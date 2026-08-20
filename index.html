@@ -3,52 +3,89 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>MasterHamster837 — Minecraft Mods Wiki</title>
-  <meta name="description" content="Documentation hub for Minecraft mods by MasterHamster837.">
-  <link rel="stylesheet" href="assets/style.css">
+  <title>GILE Wiki — Genshin Impact Lunar Expansion</title>
+  <meta name="description" content="GILE documentation: blocks, items, entities, structures, recipes, mechanics, issues and installation.">
+  <link rel="stylesheet" href="../assets/style.css">
 </head>
-<body class="hub">
+<body>
   <header class="topbar">
-    <a class="brand" href="./">MasterHamster837 <span>WIKI</span></a>
+    <a class="brand" href="../">MasterHamster837 <span>WIKI</span></a>
     <nav>
-      <a href="./">Mods</a>
-      <a href="gile/">GILE</a>
+      <a href="../">All Mods</a>
+      <a class="active" href="./">GILE</a>
       <a href="https://www.curseforge.com/minecraft/mc-mods/genshin-impact-lunar-expansion" target="_blank" rel="noreferrer">CurseForge ↗</a>
     </nav>
   </header>
 
-  <main class="hero-wrap">
-    <section class="hero">
-      <p class="eyebrow">MINECRAFT MODS • DOCUMENTATION</p>
-      <h1>Mods by <span>MasterHamster837</span></h1>
-      <p class="lead">A central wiki for my Minecraft projects, their mechanics, content, recipes and installation guides.</p>
-    </section>
+  <div class="docs-layout">
+    <aside class="sidebar">
+      <div class="sidebar-title">GILE</div>
+      <a class="side-link active" href="./">Overview</a>
 
-    <section class="mod-grid" aria-label="Mods">
-      <a class="mod-card featured" href="gile/">
-        <div class="card-icon">✦</div>
-        <div class="card-body">
-          <div class="tag">CURRENT PROJECT</div>
-          <h2>GILE</h2>
-          <p>Genshin Impact Lunar Expansion — Teyvat-inspired content, new End biomes, weapons, entities, materials and custom mechanics.</p>
-          <div class="meta">
-            <span>Fabric</span><span>Minecraft 1.21.1</span><span>Beta</span>
+      <div class="side-heading">CONTENT</div>
+      <a class="side-link" href="blocks.html">Blocks</a>
+      <a class="side-link" href="items.html">Items</a>
+      <a class="side-link" href="entities.html">Entities</a>
+      <a class="side-link" href="structures.html">Structures</a>
+      <a class="side-link" href="recipes.html">Recipes</a>
+
+      <div class="side-heading">GAMEPLAY</div>
+      <a class="side-link" href="mechanics.html">Mechanics</a>
+      <a class="side-link" href="installation.html">Installation</a>
+      <a class="side-link" href="issues.html">Known Issues</a>
+
+      <div class="side-heading">LINKS</div>
+      <a class="side-link" href="https://www.curseforge.com/minecraft/mc-mods/genshin-impact-lunar-expansion" target="_blank" rel="noreferrer">CurseForge ↗</a>
+      <a class="side-link" href="https://github.com/" target="_blank" rel="noreferrer">Source ↗</a>
+    </aside>
+
+    <main class="docs-main">
+      <div class="breadcrumbs"><a href="../">Mods</a> / GILE / Overview</div>
+
+      <section class="doc-hero">
+        <div>
+          <p class="eyebrow">GILE • BETA</p>
+          <h1>Genshin Impact<br><span>Lunar Expansion</span></h1>
+          <p class="lead">A Teyvat-inspired expansion for Minecraft that brings new materials, weapons, entities, biomes and custom abilities to your world.</p>
+          <div class="button-row">
+            <a class="button primary" href="installation.html">Install GILE →</a>
+            <a class="button" href="blocks.html">Browse documentation</a>
           </div>
         </div>
-        <div class="arrow">→</div>
-      </a>
-
-      <div class="mod-card placeholder">
-        <div class="card-icon">＋</div>
-        <div class="card-body">
-          <div class="tag">COMING SOON</div>
-          <h2>More mods</h2>
-          <p>This space is reserved for future projects by MasterHamster837.</p>
+        <div class="version-card">
+          <div class="version-label">CURRENT VERSION</div>
+          <strong>0.1.5-beta</strong>
+          <span>Fabric · Minecraft 1.21.1</span>
         </div>
-      </div>
-    </section>
-  </main>
+      </section>
 
-  <footer>© 2026 MasterHamster837 · Built for GitHub Pages</footer>
+      <section class="notice">
+        <strong>⚠ Beta release.</strong> Features, balancing and mechanics may change between versions. Check Known Issues before reporting a bug.
+      </section>
+
+      <h2>Documentation</h2>
+      <div class="doc-grid">
+        <a href="blocks.html"><b>▦ Blocks</b><span>Building blocks, decorative blocks, light sources and more.</span></a>
+        <a href="items.html"><b>◆ Items</b><span>Weapons, tools, materials, food and utility items.</span></a>
+        <a href="entities.html"><b>♧ Entities</b><span>Mobs, ambient creatures and their drops.</span></a>
+        <a href="structures.html"><b>⌂ Structures</b><span>World generation and points of interest.</span></a>
+        <a href="recipes.html"><b>◇ Recipes</b><span>Crafting and processing recipes.</span></a>
+        <a href="mechanics.html"><b>✦ Mechanics</b><span>Abilities, dimensions, progression and gameplay systems.</span></a>
+        <a href="installation.html"><b>⚙ Installation</b><span>Requirements and step-by-step setup.</span></a>
+        <a href="issues.html"><b>⚠ Known Issues</b><span>Current bugs, limitations and workarounds.</span></a>
+      </div>
+
+      <h2>What's in GILE?</h2>
+      <ul class="feature-list">
+        <li><strong>Expanded End</strong> — Ghostly Thickets and Moon Desert.</li>
+        <li><strong>Currencies</strong> — Primogems, Mora and elemental sigils.</li>
+        <li><strong>Legendary weapons</strong> — Genshin-inspired weapons with custom abilities.</li>
+        <li><strong>Creatures</strong> — Void Slimes, Moths, Weasels, Jerboas, Gloomy Lynx and Ghosts.</li>
+        <li><strong>Abilities</strong> — Grappling Hook, Shrinker, Enlarger, Shadow Clock and Heart of Healing.</li>
+      </ul>
+    </main>
+  </div>
+
+  <footer>GILE Wiki · MasterHamster837 · <a href="../">All Mods</a></footer>
 </body>
 </html>
