@@ -1,28 +1,19 @@
 :root {
-  /* Deep, cool blues derived from the hoodie for backgrounds */
   --bg: #090e17;
   --bg-deep: #05080f;
   --panel: #111a2e;
   --panel-2: #192642;
   --panel-dark: #0c1322;
-  
-  /* Borders - cool blue tints rather than purple-grays */
   --line: #263859;
   --line-soft: #1c2942;
   --line-hover: #3b5380;
-  
-  /* Text */
   --text: #f0f4f8;
   --muted: #94a3b8;
   --muted-dark: #64748b;
-  
-  /* Accents - Palish, non-toxic versions of the skin colors */
-  --accent: #7aa2f7;      /* Soft Royal Blue (Hoodie) */
-  --accent-2: #89ddff;    /* Pale Cyan */
-  --good: #86db93;        /* Soft Grass Green (Pants) */
-  --warning: #ebcb8b;     /* Soft Yellow (Hair) - replacing skin tones */
-  
-  /* Transparent backgrounds updated to match new hex codes */
+  --accent: #7aa2f7;
+  --accent-2: #89ddff;
+  --good: #86db93;
+  --warning: #ebcb8b;
   --accent-bg: rgba(122, 162, 247, 0.08);
   --accent-bg-strong: rgba(122, 162, 247, 0.14);
   --cyan-bg: rgba(137, 221, 255, 0.08);
@@ -34,11 +25,10 @@
 * { box-sizing: border-box; }
 html { scroll-behavior: smooth; }
 
-/* Swapped the second background gradient to use the new green instead of cyan */
 body {
   margin: 0;
   background: radial-gradient(circle at 80% 0%, rgba(122, 162, 247, 0.11), transparent 34rem),
-              radial-gradient(circle at 15% 25%, rgba(134, 219, 147, 0.07), transparent 28rem), 
+              radial-gradient(circle at 15% 25%, rgba(134, 219, 147, 0.07), transparent 28rem),
               var(--bg);
   color: var(--text);
   font: 15px/1.65 Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
@@ -47,9 +37,8 @@ body {
 a { color: inherit; text-decoration: none; }
 button, a { -webkit-tap-highlight-color: transparent; }
 
-nav a.active { display: inline-flex; align-items: center;gap: 8px;}
-nav a.active img {  width: 24px; height: 24px; object-fit: contain;}
-.card-icon img { width: 48px; height: 48px; object-fit: contain;}
+nav a.active { display: inline-flex; align-items: center; gap: 8px; }
+nav a.active img { width: 24px; height: 24px; object-fit: contain; }
 
 .topbar { height: 68px; display: flex; align-items: center; justify-content: space-between; padding: 0 28px; border-bottom: 1px solid var(--line); background: rgba(9, 14, 23, 0.88); backdrop-filter: blur(14px); position: sticky; top: 0; z-index: 10; }
 .brand { font-weight: 800; letter-spacing: -0.02em; }
@@ -66,13 +55,17 @@ h1 span { color: var(--accent); }
 .lead { color: var(--muted); font-size: 18px; max-width: 720px; }
 
 .mod-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; margin-top: 52px; }
-.mod-card { min-height: 250px; padding: 28px; border: 1px solid var(--line); border-radius: 18px; background: linear-gradient(145deg, rgba(25, 38, 66, 0.92), rgba(17, 26, 46, 0.94)); display: flex; gap: 20px; position: relative; transition: transform 0.2s ease, border-color 0.2s ease, background 0.2s ease; }
+.mod-card { min-height: 250px; padding: 28px; border: 1px solid var(--line); border-radius: 18px; background: linear-gradient(145deg, rgba(25, 38, 66, 0.92), rgba(17, 26, 46, 0.94)); display: block; position: relative; transition: transform 0.2s ease, border-color 0.2s ease, background 0.2s ease; }
 .mod-card.featured:hover { transform: translateY(-4px); border-color: rgba(122, 162, 247, 0.65); background: linear-gradient(145deg, rgba(29, 45, 77, 0.96), rgba(17, 26, 46, 0.96)); }
 .mod-card.placeholder { opacity: 0.65; }
 
-.card-icon { width: 46px; height: 46px; border: 1px solid var(--line); border-radius: 12px; display: grid; place-items: center; color: var(--accent); background: var(--accent-bg); font-size: 22px; flex: 0 0 auto; }
-.card-body { padding-right: 25px; }
-.card-body h2 { margin: 5px 0 8px; font-size: 28px; letter-spacing: -0.025em; }
+.card-top { display: flex; align-items: center; gap: 16px; padding-right: 35px; }
+.card-icon { width: 56px; height: 56px; border: 1px solid var(--line); border-radius: 12px; display: grid; place-items: center; color: var(--accent); background: var(--accent-bg); font-size: 22px; flex: 0 0 auto; overflow: hidden; }
+.card-icon img { width: 100%; height: 100%; padding: 6px; object-fit: contain; }
+.card-title { min-width: 0; }
+.card-title .tag { margin: 0 0 2px; }
+.card-title h2 { margin: 0; font-size: 28px; line-height: 1.1; letter-spacing: -0.025em; }
+.card-body { padding-right: 35px; margin-top: 18px; }
 .card-body p { color: var(--muted); margin: 0 0 18px; }
 
 .tag, .version-label { color: var(--accent); font-size: 10px; font-weight: 800; letter-spacing: 0.16em; }
@@ -175,6 +168,8 @@ tr:hover td { background: rgba(25, 38, 66, 0.45); }
   h1 { font-size: 44px; }
   .lead { font-size: 16px; }
   .mod-card { padding: 22px; min-height: 220px; }
-  .card-body h2 { font-size: 24px; }
+  .card-icon { width: 50px; height: 50px; }
+  .card-title h2 { font-size: 24px; }
+  .card-body { padding-right: 25px; }
   .doc-grid a { padding: 16px; }
 }
