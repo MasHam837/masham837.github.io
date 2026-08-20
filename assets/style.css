@@ -1,15 +1,14 @@
 :root {
-  --bg: #0b0d12;
-  --panel: #121620;
-  --panel-2: #171c28;
-  --line: #293142;
-  --text: #eef2f8;
-  --muted: #9da7b8;
-  --accent: #b99cff;
-  --accent-2: #8de4ff;
-  --good: #8fe3b0;
-  --warning: #ffd27a;
-  --max: 1180px;
+  --bg:       /* background */
+  --panel:    /* main tables */
+  --panel-2:  /* secondary tables & menu */
+  --line:     /* borders */
+  --text:     /* main text */
+  --muted:    /* secondary text */
+  --accent:   /* main accent */
+  --accent-2: /* second accent */
+  --good:     /* green verified */
+  --warning:  /* warning text */
 }
 * { box-sizing: border-box; }
 html { scroll-behavior: smooth; }
