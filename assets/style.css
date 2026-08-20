@@ -1,14 +1,15 @@
 :root {
-  --bg:       /* background */
-  --panel:    /* main tables */
-  --panel-2:  /* secondary tables & menu */
-  --line:     /* borders */
-  --text:     /* main text */
-  --muted:    /* secondary text */
-  --accent:   /* main accent */
-  --accent-2: /* second accent */
-  --good:     /* green verified */
-  --warning:  /* warning text */
+  --bg: #0d1020;          /* deep blue-violet: main page background */
+  --panel: #171b31;       /* softened royal blue: cards */
+  --panel-2: #202644;     /* lighter blue-violet: secondary cards/nav */
+  --line: #394263;        /* muted blue: borders and separators */
+  --text: #f2f3fb;        /* near-white: primary text */
+  --muted: #aeb5cb;       /* desaturated blue-gray: secondary text */
+  --accent: #aeb6f2;      /* pastel version of the skin's strong blue */
+  --accent-2: #9ed9f0;    /* pastel cyan from the skin's blue highlights */
+  --good: #a9d69b;        /* pastel green from the trousers */
+  --warning: #e8b8a4;     /* soft skin/peach accent for warnings */
+  --max: 1180px;
 }
 * { box-sizing: border-box; }
 html { scroll-behavior: smooth; }
