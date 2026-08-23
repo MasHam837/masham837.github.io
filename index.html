@@ -6,10 +6,39 @@
   <title>MasterHamster837 — Minecraft Mods Wiki</title>
   <meta name="description" content="Documentation hub for Minecraft mods by MasterHamster837.">
   <link rel="stylesheet" href="assets/style.css">
+  <style>
+    /* Brand Color Classes using your exact style.css variables */
+    .brand-master { color: var(--accent) !important; }
+    .brand-hamster { color: var(--block-green) !important; }
+    .brand-837 { color: var(--warning) !important; }
+
+    /* Custom Green styling for the GILE Mod Card */
+    .mod-card.card-green {
+      border-color: rgba(0, 255, 85, 0.3);
+      background: linear-gradient(145deg, rgba(0, 50, 20, 0.92), rgba(0, 22, 59, 0.94));
+    }
+    .mod-card.card-green:hover {
+      border-color: var(--block-green);
+      background: linear-gradient(145deg, rgba(0, 70, 30, 0.96), rgba(0, 22, 59, 0.96));
+    }
+    .mod-card.card-green .tag {
+      color: var(--block-green);
+    }
+    .mod-card.card-green .arrow {
+      color: var(--block-green);
+    }
+    .mod-card.card-green .card-icon {
+      color: var(--block-green);
+      background: var(--block-green-bg);
+      border-color: rgba(0, 255, 85, 0.3);
+    }
+  </style>
 </head>
 <body class="hub">
   <header class="topbar">
-    <a class="brand" href="./">MasterHamster837 <span>WIKI</span></a>
+    <a class="brand" href="./">
+      <span class="brand-master">Master</span><span class="brand-hamster">Hamster</span><span class="brand-837">837</span> <span>WIKI</span>
+    </a>
     <nav>
       <a href="https://www.curseforge.com/members/masterhamster837/projects" target="_blank" rel="noreferrer" style="color: #f36c21;">CurseForge ↗</a>
       <a href="https://modrinth.com/user/masterhamster837" target="_blank" rel="noreferrer" style="color: #5cff4a;"> Modrinth ↗</a>
@@ -19,48 +48,49 @@
   <main class="hero-wrap">
     <section class="hero">
       <p class="eyebrow">MINECRAFT MODS • DOCUMENTATION</p>
-      <h1>Mods by <span>MasterHamster837</span></h1>
+      <h1>Mods by <span class="brand-master">Master</span><span class="brand-hamster">Hamster</span><span class="brand-837">837</span></h1>
       <p class="lead">A central wiki for my Minecraft projects, their mechanics, content, recipes and installation guides.</p>
     </section>
 
     <section class="mod-grid" aria-label="Mods">
-      <a class="mod-card featured" href="GILE/">
-  <div class="card-top">
-    <div class="card-icon">
-      <img src="assets/gile-icon.png" alt="GILE icon">
-    </div>
-    <div class="card-title">
-      <div class="tag">LATEST PROJECT</div>
-      <h2>GILE</h2>
-    </div>
-  </div>
-  <div class="card-body">
-    <p>
-      Genshin Impact Lunar Expansion — Hoyoverse-inspired content, new End biomes,
-      weapons, entities, materials and custom mechanics.
-    </p>
-    <div class="meta">
-      <span>Fabric</span>
-      <span>Minecraft 1.21.1</span>
-      <span>Beta</span>
-      <span>Minecraft 26.1</span>
-      <span>Release</span>
-    </div>
-  </div>
-  <div class="arrow">→</div>
-</a>
+      <!-- Added 'card-green' class alongside 'featured' -->
+      <a class="mod-card featured card-green" href="GILE/">
+        <div class="card-top">
+          <div class="card-icon">
+            <img src="assets/gile-icon.png" alt="GILE icon">
+          </div>
+          <div class="card-title">
+            <div class="tag">LATEST PROJECT</div>
+            <h2>GILE</h2>
+          </div>
+        </div>
+        <div class="card-body">
+          <p>
+            Genshin Impact Lunar Expansion — Hoyoverse-inspired content, new End biomes,
+            weapons, entities, materials and custom mechanics.
+          </p>
+          <div class="meta">
+            <span>Fabric</span>
+            <span>Minecraft 1.21.1</span>
+            <span>Beta</span>
+            <span>Minecraft 26.1</span>
+            <span>Release</span>
+          </div>
+        </div>
+        <div class="arrow">→</div>
+      </a>
 
       <div class="mod-card placeholder">
         <div class="card-icon">＋</div>
         <div class="card-body">
           <div class="tag">COMING SOON</div>
           <h2>More mods</h2>
-          <p>This space is reserved for future projects by MasterHamster837.</p>
+          <p>This space is reserved for future projects by <span class="brand-master">Master</span><span class="brand-hamster">Hamster</span><span class="brand-837">837</span>.</p>
         </div>
       </div>
     </section>
   </main>
 
-  <footer>© 2026 MasterHamster837 · Built for GitHub Pages</footer>
+  <footer>© 2026 <span class="brand-master">Master</span><span class="brand-hamster">Hamster</span><span class="brand-837">837</span> · Built for GitHub Pages</footer>
 </body>
 </html>
