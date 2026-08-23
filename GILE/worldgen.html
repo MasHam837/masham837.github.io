@@ -3,27 +3,32 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>World Generation — GILE Wiki</title>
+  <title>World Generation & Structures — GILE Wiki</title>
   <link rel="stylesheet" href="../assets/style.css">
+  <style>
+    /* Add any page-specific styles here */
+    .boss-stats { display: flex; gap: 15px; margin: 15px 0; }
+  </style>
 </head>
 <body>
   <header class="topbar">
     <a class="brand" href="../">MasterHamster837 <span>WIKI</span></a>
     <nav>
       <a class="active" href="./"><img src="../assets/gile-icon.png" alt="GILE icon"> GILE</a>
-      <a href="https://www.curseforge.com/minecraft/mc-mods/genshin-impact-lunar-expansion"target="_blank"rel="noreferrer"style="color: #f36c21;">CurseForge ↗</a>
-      <a href="https://modrinth.com/mod/genshin-impact-lunar-expansion"  target="_blank"rel="noreferrer" style="color: #5cff4a;"> Modrinth ↗</a>
+      <a href="https://www.curseforge.com/minecraft/mc-mods/genshin-impact-lunar-expansion" target="_blank" rel="noreferrer" style="color: #f36c21;">CurseForge ↗</a>
+      <a href="https://modrinth.com/mod/genshin-impact-lunar-expansion" target="_blank" rel="noreferrer" style="color: #5cff4a;"> Modrinth ↗</a>
     </nav>
-</header>
+  </header>
   <div class="docs-layout">
     
     <aside class="sidebar">
       <div class="sidebar-title">GILE</div>
-      <a class="side-link active" href="./">Overview</a>
+      <a class="side-link" href="./">Overview</a>
 
       <div class="side-heading">GAMEPLAY</div>
       <a class="side-link" href="start.html">Getting Started</a>
-      <a class="side-link" href="worldgen.html">World Generation</a>
+      <a class="side-link active" href="worldgen.html">World Generation</a>
+      <a class="side-link" href="biomes.html">Biomes</a>
       <a class="side-link" href="tools.html">Tools & Utils</a>
       <a class="side-link" href="wish.html">Wish Mechanics</a>
       <a class="side-link" href="weapons.html">Weapons</a>
@@ -31,11 +36,11 @@
       <div class="side-heading">DOCUMENTATION</div>
       <a class="side-link" href="installation.html">Installation</a>
       <a class="side-link" href="issues.html">Known Issues</a>
-      <a class="side-link" href="versions.html">Versions History</span></a>
+      <a class="side-link" href="versions.html">Versions History</a>
 
       <div class="side-heading">LINKS</div>
       <a class="side-link" href="https://www.curseforge.com/minecraft/mc-mods/genshin-impact-lunar-expansion" target="_blank" rel="noreferrer" style="color: #f36c21;">CurseForge ↗</a>
-      <a class="side-link" href="https://modrinth.com/mod/genshin-impact-lunar-expansion"  target="_blank" rel="noreferrer" style="color: #5cff4a;"> Modrinth ↗</a>
+      <a class="side-link" href="https://modrinth.com/mod/genshin-impact-lunar-expansion" target="_blank" rel="noreferrer" style="color: #5cff4a;"> Modrinth ↗</a>
       <a class="side-link" href="https://github.com/MasHam837/minecraft-mods-source-codes" target="_blank" rel="noreferrer" style="color: #3388ff;">Source ↗</a>
     </aside>
     
@@ -43,18 +48,117 @@
       <div class="breadcrumbs"><a href="index.html">GILE</a> / World Generation</div>
       <div class="content">
         <p class="eyebrow">GILE DOCUMENTATION</p>
-        <h1>World Generation</h1>
-        <p class="lead">World generation of GILE. Custom biomes, entities and structures.</p>
-        <div class="placeholder-box">
-          <strong>Template section</strong><br>
-          Replace this area with the real worldgen documentation. The navigation and styling are already wired up.
+        <h1>World Generation & Structures</h1>
+        <p class="lead">Discover Ancient Ruins, defeat the Ruin Guard, and find your way to the Moon (Outer End Islands).</p>
+
+        <!-- IMAGE PLACEHOLDER -->
+        <div class="placeholder-box" style="margin-bottom: 30px;">
+          <strong>[IMAGE PLACEHOLDER: Ancient Ruins Structure Exterior]</strong><br>
+          <em>Show the structure generating on the Overworld surface.</em>
         </div>
-        <h2>Coming next</h2>
-        <ul>
-          <li>Add entries, screenshots and icons.</li>
-          <li>Link recipes, items, blocks and entities to each other.</li>
-          <li>Keep version-specific information grouped by Minecraft/GILE version.</li>
+
+        <h2>1. Ancient Ruins</h2>
+        <p>The <strong>Ancient Ruins</strong> structure can generate anywhere on the Overworld surface. It is the primary mid-game dungeon of the mod and your alternative gateway to the End dimension.</p>
+        
+        <h3>Structure Layout & Loot</h3>
+        <p>The ruins consist of one <strong>Central Boss Arena</strong> and up to <strong>5 randomly generated side rooms</strong>. Note that some side rooms have a chance to not generate at all, making every ruin slightly different!</p>
+        
+        <ul class="feature-list">
+          <li>Side rooms contain clay jars and chests.</li>
+          <li>Loot is based on one of the 8 elements, pulling from specialized drop tables.</li>
         </ul>
+
+        <!-- IMAGE PLACEHOLDER -->
+        <div class="placeholder-box">
+          <strong>[IMAGE PLACEHOLDER: Side Rooms Gallery]</strong><br>
+          <em>Insert grid or collage of the different possible side rooms here.</em>
+        </div>
+
+        <p style="margin-top: 15px;"><strong>Elemental Loot Pools:</strong></p>
+        <table>
+          <thead>
+            <tr><th>Element Type</th><th>Possible Loot Drops</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Anemo</td><td><em>[Insert Anemo Loot]</em></td></tr>
+            <tr><td>Cryo</td><td><em>[Insert Cryo Loot]</em></td></tr>
+            <tr><td>Dendro</td><td><em>[Insert Dendro Loot]</em></td></tr>
+            <tr><td>Electro</td><td><em>[Insert Electro Loot]</em></td></tr>
+            <tr><td>Geo</td><td><em>[Insert Geo Loot]</em></td></tr>
+            <tr><td>Hydro</td><td><em>[Insert Hydro Loot]</em></td></tr>
+            <tr><td>Pyro</td><td><em>[Insert Pyro Loot]</em></td></tr>
+            <tr><td>Luna</td><td><em>[Insert Luna Loot]</em></td></tr>
+          </tbody>
+        </table>
+
+        <h2>2. The Ruin Guard (Mini-Boss)</h2>
+        <p>The central arena of the Ancient Ruins houses the <strong>Ruin Guard</strong>. This formidable mechanical foe adapts its attacks based on how far away you are.</p>
+        
+        <div class="boss-stats">
+          <span class="badge badge-green">Health: 400 HP (200 Hearts)</span>
+          <span class="badge badge-warning">Rare Drop: Cogwork Core</span>
+        </div>
+
+        <!-- GIF PLACEHOLDERS for Blockbench Animations -->
+        <div class="doc-grid" style="margin: 20px 0;">
+          <a href="#">
+            <strong>[GIF: Melee Attack]</strong>
+            <span>Triggered when the player is close. Deals heavy physical damage.</span>
+          </a>
+          <a href="#">
+            <strong>[GIF: Ranged Attack]</strong>
+            <span>Triggered when the player is far away.</span>
+          </a>
+          <a href="#">
+            <strong>[GIF: Rotation Attack]</strong>
+            <span>Random chance to trigger at mid-range or while chasing the player.</span>
+          </a>
+        </div>
+
+        <h2>3. Cogwork Core & Ender Compass</h2>
+        <p>Defeating the Ruin Guard gives you a rare chance to obtain a <strong>Cogwork Core</strong>. This item is critical for crafting two highly overpowered utility items: the <a href="tools.html">Nuclear Cannon</a> and the <strong>Ender Compass</strong>.</p>
+        
+        <div class="notice">
+          <strong>How the Ender Compass Works:</strong><br>
+          Using the Ender Compass teleports you directly to the End dimension at your exact Overworld coordinates (X and Z). The compass algorithm ensures you never spawn in the void by searching for a safe block within an 8-chunk radius. If no safe block is found, it returns an error.
+        </div>
+
+        <ul class="feature-list">
+          <li><strong>Bypassing the Dragon:</strong> If your X or Z coordinates in the Overworld are close to <strong>1000 or greater</strong>, the compass will safely teleport you to the Outer End Islands (The Moon).</li>
+          <li><strong>Warning System:</strong> The compass emits a warning if your coordinates will land you on the Main End Island, allowing you to prepare before accidental teleportation.</li>
+        </ul>
+
+        <h2>4. The Moon & Enderite Ore</h2>
+        <p>In GILE, the Outer End Islands represent <strong>The Moon</strong>. (The Main End Island remains strict vanilla). Here, you will find <a href="start.html">Primogem Ore</a>, moon sand blobs, glowing flora, and the most powerful material in the mod: <strong>Enderite</strong>.</p>
+
+        <!-- IMAGE PLACEHOLDER -->
+        <div class="placeholder-box">
+          <strong>[IMAGE PLACEHOLDER: Enderite Ore Generation]</strong><br>
+          <em>Show Enderite ore generating within end stone / moon sand.</em>
+        </div>
+
+        <p><strong>Enderite</strong> is the ultimate late-game tier, acting as a direct upgrade to Netherite. You can craft full Enderite tool, weapon, and armor sets.</p>
+        
+        <table>
+          <thead>
+            <tr><th>Item</th><th>Recipe / Use</th></tr>
+          </thead>
+          <tbody>
+            <tr><td><strong>Fate Upgrade Smithing Template</strong></td><td>Used at a Smithing Table to upgrade Netherite gear to Enderite gear.</td></tr>
+            <tr><td><strong>Enderite Block</strong></td><td>Used to craft the late-game <a href="tools.html">Nuclear Cannon</a>.</td></tr>
+            <tr><td><strong>Ore Generation</strong></td><td><em>[Insert spawn height, vein size, and generation chances here]</em></td></tr>
+          </tbody>
+        </table>
+
+        <!-- IMAGE PLACEHOLDER -->
+        <div class="placeholder-box" style="margin-top: 20px;">
+          <strong>[IMAGE PLACEHOLDER: Crafting Recipes]</strong><br>
+          <em>Show Fate Upgrade Smithing Template recipe and Enderite Block recipe here.</em>
+        </div>
+
+        <hr style="border: 0; border-top: 1px solid var(--line); margin: 40px 0;">
+        <p>Looking for details on the new flora, moon terrains, and ambient mobs? Head over to the <a href="biomes.html" class="text-accent">Biomes Documentation →</a></p>
+
       </div>
     </main>
   </div>
