@@ -4,62 +4,136 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/png" href="../assets/gile-icon.png">
-  <title>Wish Mechacnics — GILE Wiki</title>
+  <title>Wishn Mechanic — GILE Wiki</title>
   <link rel="stylesheet" href="../assets/style.css">
+  <style>
+    .rarity-common { color: #5c8aff; font-weight: bold; }
+    .rarity-rare { color: #b75cff; font-weight: bold; }
+    .rarity-legendary { color: #ffb732; font-weight: bold; }
+  </style>
 </head>
 <body>
   <header class="topbar">
     <a class="brand" href="../">MasterHamster837 <span>WIKI</span></a>
     <nav>
       <a class="active" href="./"><img src="../assets/gile-icon.png" alt="GILE icon"> GILE</a>
-      <a href="https://www.curseforge.com/minecraft/mc-mods/genshin-impact-lunar-expansion"target="_blank"rel="noreferrer"style="color: #f36c21;">CurseForge ↗</a>
-      <a href="https://modrinth.com/mod/genshin-impact-lunar-expansion"  target="_blank"rel="noreferrer" style="color: #5cff4a;">Modrinth ↗</a>
+      <a href="https://www.curseforge.com/minecraft/mc-mods/genshin-impact-lunar-expansion" target="_blank" rel="noreferrer" style="color: #f36c21;">CurseForge ↗</a>
+      <a href="https://modrinth.com/mod/genshin-impact-lunar-expansion" target="_blank" rel="noreferrer" style="color: #5cff4a;">Modrinth ↗</a>
       <a href="https://github.com/MasHam837/minecraft-mods-source-codes" target="_blank" rel="noreferrer" style="color: #3388ff;">Source ↗</a>
     </nav>
-</header>
+  </header>
   <div class="docs-layout">
     
     <aside class="sidebar">
       <div class="sidebar-title">GILE</div>
-      <a class="side-link active" href="./">Overview</a>
+      <a class="side-link" href="./">Overview</a>
 
       <div class="side-heading">GAMEPLAY</div>
       <a class="side-link" href="start.html">Getting Started</a>
       <a class="side-link" href="worldgen.html">World Generation</a>
       <a class="side-link" href="biomes.html">Biomes & Entities</a>
       <a class="side-link" href="tools.html">Tools & Utilities</a>
-      <a class="side-link" href="wish.html">Wishing Mechanic</a>
+      <a class="side-link active" href="wish.html">Wishing Mechanic</a>
       <a class="side-link" href="elemental_weapons.html">Elemental Weapons</a>
       <a class="side-link" href="legendary_weapons.html">Legendary Weapons</a>
 
       <div class="side-heading">DOCUMENTATION</div>
       <a class="side-link" href="installation.html">Installation</a>
       <a class="side-link" href="issues.html">Known Issues</a>
-      <a class="side-link" href="versions.html">Versions History</span></a>
+      <a class="side-link" href="versions.html">Versions History</a>
 
       <div class="side-heading">LINKS</div>
       <a class="side-link" href="https://www.curseforge.com/minecraft/mc-mods/genshin-impact-lunar-expansion" target="_blank" rel="noreferrer" style="color: #f36c21;">CurseForge ↗</a>
-      <a class="side-link" href="https://modrinth.com/mod/genshin-impact-lunar-expansion"  target="_blank" rel="noreferrer" style="color: #5cff4a;">Modrinth ↗</a>
+      <a class="side-link" href="https://modrinth.com/mod/genshin-impact-lunar-expansion" target="_blank" rel="noreferrer" style="color: #5cff4a;">Modrinth ↗</a>
       <a class="side-link" href="https://github.com/MasHam837/minecraft-mods-source-codes" target="_blank" rel="noreferrer" style="color: #3388ff;">Source ↗</a>
-
     </aside>
     
     <main class="docs-main doc-page">
-      <div class="breadcrumbs"><a href="index.html">GILE</a> / Wish Mechacnics</div>
+      <div class="breadcrumbs"><a href="index.html">GILE</a> / Wishing Mechanic</div>
       <div class="content">
         <p class="eyebrow">GILE DOCUMENTATION</p>
-        <h1>Wish Mechacnics</h1>
-        <p class="lead">Main use of primogems - a way to get elemental & legendary weapons through sigils & Wish Table.</p>
+        <h1>Wishing Mechanic</h1>
+        <p class="lead">The primary use of Primogems. A unique gacha-inspired system to obtain powerful Elemental and Legendary weapons through the Wish Table.</p>
+
+        <h2>1. The Wish Table GUI</h2>
+        <p>The entire mechanic revolves around the <strong>Wish Table</strong>, a functional block with a custom user interface. The UI consists of inputs, outputs, a central star, and a progression bar.</p>
+
+        <!-- IMAGE PLACEHOLDER -->
         <div class="placeholder-box">
-          <strong>Template section</strong><br>
-          Replace this area with the real wish mechanics documentation. The navigation and styling are already wired up.
+          <strong>[IMAGE PLACEHOLDER: Wish Table GUI]</strong><br>
+          <em>Show the interface with 2 input slots on the left, 2 output slots on the right, and the star/progress bar in the middle.</em>
         </div>
-        <h2>Coming next</h2>
-        <ul>
-          <li>Add entries, screenshots and icons.</li>
-          <li>Link recipes, items, blocks and entities to each other.</li>
-          <li>Keep version-specific information grouped by Minecraft/GILE version.</li>
+
+        <ul class="feature-list">
+          <li><strong>Input Slots (2):</strong> One strictly for <strong>Wish Blocks</strong> (the fuel), and one for an <strong>Elemental Sigil</strong> (the catalyst).</li>
+          <li><strong>Output Slots (2):</strong> One for byproducts (Star Dust/Star Shine) and one for the successful result (Weapon).</li>
         </ul>
+
+        <div class="notice">
+          <strong>Automation:</strong> The Wish Table can be automated! A hopper placed beneath the table will extract outputs. <em>Note:</em> The table will not start a new wish progress if the output slots are full.
+        </div>
+
+        <h2>2. The Wishing Process (Attempt)</h2>
+        <p>Inputting one Elemental Sigil alongside Wish Blocks will begin the wishing process. <strong>Each attempt takes 5 seconds, consumes 1 Wish Block, and yields Star Dust, but does NOT consume the Elemental Sigil.</strong></p>
+
+        <!-- GIF PLACEHOLDER -->
+        <div class="placeholder-box">
+          <strong>[GIF PLACEHOLDER: 5-Second Wish Mechanic Loop]</strong><br>
+          <em>Show the star brightening in the GUI and colored particles emitting from the block in the world.</em>
+        </div>
+
+        <p>During an attempt, the central star brightens and emits colored particles (visible both in the GUI and in the world). The color determines how much the progression bar fills:</p>
+
+        <table>
+          <thead>
+            <tr><th>Rarity (Color)</th><th>Chance per Attempt</th><th>Progress Bar Fill %</th></tr>
+          </thead>
+          <tbody>
+            <tr><td><span class="rarity-common">Common (Blue)</span></td><td>80%</td><td>2% - 4%</td></tr>
+            <tr><td><span class="rarity-rare">Rare (Purple)</span></td><td>17%</td><td>15%</td></tr>
+            <tr><td><span class="rarity-legendary">Legendary (Golden)</span></td><td>3%</td><td>25% - 50%</td></tr>
+          </tbody>
+        </table>
+
+        <h2>3. Wish Completion & Rewards</h2>
+        <p>Once the progression bar fills to 100%, a weapon is generated in the output slot alongside a bonus of <strong>10 Star Shine</strong>. The weapon you receive depends on a final roll based on the Elemental Sigil you used.</p>
+
+        <table>
+          <thead>
+            <tr><th>Outcome</th><th>Chance</th><th>Result Details</th></tr>
+          </thead>
+          <tbody>
+            <tr><td><strong>Wish Success</strong></td><td>60%</td><td>You receive the exact <a href="elemental_weapons.html">Elemental Weapon</a> corresponding to your inputted sigil (e.g., Anemo Sigil gives an Anemo Weapon).</td></tr>
+            <tr><td><strong>Legendary Success</strong></td><td>20%</td><td>You receive 1 of the 4 <a href="legendary_weapons.html">Legendary Weapons</a>.</td></tr>
+            <tr><td><strong>Wish Fail</strong></td><td>20%</td><td>You receive a random Elemental Weapon of a <em>different</em> element.</td></tr>
+          </tbody>
+        </table>
+
+        <blockquote>
+          <strong>Pro Tip:</strong> Based on mathematical averages, a full stack of Wish Blocks (64) will typically yield around <strong>4 weapons</strong>.
+        </blockquote>
+
+        <hr style="border: 0; border-top: 1px solid var(--line); margin: 30px 0;">
+
+        <h2>4. The Wisher Villager & Byproducts</h2>
+        <p>The Wish Table also acts as a job site block, allowing an unemployed villager to take on the custom <strong>Wisher</strong> profession. </p>
+
+        <!-- IMAGE PLACEHOLDER -->
+        <div class="placeholder-box">
+          <strong>[IMAGE PLACEHOLDER: Wisher Villager Trades UI]</strong><br>
+          <em>Showcase the custom trades available from the Wisher.</em>
+        </div>
+
+        <h3>Currencies & Crafting</h3>
+        <ul class="feature-list">
+          <li><strong>Star Shine:</strong> Obtained purely from Wish Completions. Used exclusively as high-tier currency to trade with the Wisher villager.</li>
+          <li><strong>Star Dust:</strong> Obtained from every single Wish Attempt. Can be sold to the Wisher, or used to craft decorative <strong>Glitter Blocks</strong> and <strong>Glitter Carpets</strong>.</li>
+        </ul>
+
+        <div class="notice">
+          <strong>Note:</strong> Dust dropped by the Glitter mob found in the End Leftovers (see <a href="biomes.html">Biomes</a>) can also be used interchangeably to craft Glitter Blocks and Carpets.
+        </div>
+
       </div>
     </main>
   </div>
