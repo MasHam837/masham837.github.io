@@ -4,24 +4,43 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/png" href="../assets/gile-icon.png">
-  <title>Weapons — GILE Wiki</title>
+  <title>Elemental Weapons — GILE Wiki</title>
   <link rel="stylesheet" href="../assets/style.css">
+  <style>
+    .key-bind {
+      display: inline-block;
+      padding: 2px 6px;
+      font-size: 0.85em;
+      font-family: monospace;
+      background: rgba(255, 255, 255, 0.1);
+      border: 1px solid var(--line);
+      border-radius: 4px;
+      color: var(--accent);
+    }
+    .element-anemo { color: #5cffb7; font-weight: bold; }
+    .element-geo { color: #ffb732; font-weight: bold; }
+    .element-electro { color: #b75cff; font-weight: bold; }
+    .element-dendro { color: #5cff4a; font-weight: bold; }
+    .element-hydro { color: #3388ff; font-weight: bold; }
+    .element-pyro { color: #f36c21; font-weight: bold; }
+    .element-cryo { color: #88eeff; font-weight: bold; }
+  </style>
 </head>
 <body>
   <header class="topbar">
     <a class="brand" href="../">MasterHamster837 <span>WIKI</span></a>
     <nav>
       <a class="active" href="./"><img src="../assets/gile-icon.png" alt="GILE icon"> GILE</a>
-      <a href="https://www.curseforge.com/minecraft/mc-mods/genshin-impact-lunar-expansion"target="_blank"rel="noreferrer"style="color: #f36c21;">CurseForge ↗</a>
-      <a href="https://modrinth.com/mod/genshin-impact-lunar-expansion"  target="_blank"rel="noreferrer" style="color: #5cff4a;">Modrinth ↗</a>
+      <a href="https://www.curseforge.com/minecraft/mc-mods/genshin-impact-lunar-expansion" target="_blank" rel="noreferrer" style="color: #f36c21;">CurseForge ↗</a>
+      <a href="https://modrinth.com/mod/genshin-impact-lunar-expansion" target="_blank" rel="noreferrer" style="color: #5cff4a;">Modrinth ↗</a>
       <a href="https://github.com/MasHam837/minecraft-mods-source-codes" target="_blank" rel="noreferrer" style="color: #3388ff;">Source ↗</a>
     </nav>
-</header>
+  </header>
   <div class="docs-layout">
     
     <aside class="sidebar">
       <div class="sidebar-title">GILE</div>
-      <a class="side-link active" href="./">Overview</a>
+      <a class="side-link" href="./">Overview</a>
 
       <div class="side-heading">GAMEPLAY</div>
       <a class="side-link" href="start.html">Getting Started</a>
@@ -29,37 +48,102 @@
       <a class="side-link" href="biomes.html">Biomes & Entities</a>
       <a class="side-link" href="tools.html">Tools & Utilities</a>
       <a class="side-link" href="wish.html">Wishing Mechanic</a>
-      <a class="side-link" href="elemental_weapons.html">Elemental Weapons</a>
+      <a class="side-link active" href="elemental_weapons.html">Elemental Weapons</a>
       <a class="side-link" href="legendary_weapons.html">Legendary Weapons</a>
 
       <div class="side-heading">DOCUMENTATION</div>
       <a class="side-link" href="installation.html">Installation</a>
       <a class="side-link" href="issues.html">Known Issues</a>
-      <a class="side-link" href="versions.html">Versions History</span></a>
-
-      <div class="side-heading">LINKS</div>
-      <a class="side-link" href="https://www.curseforge.com/minecraft/mc-mods/genshin-impact-lunar-expansion" target="_blank" rel="noreferrer" style="color: #f36c21;">CurseForge ↗</a>
-      <a class="side-link" href="https://modrinth.com/mod/genshin-impact-lunar-expansion"  target="_blank" rel="noreferrer" style="color: #5cff4a;">Modrinth ↗</a>
-      <a class="side-link" href="https://github.com/MasHam837/minecraft-mods-source-codes" target="_blank" rel="noreferrer" style="color: #3388ff;">Source ↗</a>
-
+      <a class="side-link" href="versions.html">Versions History</a>
     </aside>
     
     <main class="docs-main doc-page">
-      <div class="breadcrumbs"><a href="index.html">GILE</a> / Weapons</div>
+      <div class="breadcrumbs"><a href="index.html">GILE</a> / Elemental Weapons</div>
       <div class="content">
         <p class="eyebrow">GILE DOCUMENTATION</p>
-        <h1>Weapons</h1>
-        <p class="lead">Detailed description of elemental and legendary weapons and their abilities.</p>
-        <div class="placeholder-box">
-          <strong>Template section</strong><br>
-          Replace this area with the real weapons documentation. The navigation and styling are already wired up.
-        </div>
-        <h2>Coming next</h2>
-        <ul>
-          <li>Add entries, screenshots and icons.</li>
-          <li>Link recipes, items, blocks and entities to each other.</li>
-          <li>Keep version-specific information grouped by Minecraft/GILE version.</li>
+        <h1>Elemental Weapons</h1>
+        <p class="lead">Unbreakable armaments of the Archons. Each weapon delivers constant damage and features a unique active ability.</p>
+
+        <h2>Overview & Mechanics</h2>
+        <p>Elemental weapons are exclusively obtained through the Wish Table. They are <strong>unbreakable</strong> and have no durability bar. Every elemental weapon has a unique ability bound to the <a href="tools.html"><span class="key-bind">V</span></a> key (10-second cooldown), which typically triggers on the block you are looking at (except Hydro).</p>
+        
+        <ul class="feature-list">
+          <li><strong>Swords:</strong> Hit with AoE sweeps and apply slowness.</li>
+          <li><strong>Spears:</strong> Slower attack speed, but damage scales with player speed.</li>
+          <li><strong>Catalysts:</strong> Fast, precise, magic-based strikes.</li>
+          <li><strong>Bows:</strong> Unique draw mechanics with specialized projectiles.</li>
         </ul>
+
+        <hr style="border: 0; border-top: 1px solid var(--line); margin: 30px 0;">
+
+        <!-- WEAPON LIST -->
+        <h3><span class="element-anemo">Anemo:</span> Daybreak Chronicles (Bow)</h3>
+        <p><strong>Ability: Venti Vortex</strong></p>
+        <ul class="feature-list">
+          <li><strong>Passive:</strong> Grants the wielder complete immunity to fall damage.</li>
+          <li><strong>Combat:</strong> Does not require arrows. Shoots unique "Venti Arrows". A small pull shoots normally. A hard pull creates a wind burst that pushes enemies. A max pull accelerates the arrow to create a massive wind burst capable of pushing even heavy mobs (Iron Golems, Wardens).</li>
+          <li><strong>Active (<span class="key-bind">V</span>):</strong> Conjures a massive vortex with an 8-block radius that violently pulls in all mobs before pushing them away.</li>
+        </ul>
+
+        <h3><span class="element-geo">Geo:</span> Vortex Vanquisher (Spear)</h3>
+        <p><strong>Ability: Zhong Li Barricade</strong></p>
+        <ul class="feature-list">
+          <li><strong>On-Hit:</strong> Generates Geo particles and slows enemies.</li>
+          <li><strong>Active (<span class="key-bind">V</span>):</strong> Pulls Geo columns out of the ground to form a Barricade, heavily slowing every mob within range. After the 10s cooldown ends, the barricade retracts.</li>
+        </ul>
+        <div class="notice">
+          <strong>Surface Requirement:</strong> The ability only works if the surface contains enough Geo-aligned blocks.
+          <br><br>
+          <em>[TABLE PLACEHOLDER: List of supported Geo surface blocks]</em>
+        </div>
+
+        <h3><span class="element-electro">Electro:</span> Engulfing Lightning (Spear)</h3>
+        <p><strong>Ability: Raiden Shogun Thunder</strong></p>
+        <ul class="feature-list">
+          <li><strong>On-Hit:</strong> 50% chance to summon a lightning strike on the target.</li>
+          <li><strong>Active (<span class="key-bind">V</span>):</strong> Summons a devastating thunderstorm. A huge bolt strikes the target block, while granting Resistance to the player and changing the world weather to Thunder. Once the cooldown ends, the weather clears.</li>
+        </ul>
+
+        <h3><span class="element-dendro">Dendro:</span> Thousand Floating Dreams (Catalyst)</h3>
+        <p><strong>Ability: Nahida Sowing</strong></p>
+        <ul class="feature-list">
+          <li><strong>Passive:</strong> Grants the player complete immunity to Poison and Wither effects.</li>
+          <li><strong>On-Hit:</strong> Poisons the target for 5 seconds.</li>
+          <li><strong>Active (<span class="key-bind">V</span>):</strong> Creates a massive Area of Effect (AoE) poisoning zone.</li>
+        </ul>
+
+        <h3><span class="element-hydro">Hydro:</span> Splendor of Tranquil Waters (Sword)</h3>
+        <p><strong>Ability: Furina Salon Members</strong></p>
+        <ul class="feature-list">
+          <li><strong>Passive:</strong> Grants permanent Water Breathing.</li>
+          <li><strong>On-Hit:</strong> Creates Hydro splash particles.</li>
+          <li><strong>Active (<span class="key-bind">V</span>):</strong> Summons 3 Salon Members (<em>Surintendante Chevalmarin, Mademoiselle Crabaletta, Gentilhomme Usher</em>) around the player. They attack enemies but <strong>drain the player's HP per hit</strong>. If the player drops below 50% HP and stops healing, the members deal no damage. They disappear when the cooldown ends.</li>
+        </ul>
+
+        <h3><span class="element-pyro">Pyro:</span> Thousand Blazing Suns (Sword)</h3>
+        <p><strong>Ability: Mavuika Rage</strong></p>
+        <ul class="feature-list">
+          <li><strong>Passive:</strong> Grants Fire Resistance.</li>
+          <li><strong>On-Hit:</strong> Sets targets on fire.</li>
+          <li><strong>Active (<span class="key-bind">V</span>):</strong> Grants the player a speed boost on land/ground. Spawns 3 autonomous fire elemental blobs that roam, setting the surroundings ablaze and damaging entities.</li>
+        </ul>
+
+        <h3><span class="element-cryo">Cryo:</span> Heimal Mandate (Sword)</h3>
+        <p><strong>Ability: Tsaritsa Blizzard</strong></p>
+        <ul class="feature-list">
+          <li><strong>Passive:</strong> Constant Frostwalker effect. Allows the player to walk and climb on Powder Snow without freezing.</li>
+          <li><strong>On-Hit:</strong> Slows enemies.</li>
+          <li><strong>Active (<span class="key-bind">V</span>):</strong> Conjures a massive blizzard that slows and blows away any enemies trapped inside.</li>
+        </ul>
+
+        <h3><span class="element-cryo">Cryo (Lunar):</span> Nocturne Curtain Call (Catalyst)</h3>
+        <p><strong>Ability: Columbina Lunar Domain</strong></p>
+        <ul class="feature-list">
+          <li><strong>Passive:</strong> Gravity resistance. The player experiences lower gravity and constant Slow Falling.</li>
+          <li><strong>On-Hit:</strong> Levitates enemies upon impact.</li>
+          <li><strong>Active (<span class="key-bind">V</span>):</strong> Projects a massive hemisphere. Any entity caught inside the dome is forced to levitate.</li>
+        </ul>
+
       </div>
     </main>
   </div>
