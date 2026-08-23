@@ -213,3 +213,21 @@ tr:hover td { background: var(--block-green-hover); }
   .card-body { padding-right: 25px; }
   .doc-grid a { padding: 16px; }
 }
+
+.weapon-media-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.weapon-media-grid .placeholder-box {
+  height: 300px;
+  margin: 0 !important;
+  box-sizing: border-box;
+}
+
+@media (max-width: 600px) {
+  .weapon-media-grid {
+    grid-template-columns: 1fr;
+  }
+}
