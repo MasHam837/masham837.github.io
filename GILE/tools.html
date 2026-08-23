@@ -3,59 +3,224 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/png" href="../assets/gile-icon.png">
   <title>Tools & Utilities — GILE Wiki</title>
   <link rel="stylesheet" href="../assets/style.css">
+  <style>
+    .key-bind {
+      display: inline-block;
+      padding: 2px 6px;
+      font-size: 0.85em;
+      font-family: monospace;
+      background: rgba(255, 255, 255, 0.1);
+      border: 1px solid var(--line);
+      border-radius: 4px;
+      color: var(--accent);
+    }
+    .tool-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 16px;
+      margin: 20px 0;
+    }
+  </style>
 </head>
 <body>
   <header class="topbar">
     <a class="brand" href="../">MasterHamster837 <span>WIKI</span></a>
     <nav>
       <a class="active" href="./"><img src="../assets/gile-icon.png" alt="GILE icon"> GILE</a>
-      <a href="https://www.curseforge.com/minecraft/mc-mods/genshin-impact-lunar-expansion"target="_blank"rel="noreferrer"style="color: #f36c21;">CurseForge ↗</a>
-      <a href="https://modrinth.com/mod/genshin-impact-lunar-expansion"  target="_blank"rel="noreferrer" style="color: #5cff4a;">Modrinth ↗</a>
+      <a href="https://www.curseforge.com/minecraft/mc-mods/genshin-impact-lunar-expansion" target="_blank" rel="noreferrer" style="color: #f36c21;">CurseForge ↗</a>
+      <a href="https://modrinth.com/mod/genshin-impact-lunar-expansion" target="_blank" rel="noreferrer" style="color: #5cff4a;">Modrinth ↗</a>
       <a href="https://github.com/MasHam837/minecraft-mods-source-codes" target="_blank" rel="noreferrer" style="color: #3388ff;">Source ↗</a>
     </nav>
-</header>
+  </header>
+
   <div class="docs-layout">
-    
     <aside class="sidebar">
       <div class="sidebar-title">GILE</div>
-      <a class="side-link active" href="./">Overview</a>
+      <a class="side-link" href="./">Overview</a>
 
       <div class="side-heading">GAMEPLAY</div>
       <a class="side-link" href="start.html">Getting Started</a>
       <a class="side-link" href="worldgen.html">World Generation</a>
       <a class="side-link" href="biomes.html">Biomes & Entities</a>
-      <a class="side-link" href="tools.html">Tools & Utilities</a>
-      <a class="side-link" href="wish.html">Wish Mechanics</a>
+      <a class="side-link active" href="tools.html">Tools & Utilities</a>
+      <a class="side-link" href="wish.html">Wishing Mechanic</a>
       <a class="side-link" href="weapons.html">Weapons</a>
 
       <div class="side-heading">DOCUMENTATION</div>
       <a class="side-link" href="installation.html">Installation</a>
       <a class="side-link" href="issues.html">Known Issues</a>
-      <a class="side-link" href="versions.html">Versions History</span></a>
+      <a class="side-link" href="versions.html">Versions History</a>
 
+      <div class="side-heading">LINKS</div>
+      <a class="side-link" href="https://www.curseforge.com/minecraft/mc-mods/genshin-impact-lunar-expansion" target="_blank" rel="noreferrer" style="color: #f36c21;">CurseForge ↗</a>
+      <a class="side-link" href="https://modrinth.com/mod/genshin-impact-lunar-expansion" target="_blank" rel="noreferrer" style="color: #5cff4a;">Modrinth ↗</a>
+      <a class="side-link" href="https://github.com/MasHam837/minecraft-mods-source-codes" target="_blank" rel="noreferrer" style="color: #3388ff;">Source ↗</a>
     </aside>
-    
+
     <main class="docs-main doc-page">
       <div class="breadcrumbs"><a href="index.html">GILE</a> / Tools & Utilities</div>
       <div class="content">
         <p class="eyebrow">GILE DOCUMENTATION</p>
         <h1>Tools & Utilities</h1>
-        <p class="lead">Different tools and utilities that can help you adventuring in your world.</p>
-        <div class="placeholder-box">
-          <strong>Template section</strong><br>
-          Replace this area with the real tools & utilities documentation. The navigation and styling are already wired up.
-        </div>
-        <h2>Coming next</h2>
-        <ul>
-          <li>Add entries, screenshots and icons.</li>
-          <li>Link recipes, items, blocks and entities to each other.</li>
-          <li>Keep version-specific information grouped by Minecraft/GILE version.</li>
+        <p class="lead">Specialized utility items, movement gear, and magical devices designed to help you navigate and survive in your world.</p>
+
+        <!-- 1. JELLY ON A STICK -->
+        <h2>1. Jelly on a Stick</h2>
+        <p>A specialized creature control tool crafted using a standard <strong>Fishing Rod</strong> and <strong>Jelly</strong> (harvested in the <a href="biomes.html">Ghostly Thickets</a> biome).</p>
+        
+        <ul class="feature-list">
+          <li><strong>Function:</strong> Allows players to mount and steer the floating <strong>Hovering Ghost</strong> entity.</li>
+          <li><strong>Repairable:</strong> Yes.</li>
         </ul>
+
+        <div class="placeholder-box">
+          <strong>[CRAFTING RECIPE PLACEHOLDER: Jelly on a Stick]</strong><br>
+          <em>Fishing Rod + Ghostly Jelly</em>
+        </div>
+
+        <hr style="border: 0; border-top: 1px solid var(--line); margin: 30px 0;">
+
+        <!-- 2. GRAPPLING HOOK -->
+        <h2>2. Grappling Hook</h2>
+        <p>A mobility tool that fires a line of rope upon right-clicking, pulling the player toward the target location.</p>
+
+        <!-- IMAGE PLACEHOLDER -->
+        <div class="placeholder-box">
+          <strong>[IMAGE / GIF PLACEHOLDER: Grappling Hook in Action]</strong><br>
+          <em>Show player pulling themselves towards a solid wall.</em>
+        </div>
+
+        <h3>Mechanics & Rules</h3>
+        <ul class="feature-list">
+          <li><strong>Base Range:</strong> 64 blocks. Targeting block must be solid and non-collidable.</li>
+          <li><strong>Texture Dynamic:</strong> Swaps textures when deployed and actively pulling.</li>
+          <li><strong>Canceling Rope:</strong> Can be canceled manually by looking straight down, sneaking, or automatically after 15 seconds as a anti-bug safety measure.</li>
+          <li><strong>Enchantments:</strong> Compatible with the <strong>Range</strong> enchantment (+16 blocks per level). Can be acquired from the Wisher villager (see <a href="wish.html">Wishing Mechanic</a>).</li>
+          <li><strong>Repairable:</strong> Yes.</li>
+        </ul>
+
+        <hr style="border: 0; border-top: 1px solid var(--line); margin: 30px 0;">
+
+        <!-- 3. SHRINKER & ENLARGER -->
+        <h2>3. Size Manipulation Wands (Shrinker & Enlarger)</h2>
+        <p>Two powerful wands capable of manipulating entity and player scales. Both share similar crafting recipes and equal durability values.</p>
+
+        <div class="tool-grid">
+          <div class="placeholder-box" style="margin: 0;">
+            <strong>[ITEM ICON: Shrinker Wand]</strong><br>
+            Reduces target size to <strong>0.20x</strong>
+          </div>
+          <div class="placeholder-box" style="margin: 0;">
+            <strong>[ITEM ICON: Enlarger Wand]</strong><br>
+            Increases target size to <strong>1.80x</strong>
+          </div>
+        </div>
+
+        <h3>Controls & Controls Mechanics</h3>
+        <table>
+          <thead>
+            <tr><th>Action</th><th>Target</th><th>Effect</th></tr>
+          </thead>
+          <tbody>
+            <tr><td><strong>Right-Click</strong></td><td>Entity (up to 32 blocks)</td><td>Applies Shrinking/Enlarging effect for 5 minutes.</td></tr>
+            <tr><td><strong>Shift + Right-Click</strong></td><td>Self</td><td>Applies Shrinking/Enlarging effect to the player for 5 minutes.</td></tr>
+            <tr><td><strong>Close Right-Click</strong></td><td>Active Target</td><td>Cancels active size effect on the target.</td></tr>
+            <tr><td><strong>Shift + RC (Looking Straight Down)</strong></td><td>Self</td><td>Cancels active size effect on the player.</td></tr>
+            <tr><td><strong>Opposite Wand Use</strong></td><td>Active Target / Self</td><td>Subtracts 5 minutes from the current active effect.</td></tr>
+          </tbody>
+        </table>
+
+        <h3>Attribute Scaling & Ability Mechanics (<span class="key-bind">V</span> Key)</h3>
+        <p>Size changes scale player attributes proportionally: Max Health, Jump Height, Speed, Block Reach, and Entity Interaction Range. Survival default effect level is <strong>Level IV</strong> (commands support alternate levels, with each level adding/subtracting 20% size).</p>
+
+        <div class="notice">
+          <strong>Special Ability Trigger (<span class="key-bind">V</span> Key):</strong>
+          <ul>
+            <li><strong>Shrink Effect Active:</strong> Pressing <span class="key-bind">V</span> toggles <strong>Infinite Invisibility</strong> (press again to disable).</li>
+            <li><strong>Enlarge Effect Active:</strong> Pressing <span class="key-bind">V</span> triggers <strong>Lunar Stomp</strong>, dealing AoE damage and applying Slowness to surrounding entities in a small radius (has cooldown).</li>
+          </ul>
+        </div>
+
+        <hr style="border: 0; border-top: 1px solid var(--line); margin: 30px 0;">
+
+        <!-- 4. HEART OF EMERGENCY -->
+        <h2>4. Heart of Emergency</h2>
+        <p>A life-saving relic that automatically safeguards you from lethal damage.</p>
+
+        <ul class="feature-list">
+          <li><strong>Trigger:</strong> Activates automatically when stored anywhere in your inventory if player health drops to <strong>25% or below</strong>.</li>
+          <li><strong>Buffs Granted:</strong> Instant Health, Regeneration, and Resistance for several seconds.</li>
+          <li><strong>Restrictions:</strong> Has an internal cooldown and does not stack.</li>
+          <li><strong>Uncraftable:</strong> Found in loot chests within <a href="worldgen.html">Ancient Ruins</a>, End Cities, or purchased from the Wisher villager (<a href="wish.html">Wish Mechanic</a>).</li>
+        </ul>
+
+        <hr style="border: 0; border-top: 1px solid var(--line); margin: 30px 0;">
+
+        <!-- 5. WARP CLOCK -->
+        <h2>5. Warp Clock</h2>
+        <p>A stackable temporal device (up to 16) used to bind and teleport to specific sign coordinates.</p>
+
+        <!-- IMAGE PLACEHOLDER -->
+        <div class="placeholder-box">
+          <strong>[IMAGE / GIF PLACEHOLDER: Bounding Sign with Warp Clock]</strong><br>
+          <em>Show tooltip reading sign text and teleporting process.</em>
+        </div>
+
+        <h3>Usage Steps</h3>
+        <ol class="feature-list">
+          <li><strong>Binding:</strong> Right-click on any standard or hanging sign. The sign text will save to the item tooltip as a warp point, displaying a confirmation message.</li>
+          <li><strong>Teleporting:</strong> Right-click anywhere else to instantly teleport to the saved sign coordinates. Consumes <strong>1 Chrono Gear</strong> per warp.</li>
+          <li><strong>Clearing Target:</strong> Shift + Right-Click on any block to clear the saved warp point.</li>
+        </ol>
+
+        <div class="notice">
+          <strong>Note:</strong> Warp Clocks operate when stacked and share the same bound warp point across the stack. Teleporting fails with an error message if you are in the wrong dimension or if the bound sign is destroyed.
+        </div>
+
+        <hr style="border: 0; border-top: 1px solid var(--line); margin: 30px 0;">
+
+        <!-- 6. NUCLEAR CANNON -->
+        <h2>6. Nuclear Cannon</h2>
+        <p>An endgame destructive ranged weapon forged using an Enderite Block obtained from lunar exploration (see <a href="worldgen.html">World Generation</a>).</p>
+
+        <ul class="feature-list">
+          <li><strong>Primary Beam:</strong> Emits a high-intensity ray that vaporizes all blocks in its immediate path (except Bedrock).</li>
+          <li><strong>Secondary Destruction:</strong> Triggers occasional explosive blasts and ignites any hit entities on fire.</li>
+          <li><strong>Repairable:</strong> Yes.</li>
+        </ul>
+
+        <div class="placeholder-box">
+          <strong>[CRAFTING RECIPE PLACEHOLDER: Nuclear Cannon]</strong><br>
+          <em>Enderite Block + Cogwork Core + late-game components.</em>
+        </div>
+
+        <hr style="border: 0; border-top: 1px solid var(--line); margin: 30px 0;">
+
+        <!-- 7. FLUTTERER & FLUTTERING ENCHANTMENT -->
+        <h2>7. Flutterer & Fluttering Enchantment</h2>
+        <p>A mobility utility that grants enhanced jump height and slow-falling glides.</p>
+
+        <h3>The Flutterer (Chest Slot Item)</h3>
+        <ul class="feature-list">
+          <li>Equipped in the chest armor slot in place of a standard chestplate.</li>
+          <li>Pressing <span class="key-bind">SPACE</span> (or custom rebindable key) performs an elevated jump slightly higher than 1 block.</li>
+          <li>Applies <strong>Slow Falling</strong> automatically while descending, accompanied by particle trail effects.</li>
+          <li><strong>Repairable:</strong> Yes.</li>
+        </ul>
+
+        <h3>Fluttering Enchantment</h3>
+        <ul class="feature-list">
+          <li>Purchased directly from the Wisher villager (<a href="wish.html">Wish Mechanic</a>).</li>
+          <li>Can be applied to <strong>any chestplate armor piece</strong>, granting the exact same jump boost, slow-falling effect, and keybind functionality while draining the armor's durability.</li>
+        </ul>
+
       </div>
     </main>
   </div>
+
   <footer>GILE Wiki · MasterHamster837 · <a href="index.html">Back to GILE</a></footer>
 </body>
 </html>
