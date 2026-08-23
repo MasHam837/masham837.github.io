@@ -2,7 +2,7 @@
 
 Welcome to the official documentation repository for **GILE (Genshin Impact: Lunar Expansion)**, a content-heavy Minecraft mod built for Fabric.
 
-🌐 **Live Wiki Website:** [https://masham837.github.io/GILE/](https://masham837.github.io/GILE/)
+🌐 **Live Wiki Website:** [https://masham837.github.io/gile/](https://masham837.github.io/gile/)
 
 ## 📖 Wiki Navigation & Pages
 - **[Getting Started](GILE/start.html):** Basic progression, early-game survival, and fundamental mechanics.
