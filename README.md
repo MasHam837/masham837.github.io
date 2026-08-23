@@ -10,7 +10,8 @@ Welcome to the official documentation repository for **GILE (Genshin Impact: Lun
 - **[Biomes & Entities](GILE/biomes.html):** Three new biomes & versatile moon flora and fauna.
 - **[Tools & Utilities](GILE/tools.html):** Traversal gear, magical clocks, compasses, and size-manipulation items.
 - **[Wish Mechanics](GILE/wish.html):** Primogems, Sigils, Wish Table, and villager trades.
-- **[Weapons & Abilities](GILE/weapons.html):** Elemental weapons, legendary artifacts, and keybind abilities.
+- **[Elemental Weapons](GILE/elemental_weapons.html):** 8 elemental weapons with corresponding keybind abilities.
+- **[Legendary Weapons](GILE/legendary_weapons.html):** Legendary weapons with more utility at higher cost.
 - **[Installation](GILE/installation.html):** Fabric loader requirements and setup steps.
 - **[Known Issues](GILE/issues.html):** Bug tracker, limitations, and version quirks.
 - **[Version History](GILE/history.html):** Changelogs and upcoming updates.
