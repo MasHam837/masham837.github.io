@@ -7,6 +7,7 @@ Welcome to the official documentation repository for **GILE (Genshin Impact: Lun
 ## 📖 Wiki Navigation & Pages
 - **[Getting Started](GILE/start.html):** Basic progression, early-game survival, and fundamental mechanics.
 - **[World Generation](GILE/worldgen.html):** Biomes, structures, ores, flora, and world entities.
+- **[Biomes & Entities](GILE/biomes.html):** Three new biomes & versatile moon flora and fauna.
 - **[Tools & Utilities](GILE/tools.html):** Traversal gear, magical clocks, compasses, and size-manipulation items.
 - **[Wish Mechanics](GILE/wish.html):** Primogems, Sigils, Wish Table, and villager trades.
 - **[Weapons & Abilities](GILE/weapons.html):** Elemental weapons, legendary artifacts, and keybind abilities.
