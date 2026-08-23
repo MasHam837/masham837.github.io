@@ -12,11 +12,11 @@
     <a class="brand" href="../">MasterHamster837 <span>WIKI</span></a>
     <nav>
       <a class="active" href="./"><img src="../assets/gile-icon.png" alt="GILE icon"> GILE</a>
-      <a href="https://www.curseforge.com/minecraft/mc-mods/genshin-impact-lunar-expansion"target="_blank"rel="noreferrer"style="color: #f36c21;">CurseForge ↗</a>
-      <a href="https://modrinth.com/mod/genshin-impact-lunar-expansion"  target="_blank"rel="noreferrer" style="color: #5cff4a;">Modrinth ↗</a>
+      <a href="https://www.curseforge.com/minecraft/mc-mods/genshin-impact-lunar-expansion" target="_blank" rel="noreferrer" style="color: #f36c21;">CurseForge ↗</a>
+      <a href="https://modrinth.com/mod/genshin-impact-lunar-expansion" target="_blank" rel="noreferrer" style="color: #5cff4a;">Modrinth ↗</a>
       <a href="https://github.com/MasHam837/minecraft-mods-source-codes" target="_blank" rel="noreferrer" style="color: #3388ff;">Source ↗</a>
     </nav>
-</header>
+  </header>
   <div class="docs-layout">
     
     <aside class="sidebar">
@@ -35,13 +35,12 @@
       <div class="side-heading">DOCUMENTATION</div>
       <a class="side-link active" href="installation.html">Installation</a>
       <a class="side-link" href="issues.html">Known Issues</a>
-      <a class="side-link" href="versions.html">Versions History</span></a>
+      <a class="side-link" href="versions.html">Versions History</a>
 
       <div class="side-heading">LINKS</div>
       <a class="side-link" href="https://www.curseforge.com/minecraft/mc-mods/genshin-impact-lunar-expansion" target="_blank" rel="noreferrer" style="color: #f36c21;">CurseForge ↗</a>
-      <a class="side-link" href="https://modrinth.com/mod/genshin-impact-lunar-expansion"  target="_blank" rel="noreferrer" style="color: #5cff4a;">Modrinth ↗</a>
+      <a class="side-link" href="https://modrinth.com/mod/genshin-impact-lunar-expansion" target="_blank" rel="noreferrer" style="color: #5cff4a;">Modrinth ↗</a>
       <a class="side-link" href="https://github.com/MasHam837/minecraft-mods-source-codes" target="_blank" rel="noreferrer" style="color: #3388ff;">Source ↗</a>
-
     </aside>
     
     <main class="docs-main doc-page">
@@ -49,17 +48,56 @@
       <div class="content">
         <p class="eyebrow">GILE DOCUMENTATION</p>
         <h1>Installation</h1>
-        <p class="lead">Requirements and step-by-step instructions for installing GILE.</p>
-        <div class="placeholder-box">
-          <strong>Template section</strong><br>
-          Replace this area with the real installation documentation. The navigation and styling are already wired up.
+        <p class="lead">Requirements and step-by-step instructions for installing GILE on Fabric.</p>
+
+        <h2>1. Minimum Requirements</h2>
+        <p>GILE strictly requires the <strong>Fabric Loader</strong> and the <strong>Fabric API</strong>. Please ensure you are matching your mod version with the exact dependencies listed below.</p>
+        
+        <table>
+          <thead>
+            <tr>
+              <th>GILE Version</th>
+              <th>Minecraft Version</th>
+              <th>Fabric Loader</th>
+              <th>Fabric API</th>
+              <th>Java Version</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>1.0.0 Release</strong></td>
+              <td>~26.1</td>
+              <td>&gt;= 0.19.3</td>
+              <td>0.145.1+26.1</td>
+              <td>Java 25+</td>
+            </tr>
+            <tr>
+              <td><strong>0.1.5 Beta</strong></td>
+              <td>~1.21.1</td>
+              <td>&gt;= 0.19.2</td>
+              <td>0.116.11+1.21.1</td>
+              <td>Java 21+</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <div style="background: rgba(255,0,0,0.1); border-left: 4px solid #ff4a4a; padding: 15px; margin: 20px 0;">
+          <strong>Warning:</strong> GILE will <em>not</em> function without the correct version of the <strong>Fabric API</strong> present in your mods folder!
         </div>
-        <h2>Coming next</h2>
-        <ul>
-          <li>Add entries, screenshots and icons.</li>
-          <li>Link recipes, items, blocks and entities to each other.</li>
-          <li>Keep version-specific information grouped by Minecraft/GILE version.</li>
-        </ul>
+
+        <h2>2. Installation Guide</h2>
+        <div class="placeholder-box">
+          <strong>[IMAGE PLACEHOLDER: Folder Structure / Mod Folder screenshot]</strong>
+        </div>
+        
+        <ol>
+          <li><strong>Install Fabric:</strong> Download and run the <a href="https://fabricmc.net/use/installer/" target="_blank">Fabric Installer</a> for your targeted Minecraft version (Client).</li>
+          <li><strong>Download Fabric API:</strong> Fetch the matching version of the <a href="https://modrinth.com/mod/fabric-api" target="_blank">Fabric API</a>.</li>
+          <li><strong>Download GILE:</strong> Download the `.jar` file for Genshin Impact: Lunar Expansion from <a href="https://www.curseforge.com/minecraft/mc-mods/genshin-impact-lunar-expansion" target="_blank">CurseForge</a> or <a href="https://modrinth.com/mod/genshin-impact-lunar-expansion" target="_blank">Modrinth</a>.</li>
+          <li><strong>Place the Mods:</strong> Navigate to your `.minecraft/mods` folder (create it if it doesn't exist) and drop both the <em>Fabric API</em> `.jar` and the <em>GILE</em> `.jar` inside.</li>
+          <li><strong>Launch:</strong> Open the Minecraft Launcher, select the Fabric profile, and click Play!</li>
+        </ol>
+
       </div>
     </main>
   </div>
