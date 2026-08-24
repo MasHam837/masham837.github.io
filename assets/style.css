@@ -1,38 +1,38 @@
 :root {
-  /* True Blue Backgrounds */
-  --bg: #001233;
-  --bg-deep: #000a1f;
-  --panel: #002255;
-  --panel-2: #003377;
-  --panel-dark: #00163b;
-  --line: #003d99;
-  --line-soft: #002e7a;
-  --line-hover: #0055cc;
+  /* Calm Deep Blue Backgrounds */
+  --bg: #0b1628;
+  --bg-deep: #07101e;
+  --panel: #12243b;
+  --panel-2: #18304d;
+  --panel-dark: #0d1c30;
+  --line: #284765;
+  --line-soft: #203b57;
+  --line-hover: #3d6385;
 
-  /* White Main Text */
-  --text: #ffffff;
-  --muted: #d1d5db;
-  --muted-dark: #9ca3af;
+  /* Softer Main Text */
+  --text: #e8edf2;
+  --muted: #b7c2ce;
+  --muted-dark: #8492a1;
 
-  /* Accent Colors */
-  --accent: #3388ff;
-  --accent-2: #33ccff;
+  /* Calm Blue Accents */
+  --accent: #78a9d6;
+  --accent-2: #8fc4cf;
   
-  /* Vibrant Green for Blocks (Lists & Tables) */
-  --block-green: #00ff55;
-  --block-green-bg: rgba(0, 255, 85, 0.12);
-  --block-green-hover: rgba(0, 255, 85, 0.2);
-  --good: #00ff55;
+  /* Soft Sage Green for Blocks */
+  --block-green: #8fc6a3;
+  --block-green-bg: rgba(143, 198, 163, 0.10);
+  --block-green-hover: rgba(143, 198, 163, 0.16);
+  --good: #8fc6a3;
 
-  /* Ochre Warnings */
-  --warning: #cc8800; 
+  /* Pale Ochre Warnings */
+  --warning: #d6b56a;
 
   /* Transparent BG references */
-  --accent-bg: rgba(51, 136, 255, 0.1);
-  --accent-bg-strong: rgba(51, 136, 255, 0.18);
-  --cyan-bg: rgba(51, 204, 255, 0.1);
-  --green-bg: rgba(0, 255, 85, 0.1);
-  --warning-bg: rgba(204, 136, 0, 0.15);
+  --accent-bg: rgba(120, 169, 214, 0.10);
+  --accent-bg-strong: rgba(120, 169, 214, 0.16);
+  --cyan-bg: rgba(143, 196, 207, 0.10);
+  --green-bg: rgba(143, 198, 163, 0.09);
+  --warning-bg: rgba(214, 181, 106, 0.12);
   
   --max: 1180px;
 }
