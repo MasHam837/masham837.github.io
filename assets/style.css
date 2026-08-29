@@ -162,6 +162,15 @@ footer a:hover { color: var(--accent-2); }
   background: var(--block-green-bg); 
 }
 
+.item-texture {
+  width: 128px;
+  height: 128px;
+  object-fit: contain;
+  image-rendering: pixelated;
+  display: block;
+  margin: 20px auto;
+}
+
 table { width: 100%; border-collapse: collapse; margin: 20px 0; }
 th, td { padding: 10px 12px; border: 1px solid var(--block-green); text-align: left; }
 th { background: rgba(0, 255, 85, 0.25); color: var(--text); font-weight: bold; }
