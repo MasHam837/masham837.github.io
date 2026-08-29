@@ -162,13 +162,28 @@ footer a:hover { color: var(--accent-2); }
   background: var(--block-green-bg); 
 }
 
-.item-texture {
-  width: 128px;
-  height: 128px;
+.item-preview {
+  width: 160px;
+  padding: 18px;
+  margin: 20px 0;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: var(--accent-bg);
+  text-align: center;
+}
+
+.item-preview img {
+  width: 96px;
+  height: 96px;
   object-fit: contain;
   image-rendering: pixelated;
   display: block;
-  margin: 20px auto;
+  margin: 0 auto 10px;
+}
+
+.item-preview span {
+  color: var(--muted);
+  font-size: 13px;
 }
 
 table { width: 100%; border-collapse: collapse; margin: 20px 0; }
