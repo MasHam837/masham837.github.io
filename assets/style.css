@@ -181,8 +181,8 @@ footer a:hover { color: var(--accent-2); }
 }
 
 .item-showcase-image img {
-  width: 380px;
-  height: 190px;
+  width: 128px;
+  height: 128px;
   object-fit: contain;
   image-rendering: pixelated;
 }
