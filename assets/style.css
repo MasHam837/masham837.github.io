@@ -162,30 +162,6 @@ footer a:hover { color: var(--accent-2); }
   background: var(--block-green-bg); 
 }
 
-.item-preview {
-  width: 160px;
-  padding: 18px;
-  margin: 20px 0;
-  border: 1px solid var(--line);
-  border-radius: 12px;
-  background: var(--accent-bg);
-  text-align: center;
-}
-
-.item-preview img {
-  width: 96px;
-  height: 96px;
-  object-fit: contain;
-  image-rendering: pixelated;
-  display: block;
-  margin: 0 auto 10px;
-}
-
-.item-preview span {
-  color: var(--muted);
-  font-size: 13px;
-}
-
 .item-showcase {
   display: grid;
   grid-template-columns: 180px minmax(0, 1fr);
