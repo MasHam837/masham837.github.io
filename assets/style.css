@@ -245,7 +245,7 @@ footer a:hover { color: var(--accent-2); }
 }
 
 @font-face {
-  font-family: "Minecraft";
+  font-family: "Monocraft";
   src: url("../fonts/Monocraft.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
