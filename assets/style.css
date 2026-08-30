@@ -175,9 +175,11 @@ footer a:hover { color: var(--accent-2); }
 
 .item-showcase-image {
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   min-height: 180px;
+  gap: 4px;
 }
 
 .item-showcase-image img {
