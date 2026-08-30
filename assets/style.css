@@ -246,7 +246,7 @@ footer a:hover { color: var(--accent-2); }
 
 @font-face {
   font-family: "Minecraft";
-  src: url("fonts/minecraft.ttf") format("truetype");
+  src: url("../fonts/Monocraft.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
   font-display: swap;
@@ -266,27 +266,8 @@ footer a:hover { color: var(--accent-2); }
 
 /* Minecraft item tooltip name */
 .recipe span {
-  display: block;
-  padding: 6px 8px;
-  margin: 0;
-
-  background: #10001f;
-  border: 2px solid #3f2750;
-
-  color: #ffffff;
-
-  font-family: "Minecraft", monospace;
-  font-size: 14px;
-  line-height: 1.3;
-
-  white-space: nowrap;
-
-  box-shadow:
-    3px 3px 0 #000000,
-    inset 2px 2px 0 rgba(255, 255, 255, 0.12),
-    inset -2px -2px 0 rgba(0, 0, 0, 0.45);
+  font-family: "Monocraft", monospace;
 }
-
 
 /* Yellow notice-style description */
 .item-showcase-section:first-child {
