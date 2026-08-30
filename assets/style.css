@@ -189,6 +189,33 @@ footer a:hover { color: var(--accent-2); }
   image-rendering: pixelated;
 }
 
+/* Minecraft tooltip name underneath the item */
+.item-showcase-image::after {
+  content: attr(data-item-name);
+  display: block;
+
+  padding: 6px 8px;
+
+  background: #10001f;
+  border: 2px solid #3f2750;
+
+  color: #ffffff;
+
+  font-family: monospace;
+  font-size: 13px;
+  font-weight: bold;
+  line-height: 1.2;
+
+  white-space: nowrap;
+
+  image-rendering: pixelated;
+
+  box-shadow:
+    3px 3px 0 #000000,
+    inset 2px 2px 0 rgba(255, 255, 255, 0.12),
+    inset -2px -2px 0 rgba(0, 0, 0, 0.45);
+}
+
 .item-showcase-info {
   display: flex;
   flex-direction: column;
