@@ -206,12 +206,36 @@ footer a:hover { color: var(--accent-2); }
   margin-bottom: 6px;
 }
 
+.item-showcase-section:first-child {
+  border-color: var(--warning);
+  background: var(--warning-bg);
+}
+
+.item-showcase-section:first-child strong {
+  color: var(--warning);
+}
+
 .recipe {
   display: inline-flex;
-  align-items: center;
-  gap: 8px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0;
   font-family: monospace;
-  color: var(--text);
+}
+
+.recipe span {
+  display: block;
+  padding: 5px 8px;
+  background: #10001f;
+  border: 2px solid #3f2750;
+  color: #ffffff;
+  font-family: monospace;
+  font-size: 14px;
+  line-height: 1.2;
+  white-space: nowrap;
+  box-shadow:
+    inset 1px 1px 0 rgba(255, 255, 255, 0.15),
+    inset -1px -1px 0 rgba(0, 0, 0, 0.5);
 }
 
 @media (max-width: 600px) {
