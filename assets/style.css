@@ -252,6 +252,10 @@ footer a:hover { color: var(--accent-2); }
   font-display: swap;
 }
 
+.item-showcase-image::after {
+  font-family: "Minecraft", monospace;
+}
+
 /* Minecraft-style crafting recipe */
 .recipe {
   display: inline-flex;
