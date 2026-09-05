@@ -289,6 +289,518 @@ footer a:hover { color: var(--accent-2); }
   }
 }
 
+/* =========================================================
+   ENTITY SHOWCASE
+   Minecraft / Pokémon / Bakugan inspired entity card
+   ========================================================= */
+
+.entity-showcase {
+  position: relative;
+  display: grid;
+  grid-template-columns: 280px minmax(0, 1fr);
+  gap: 0;
+  margin: 30px 0;
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  overflow: hidden;
+
+  background:
+    radial-gradient(
+      circle at 18% 20%,
+      rgba(120, 169, 214, 0.12),
+      transparent 220px
+    ),
+    linear-gradient(
+      145deg,
+      rgba(0, 34, 85, 0.96),
+      rgba(7, 16, 30, 0.98)
+    );
+
+  box-shadow:
+    0 12px 30px rgba(0, 0, 0, 0.25),
+    inset 0 1px 0 rgba(255, 255, 255, 0.04);
+}
+
+/* Thin decorative line at the top of the card */
+.entity-showcase::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(
+    90deg,
+    var(--accent),
+    var(--accent-2),
+    var(--block-green)
+  );
+}
+
+
+/* =========================================================
+   ENTITY ART / LEFT SIDE
+   ========================================================= */
+
+.entity-showcase-image {
+  min-height: 390px;
+  padding: 28px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  border-right: 1px solid var(--line);
+
+  background:
+    radial-gradient(
+      circle at center,
+      rgba(120, 169, 214, 0.13),
+      transparent 65%
+    ),
+    rgba(7, 16, 30, 0.42);
+}
+
+.entity-showcase-image img {
+  width: 220px;
+  height: 220px;
+
+  object-fit: contain;
+  image-rendering: pixelated;
+
+  filter:
+    drop-shadow(0 8px 10px rgba(0, 0, 0, 0.55))
+    drop-shadow(0 0 18px rgba(120, 169, 214, 0.12));
+}
+
+
+/* =========================================================
+   ENTITY NAME / HEADER
+   ========================================================= */
+
+.entity-showcase-name {
+  width: 100%;
+  margin-top: 18px;
+
+  text-align: center;
+
+  font-family: "Monocraft", monospace;
+  font-size: 20px;
+  font-weight: bold;
+  letter-spacing: -0.02em;
+
+  color: var(--text);
+}
+
+.entity-showcase-type {
+  margin-top: 5px;
+
+  color: var(--accent);
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+
+/* =========================================================
+   RIGHT SIDE
+   ========================================================= */
+
+.entity-showcase-info {
+  min-width: 0;
+  padding: 26px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+
+/* =========================================================
+   ENTITY HEADER
+   ========================================================= */
+
+.entity-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 20px;
+
+  padding-bottom: 14px;
+
+  border-bottom: 1px solid var(--line);
+}
+
+.entity-header-title {
+  min-width: 0;
+}
+
+.entity-header-title h3 {
+  margin: 0;
+
+  font-size: 28px;
+  line-height: 1.1;
+  letter-spacing: -0.025em;
+}
+
+.entity-header-title span {
+  display: block;
+  margin-top: 5px;
+
+  color: var(--muted);
+  font-size: 12px;
+}
+
+
+/* =========================================================
+   HEALTH
+   ========================================================= */
+
+.entity-health {
+  flex: 0 0 auto;
+
+  padding: 9px 12px;
+
+  border: 1px solid var(--line);
+  border-radius: 9px;
+
+  background: rgba(0, 0, 0, 0.22);
+
+  white-space: nowrap;
+}
+
+.entity-health-label {
+  display: block;
+
+  margin-bottom: 5px;
+
+  color: var(--muted-dark);
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.entity-hearts {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2px;
+  align-items: center;
+}
+
+.entity-heart {
+  width: 18px;
+  height: 18px;
+
+  object-fit: contain;
+
+  image-rendering: pixelated;
+}
+
+.entity-health-number {
+  margin-left: 6px;
+
+  color: var(--text);
+  font-family: "Monocraft", monospace;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+
+/* =========================================================
+   STAT BADGES
+   ========================================================= */
+
+.entity-stats {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+}
+
+.entity-stat {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+
+  padding: 5px 9px;
+
+  border: 1px solid var(--line);
+  border-radius: 7px;
+
+  background: rgba(0, 34, 85, 0.35);
+
+  color: var(--muted);
+  font-size: 11px;
+}
+
+.entity-stat strong {
+  color: var(--accent);
+  font-size: 10px;
+  letter-spacing: 0.05em;
+}
+
+
+/* =========================================================
+   INFORMATION BOXES
+   ========================================================= */
+
+.entity-info-box {
+  padding: 14px;
+
+  border: 1px solid var(--line);
+  border-radius: 9px;
+
+  background: rgba(0, 34, 85, 0.32);
+}
+
+.entity-info-box strong {
+  display: block;
+
+  margin-bottom: 6px;
+
+  color: var(--accent);
+
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.entity-info-box p {
+  margin: 0;
+  color: var(--muted);
+}
+
+
+/* Spawning box */
+.entity-info-box.spawning {
+  border-color: var(--block-green);
+  background: var(--block-green-bg);
+}
+
+.entity-info-box.spawning strong {
+  color: var(--block-green);
+}
+
+
+/* Behaviour box */
+.entity-info-box.behaviour {
+  border-color: var(--accent-2);
+  background: var(--cyan-bg);
+}
+
+.entity-info-box.behaviour strong {
+  color: var(--accent-2);
+}
+
+
+/* Combat box */
+.entity-info-box.combat {
+  border-color: var(--warning);
+  background: var(--warning-bg);
+}
+
+.entity-info-box.combat strong {
+  color: var(--warning);
+}
+
+
+/* =========================================================
+   DROPS
+   ========================================================= */
+
+.entity-drops {
+  padding: 14px;
+
+  border: 1px solid var(--line);
+  border-radius: 9px;
+
+  background: rgba(0, 34, 85, 0.28);
+}
+
+.entity-drops-title {
+  margin-bottom: 10px;
+
+  color: var(--accent);
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.entity-drops-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+
+/* Individual dropped item */
+.entity-drop {
+  position: relative;
+
+  width: 64px;
+  min-height: 76px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 3px;
+
+  padding: 6px;
+
+  border: 1px solid var(--line);
+  border-radius: 7px;
+
+  background: rgba(7, 16, 30, 0.65);
+
+  transition:
+    transform 0.15s ease,
+    border-color 0.15s ease,
+    background 0.15s ease;
+}
+
+.entity-drop:hover {
+  transform: translateY(-3px);
+
+  border-color: var(--line-hover);
+
+  background: rgba(24, 48, 77, 0.8);
+}
+
+.entity-drop img {
+  width: 40px;
+  height: 40px;
+
+  object-fit: contain;
+  image-rendering: pixelated;
+}
+
+.entity-drop-name {
+  max-width: 58px;
+
+  overflow: hidden;
+
+  color: var(--muted);
+
+  font-family: "Monocraft", monospace;
+  font-size: 7px;
+  line-height: 1.2;
+
+  text-align: center;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+
+/* Drop quantity badge */
+.entity-drop-amount {
+  position: absolute;
+  right: 3px;
+  bottom: 3px;
+
+  min-width: 15px;
+  height: 15px;
+
+  padding: 1px 3px;
+
+  display: grid;
+  place-items: center;
+
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 3px;
+
+  background: #10001f;
+
+  color: #ffffff;
+
+  font-family: "Monocraft", monospace;
+  font-size: 8px;
+  font-weight: bold;
+
+  box-shadow: 2px 2px 0 #000000;
+}
+
+
+/* =========================================================
+   SMALL CARD LABEL
+   ========================================================= */
+
+.entity-label {
+  display: inline-block;
+
+  padding: 3px 7px;
+
+  border: 1px solid var(--line);
+  border-radius: 999px;
+
+  color: var(--muted);
+
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 800px) {
+  .entity-showcase {
+    grid-template-columns: 1fr;
+  }
+
+  .entity-showcase-image {
+    min-height: 320px;
+
+    border-right: none;
+    border-bottom: 1px solid var(--line);
+  }
+
+  .entity-showcase-image img {
+    width: 190px;
+    height: 190px;
+  }
+
+  .entity-showcase-info {
+    padding: 20px;
+  }
+}
+
+
+@media (max-width: 480px) {
+  .entity-showcase-image {
+    min-height: 270px;
+    padding: 20px;
+  }
+
+  .entity-showcase-image img {
+    width: 160px;
+    height: 160px;
+  }
+
+  .entity-header {
+    flex-direction: column;
+  }
+
+  .entity-health {
+    width: 100%;
+  }
+
+  .entity-showcase-info {
+    padding: 16px;
+  }
+
+  .entity-header-title h3 {
+    font-size: 24px;
+  }
+}
+
 table { width: 100%; border-collapse: collapse; margin: 20px 0; }
 th, td { padding: 10px 12px; border: 1px solid var(--block-green); text-align: left; }
 th { background: rgba(0, 255, 85, 0.25); color: var(--text); font-weight: bold; }
