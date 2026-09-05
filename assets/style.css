@@ -203,7 +203,7 @@ footer a:hover { color: var(--accent-2); }
 
   font-family: monospace;
   font-size: 13px;
-  font-weight: bold;
+  font-weight: normal;
   line-height: 1.2;
 
   white-space: nowrap;
