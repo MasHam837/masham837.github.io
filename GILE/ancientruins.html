@@ -103,6 +103,90 @@
         <h2>2. The Ruin Guard (Mini-Boss)</h2>
         <p>The central arena of the Ancient Ruins houses the <strong>Ruin Guard</strong>. This formidable mechanical foe adapts its attacks based on how far away you are.</p>
         
+        <!-- Ruin Guard Entity Showcase-->
+<div class="entity-showcase">
+  <!-- ENTITY ART -->
+  <div class="entity-showcase-image">
+    <img src="images/entities/ruin_guard.png" alt="Ruin Guard Entity Model">
+    <div class="entity-showcase-name">Ruin Guard</div>
+    <div class="entity-showcase-type">Mini Boss</div>
+  </div>
+  <!-- ENTITY INFORMATION -->
+  <div class="entity-showcase-info">
+    <!-- HEADER -->
+    <div class="entity-header">
+      <div class="entity-header-title">
+        <h3>Ruin Guard</h3>
+        <span>Mini Boss · Hostile · Overworld</span>
+      </div>
+      <!-- HEALTH -->
+      <div class="entity-health">
+        <span class="entity-health-label">Health</span>
+        <div class="entity-hearts">
+          <img class="entity-heart" src="../assets/ui/heart_full.png" alt="1 heart">
+          <img class="entity-heart" src="../assets/heart_full.png" alt="1 heart">
+          <img class="entity-heart" src="../assets/ui/heart_full.png" alt="1 heart">
+          <img class="entity-heart" src="../assets/ui/heart_full.png" alt="1 heart">
+          <img class="entity-heart" src="../assets/ui/heart_full.png" alt="1 heart">
+          <img class="entity-heart" src="../assets/ui/heart_full.png" alt="1 heart">
+          <span class="entity-health-number">200 ♥</span>
+        </div>
+      </div>
+    </div>
+    <!-- QUICK STATS -->
+    <div class="entity-stats">
+      <div class="entity-stat"><strong>ATTACK</strong>15</div>
+      <div class="entity-stat"><strong>SPEED</strong>0.25</div>
+      <div class="entity-stat"><strong>KNOCKBACK RESISTANCE</strong>1</div>
+      <div class="entity-stat"><strong>ARMOR</strong>10</div>
+      <div class="entity-stat"><strong>ARMOR TOUGHNESS</strong>4</div>
+      <div class="entity-stat"><strong>XP</strong>???</div>
+    </div>
+    <!-- SPAWNING -->
+    <div class="entity-info-box spawning">
+      <strong>Spawning</strong>
+      <p>
+        Spawns exactly once on Ancient Ruins Generation.
+      </p>
+    </div>
+    <!-- BEHAVIOUR -->
+    <div class="entity-info-box behaviour">
+      <strong>Behaviour</strong>
+      <p>
+        Have three types of attack: Melee, Ranged & Rotation.
+        When does not have target or when chases it, Ruin Guard walks or can randomly use
+        its Rotation attack, that deals a huge knockback. Deals 10 damage on contact.
+      </p>
+    </div>
+    <!-- COMBAT -->
+    <div class="entity-info-box combat">
+      <strong>Combat</strong>
+      <p>
+        Melee is used on close distance to the target, consist of 5 consecutive hits with 15 damage each.
+        Ranged makes it shoot 6 following player rockets. Each one explodes and deals 6 damage.
+      </p>
+    </div>
+    <!-- DROPS -->
+    <div class="entity-drops">
+      <div class="entity-drops-title">Drops</div>
+      <div class="entity-drops-list">
+        <!-- DROP 1 -->
+        <div class="entity-drop">
+          <img src="images/textures/cogwork_core.png" alt="Cogwork Core">
+          <span class="entity-drop-name">Cogwork Core</span>
+          <span class="entity-drop-amount">1</span>
+        </div>
+        <!-- DROP 2 -->
+        <div class="entity-drop">
+          <img src="images/textures/primogem.png" alt="Primogem">
+          <span class="entity-drop-name">Primogem</span>
+          <span class="entity-drop-amount">10-20</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+        
         <div class="boss-stats">
           <span class="badge badge-green">Health: 400 HP (200 Hearts)</span>
           <span class="badge badge-green">Damage: 15 HP/hit Melee, ~6 HP/rocket Ranged</span>
