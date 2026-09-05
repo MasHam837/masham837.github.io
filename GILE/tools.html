@@ -68,19 +68,53 @@
         <h1>Tools & Utilities</h1>
         <p class="lead">Specialized utility items, movement gear, and magical devices designed to help you navigate and survive in your world.</p>
 
-        <!-- 1. JELLY ON A STICK -->
-        <h2>1. Jelly on a Stick</h2>
-        <p>A specialized creature control tool crafted using a standard <strong>Fishing Rod</strong> and <strong>Jelly</strong> (harvested in the <a href="biomes.html">Ghostly Thickets</a> biome).</p>
+        <!-- 1. FLUTTERER & FLUTTERING ENCHANTMENT -->
+        <h2>1. Flutterer & Fluttering Enchantment</h2>
+        <p>A mobility utility that grants enhanced jump height and slow-falling "glides".</p>
+
+        <!-- GIF PLACEHOLDER -->
+        <div>
+          <img src="images/gifs/flutterer.gif"
+               alt="Flutterer"
+               style="width: 100%; border-radius: 8px;">
+            <strong>Flutterer</strong>
+          <span> Flutterer lifting and slow falling abilities demonstration.</span>
+        </div>
+
+        <!-- PLACEHOLDER ABOUT WARP CLOCK -->
+      <div class="item-showcase">
+        <div class="item-showcase-image" data-item-name="Flutterer">
+          <img src="images/textures/flutterer.png" alt="Flutterer Texture">
+        </div>
+      <div class="item-showcase-info">
+    <div class="item-showcase-section">
+      <strong>Description</strong>
+      <p> Flutterer has ??? durability. Consumes it on every ability use. Ability key is SPACE by default, but can be configured.</p>
+    </div>
+    <div class="item-showcase-section">
+      <strong>Crafting Recipe</strong>
+      <div class="recipe">
+        <img src="images/recipes/flutterer.png"
+          alt="Flutterer crafting recipe"
+          style="width: 380px; height: 190px; image-rendering: pixelated;">
+            </div>
+          </div>
+        </div>
+      </div>
         
+        <h3>The Flutterer (Chest Slot Item)</h3>
         <ul class="feature-list">
-          <li><strong>Function:</strong> Allows players to mount and steer the floating <strong>Hovering Ghost</strong> entity.</li>
+          <li>Equipped in the chest armor slot in place of a standard chestplate.</li>
+          <li>Pressing <span class="key-bind">SPACE</span> (or custom rebindable key) performs an elevated jump slightly higher than 1 block.</li>
+          <li>Applies <strong>Slow Falling</strong> automatically while descending, accompanied by particle trail effects.</li>
           <li><strong>Repairable:</strong> Yes.</li>
         </ul>
 
-        <div class="placeholder-box">
-          <strong>[CRAFTING RECIPE PLACEHOLDER: Jelly on a Stick]</strong><br>
-          <em>Fishing Rod + Ghostly Jelly</em>
-        </div>
+        <h3>Fluttering Enchantment</h3>
+        <ul class="feature-list">
+          <li>Purchased directly from the Wisher villager (<a href="wish.html">Wish Mechanic</a>).</li>
+          <li>Can be applied to <strong>any chestplate armor piece</strong>, granting the exact same jump boost, slow-falling effect, and keybind functionality while draining the armor's durability.</li>
+        </ul>
 
         <hr style="border: 0; border-top: 1px solid var(--line); margin: 30px 0;">
 
@@ -88,15 +122,40 @@
         <h2>2. Grappling Hook</h2>
         <p>A mobility tool that fires a line of rope upon right-clicking, pulling the player toward the target location.</p>
 
-        <!-- IMAGE PLACEHOLDER -->
-        <div class="placeholder-box">
-          <strong>[IMAGE / GIF PLACEHOLDER: Grappling Hook in Action]</strong><br>
-          <em>Show player pulling themselves towards a solid wall.</em>
+        <!-- GIF PLACEHOLDER -->
+        <div>
+          <img src="images/gifs/grappling_hook.gif"
+               alt="Grappling Hook Use"
+               style="width: 100%; border-radius: 8px;">
+            <strong>Grappling Hook Use</strong>
+          <span>Player pulling using a grappling hook.</span>
         </div>
 
+<!-- PLACEHOLDER ABOUT GRAPPLING HOOK -->
+      <div class="item-showcase">
+        <div class="item-showcase-image" data-item-name="Grappling Hook">
+          <img src="images/textures/grappling_hook.png" alt="Grappling Hook Item Texture">
+        </div>
+      <div class="item-showcase-info">
+    <div class="item-showcase-section">
+      <strong>Description</strong>
+      <p> Grappling Hook can really simplify your travelling. Especially in a mountain region or in The End dimension. Has ??? durability.
+          Default range is 32 blocks. Range enchantment can be used to increase it by 16 blocks per level.</p>
+    </div>
+    <div class="item-showcase-section">
+      <strong>Crafting Recipe</strong>
+      <div class="recipe">
+        <img src="images/recipes/grappling_hook.png"
+          alt="Grappling Hook crafting recipe"
+          style="width: 380px; height: 190px; image-rendering: pixelated;">
+            </div>
+          </div>
+        </div>
+      </div>
+        
         <h3>Mechanics & Rules</h3>
         <ul class="feature-list">
-          <li><strong>Base Range:</strong> 64 blocks. Targeting block must be solid and non-collidable.</li>
+          <li><strong>Base Range:</strong> 32 blocks. Targeting block must be solid and non-collidable.</li>
           <li><strong>Texture Dynamic:</strong> Swaps textures when deployed and actively pulling.</li>
           <li><strong>Canceling Rope:</strong> Can be canceled manually by looking straight down, sneaking, or automatically after 15 seconds as a anti-bug safety measure.</li>
           <li><strong>Enchantments:</strong> Compatible with the <strong>Range</strong> enchantment (+16 blocks per level). Can be acquired from the Wisher villager (see <a href="wish.html">Wishing Mechanic</a>).</li>
@@ -105,20 +164,107 @@
 
         <hr style="border: 0; border-top: 1px solid var(--line); margin: 30px 0;">
 
-        <!-- 3. SHRINKER & ENLARGER -->
-        <h2>3. Size Manipulation Wands (Shrinker & Enlarger)</h2>
-        <p>Two powerful wands capable of manipulating entity and player scales. Both share similar crafting recipes and equal durability values.</p>
+        <!-- 3. HEART OF EMERGENCY -->
+        <h2>3. Heart of Emergency</h2>
+        <p>A life-saving relic that automatically safeguards you from lethal damage.</p>
 
-        <div class="tool-grid">
-          <div class="placeholder-box" style="margin: 0;">
-            <strong>[ITEM ICON: Shrinker Wand]</strong><br>
-            Reduces target size to <strong>0.20x</strong>
-          </div>
-          <div class="placeholder-box" style="margin: 0;">
-            <strong>[ITEM ICON: Enlarger Wand]</strong><br>
-            Increases target size to <strong>1.80x</strong>
+        <!-- GIF PLACEHOLDER -->
+        <div>
+          <img src="images/gifs/heart_of_emergency.gif"
+               alt="Heart Of Emergency"
+               style="width: 100%; border-radius: 8px;">
+            <strong>Heart of Emergency</strong>
+          <span> Heart of Emergency saves player on critical HP.</span>
+        </div>
+        
+        <ul class="feature-list">
+          <li><strong>Trigger:</strong> Activates automatically when stored anywhere in your inventory if player health drops to <strong>25% or below</strong>.</li>
+          <li><strong>Buffs Granted:</strong> Instant Health, Regeneration, and Resistance for several seconds.</li>
+          <li><strong>Restrictions:</strong> Has an internal cooldown and does not stack.</li>
+          <li><strong>Uncraftable:</strong> Found in loot chests within <a href="ancientruins.html">Ancient Ruins</a>, End Cities, or purchased from the Wisher villager (<a href="wish.html">Wish Mechanic</a>).</li>
+        </ul>
+
+        <hr style="border: 0; border-top: 1px solid var(--line); margin: 30px 0;">
+        
+        <!-- 4. JELLY ON A STICK -->
+        <h2>4. Jelly on a Stick</h2>
+        <p>A specialized creature control tool crafted using a standard <strong>Fishing Rod</strong> and <strong>Jelly</strong> (harvested in the <a href="biomes.html">Ghostly Thickets</a> biome).</p>
+        
+        <ul class="feature-list">
+          <li><strong>Function:</strong> Allows players to mount and steer the floating <strong>Hovering Ghost</strong> entity.</li>
+          <li><strong>Repairable:</strong> Yes.</li>
+        </ul>
+
+        <!-- PLACEHOLDER ABOUT JELLY ON A STICK -->
+      <div class="item-showcase">
+        <div class="item-showcase-image" data-item-name="Jelly on a Stick">
+          <img src="images/textures/jelly_on_a_stick.png" alt="Jelly on a Stick Item Texture">
+        </div>
+      <div class="item-showcase-info">
+    <div class="item-showcase-section">
+      <strong>Description</strong>
+      <p> Jelly on a Stick is used to control Hovering Ghost riding it. Has ??? durability, is enough to be used ??? times.</p>
+    </div>
+    <div class="item-showcase-section">
+      <strong>Crafting Recipe</strong>
+      <div class="recipe">
+        <img src="images/recipes/jelly_on_a_stick.png"
+          alt="Jelly on a Stick crafting recipe"
+          style="width: 380px; height: 190px; image-rendering: pixelated;">
+            </div>
           </div>
         </div>
+      </div>
+
+        <hr style="border: 0; border-top: 1px solid var(--line); margin: 30px 0;">
+        
+        <!-- 5. SHRINKER & ENLARGER -->
+        <h2>5. Size Manipulation Wands (Shrinker & Enlarger)</h2>
+        <p>Two powerful wands capable of manipulating entity and player scales. Both share similar crafting recipes and equal durability values.</p>
+
+        <!-- PLACEHOLDER ABOUT SHRINKER -->
+      <div class="item-showcase">
+        <div class="item-showcase-image" data-item-name="Shrinker">
+          <img src="images/textures/shrinker.png" alt="Shrinker Item Texture">
+        </div>
+      <div class="item-showcase-info">
+    <div class="item-showcase-section">
+      <strong>Description</strong>
+      <p> Reduces target size to <strong>0.20x</strong>. Have ??? durability. Can shrink the player using it, or any entity its looking at.
+          Player receives a custom Infinite Invisibility ability while holding it.</p>
+    </div>
+    <div class="item-showcase-section">
+      <strong>Crafting Recipe</strong>
+      <div class="recipe">
+        <img src="images/recipes/shrinker.png"
+          alt="Shrinker crafting recipe"
+          style="width: 380px; height: 190px; image-rendering: pixelated;">
+            </div>
+          </div>
+        </div>
+      </div>
+
+        <!-- PLACEHOLDER ABOUT ENLARGER -->
+      <div class="item-showcase">
+        <div class="item-showcase-image" data-item-name="Enlarger">
+          <img src="images/textures/enlarger.png" alt="Enlarger Item Texture">
+        </div>
+      <div class="item-showcase-info">
+    <div class="item-showcase-section">
+      <strong>Description</strong>
+      <p> Increases target size to <strong>1.80x</strong>. Have ??? durability. Can enlarge the player using it, or any entity its looking at.
+          Player receives a custom Lunar Stomp ability while holding it.</p>
+    </div>
+    <div class="item-showcase-section">
+      <strong>Crafting Recipe</strong>
+      <div class="recipe">
+        <img src="images/recipes/enlarger.png"
+          alt="Enlarger crafting recipe"
+          style="width: 380px; height: 190px; image-rendering: pixelated;">
+            </div>
+          </div>
+        </div>
+      </div>
 
         <h3>Controls & Controls Mechanics</h3>
         <table>
@@ -146,29 +292,40 @@
         </div>
 
         <hr style="border: 0; border-top: 1px solid var(--line); margin: 30px 0;">
-
-        <!-- 4. HEART OF EMERGENCY -->
-        <h2>4. Heart of Emergency</h2>
-        <p>A life-saving relic that automatically safeguards you from lethal damage.</p>
-
-        <ul class="feature-list">
-          <li><strong>Trigger:</strong> Activates automatically when stored anywhere in your inventory if player health drops to <strong>25% or below</strong>.</li>
-          <li><strong>Buffs Granted:</strong> Instant Health, Regeneration, and Resistance for several seconds.</li>
-          <li><strong>Restrictions:</strong> Has an internal cooldown and does not stack.</li>
-          <li><strong>Uncraftable:</strong> Found in loot chests within <a href="ancientruins.html">Ancient Ruins</a>, End Cities, or purchased from the Wisher villager (<a href="wish.html">Wish Mechanic</a>).</li>
-        </ul>
-
-        <hr style="border: 0; border-top: 1px solid var(--line); margin: 30px 0;">
-
-        <!-- 5. WARP CLOCK -->
-        <h2>5. Warp Clock</h2>
+        
+        <!-- 6. WARP CLOCK -->
+        <h2>6. Warp Clock</h2>
         <p>A stackable temporal device (up to 16) used to bind and teleport to specific sign coordinates.</p>
 
-        <!-- IMAGE PLACEHOLDER -->
-        <div class="placeholder-box">
-          <strong>[IMAGE / GIF PLACEHOLDER: Bounding Sign with Warp Clock]</strong><br>
-          <em>Show tooltip reading sign text and teleporting process.</em>
+         <!-- GIF PLACEHOLDER -->
+        <div>
+          <img src="images/gifs/warp_clock.gif"
+               alt="Warp Clock"
+               style="width: 100%; border-radius: 8px;">
+            <strong>Warp Clock</strong>
+          <span> Warp Clock warp setting & using it demonstration.</span>
         </div>
+
+        <!-- PLACEHOLDER ABOUT WARP CLOCK -->
+      <div class="item-showcase">
+        <div class="item-showcase-image" data-item-name="Warp Clock">
+          <img src="images/textures/warp_clock.png" alt="Warp Clock Texture">
+        </div>
+      <div class="item-showcase-info">
+    <div class="item-showcase-section">
+      <strong>Description</strong>
+      <p> Can be used to set warp points on signs. Can be used multiple simultaniously. Consumes Chrono Gears for each teleportation.</p>
+    </div>
+    <div class="item-showcase-section">
+      <strong>Crafting Recipe</strong>
+      <div class="recipe">
+        <img src="images/recipes/warp_clock.png"
+          alt="Warp Clock crafting recipe"
+          style="width: 380px; height: 190px; image-rendering: pixelated;">
+            </div>
+          </div>
+        </div>
+      </div>
 
         <h3>Usage Steps</h3>
         <ol class="feature-list">
@@ -180,43 +337,6 @@
         <div class="notice">
           <strong>Note:</strong> Warp Clocks operate when stacked and share the same bound warp point across the stack. Teleporting fails with an error message if you are in the wrong dimension or if the bound sign is destroyed.
         </div>
-
-        <hr style="border: 0; border-top: 1px solid var(--line); margin: 30px 0;">
-
-        <!-- 6. NUCLEAR CANNON -->
-        <h2>6. Nuclear Cannon</h2>
-        <p>An endgame destructive ranged weapon forged using an Enderite Block obtained from lunar exploration (see <a href="ancientruins.html">World Generation</a>).</p>
-
-        <ul class="feature-list">
-          <li><strong>Primary Beam:</strong> Emits a high-intensity ray that vaporizes all blocks in its immediate path (except Bedrock).</li>
-          <li><strong>Secondary Destruction:</strong> Triggers occasional explosive blasts and ignites any hit entities on fire.</li>
-          <li><strong>Repairable:</strong> Yes.</li>
-        </ul>
-
-        <div class="placeholder-box">
-          <strong>[CRAFTING RECIPE PLACEHOLDER: Nuclear Cannon]</strong><br>
-          <em>Enderite Block + Cogwork Core + late-game components.</em>
-        </div>
-
-        <hr style="border: 0; border-top: 1px solid var(--line); margin: 30px 0;">
-
-        <!-- 7. FLUTTERER & FLUTTERING ENCHANTMENT -->
-        <h2>7. Flutterer & Fluttering Enchantment</h2>
-        <p>A mobility utility that grants enhanced jump height and slow-falling glides.</p>
-
-        <h3>The Flutterer (Chest Slot Item)</h3>
-        <ul class="feature-list">
-          <li>Equipped in the chest armor slot in place of a standard chestplate.</li>
-          <li>Pressing <span class="key-bind">SPACE</span> (or custom rebindable key) performs an elevated jump slightly higher than 1 block.</li>
-          <li>Applies <strong>Slow Falling</strong> automatically while descending, accompanied by particle trail effects.</li>
-          <li><strong>Repairable:</strong> Yes.</li>
-        </ul>
-
-        <h3>Fluttering Enchantment</h3>
-        <ul class="feature-list">
-          <li>Purchased directly from the Wisher villager (<a href="wish.html">Wish Mechanic</a>).</li>
-          <li>Can be applied to <strong>any chestplate armor piece</strong>, granting the exact same jump boost, slow-falling effect, and keybind functionality while draining the armor's durability.</li>
-        </ul>
 
       </div>
     </main>
