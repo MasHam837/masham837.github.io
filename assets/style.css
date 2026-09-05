@@ -253,7 +253,7 @@ footer a:hover { color: var(--accent-2); }
 }
 
 .item-showcase-image::after {
-  font-family: "Minecraft", monospace;
+  font-family: "Monocraft", monospace;
 }
 
 /* Minecraft-style crafting recipe */
