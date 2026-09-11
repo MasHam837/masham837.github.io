@@ -603,6 +603,8 @@ footer a:hover { color: var(--accent-2); }
    ========================================================= */
 
 .entity-drops {
+  position: relative;
+
   padding: 14px;
 
   border: 1px solid var(--line);
@@ -714,55 +716,23 @@ footer a:hover { color: var(--accent-2); }
 }
 
 /* =========================================================
-   DROPS
-   ========================================================= */
-
-.entity-drops {
-  position: relative;
-
-  min-height: 76px;
-
-  padding: 14px;
-  padding-right: 108px;
-
-  border: 1px solid var(--line);
-  border-radius: 9px;
-
-  background: rgba(0, 34, 85, 0.28);
-}
-
-.entity-drops-title {
-  margin-bottom: 10px;
-
-  color: var(--accent);
-  font-size: 11px;
-  font-weight: 800;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-}
-
-.entity-drops-list {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 12px;
-}
-
-/* =========================================================
    SPAWN EGG
    ========================================================= */
 
 .entity-spawn-egg {
   position: absolute;
 
-  top: 10px;
   right: 10px;
   bottom: 10px;
 
   width: 82px;
+  height: 82px;
 
   display: flex;
   align-items: center;
   justify-content: center;
+
+  box-sizing: border-box;
 
   border: 1px solid var(--line);
   border-radius: 7px;
@@ -793,17 +763,18 @@ footer a:hover { color: var(--accent-2); }
   filter: drop-shadow(0 4px 5px rgba(0, 0, 0, 0.45));
 }
 
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
 @media (max-width: 480px) {
-  .entity-drops {
-    padding-right: 92px;
-  }
 
   .entity-spawn-egg {
-    width: 68px;
-
-    top: 8px;
     right: 8px;
     bottom: 8px;
+
+    width: 68px;
+    height: 68px;
   }
 
   .entity-spawn-egg img {
