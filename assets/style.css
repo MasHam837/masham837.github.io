@@ -714,6 +714,121 @@ footer a:hover { color: var(--accent-2); }
 }
 
 /* =========================================================
+   DROPS + SPAWN EGG
+   ========================================================= */
+
+.entity-drops {
+  padding: 14px;
+
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 110px;
+  gap: 14px;
+  align-items: stretch;
+
+  border: 1px solid var(--line);
+  border-radius: 9px;
+
+  background: rgba(0, 34, 85, 0.28);
+}
+
+.entity-drops-content {
+  min-width: 0;
+}
+
+.entity-drops-title {
+  margin-bottom: 10px;
+
+  color: var(--accent);
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.entity-drops-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+/* =========================================================
+   SPAWN EGG
+   ========================================================= */
+
+.entity-spawn-egg {
+  aspect-ratio: 1 / 1;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  padding: 10px;
+
+  border: 1px solid var(--line);
+  border-radius: 7px;
+
+  background: rgba(7, 16, 30, 0.65);
+
+  transition:
+    transform 0.15s ease,
+    border-color 0.15s ease,
+    background 0.15s ease;
+}
+
+.entity-spawn-egg:hover {
+  transform: translateY(-3px);
+
+  border-color: var(--line-hover);
+
+  background: rgba(24, 48, 77, 0.8);
+}
+
+.entity-spawn-egg-title {
+  margin-bottom: 7px;
+
+  color: var(--muted);
+
+  font-family: "Monocraft", monospace;
+  font-size: 8px;
+  font-weight: bold;
+
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.entity-spawn-egg img {
+  width: 64px;
+  height: 64px;
+
+  object-fit: contain;
+  image-rendering: pixelated;
+
+  filter: drop-shadow(0 4px 5px rgba(0, 0, 0, 0.45));
+}
+
+@media (max-width: 480px) {
+  .entity-drops {
+    grid-template-columns: minmax(0, 1fr) 90px;
+    gap: 10px;
+    padding: 10px;
+  }
+
+  .entity-spawn-egg {
+    padding: 7px;
+  }
+
+  .entity-spawn-egg img {
+    width: 52px;
+    height: 52px;
+  }
+
+  .entity-spawn-egg-title {
+    font-size: 7px;
+  }
+}
+
+/* =========================================================
    SMALL CARD LABEL
    ========================================================= */
 
