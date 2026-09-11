@@ -18,6 +18,40 @@
     </nav>
   </header>
 
+  <style>
+    .weasel-trades {--bg:#111318;--panel:#191c24;--panel-hover:#222631;--border:#343946;--text:#f1f3f7;--muted:#a9afbd;--gold:#e8c66a;--green:#8fd694;--purple:#c39bea;--red:#e98585;--blue:#82b8e8;background:var(--bg);color:var(--text);padding:28px;border-radius:16px;font-family:Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;line-height:1.5;}
+    .weasel-trades h1 { margin: 0 0 8px; font-size: 30px; color: var(--gold); }
+    .weasel-trades h2 { margin: 38px 0 14px; font-size: 22px; color: var(--text); }
+    .weasel-trades p { color: var(--muted); margin: 6px 0 18px; }
+    .trade-summary { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 12px; margin: 20px 0 30px; }
+    .summary-card { background: var(--panel); border: 1px solid var(--border); border-radius: 12px; padding: 16px; }
+    .summary-card strong { display: block; font-size: 20px; color: var(--gold); margin-bottom: 4px; }
+    .summary-card span { color: var(--muted); font-size: 13px; }
+    .table-wrapper { overflow-x: auto; border: 1px solid var(--border); border-radius: 12px; margin-bottom: 28px; }
+    table { width: 100%; min-width: 900px; border-collapse: collapse; background: var(--panel); }
+    th { background: #20242d; color: var(--gold); text-align: left; padding: 13px 14px; font-size: 13px; text-transform: uppercase; letter-spacing: .06em; white-space: nowrap; }
+    td { padding: 13px 14px; border-top: 1px solid var(--border); vertical-align: middle; }
+    tbody tr { transition: background .15s ease; }
+    tbody tr:hover { background: var(--panel-hover); }
+    .trade-number { color: var(--muted); font-weight: 700; width: 45px; }
+    .element { font-weight: 700; white-space: nowrap; }
+    .sigil { color: var(--purple); font-weight: 700; }
+    .currency { color: var(--gold); font-weight: 700; }
+    .amount { font-weight: 700; white-space: nowrap; }
+    .arrow { color: var(--muted); font-size: 18px; padding: 0 5px; }
+    .output { font-weight: 600; }
+    .random { display: inline-block; min-width: 24px; text-align: center; padding: 3px 7px; border-radius: 6px; background: #292e39; color: var(--blue); font-family: monospace; font-weight: 700; }
+    .variant { display: inline-block; padding: 4px 9px; border-radius: 999px; font-size: 12px; font-weight: 800; }
+    .amateur { background: rgba(143, 214, 148, .12); color: var(--green); }
+    .hoarder { background: rgba(130, 184, 232, .12); color: var(--blue); }
+    .golden { background: rgba(232, 198, 106, .14); color: var(--gold); }
+    .limited { color: var(--muted); white-space: nowrap; }
+    .section-note { background: #171a21; border-left: 3px solid var(--gold); padding: 13px 16px; margin: 14px 0 20px; color: var(--muted); border-radius: 0 8px 8px 0; }
+    .element-table td:first-child { font-weight: 800; } .element-air { color: #9bd9d2; } .element-earth { color: #d6b278; } .element-electro { color: #b99bea; }
+    .element-nature { color: #8fd694; } .element-water { color: #82b8e8; } .element-fire { color: #e98585; } .element-frost { color: #a7d9ed; }
+    .element-moon { color: #d0b9ed; } @media (max-width: 700px) { .weasel-trades { padding: 16px; } .weasel-trades h1 { font-size: 24px; } }
+  </style>
+  
   <div class="docs-layout">
     
     <aside class="sidebar">
@@ -60,7 +94,6 @@
         <h2>1. Step One: Basic Survival & Iron Gear</h2>
         <p>Before diving deep into the expansion's mechanics, treat GILE like standard vanilla survival. Get yourself a secure house, a steady food supply, and basic <strong>iron-tier gear</strong>.</p>
         <p>Why iron? Because the core resource of the entire mod requires at least an iron pickaxe (or better) to mine effectively.</p>
-        <p>Consider as well getting some <a href="tools.html">Tools & Utils</a>, that may be really usefull for exploring. Some of them are available in early-game.</p>
 
         <h2>2. Finding Primogem Ore</h2>
         <p>Once your basic setup is ready, keep an eye out for the mod's primary resource: <strong>Primogem Ore</strong>. It comes in three natural variants across your world:</p>
@@ -100,10 +133,6 @@
             <tr>
               <td>Required Tool</td>
               <td>Iron Pickaxe tier or higher</td>
-            </tr>
-            <tr>
-              <td>Loot Table Drop</td>
-              <td><em>[Insert exact JSON drop table reference later]</em></td>
             </tr>
           </tbody>
         </table>
@@ -198,34 +227,276 @@
   </div>
 </div>
 
-        <ul class="feature-list">
-          <li><strong>Rarity Tiers & Spawn Chances:</strong>
-            <ul>
-              <li><strong>Amateur:</strong> 60% spawn chance</li>
-              <li><strong>Hoarder:</strong> 30% spawn chance</li>
-              <li><strong>Golden:</strong> 10% spawn chance</li>
-            </ul>
-          </li>
-          <li><strong>Trading:</strong> Every Weasel features 9 randomized trades spanning pools for all 8 mod elements, plus a dedicated trade to convert Mora into Elemental Sigils.
-            <ul>
-              <li><em>Amateur Weasels</em> sell basic items useful for skyblock setups.</li>
-              <li><em>Hoarder Weasels</em> sell more valuable items helpful in normal survival worlds.</li>
-              <li><em>Golden Weasels</em> can sell enchanted tools and even powerful <a href="weapons.html">Elemental Weapons</a>!</li>
-            </ul>
-          </li>
-        </ul>
+        <!-- IMAGE EXAMPLE OF WEASEL TRADES -->
+        <h3>Weasel Thief Trades Example</h3>
+        <div class="placeholder-box">
+          <img src="images/screenshots/weasel_thief_trades_example.png" 
+          alt="Weasel Trades Example"
+          style="width: 100%; border-radius: 8px; margin-bottom: 0px;">
+        </div>
+        <p>Detailed descrription right below:</p>
 
-        <h3>=== Amateur Trades: === _ _ _ _ _ _ _ === Hoarder Trades: === _ _ _ _ _ _ _ === Golden Trades: ===</h3>
-        <!-- TABLE PLACEHOLDER: Trades of a Weasel Thief -->
+        <!-- WEASEL TRADES DESCRIPTION -->
+<div class="weasel-trades">
 
+  <h1>🦦 Weasel Thief — Trade Reference</h1>
+  <p>
+    Complete reference for the trades generated by
+    <code>updateTrades(ServerLevel level)</code>.
+    Each Weasel receives one trade for each elemental/sigil category,
+    plus the universal Mora Converter.
+  </p>
+
+  <div class="trade-summary">
+    <div class="summary-card"><strong>25</strong><span>Total trade slots per Weasel</span></div>
+    <div class="summary-card"><strong>3</strong><span>Weasel variants</span></div>
+    <div class="summary-card"><strong>8</strong><span>Sigil categories</span></div>
+    <div class="summary-card"><strong>3</strong><span>Possible outcomes per category</span></div>
+    <div class="summary-card"><strong>3</strong><span>Maximum uses per trade</span></div>
+    <div class="summary-card"><strong>5 XP</strong><span>Experience per trade</span></div>
+  </div>
+
+  <h2>⚙️ Global Trade Rules</h2>
+
+  <div class="section-note">
+    <strong>Important:</strong>
+    <code>maxUses</code> is currently <strong>3 for every variant</strong>,
+    and <code>xp</code> is currently <strong>5 for every variant</strong>.
+    The variant changes the prices and rewards, but not the usage limit or XP.
+  </div>
+
+  <div class="table-wrapper">
+    <table>
+      <thead><tr><th>Property</th><th>Amateur</th><th>Hoarder</th><th>Golden</th></tr></thead>
+      <tbody>
+        <tr><td>Maximum Uses</td><td>3</td><td>3</td><td>3</td></tr>
+        <tr><td>XP per Trade</td><td>5</td><td>5</td><td>5</td></tr>
+        <tr><td>Trade Slots</td><td>9</td><td>9</td><td>9</td></tr>
+        <tr><td>Random Elemental Outcomes</td><td>3 per element</td><td>3 per element</td><td>3 per element</td></tr>
+      </tbody>
+    </table>
+  </div>
+        
+        <!-- COMPLETE WEASELS TRADES TABLE -->
+  <h2>💰 Trade 1 — Mora Converter</h2>
+  <p>This trade is always generated first. The player pays Mora and receives<strong>one randomly selected Sigil</strong>.</p>
+  <div class="table-wrapper">
+    <table>
+      <thead><tr><th>Trade</th><th>Variant</th><th>Cost</th><th>Possible Reward</th><th>Quantity</th><th>Uses</th><th>XP</th></tr></thead>
+      <tbody>
+        <tr><td class="trade-number">1</td><td><span class="variant amateur">AMATEUR</span></td><td><span class="amount currency">4 Mora</span></td><td class="output">Random Sigil</td><td>1</td><td>3</td><td>5</td></tr>
+        <tr><td class="trade-number">1</td><td><span class="variant hoarder">HOARDER</span></td><td><span class="amount currency">2 Mora</span></td><td class="output">Random Sigil</td><td>1</td><td>3</td><td>5</td></tr>
+        <tr><td class="trade-number">1</td><td><span class="variant golden">GOLDEN</span></td><td><span class="amount currency">1 Mora</span></td><td class="output">Random Sigil</td><td>1</td><td>3</td><td>5</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="section-note">
+    <strong>Random reward pool:</strong> Pyro, Geo, Dendro, Electro, Hydro, Anemo, Cryo, or Luna Sigil. The reward is selected independently when the trades are generated.
+  </div>
+
+  <h2>🌬️ Trade 2 — Air / Anemo</h2>
+  <div class="table-wrapper">
+    <table class="element-table">
+      <thead><tr><th>Variant</th><th>Roll</th><th>Cost</th><th>Reward</th><th>Quantity</th><th>Uses</th><th>XP</th></tr></thead>
+      <tbody>
+        <tr><td class="element-air">AMATEUR</td><td><span class="random">0</span></td><td>2 Anemo Sigils</td><td>Phantom Membrane</td><td>4</td><td>3</td><td>5</td></tr>
+        <tr><td class="element-air">AMATEUR</td><td><span class="random">1</span></td><td>1 Anemo Sigil</td><td>Egg</td><td>2</td><td>3</td><td>5</td></tr>
+        <tr><td class="element-air">AMATEUR</td><td><span class="random">2</span></td><td>4 Anemo Sigils</td><td>Duration III Rocket</td><td>8</td><td>3</td><td>5</td></tr>
+        <tr><td class="element-air">HOARDER</td><td><span class="random">0</span></td><td>8 Anemo Sigils</td><td>Breeze Rod</td><td>2</td><td>3</td><td>5</td></tr>
+        <tr><td class="element-air">HOARDER</td><td><span class="random">1</span></td><td>15 Anemo Sigils</td><td>Dragon Breath</td><td>8</td><td>3</td><td>5</td></tr>
+        <tr><td class="element-air">HOARDER</td><td><span class="random">2</span></td><td>9 Anemo Sigils</td><td>Cobweb</td><td>3</td><td>3</td><td>5</td></tr>
+        <tr><td class="element-air">GOLDEN</td><td><span class="random">0</span></td><td>30 Anemo Sigils</td><td>Heavy Core</td><td>1</td><td>3</td><td>5</td></tr>
+        <tr><td class="element-air">GOLDEN</td><td><span class="random">1</span></td><td>40 Anemo Sigils</td><td>Elytra</td><td>1</td><td>3</td><td>5</td></tr>
+        <tr><td class="element-air">GOLDEN</td><td><span class="random">2</span></td><td>64 Anemo Sigils</td><td>Daybreak Chronicles</td><td>1</td><td>3</td><td>5</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h2>🪨 Trade 3 — Earth / Geo</h2>
+  <div class="table-wrapper">
+    <table class="element-table">
+      <thead><tr><th>Variant</th><th>Roll</th><th>Cost</th><th>Reward</th><th>Quantity</th><th>Uses</th><th>XP</th></tr></thead>
+      <tbody>
+        <tr><td class="element-earth">AMATEUR</td><td><span class="random">0</span></td><td>1 Geo Sigil</td><td>Sand</td><td>16</td><td>3</td><td>5</td></tr>
+        <tr><td class="element-earth">AMATEUR</td><td><span class="random">1</span></td><td>2 Geo Sigils</td><td>Grass Block</td><td>4</td><td>3</td><td>5</td></tr>
+        <tr><td class="element-earth">AMATEUR</td><td><span class="random">2</span></td><td>4 Geo Sigils</td><td>Stone</td><td>32</td><td>3</td><td>5</td></tr>
+        <tr><td class="element-earth">HOARDER</td><td><span class="random">0</span></td><td>8 Geo Sigils</td><td>Pointed Dripstone</td><td>4</td><td>3</td><td>5</td></tr>
+        <tr><td class="element-earth">HOARDER</td><td><span class="random">1</span></td><td>4 Geo Sigils</td><td>Amethyst Cluster</td><td>2</td><td>3</td><td>5</td></tr>
+        <tr><td class="element-earth">HOARDER</td><td><span class="random">2</span></td><td>9 Geo Sigils</td><td>Pearlescent Material</td><td>1</td><td>3</td><td>5</td></tr>
+        <tr><td class="element-earth">GOLDEN</td><td><span class="random">0</span></td><td>32 Geo Sigils</td><td>Diamond Block</td><td>1</td><td>3</td><td>5</td></tr>
+        <tr><td class="element-earth">GOLDEN</td><td><span class="random">1</span></td><td>16 Geo Sigils</td><td>Deepslate Emerald Ore</td><td>4</td><td>3</td><td>5</td></tr>
+        <tr><td class="element-earth">GOLDEN</td><td><span class="random">2</span></td><td>64 Geo Sigils</td><td>Vortex Vanquisher</td><td>1</td><td>3</td><td>5</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h2>⚡ Trade 4 — Electro</h2>
+  <div class="table-wrapper">
+    <table class="element-table">
+      <thead><tr><th>Variant</th><th>Roll</th><th>Cost</th><th>Reward</th><th>Quantity</th><th>Uses</th><th>XP</th></tr></thead>
+      <tbody>
+        <tr><td class="element-electro">AMATEUR</td><td><span class="random">0</span></td><td>1 Electro Sigil</td><td>Redstone</td><td>16</td><td>3</td><td>5</td></tr>
+        <tr><td class="element-electro">AMATEUR</td><td><span class="random">1</span></td><td>3 Electro Sigils</td><td>Repeater</td><td>9</td><td>3</td><td>5</td></tr>
+        <tr><td class="element-electro">AMATEUR</td><td><span class="random">2</span></td><td>5 Electro Sigils</td><td>Comparator</td><td>6</td><td>3</td><td>5</td></tr>
+        <tr><td class="element-electro">HOARDER</td><td><span class="random">0</span></td><td>4 Electro Sigils</td><td>TNT</td><td>2</td><td>3</td><td>5</td></tr>
+        <tr><td class="element-electro">HOARDER</td><td><span class="random">1</span></td><td>6 Electro Sigils</td><td>Glowstone</td><td>6</td><td>3</td><td>5</td></tr>
+        <tr><td class="element-electro">HOARDER</td><td><span class="random">2</span></td><td>8 Electro Sigils</td><td>Oxidized Copper</td><td>4</td><td>3</td><td>5</td></tr>
+        <tr><td class="element-electro">GOLDEN</td><td><span class="random">0</span></td><td>16 Electro Sigils</td><td>Redstone Block</td><td>8</td><td>3</td><td>5</td></tr>
+        <tr><td class="element-electro">GOLDEN</td><td><span class="random">1</span></td><td>32 Electro Sigils</td><td>Thunder Trident</td><td>1</td><td>3</td><td>5</td></tr>
+        <tr><td class="element-electro">GOLDEN</td><td><span class="random">2</span></td><td>64 Electro Sigils</td><td>Engulfing Lightning</td><td>1</td><td>3</td><td>5</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h2>🌿 Trade 5 — Nature / Dendro</h2>
+  <div class="table-wrapper">
+    <table class="element-table">
+      <thead><tr><th>Variant</th><th>Roll</th><th>Cost</th><th>Reward</th><th>Quantity</th><th>Uses</th><th>XP</th></tr></thead>
+      <tbody>
+        <tr><td class="element-nature">AMATEUR</td><td><span class="random">0</span></td><td>1 Dendro Sigil</td><td>Moss Block</td><td>16</td><td>3</td><td>5</td></tr>
+        <tr><td class="element-nature">AMATEUR</td><td><span class="random">1</span></td><td>4 Dendro Sigils</td><td>Lily Pad</td><td>8</td><td>3</td><td>5</td></tr>
+        <tr><td class="element-nature">AMATEUR</td><td><span class="random">2</span></td><td>3 Dendro Sigils</td><td>Spore Blossom</td><td>1</td><td>3</td><td>5</td></tr>
+        <tr><td class="element-nature">HOARDER</td><td><span class="random">0</span></td><td>5 Dendro Sigils</td><td>Sugar Cane</td><td>12</td><td>3</td><td>5</td></tr>
+        <tr><td class="element-nature">HOARDER</td><td><span class="random">1</span></td><td>6 Dendro Sigils</td><td>Bamboo</td><td>4</td><td>3</td><td>5</td></tr>
+        <tr><td class="element-nature">HOARDER</td><td><span class="random">2</span></td><td>8 Dendro Sigils</td><td>Cocoa Beans</td><td>2</td><td>3</td><td>5</td></tr>
+        <tr><td class="element-nature">GOLDEN</td><td><span class="random">0</span></td><td>15 Dendro Sigils</td><td>Bee Nest with Bee</td><td>1</td><td>3</td><td>5</td></tr>
+        <tr><td class="element-nature">GOLDEN</td><td><span class="random">1</span></td><td>20 Dendro Sigils</td><td>Sniffer Egg</td><td>1</td><td>3</td><td>5</td></tr>
+        <tr><td class="element-nature">GOLDEN</td><td><span class="random">2</span></td><td>64 Dendro Sigils</td><td>Thousand Floating Dreams</td><td>1</td><td>3</td><td>5</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h2>💧 Trade 6 — Water / Hydro</h2>
+  <div class="table-wrapper">
+    <table class="element-table">
+      <thead><tr><th>Variant</th><th>Roll</th><th>Cost</th><th>Reward</th><th>Quantity</th><th>Uses</th><th>XP</th></tr></thead>
+      <tbody>
+        <tr><td class="element-water">AMATEUR</td><td><span class="random">0</span></td><td>2 Hydro Sigils</td><td>Prismarine Crystals</td><td>5</td><td>3</td><td>5</td></tr>
+        <tr><td class="element-water">AMATEUR</td><td><span class="random">1</span></td><td>1 Hydro Sigil</td><td>Sea Pickle</td><td>8</td><td>3</td><td>5</td></tr>
+        <tr><td class="element-water">AMATEUR</td><td><span class="random">2</span></td><td>1 Hydro Sigil</td><td>Dried Kelp Block</td><td>4</td><td>3</td><td>5</td></tr>
+        <tr><td class="element-water">HOARDER</td><td><span class="random">0</span></td><td>12 Hydro Sigils</td><td>Nautilus Shell</td><td>2</td><td>3</td><td>5</td></tr>
+        <tr><td class="element-water">HOARDER</td><td><span class="random">1</span></td><td>10 Hydro Sigils</td><td>Axolotl Bucket</td><td>1</td><td>3</td><td>5</td></tr>
+        <tr><td class="element-water">HOARDER</td><td><span class="random">2</span></td><td>8 Hydro Sigils</td><td>Sponge</td><td>4</td><td>3</td><td>5</td></tr>
+        <tr><td class="element-water">GOLDEN</td><td><span class="random">0</span></td><td>25 Hydro Sigils</td><td>Heart of the Sea</td><td>1</td><td>3</td><td>5</td></tr>
+        <tr><td class="element-water">GOLDEN</td><td><span class="random">1</span></td><td>32 Hydro Sigils</td><td>Riptide Trident</td><td>1</td><td>3</td><td>5</td></tr>
+        <tr><td class="element-water">GOLDEN</td><td><span class="random">2</span></td><td>64 Hydro Sigils</td><td>Splendor of Tranquil Waters</td><td>1</td><td>3</td><td>5</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+
+  <h2>🔥 Trade 7 — Fire / Pyro</h2>
+  <div class="table-wrapper">
+    <table class="element-table">
+      <thead><tr><th>Variant</th><th>Roll</th><th>Cost</th><th>Reward</th><th>Quantity</th><th>Uses</th><th>XP</th></tr></thead>
+      <tbody>
+        <tr><td class="element-fire">AMATEUR</td><td><span class="random">0</span></td><td>2 Pyro Sigils</td><td>Magma Block</td><td>16</td><td>3</td><td>5</td></tr>
+        <tr><td class="element-fire">AMATEUR</td><td><span class="random">1</span></td><td>3 Pyro Sigils</td><td>Lava Bucket</td><td>1</td><td>3</td><td>5</td></tr>
+        <tr><td class="element-fire">AMATEUR</td><td><span class="random">2</span></td><td>2 Pyro Sigils</td><td>Fire Charge</td><td>8</td><td>3</td><td>5</td></tr>
+        <tr><td class="element-fire">HOARDER</td><td><span class="random">0</span></td><td>16 Pyro Sigils</td><td>Obsidian</td><td>1</td><td>3</td><td>5</td></tr>
+        <tr><td class="element-fire">HOARDER</td><td><span class="random">1</span></td><td>8 Pyro Sigils</td><td>Blaze Rod</td><td>2</td><td>3</td><td>5</td></tr>
+        <tr><td class="element-fire">HOARDER</td><td><span class="random">2</span></td><td>4 Pyro Sigils</td><td>Ghast Tear</td><td>2</td><td>3</td><td>5</td></tr>
+        <tr><td class="element-fire">GOLDEN</td><td><span class="random">0</span></td><td>30 Pyro Sigils</td><td>Wither Skeleton Skull</td><td>1</td><td>3</td><td>5</td></tr>
+        <tr><td class="element-fire">GOLDEN</td><td><span class="random">1</span></td><td>25 Pyro Sigils</td><td>Netherite Scrap</td><td>1</td><td>3</td><td>5</td></tr>
+        <tr><td class="element-fire">GOLDEN</td><td><span class="random">2</span></td><td>64 Pyro Sigils</td><td>Thousand Blazing Suns</td><td>1</td><td>3</td><td>5</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+
+  <h2>❄️ Trade 8 — Frost / Cryo</h2>
+  <div class="table-wrapper">
+    <table class="element-table">
+      <thead><tr><th>Variant</th><th>Roll</th><th>Cost</th><th>Reward</th><th>Quantity</th><th>Uses</th><th>XP</th></tr></thead>
+      <tbody>
+        <tr><td class="element-frost">AMATEUR</td><td><span class="random">0</span></td><td>2 Cryo Sigils</td><td>Powder Snow Bucket</td><td>1</td><td>3</td><td>5</td></tr>
+        <tr><td class="element-frost">AMATEUR</td><td><span class="random">1</span></td><td>8 Cryo Sigils</td><td>Snow Block</td><td>1</td><td>3</td><td>5</td></tr>
+        <tr><td class="element-frost">AMATEUR</td><td><span class="random">2</span></td><td>1 Cryo Sigil</td><td>Ice</td><td>16</td><td>3</td><td>5</td></tr>
+        <tr><td class="element-frost">HOARDER</td><td><span class="random">0</span></td><td>8 Cryo Sigils</td><td>Packed Ice</td><td>32</td><td>3</td><td>5</td></tr>
+        <tr><td class="element-frost">HOARDER</td><td><span class="random">1</span></td><td>18 Cryo Sigils</td><td>Frost Walker Book</td><td>1</td><td>3</td><td>5</td></tr>
+        <tr><td class="element-frost">HOARDER</td><td><span class="random">2</span></td><td>9 Cryo Sigils</td><td>Sculk Sensor</td><td>16</td><td>3</td><td>5</td></tr>
+        <tr><td class="element-frost">GOLDEN</td><td><span class="random">0</span></td><td>20 Cryo Sigils</td><td>Blue Ice</td><td>64</td><td>3</td><td>5</td></tr>
+        <tr><td class="element-frost">GOLDEN</td><td><span class="random">1</span></td><td>36 Cryo Sigils</td><td>Epic Pickaxe</td><td>1</td><td>3</td><td>5</td></tr>
+        <tr><td class="element-frost">GOLDEN</td><td><span class="random">2</span></td><td>64 Cryo Sigils</td><td>Hiemal Mandate</td><td>1</td><td>3</td><td>5</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h2>🌙 Trade 9 — Moon / Luna</h2>
+  <div class="table-wrapper">
+    <table class="element-table">
+      <thead><tr><th>Variant</th><th>Roll</th><th>Cost</th><th>Reward</th><th>Quantity</th><th>Uses</th><th>XP</th></tr></thead>
+      <tbody>
+        <tr><td class="element-moon">AMATEUR</td><td><span class="random">0</span></td><td>1 Luna Sigil</td><td>End Grass Block</td><td>2</td><td>3</td><td>5</td></tr>
+        <tr><td class="element-moon">AMATEUR</td><td><span class="random">1</span></td><td>1 Luna Sigil</td><td>End Stone</td><td>16</td><td>3</td><td>5</td></tr>
+        <tr><td class="element-moon">AMATEUR</td><td><span class="random">2</span></td><td>4 Luna Sigils</td><td>Ghostly Sapling</td><td>1</td><td>3</td><td>5</td></tr>
+        <tr><td class="element-moon">HOARDER</td><td><span class="random">0</span></td><td>6 Luna Sigils</td><td>Ender Pearl</td><td>4</td><td>3</td><td>5</td></tr>
+        <tr><td class="element-moon">HOARDER</td><td><span class="random">1</span></td><td>8 Luna Sigils</td><td>Shulker Shell</td><td>2</td><td>3</td><td>5</td></tr>
+        <tr><td class="element-moon">HOARDER</td><td><span class="random">2</span></td><td>16 Luna Sigils</td><td>Heart of Emergency</td><td>1</td><td>3</td><td>5</td></tr>
+        <tr><td class="element-moon">GOLDEN</td><td><span class="random">0</span></td><td>20 Luna Sigils</td><td>End Crystal</td><td>2</td><td>3</td><td>5</td></tr>
+        <tr><td class="element-moon">GOLDEN</td><td><span class="random">1</span></td><td>24 Luna Sigils</td><td>Warp Clock</td><td>1</td><td>3</td><td>5</td></tr>
+        <tr><td class="element-moon">GOLDEN</td><td><span class="random">2</span></td><td>64 Luna Sigils</td><td>Nocturne's Curtain Call</td><td>1</td><td>3</td><td>5</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h2>📊 Complete Trade Overview</h2>
+  <div class="table-wrapper">
+    <table>
+      <thead><tr><th>#</th><th>Category</th><th>Input Currency</th><th>Amateur Cost Range</th><th>Hoarder Cost Range</th><th>Golden Cost Range</th><th>Possible Rewards</th></tr></thead>
+      <tbody>
+        <tr><td>1</td><td>Mora Converter</td><td>Mora</td><td>4</td><td>2</td><td>1</td><td>8 possible Sigils</td></tr>
+        <tr><td>2</td><td>Anemo</td><td>Anemo Sigil</td><td>1–4</td><td>8–15</td><td>30–64</td><td>9 possible rewards</td></tr>
+        <tr><td>3</td><td>Geo</td><td>Geo Sigil</td><td>1–4</td><td>4–9</td><td>16–64</td><td>9 possible rewards</td></tr>
+        <tr><td>4</td><td>Electro</td><td>Electro Sigil</td><td>1–5</td><td>4–8</td><td>16–64</td><td>9 possible rewards</td></tr>
+        <tr><td>5</td><td>Dendro</td><td>Dendro Sigil</td><td>1–4</td><td>5–8</td><td>15–64</td><td>9 possible rewards</td></tr>
+        <tr><td>6</td><td>Hydro</td><td>Hydro Sigil</td><td>1–2</td><td>8–12</td><td>25–64</td><td>9 possible rewards</td></tr>
+        <tr><td>7</td><td>Pyro</td><td>Pyro Sigil</td><td>2–3</td><td>4–16</td><td>25–64</td><td>9 possible rewards</td></tr>
+        <tr><td>8</td><td>Cryo</td><td>Cryo Sigil</td><td>1–8</td><td>8–18</td><td>20–64</td><td>9 possible rewards</td></tr>
+        <tr><td>9</td><td>Luna</td><td>Luna Sigil</td><td>1–4</td><td>6–16</td><td>20–64</td><td>9 possible rewards</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h2>🎲 Randomization Mechanics</h2>
+  <div class="section-note">
+    Each elemental category independently rolls:
+    <code>random.nextInt(3)</code>.
+    This produces one of three values:
+    <strong>0</strong>, <strong>1</strong>, or <strong>2</strong>.
+    The resulting value determines which of that element's three trades is
+    inserted into the merchant's offers.
+  </div>
+
+  <div class="table-wrapper">
+    <table>
+      <thead>
+        <tr><th>Random Value</th><th>Meaning</th><th>Effect</th></tr>
+      </thead>
+      <tbody>
+        <tr><td><span class="random">0</span></td><td>First outcome</td><td>Uses the first <code>createTrade()</code> branch.</td></tr>
+        <tr><td><span class="random">1</span></td><td>Second outcome</td><td>Uses the second <code>createTrade()</code> branch.</td></tr>
+        <tr><td><span class="random">2</span></td><td>Third outcome</td><td>Uses the third <code>createTrade()</code> branch.</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="section-note">
+    <strong>Generation behavior:</strong>
+    The eight elemental rolls are independent. Therefore, a single Weasel
+    can simultaneously receive any combination of the three possible outcomes
+    across Anemo, Geo, Electro, Dendro, Hydro, Pyro, Cryo, and Luna.
+  </div>
+
+</div>
+        
         <h2>4. Crafting Sigils</h2>
         <p>If you are lucky enough early on, you can craft Sigils right away. They are made using Primogems combined with an elemental item (or standard dye if playing in dyeable data pack mode).</p>
         
         <div class="notice">
           <strong>⚠ Data Pack Mode Notice:</strong> In Lunar Favor pack mode, sigils craft using dyes instead of elemental components. Keep this in mind if balancing changes on your server/pack.
-          <p>
-          You can turn it on by <strong>/datapack enable gilemod:lunar_favor_mode</strong> , you'll need cheets enabled on the server for that. OFF by default or by using <strong>/datapack disable gilemod:lunar_favor_mode</strong>
-          </p>
+          <p>You can turn it on by <strong>/datapack enable gilemod:lunar_favor_mode</strong> , you'll need cheets enabled on the server for that. OFF by default or by using <strong>/datapack disable gilemod:lunar_favor_mode</strong></p>
         </div>
         
         <h3>=== Normal Recipe: === _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ === Lunar Favor Mode: === _ _ _ _ _ _ _ _ _ _ _ _ _</h3>
@@ -248,7 +519,7 @@
           <li><strong>Path A:</strong> Continue normal game progression to naturally reach <strong>The End</strong>.</li>
           <li><strong>Path B:</strong> Venture out to find the <a href="ancientruins.html">Ancient Ruins</a> structure, offering an alternative route to the End dimension.</li>
         </ul>
-        <p>To help you navigate these hazardous locations, make sure to craft yourself some helpful <a href="tools.html">Utilities & Gear</a> beforehand!</p>
+        <p>To help you navigate these hazardous locations, make sure to craft yourself some helpful <a href="tools.html">Tools & Utils</a> beforehand!</p>
 
         <!-- IMAGE PLACEHOLDER: Visual flowchart or summary screenshot of late-game progression branches -->
         <div class="placeholder-box" style="margin-top: 0px;">
