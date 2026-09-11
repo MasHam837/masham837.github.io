@@ -337,7 +337,6 @@ footer a:hover { color: var(--accent-2); }
   );
 }
 
-
 /* =========================================================
    ENTITY ART / LEFT SIDE
    ========================================================= */
@@ -374,7 +373,6 @@ footer a:hover { color: var(--accent-2); }
     drop-shadow(0 0 18px rgba(120, 169, 214, 0.12));
 }
 
-
 /* =========================================================
    ENTITY NAME / HEADER
    ========================================================= */
@@ -403,7 +401,6 @@ footer a:hover { color: var(--accent-2); }
   text-transform: uppercase;
 }
 
-
 /* =========================================================
    RIGHT SIDE
    ========================================================= */
@@ -416,7 +413,6 @@ footer a:hover { color: var(--accent-2); }
   flex-direction: column;
   gap: 14px;
 }
-
 
 /* =========================================================
    ENTITY HEADER
@@ -452,7 +448,6 @@ footer a:hover { color: var(--accent-2); }
   color: var(--muted);
   font-size: 12px;
 }
-
 
 /* =========================================================
    HEALTH
@@ -508,7 +503,6 @@ footer a:hover { color: var(--accent-2); }
   font-weight: bold;
 }
 
-
 /* =========================================================
    STAT BADGES
    ========================================================= */
@@ -541,7 +535,6 @@ footer a:hover { color: var(--accent-2); }
   letter-spacing: 0.05em;
 }
 
-
 /* =========================================================
    INFORMATION BOXES
    ========================================================= */
@@ -573,7 +566,6 @@ footer a:hover { color: var(--accent-2); }
   color: var(--muted);
 }
 
-
 /* Spawning box */
 .entity-info-box.spawning {
   border-color: var(--block-green);
@@ -583,7 +575,6 @@ footer a:hover { color: var(--accent-2); }
 .entity-info-box.spawning strong {
   color: var(--block-green);
 }
-
 
 /* Behaviour box */
 .entity-info-box.behaviour {
@@ -595,7 +586,6 @@ footer a:hover { color: var(--accent-2); }
   color: var(--accent-2);
 }
 
-
 /* Combat box */
 .entity-info-box.combat {
   border-color: var(--warning);
@@ -605,7 +595,6 @@ footer a:hover { color: var(--accent-2); }
 .entity-info-box.combat strong {
   color: var(--warning);
 }
-
 
 /* =========================================================
    DROPS
@@ -635,7 +624,6 @@ footer a:hover { color: var(--accent-2); }
   flex-wrap: wrap;
   gap: 12px;
 }
-
 
 /* Individual dropped item */
 .entity-drop {
@@ -695,7 +683,6 @@ footer a:hover { color: var(--accent-2); }
   white-space: nowrap;
 }
 
-
 /* Drop quantity badge */
 .entity-drop-amount {
   position: absolute;
@@ -724,7 +711,6 @@ footer a:hover { color: var(--accent-2); }
   box-shadow: 2px 2px 0 #000000;
 }
 
-
 /* =========================================================
    SMALL CARD LABEL
    ========================================================= */
@@ -744,7 +730,6 @@ footer a:hover { color: var(--accent-2); }
   letter-spacing: 0.1em;
   text-transform: uppercase;
 }
-
 
 /* =========================================================
    RESPONSIVE
@@ -802,7 +787,6 @@ footer a:hover { color: var(--accent-2); }
 
 /* =========================================================
    WEASEL TRADES
-   GILE Wiki / Documentation Style
    ========================================================= */
 
 .weasel-trades {
@@ -1253,7 +1237,6 @@ footer a:hover { color: var(--accent-2); }
   color: #d0b9ed;
 }
 
-
 /* =========================================================
    SIGILS / CURRENCY
    ========================================================= */
@@ -1266,13 +1249,11 @@ footer a:hover { color: var(--accent-2); }
   font-weight: 700;
 }
 
-
 .weasel-trades .currency {
   color: var(--trade-warning);
 
   font-weight: 800;
 }
-
 
 .weasel-trades .amount {
   color: var(--trade-text);
@@ -1283,7 +1264,6 @@ footer a:hover { color: var(--accent-2); }
 
   white-space: nowrap;
 }
-
 
 /* =========================================================
    TRADE ARROW
@@ -1300,7 +1280,6 @@ footer a:hover { color: var(--accent-2); }
   text-align: center;
 }
 
-
 /* =========================================================
    OUTPUT
    ========================================================= */
@@ -1311,20 +1290,17 @@ footer a:hover { color: var(--accent-2); }
   font-weight: 600;
 }
 
-
 .weasel-trades .output.custom {
   color: var(--trade-accent);
 
   font-weight: 700;
 }
 
-
 .weasel-trades .output.rare {
   color: var(--trade-warning);
 
   font-weight: 700;
 }
-
 
 /* =========================================================
    RANDOM ROLL
@@ -1357,7 +1333,6 @@ footer a:hover { color: var(--accent-2); }
     inset 0 1px 0 rgba(255, 255, 255, 0.03);
 }
 
-
 /* =========================================================
    VARIANT BADGES
    ========================================================= */
@@ -1384,7 +1359,6 @@ footer a:hover { color: var(--accent-2); }
   white-space: nowrap;
 }
 
-
 .weasel-trades .variant.amateur {
   border-color: rgba(143, 198, 163, 0.38);
 
@@ -1392,7 +1366,6 @@ footer a:hover { color: var(--accent-2); }
 
   color: var(--trade-green);
 }
-
 
 .weasel-trades .variant.hoarder {
   border-color: rgba(120, 169, 214, 0.38);
@@ -1402,7 +1375,6 @@ footer a:hover { color: var(--accent-2); }
   color: var(--trade-accent);
 }
 
-
 .weasel-trades .variant.golden {
   border-color: rgba(214, 181, 106, 0.42);
 
@@ -1410,7 +1382,6 @@ footer a:hover { color: var(--accent-2); }
 
   color: var(--trade-warning);
 }
-
 
 /* =========================================================
    USES / XP / LIMITS
@@ -1424,7 +1395,6 @@ footer a:hover { color: var(--accent-2); }
   white-space: nowrap;
 }
 
-
 .weasel-trades .xp {
   color: var(--trade-green);
 
@@ -1433,14 +1403,12 @@ footer a:hover { color: var(--accent-2); }
   font-weight: bold;
 }
 
-
 .weasel-trades .uses {
   color: var(--trade-muted);
 
   font-family: "Monocraft", monospace;
   font-size: 10px;
 }
-
 
 /* =========================================================
    SUMMARY / OVERVIEW TABLE
@@ -1450,13 +1418,11 @@ footer a:hover { color: var(--accent-2); }
   min-width: 900px;
 }
 
-
 .weasel-trades .overview-table td:first-child {
   color: var(--trade-accent);
 
   font-weight: 700;
 }
-
 
 .weasel-trades .range {
   color: var(--trade-text);
@@ -1465,13 +1431,11 @@ footer a:hover { color: var(--accent-2); }
   font-size: 10px;
 }
 
-
 .weasel-trades .reward-count {
   color: var(--trade-green);
 
   font-weight: 700;
 }
-
 
 /* =========================================================
    RANDOMIZATION EXPLANATION
@@ -1487,7 +1451,6 @@ footer a:hover { color: var(--accent-2); }
 
   margin: 20px 0;
 }
-
 
 .weasel-trades .randomization-card {
   padding: 16px;
@@ -1507,13 +1470,11 @@ footer a:hover { color: var(--accent-2); }
     transform 0.2s ease;
 }
 
-
 .weasel-trades .randomization-card:hover {
   border-color: var(--trade-hover);
 
   transform: translateY(-1px);
 }
-
 
 .weasel-trades .randomization-number {
   display: block;
@@ -1527,7 +1488,6 @@ footer a:hover { color: var(--accent-2); }
   font-weight: bold;
 }
 
-
 .weasel-trades .randomization-title {
   display: block;
 
@@ -1539,7 +1499,6 @@ footer a:hover { color: var(--accent-2); }
   font-weight: 700;
 }
 
-
 .weasel-trades .randomization-description {
   display: block;
 
@@ -1548,7 +1507,6 @@ footer a:hover { color: var(--accent-2); }
   font-size: 11px;
   line-height: 1.5;
 }
-
 
 /* =========================================================
    CODE / TECHNICAL DETAILS
@@ -1569,7 +1527,6 @@ footer a:hover { color: var(--accent-2); }
   font-size: 0.85em;
 }
 
-
 /* =========================================================
    TRADE COUNT / META BADGES
    ========================================================= */
@@ -1584,11 +1541,9 @@ footer a:hover { color: var(--accent-2); }
   margin-top: 16px;
 }
 
-
 .weasel-trades .trade-meta .badge {
   margin: 0;
 }
-
 
 .weasel-trades .trade-meta .badge-blue {
   color: var(--trade-accent);
@@ -1598,7 +1553,6 @@ footer a:hover { color: var(--accent-2); }
   background: var(--accent-bg);
 }
 
-
 .weasel-trades .trade-meta .badge-cyan {
   color: var(--trade-cyan);
 
@@ -1607,7 +1561,6 @@ footer a:hover { color: var(--accent-2); }
   background: var(--cyan-bg);
 }
 
-
 .weasel-trades .trade-meta .badge-green {
   color: var(--trade-green);
 
@@ -1615,7 +1568,6 @@ footer a:hover { color: var(--accent-2); }
 
   background: var(--green-bg);
 }
-
 
 /* =========================================================
    DIVIDER
@@ -1634,7 +1586,6 @@ footer a:hover { color: var(--accent-2); }
       transparent
     );
 }
-
 
 /* =========================================================
    RESPONSIVE — TABLET
@@ -1664,7 +1615,6 @@ footer a:hover { color: var(--accent-2); }
   }
 
 }
-
 
 /* =========================================================
    RESPONSIVE — MOBILE
@@ -1723,7 +1673,6 @@ footer a:hover { color: var(--accent-2); }
   }
 
 }
-
 
 /* =========================================================
    SCROLLBAR
