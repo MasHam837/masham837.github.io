@@ -269,7 +269,7 @@ footer a:hover { color: var(--accent-2); }
   font-family: "Monocraft", monospace;
 }
 
-.recipe-mode-divider{display:flex;align-items:center;gap:12px;margin:20px 0;color:var(--muted);font-size:12px;font-weight:700;letter-spacing:.08em}.recipe-mode-divider::before,.recipe-mode-divider::after{content:"";flex:1;height:1px;background:var(--line)}.recipe-mode-divider span{padding:4px 9px;border:1px solid var(--line);border-radius:999px;background:var(--panel-2)}
+.recipe-title-separator{margin:0 28px;color:var(--muted)}
 
 /* Yellow notice-style description */
 .item-showcase-section:first-child {
