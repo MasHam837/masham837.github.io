@@ -57,10 +57,32 @@
         <h2>1. The Wish Table GUI</h2>
         <p>The entire mechanic revolves around the <strong>Wish Table</strong>, a functional block with a custom user interface. The UI consists of inputs, outputs, a central star, and a progression bar.</p>
 
+        <!-- Wish Table -->
+        <div class="item-showcase">
+        <div class="item-showcase-image" data-item-name="Wish Table">
+          <img src="images/textures/wish_table.png" alt="Wish Table Item Texture">
+        </div>
+      <div class="item-showcase-info">
+    <div class="item-showcase-section">
+      <strong>Description</strong>
+      <p>The core of GILE. Your guaranteed way to epic weapons and much more.</p>
+    </div>
+    <div class="item-showcase-section">
+      <strong>Crafting Recipe</strong>
+      <div class="recipe">
+        <img src="images/recipes/wish_table.png"
+          alt="Wish Table crafting recipe"
+          style="width: 372px; height: 186px; image-rendering: pixelated;">
+            </div>
+          </div>
+        </div>
+      </div>
+        
         <!-- IMAGE PLACEHOLDER -->
         <div class="placeholder-box">
-          <strong>[IMAGE PLACEHOLDER: Wish Table GUI]</strong><br>
-          <em>Show the interface with 2 input slots on the left, 2 output slots on the right, and the star/progress bar in the middle.</em>
+        <img src="images/gui/wish_table_gui.png" 
+        alt="Wish Table Gui"
+        style="width: 100%; border-radius: 8px; margin-bottom: 0px;">
         </div>
 
         <ul class="feature-list">
@@ -72,13 +94,23 @@
           <strong>Automation:</strong> The Wish Table can be automated! A hopper placed beneath the table will extract outputs. <em>Note:</em> The table will not start a new wish progress if the output slots are full.
         </div>
 
+        <!-- IMAGE PLACEHOLDER -->
+        <div class="placeholder-box">
+        <img src="images/screenshots/wish_table_automation.png" 
+        alt="Wish Table Automation"
+        style="width: 100%; border-radius: 8px; margin-bottom: 0px;">
+        </div>
+
         <h2>2. The Wishing Process (Attempt)</h2>
         <p>Inputting one Elemental Sigil alongside Wish Blocks will begin the wishing process. <strong>Each attempt takes 5 seconds, consumes 1 Wish Block, and yields Star Dust, but does NOT consume the Elemental Sigil.</strong></p>
 
         <!-- GIF PLACEHOLDER -->
         <div class="placeholder-box">
-          <strong>[GIF PLACEHOLDER: 5-Second Wish Mechanic Loop]</strong><br>
-          <em>Show the star brightening in the GUI and colored particles emitting from the block in the world.</em>
+          <img src="images/gifs/wishing_progress.gif"
+            alt="Wish Table Gui Progress"
+            style="width: 100%; border-radius: 8px;">
+          <strong>Walking</strong>
+          <span>Triggered when the player is not spotted or while chasing the player.</span>
         </div>
 
         <p>During an attempt, the central star brightens and emits colored particles (visible both in the GUI and in the world). The color determines how much the progression bar fills:</p>
@@ -88,9 +120,9 @@
             <tr><th>Rarity (Color)</th><th>Chance per Attempt</th><th>Progress Bar Fill %</th></tr>
           </thead>
           <tbody>
-            <tr><td><span class="rarity-common">Common (Blue)</span></td><td>80%</td><td>2% - 4%</td></tr>
-            <tr><td><span class="rarity-rare">Rare (Purple)</span></td><td>17%</td><td>15%</td></tr>
-            <tr><td><span class="rarity-legendary">Legendary (Golden)</span></td><td>3%</td><td>25% - 50%</td></tr>
+            <tr><td><span class="rarity-common"><img class="entity-heart" src="images/gui/common_star.png" alt="common star">Common (Blue)</span></td><td>80%</td><td>2% - 4%</td></tr>
+            <tr><td><span class="rarity-rare"><img class="entity-heart" src="images/gui/rare_star.png" alt="rare star">Rare (Purple)</span></td><td>17%</td><td>12% - 16%</td></tr>
+            <tr><td><span class="rarity-legendary"><img class="entity-heart" src="images/gui/legendary_star.png" alt="legendary star">Legendary (Golden)</span></td><td>3%</td><td>36% - 48%</td></tr>
           </tbody>
         </table>
 
@@ -119,8 +151,9 @@
 
         <!-- IMAGE PLACEHOLDER -->
         <div class="placeholder-box">
-          <strong>[IMAGE PLACEHOLDER: Wisher Villager Trades UI]</strong><br>
-          <em>Showcase the custom trades available from the Wisher.</em>
+        <img src="images/screenshots/wisher_trades.png" 
+        alt="Wisher Villager Trades"
+        style="width: 100%; border-radius: 8px; margin-bottom: 0px;">
         </div>
 
         <h3>Currencies & Crafting</h3>
