@@ -940,6 +940,10 @@ tr:hover td { background: var(--block-green-hover); }
   .doc-grid a { padding: 16px; }
 }
 
+/* =========================================================
+    WEAPONS
+   ========================================================= */
+
 .weapon-media-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -958,11 +962,15 @@ tr:hover td { background: var(--block-green-hover); }
   }
 }
 
+/* =========================================================
+   PRIMORDIAL WEAPON
+   ========================================================= */
+
 .primordial-weapon{
   display:grid;
-  grid-template-columns:260px 1fr;
+  grid-template-columns:240px minmax(0,1fr);
   gap:16px;
-  margin:20px 0;
+  margin:25px 0;
 }
 
 .primordial-weapon-display{
@@ -971,62 +979,75 @@ tr:hover td { background: var(--block-green-hover); }
   align-items:center;
   justify-content:center;
   min-height:100%;
-  padding:24px 16px;
-  box-sizing:border-box;
+  padding:24px 18px;
   text-align:center;
   background:
-    radial-gradient(circle at center, rgba(120,170,255,.10), transparent 65%),
-    linear-gradient(180deg,var(--panel-2),var(--panel-dark));
+    radial-gradient(circle at center,rgba(120,169,214,.10),transparent 65%),
+    var(--panel-dark);
   border:1px solid var(--line);
-  border-radius:8px;
-  box-shadow:0 0 18px rgba(80,130,255,.08);
+  border-radius:12px;
+  box-shadow:0 8px 20px rgba(0,0,0,.16);
+}
+
+.primordial-weapon-icon{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  width:190px;
+  height:190px;
 }
 
 .primordial-weapon-icon img{
   width:176px;
   height:176px;
-  image-rendering:pixelated;
   object-fit:contain;
-  filter:drop-shadow(0 0 12px rgba(120,170,255,.22));
+  image-rendering:pixelated;
+  filter:
+    drop-shadow(0 8px 10px rgba(0,0,0,.45))
+    drop-shadow(0 0 18px rgba(120,169,214,.12));
 }
 
 .primordial-weapon-name{
-  margin-top:16px;
+  margin-top:14px;
   font-family:"Monocraft",monospace;
-  font-size:20px;
+  font-size:18px;
+  font-weight:bold;
   color:var(--text);
 }
 
 .primordial-weapon-subtitle{
-  margin-top:6px;
-  font-size:13px;
+  margin-top:5px;
   color:var(--muted);
+  font-size:12px;
   font-style:italic;
 }
 
 .primordial-abilities{
   display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:16px;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:14px;
 }
 
 .primordial-ability{
   min-width:0;
-  padding:14px;
-  box-sizing:border-box;
+  padding:12px;
   text-align:center;
   background:
-    linear-gradient(145deg,rgba(100,150,255,.06),transparent 55%),
-    var(--panel);
+    linear-gradient(145deg,rgba(0,34,85,.42),rgba(13,28,48,.72));
   border:1px solid var(--line);
-  border-radius:8px;
-  box-shadow:0 0 14px rgba(80,130,255,.05);
-  transition:border-color .2s ease,box-shadow .2s ease;
+  border-radius:10px;
+  box-shadow:0 5px 16px rgba(0,0,0,.12);
+  transition:
+    border-color .2s ease,
+    background .2s ease,
+    transform .2s ease;
 }
 
 .primordial-ability:hover{
   border-color:var(--line-hover);
-  box-shadow:0 0 18px rgba(80,130,255,.10);
+  background:
+    linear-gradient(145deg,rgba(0,48,119,.48),rgba(13,28,48,.78));
+  transform:translateY(-2px);
 }
 
 .primordial-ability img{
@@ -1034,26 +1055,34 @@ tr:hover td { background: var(--block-green-hover); }
   width:100%;
   aspect-ratio:16/9;
   object-fit:cover;
-  border-radius:6px;
+  border:1px solid var(--line-soft);
+  border-radius:7px;
 }
 
 .primordial-ability-name{
   margin-top:10px;
   font-family:"Monocraft",monospace;
-  font-size:16px;
+  font-size:15px;
+  font-weight:bold;
   color:var(--accent);
 }
 
 .primordial-ability-key{
-  margin-top:5px;
-  font-size:12px;
-  font-weight:700;
+  display:inline-block;
+  margin-top:6px;
+  padding:3px 8px;
+  border:1px solid var(--line);
+  border-radius:999px;
+  background:rgba(0,34,85,.35);
   color:var(--muted);
+  font-size:10px;
+  font-weight:700;
+  letter-spacing:.03em;
 }
 
 .primordial-ability-description{
-  margin-top:6px;
-  color:var(--text);
+  margin-top:8px;
+  color:var(--muted);
   font-size:13px;
 }
 
@@ -1070,6 +1099,16 @@ tr:hover td { background: var(--block-green-hover); }
 @media (max-width:600px){
   .primordial-abilities{
     grid-template-columns:1fr;
+  }
+
+  .primordial-weapon-icon{
+    width:170px;
+    height:170px;
+  }
+
+  .primordial-weapon-icon img{
+    width:156px;
+    height:156px;
   }
 }
 
