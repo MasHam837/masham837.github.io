@@ -1,4 +1,4 @@
-# Genshin Impact: Lunar Expansion (GILE) — Official Wiki
+# Genshin Impact: Lunar Expansion (GILE) — Official Minecraft Mod Wiki
 
 Welcome to the official documentation repository for **GILE (Genshin Impact: Lunar Expansion)**, a content-heavy Minecraft mod built for Fabric.
 
