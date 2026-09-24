@@ -1020,10 +1020,9 @@ tr:hover td { background: var(--block-green-hover); }
 .primordial-weapon-name{
   margin-top:14px;
   font-family:"Monocraft",monospace;
-  color: #ffff55;
   font-size:18px;
   font-weight:bold;
-  color:var(--text);
+  color: #ffff55;
 }
 
 .primordial-weapon-subtitle{
@@ -1125,7 +1124,7 @@ tr:hover td { background: var(--block-green-hover); }
 
 .weapon-display{display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;min-height:220px}
 .weapon-texture img{width:128px;height:128px;image-rendering:pixelated}
-.weapon-name{margin-top:12px;font-family:"Monocraft",monospace;color:#55ffff;font-size:18px;}
+.weapon-name{margin-top:12px;font-family:"Monocraft",monospace;font-size:18px;color:#55ffff;}
 .pixelated-name{margin-top:12px;font-family:"Monocraft",monospace;font-size:18px;color:var(--text)}
 .weapon-ability{text-align:center}
 .weapon-ability img{display:block;width:100%;border-radius:8px}
@@ -1134,7 +1133,7 @@ tr:hover td { background: var(--block-green-hover); }
 .legendary-weapon{grid-template-columns:220px 1fr 1fr}
 .legendary-weapon .weapon-display{min-height:260px}
 .legendary-weapon .weapon-ability{min-width:0}
-.legendary-weapon-name{margin-top:12px;font-family:"Monocraft",monospace;color:#ff55ff;font-size:18px;}
+.legendary-weapon-name{margin-top:12px;font-family:"Monocraft",monospace;font-size:18px;color:#ff55ff;}
 
 /* =========================================================
    WEASEL TRADES
