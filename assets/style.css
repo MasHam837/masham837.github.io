@@ -1025,6 +1025,10 @@ tr:hover td { background: var(--block-green-hover); }
   color: #ffff55;
 }
 
+.item-showcase-image[data-item-name="Phanes Blade"]::after {
+  color: #ffff55;
+}
+
 .primordial-weapon-subtitle{
   margin-top:5px;
   color:var(--muted);
