@@ -23,6 +23,83 @@
       gap: 16px;
       margin: 20px 0;
     }
+    .enchantment-grid {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 20px;
+            margin: 24px 0;
+          }
+
+          .enchantment-card {
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+            background: rgba(255, 255, 255, 0.035);
+            border: 1px solid var(--line);
+            border-radius: 10px;
+            transition: transform 0.15s ease, border-color 0.15s ease;
+          }
+
+          .enchantment-card:hover {
+            transform: translateY(-2px);
+            border-color: var(--accent);
+          }
+
+          .enchantment-card-image {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 220px;
+            padding: 24px;
+            background: rgba(0, 0, 0, 0.12);
+            border-bottom: 1px solid var(--line);
+          }
+
+          .enchantment-book-texture {
+            width: 180px;
+            height: 180px;
+            object-fit: contain;
+            image-rendering: pixelated;
+          }
+
+          .enchantment-card-info {
+            padding: 20px;
+          }
+
+          .enchantment-card-info h3 {
+            margin: 0 0 6px;
+            font-size: 1.35rem;
+          }
+
+          .enchantment-level {
+            margin: 0 0 12px;
+            color: var(--accent);
+          }
+
+          .enchantment-card-info p {
+            line-height: 1.6;
+          }
+
+          .enchantment-effect,
+          .enchantment-compatible {
+            display: flex;
+            flex-direction: column;
+            gap: 3px;
+            margin-top: 14px;
+            padding-top: 12px;
+            border-top: 1px solid var(--line);
+          }
+
+          .enchantment-effect span,
+          .enchantment-compatible span {
+            color: var(--muted);
+          }
+
+          @media (max-width: 700px) {
+            .enchantment-grid {
+              grid-template-columns: 1fr;
+            }
+          }
   </style>
 </head>
 <body>
@@ -367,7 +444,75 @@
 
         <h2>7. New Enchantments</h2>
 
-        <!-- CUSTOM ENCHANTMENT BOOKS BOX PLACEHOLDER -->
+        ```html
+        <!-- CUSTOM ENCHANTMENT BOOKS -->
+        <div class="enchantment-grid">
+
+          <!-- ENCHANTMENT 1 -->
+          <div class="enchantment-card">
+            <div class="enchantment-card-image">
+              <img src="images/textures/enchanted_book.png"
+                   alt="Range Enchanted Book"
+                   class="enchantment-book-texture">
+            </div>
+
+            <div class="enchantment-card-info">
+              <h3>Range</h3>
+
+              <p class="enchantment-level">
+                <strong>Level:</strong> I – V
+              </p>
+
+              <p>
+                Increases the maximum range of compatible utility items,
+                allowing them to interact with targets from farther away.
+              </p>
+
+              <div class="enchantment-effect">
+                <strong>Effect</strong>
+                <span>+16 blocks of range per level</span>
+              </div>
+
+              <div class="enchantment-compatible">
+                <strong>Compatible With</strong>
+                <span>Grappling Hook</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- ENCHANTMENT 2 -->
+          <div class="enchantment-card">
+            <div class="enchantment-card-image">
+              <img src="images/textures/enchanted_book.png"
+                   alt="Fluttering Enchanted Book"
+                   class="enchantment-book-texture">
+            </div>
+
+            <div class="enchantment-card-info">
+              <h3>Fluttering</h3>
+
+              <p class="enchantment-level">
+                <strong>Level:</strong> I – III
+              </p>
+
+              <p>
+                Grants chestplates the ability to perform an elevated jump
+                and automatically apply Slow Falling while descending.
+              </p>
+
+              <div class="enchantment-effect">
+                <strong>Effect</strong>
+                <span>Enhanced Flutterer abilities</span>
+              </div>
+
+              <div class="enchantment-compatible">
+                <strong>Compatible With</strong>
+                <span>Chestplates</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
 
       </div>
     </main>
