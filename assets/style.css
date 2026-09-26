@@ -1149,17 +1149,42 @@ tr:hover td { background: var(--block-green-hover); }
    GILE — Genshin-inspired title styling
    ========================================================= */
 
-.doc-hero h1 {
+/* ---------------------------------------------------------
+   GILE fonts
+   --------------------------------------------------------- */
+
+@font-face {
+  font-family: "Cinzel";
+  src: url("fonts/Cinzel.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Cinzel";
+  src: url("fonts/Cinzel-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+
+/* ---------------------------------------------------------
+   GILE hero title
+   --------------------------------------------------------- */
+
+.gile-hero h1 {
   position: relative;
   margin: 0 0 22px;
+
   font-family: "Cinzel", "Trajan Pro", Georgia, serif;
   font-weight: 700;
   font-size: clamp(3rem, 6vw, 5.4rem);
   line-height: 0.94;
   letter-spacing: 0.035em;
-  text-transform: uppercase;
 
-  /* Primogem → celestial blue → lunar violet → gold */
+  /* Primogem cyan → celestial blue → violet → lunar gold */
   background: linear-gradient(
     105deg,
     #eafcff 0%,
@@ -1174,14 +1199,19 @@ tr:hover td { background: var(--block-green-hover); }
   background-clip: text;
   color: transparent;
 
-  /* Soft Genshin-like celestial glow */
+  /* Soft celestial glow */
   text-shadow:
     0 0 8px rgba(161, 232, 253, 0.35),
     0 0 22px rgba(126, 91, 214, 0.25);
 }
 
-/* The second line gets a stronger lunar / primogem treatment */
-.doc-hero h1 span {
+
+/* ---------------------------------------------------------
+   Lunar Expansion
+   Stronger violet / lunar-gold treatment
+   --------------------------------------------------------- */
+
+.gile-hero h1 span {
   display: inline-block;
   margin-top: 8px;
 
@@ -1199,12 +1229,17 @@ tr:hover td { background: var(--block-green-hover); }
 
   text-shadow:
     0 0 10px rgba(161, 232, 253, 0.32),
-    0 0 24px rgba(107, 51, 161, 0.3);
+    0 0 24px rgba(107, 51, 161, 0.30);
 }
 
-/* Fine celestial line underneath the title */
-.doc-hero h1::after {
+
+/* ---------------------------------------------------------
+   Celestial line underneath the title
+   --------------------------------------------------------- */
+
+.gile-hero h1::after {
   content: "";
+
   display: block;
   width: min(360px, 80%);
   height: 2px;
@@ -1221,45 +1256,64 @@ tr:hover td { background: var(--block-green-hover); }
 
   box-shadow:
     0 0 6px rgba(161, 232, 253, 0.45),
-    0 0 14px rgba(169, 107, 232, 0.3);
+    0 0 14px rgba(169, 107, 232, 0.30);
 
   opacity: 0.9;
 }
 
-/* Small diamond/star accents around the title */
-.doc-hero h1::before {
+
+/* ---------------------------------------------------------
+   Small celestial star accent
+   --------------------------------------------------------- */
+
+.gile-hero h1::before {
   content: "✦";
+
   position: absolute;
   left: -34px;
   top: -12px;
 
   font-family: Georgia, serif;
   font-size: 1.2rem;
+  font-weight: normal;
+
   color: #fde09f;
 
   text-shadow:
     0 0 5px #fde09f,
-    0 0 14px rgba(161, 232, 253, 0.8);
+    0 0 14px rgba(161, 232, 253, 0.80);
 
   opacity: 0.9;
 }
 
-/* Slightly more elegant hero eyebrow */
-.doc-hero .eyebrow {
+
+/* ---------------------------------------------------------
+   GILE eyebrow
+   --------------------------------------------------------- */
+
+.gile-hero .eyebrow {
   letter-spacing: 0.28em;
   color: #a1e8fd;
-  text-shadow: 0 0 10px rgba(161, 232, 253, 0.45);
+
+  text-shadow:
+    0 0 10px rgba(161, 232, 253, 0.45);
 }
 
-/* Keep the title comfortable on smaller screens */
+
+/* ---------------------------------------------------------
+   Mobile
+   --------------------------------------------------------- */
+
 @media (max-width: 700px) {
-  .doc-hero h1 {
+
+  .gile-hero h1 {
     font-size: clamp(2.5rem, 12vw, 4rem);
   }
 
-  .doc-hero h1::before {
+  .gile-hero h1::before {
     left: -4px;
     top: -22px;
     font-size: 0.9rem;
   }
+
 }
