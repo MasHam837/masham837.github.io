@@ -6,6 +6,25 @@
   <link rel="icon" type="image/png" href="icon.png">
   <title>Installation — GILE Wiki</title>
   <link rel="stylesheet" href="../assets/style.css">
+  <style> 
+    .mod-paths { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; margin: 24px 0 30px; } 
+    .mod-path { min-width: 0; padding: 16px; border: 1px solid var(--line);
+               border-radius: 10px; background: linear-gradient( 145deg, rgba(0, 34, 85, 0.32), rgba(13, 28, 48, 0.52) ); } 
+    .mod-path-title { display: flex; align-items: center; gap: 8px; margin-bottom: 10px; 
+                     font-family: "Monocraft", monospace; font-size: 14px; font-weight: bold; color: var(--accent); } 
+    .mod-path-description { margin: 0 0 10px; color: var(--muted); font-size: 12px; line-height: 1.45; } 
+    .mod-path code { display: block; width: 100%; box-sizing: border-box; padding: 9px 10px; border: 1px solid var(--line-soft); border-radius: 7px; background: rgba(0, 0, 0, 0.28);
+                    color: var(--text); font-family: "Monocraft", monospace; font-size: 10px; line-height: 1.45; overflow-x: auto; white-space: nowrap; } 
+    .mod-path-note { margin-top: 8px; color: var(--muted-dark); font-size: 10px; line-height: 1.4; }
+    .path-tip { margin: 18px 0 26px; padding: 13px 15px; border-left: 3px solid var(--accent); border-radius: 0 8px 8px 0;
+               background: var(--accent-bg);color: var(--muted); font-size: 13px; line-height: 1.5; } 
+    .path-tip strong { color: var(--text); }
+    .install-warning { margin: 20px 0; padding: 14px 15px; border-left: 4px solid #ff4a4a; border-radius: 0 7px 7px 0; background: rgba(255, 0, 0, 0.10);
+                      font-size: 13px; line-height: 1.5; } @media (max-width: 800px) { 
+      .mod-paths { grid-template-columns: 1fr; gap: 10px; } 
+      .mod-path { padding: 13px; } .mod-path-title { font-size: 13px; } 
+      .mod-path code { font-size: 9px; } } 
+  </style>
 </head>
 <body>
   <header class="topbar">
@@ -84,19 +103,211 @@
           <strong>Warning:</strong> GILE will <em>not</em> function without the correct version of the <strong>Fabric API</strong> present in your mods folder!
         </div>
 
-        <h2>2. Installation Guide</h2>
-        <div class="placeholder-box">
-          <strong>[IMAGE PLACEHOLDER: Folder Structure / Mod Folder screenshot]</strong>
-        </div>
-        
-        <ol>
-          <li><strong>Install Fabric:</strong> Download and run the <a href="https://fabricmc.net/use/installer/" target="_blank">Fabric Installer</a> for your targeted Minecraft version (Client).</li>
-          <li><strong>Download Fabric API:</strong> Fetch the matching version of the <a href="https://modrinth.com/mod/fabric-api" target="_blank">Fabric API</a>.</li>
-          <li><strong>Download GILE:</strong> Download the `.jar` file for Genshin Impact: Lunar Expansion from <a href="https://www.curseforge.com/minecraft/mc-mods/genshin-impact-lunar-expansion" target="_blank">CurseForge</a> or <a href="https://modrinth.com/mod/genshin-impact-lunar-expansion" target="_blank">Modrinth</a>.</li>
-          <li><strong>Place the Mods:</strong> Navigate to your `.minecraft/mods` folder (create it if it doesn't exist) and drop both the <em>Fabric API</em> `.jar` and the <em>GILE</em> `.jar` inside.</li>
-          <li><strong>Launch:</strong> Open the Minecraft Launcher, select the Fabric profile, and click Play!</li>
-        </ol>
+    <ol>
+      <li>
+        <strong>Install Fabric:</strong>
+        Download and run the
+        <a href="https://fabricmc.net/use/installer/" target="_blank" rel="noreferrer">
+          Fabric Installer
+        </a>
+        for your targeted Minecraft version.
+      </li>
 
+      <li>
+        <strong>Download Fabric API:</strong>
+        Download the matching version of
+        <a href="https://modrinth.com/mod/fabric-api" target="_blank" rel="noreferrer">
+          Fabric API
+        </a>.
+      </li>
+
+      <li>
+        <strong>Download GILE:</strong>
+        Download the <code>.jar</code> file for
+        <em>Genshin Impact: Lunar Expansion</em> from
+        <a
+          href="https://www.curseforge.com/minecraft/mc-mods/genshin-impact-lunar-expansion"
+          target="_blank"
+          rel="noreferrer"
+        >
+          CurseForge
+        </a>
+        or
+        <a
+          href="https://modrinth.com/mod/genshin-impact-lunar-expansion"
+          target="_blank"
+          rel="noreferrer"
+        >
+          Modrinth
+        </a>.
+      </li>
+    </ol>
+
+    <h2>3. Open Your Minecraft Mods Folder</h2>
+
+    <p>
+      Once Fabric is installed, you need to place the GILE
+      <code>.jar</code> and the matching Fabric API
+      <code>.jar</code> inside your Minecraft
+      <code>mods</code> folder.
+    </p>
+
+    <p>
+      The location of this folder depends on your operating system.
+      Here are the default Minecraft paths:
+    </p>
+
+    <div class="mod-paths">
+
+      <div class="mod-path">
+
+        <div class="mod-path-title">
+          🪟 Windows
+        </div>
+
+        <p class="mod-path-description">
+          Press <strong>Win + R</strong>, paste the path below,
+          and press Enter.
+        </p>
+
+        <code>%APPDATA%\.minecraft\mods</code>
+
+        <div class="mod-path-note">
+          This opens the Minecraft <code>mods</code> folder directly.
+        </div>
+
+      </div>
+
+      <div class="mod-path">
+
+        <div class="mod-path-title">
+          🍎 macOS
+        </div>
+
+        <p class="mod-path-description">
+          In Finder, choose <strong>Go → Go to Folder...</strong>
+          and enter the path below.
+        </p>
+
+        <code>~/Library/Application Support/minecraft/mods</code>
+
+        <div class="mod-path-note">
+          You can also press <strong>⌘ Command + Shift + G</strong>
+          in Finder.
+        </div>
+
+      </div>
+
+      <div class="mod-path">
+
+        <div class="mod-path-title">
+          🐧 Linux
+        </div>
+
+        <p class="mod-path-description">
+          Open your file manager and navigate to your Minecraft
+          directory using the path below.
+        </p>
+
+        <code>~/.minecraft/mods</code>
+
+        <div class="mod-path-note">
+          The <code>.minecraft</code> directory may be hidden.
+          Enable hidden files if necessary.
+        </div>
+
+      </div>
+
+    </div>
+
+    <div class="path-tip">
+      <strong>💡 Don't have a <code>mods</code> folder?</strong><br>
+      If the folder does not exist yet, simply create a new folder
+      named <code>mods</code> inside your Minecraft directory.
+    </div>
+
+    <h2>4. Put the Mods Inside</h2>
+
+    <p>
+      Your <code>mods</code> folder should contain at least these
+      two files:
+    </p>
+
+    <div class="placeholder-box">
+      <strong>📁 .minecraft</strong><br>
+      &nbsp;&nbsp;└── <strong>mods</strong><br>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├── Fabric API <code>.jar</code><br>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└── GILE <code>.jar</code>
+    </div>
+
+    <p>
+      Do <strong>not</strong> extract the <code>.jar</code> files.
+      Place the downloaded files directly into the
+      <code>mods</code> folder.
+    </p>
+
+    <h2>5. Launch GILE</h2>
+
+    <ol>
+
+      <li>
+        Open the <strong>Minecraft Launcher</strong>.
+      </li>
+
+      <li>
+        Select the <strong>Fabric</strong> installation for the
+        Minecraft version you installed GILE for.
+      </li>
+
+      <li>
+        Click <strong>Play</strong>.
+      </li>
+
+      <li>
+        Once Minecraft starts, GILE should load automatically
+        alongside Fabric API.
+      </li>
+
+    </ol>
+
+    <div class="path-tip">
+      <strong>⚠ Version matters.</strong><br>
+      Make sure the GILE version, Minecraft version, Fabric Loader
+      version and Fabric API version are compatible with each other.
+      If Minecraft crashes during startup, check the
+      <a href="issues.html">Known Issues</a> page first.
+    </div>
+
+    <h2>Quick Reference</h2>
+
+    <table>
+      <thead>
+        <tr>
+          <th>System</th>
+          <th>Default Mods Folder</th>
+        </tr>
+      </thead>
+
+      <tbody>
+
+        <tr>
+          <td><strong>Windows</strong></td>
+          <td><code>%APPDATA%\.minecraft\mods</code></td>
+        </tr>
+
+        <tr>
+          <td><strong>macOS</strong></td>
+          <td><code>~/Library/Application Support/minecraft/mods</code></td>
+        </tr>
+
+        <tr>
+          <td><strong>Linux</strong></td>
+          <td><code>~/.minecraft/mods</code></td>
+        </tr>
+
+      </tbody>
+    </table>
+        
       </div>
     </main>
   </div>
