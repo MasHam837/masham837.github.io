@@ -1344,14 +1344,81 @@ tr:hover td { background: var(--block-green-hover); }
 
 
   /* -------------------------------------------------------
-     RECIPE BOXES
-     ------------------------------------------------------- */
+   RECIPE BOXES
+   ------------------------------------------------------- */
+
+.recipe {
+  width: 100%;
+  max-width: 100%;
+
+  align-items: center;
+}
+
+.recipe span {
+  max-width: 100%;
+
+  font-size: 12px;
+  line-height: 1.35;
+
+  text-align: center;
+  white-space: normal;
+  overflow-wrap: anywhere;
+}
+
+/*
+   Recipe title separator
+*/
+
+.recipe-title-separator {
+  width: 100%;
+  margin: 6px 0;
+
+  text-align: center;
+
+  color: var(--muted);
+}
+
+/*
+   Keep recipe images inside the available space.
+*/
+
+.recipe img {
+  max-width: 100%;
+  height: auto;
+}
+
+/*
+   MOBILE RECIPE SIZE
+   372 × 186 px (2:1)
+
+   On smaller phones, width shrinks automatically
+   so the recipe never causes horizontal overflow.
+*/
+
+@media (max-width: 800px) {
 
   .recipe {
-    width: 100%;
-    max-width: 100%;
+    width: min(372px, 100%);
+    height: 186px;
 
+    margin-left: auto;
+    margin-right: auto;
+
+    display: flex;
     align-items: center;
+    justify-content: center;
+
+    overflow: hidden;
+  }
+
+  .recipe img {
+    max-width: 100%;
+    max-height: 100%;
+
+    width: auto;
+    height: auto;
+
+    object-fit: contain;
   }
 
   .recipe span {
@@ -1365,34 +1432,26 @@ tr:hover td { background: var(--block-green-hover); }
     overflow-wrap: anywhere;
   }
 
-  /*
-     IMPORTANT:
-     The original desktop value is:
-
-       margin: 0 144px;
-
-     That is what pushes the recipe title far away on phones.
-  */
-
   .recipe-title-separator {
     width: 100%;
-    margin: 6px 0;
+    margin: 5px 0;
 
     text-align: center;
+  }
+}
 
-    color: var(--muted);
+@media (max-width: 480px) {
+
+  .recipe {
+    width: 100%;
+    max-width: 372px;
+    height: 186px;
   }
 
-  /*
-     If a recipe contains Minecraft-style grid/item elements,
-     don't let them exceed the viewport.
-  */
-
-  .recipe img {
-    max-width: 100%;
-    height: auto;
+  .recipe span {
+    font-size: 11px;
   }
-
+}
 
   /* -------------------------------------------------------
      REGULAR TABLES
