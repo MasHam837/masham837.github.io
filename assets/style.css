@@ -1893,3 +1893,98 @@ tr:hover td { background: var(--block-green-hover); }
     font-size: 11px;
   }
 }
+
+/* =========================================================
+   VIDEO PLACEHOLDERS
+   ---------------------------------------------------------
+   Videos inside placeholder boxes stay contained within
+   the box instead of expanding to the full page width.
+   Responsive on desktop, tablet and mobile.
+   ========================================================= */
+
+.content .placeholder-box {
+  position: relative;
+  overflow: hidden;
+}
+
+/* Video itself */
+.content .placeholder-box video {
+  display: block;
+
+  width: 100%;
+  max-width: 100%;
+  height: 100%;
+
+  object-fit: contain;
+
+  border-radius: 8px;
+}
+
+/* ---------------------------------------------------------
+   WEAPON MEDIA BOXES
+   --------------------------------------------------------- */
+
+.weapon-media-grid .placeholder-box {
+  height: 300px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 12px;
+  margin: 0 !important;
+
+  box-sizing: border-box;
+}
+
+.weapon-media-grid .placeholder-box video {
+  width: 100%;
+  height: 100%;
+
+  max-width: 100%;
+  max-height: 100%;
+
+  object-fit: contain;
+
+  border-radius: 8px;
+}
+
+/* ---------------------------------------------------------
+   MOBILE
+   --------------------------------------------------------- */
+
+@media (max-width: 600px) {
+
+  .weapon-media-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .weapon-media-grid .placeholder-box {
+    height: auto;
+    min-height: 220px;
+
+    aspect-ratio: 16 / 9;
+
+    padding: 8px;
+  }
+
+  .weapon-media-grid .placeholder-box video {
+    width: 100%;
+    height: 100%;
+
+    object-fit: contain;
+  }
+}
+
+/* ---------------------------------------------------------
+   EXTRA SMALL PHONES
+   --------------------------------------------------------- */
+
+@media (max-width: 480px) {
+
+  .weapon-media-grid .placeholder-box {
+    min-height: 0;
+    aspect-ratio: 16 / 9;
+    padding: 6px;
+  }
+}
