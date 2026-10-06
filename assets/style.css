@@ -79,6 +79,7 @@ footer a:hover { color: var(--accent-2); }
 /* Sprite Decorations */
 .topbar { position: relative; }
 .topbar::before { content: ""; position: absolute; left: 28px; top: 50%; width: 28px; height: 28px; transform: translateY(-50%); background: url("branding/mh837-logo.png") center / contain no-repeat; pointer-events: none; }
+.topbar .brand { margin-left: 40px; }
 .side-link.active { display: flex; align-items: center; gap: 8px; }
 .side-link.active::before { content: ""; flex: 0 0 22px; width: 22px; height: 22px; background: url("branding/skin_sprite/right_one-up.png") center / contain no-repeat; pointer-events: none; }
 .notice { position: relative; padding-right: 72px; overflow: hidden; }
@@ -299,8 +300,7 @@ tr:hover td { background: var(--block-green-hover); }
   .entity-info-box strong { margin-bottom: 5px; }
   
   /* Sprite decorations — mobile */
-  footer {padding-left: 58px;}
-  footer::before, .bottom-bar::before {left: 18px; width: 24px; height: 24px;}
+  .topbar .brand { margin-left: 34px; }
   .side-link.active::before {flex-basis: 19px; width: 19px; height: 19px;}
   .notice {padding-right: 58px;}
   .notice::after {right: 8px; bottom: 6px; width: 40px; height: 40px;}
@@ -348,6 +348,7 @@ tr:hover td { background: var(--block-green-hover); }
 }
 
 @media (max-width: 480px) {
+  .topbar .brand { margin-left: 30px; }
   .topbar { height: 56px; padding: 0 11px; }
   .brand { font-size: 12px; }
   .brand span { font-size: 7px; letter-spacing: 0.12em; margin-left: 3px; }
