@@ -2052,15 +2052,27 @@ tr:hover td { background: var(--block-green-hover); }
    COMPACT WEAPON SHOWCASES
    ---------------------------------------------------------
    Elemental + Legendary weapons
-   Item on the left, ability/video on the right.
-   No legendary utilities column.
+   Responsive layout:
+   - Desktop: generous video area
+   - Mobile: video gets priority
    ========================================================= */
+
 
 /* ---------------------------------------------------------
    BASE LAYOUT
    --------------------------------------------------------- */
 
-.primordial-weapon,
+/* Elemental weapons */
+.primordial-weapon {
+  display: grid;
+  grid-template-columns: 180px minmax(0, 1fr);
+  gap: 14px;
+
+  width: 100%;
+  margin: 25px 0;
+}
+
+/* Legendary weapons */
 .legendary-weapon {
   display: grid;
   grid-template-columns: 180px minmax(0, 1fr);
@@ -2069,6 +2081,7 @@ tr:hover td { background: var(--block-green-hover); }
   width: 100%;
   margin: 25px 0;
 }
+
 
 /* ---------------------------------------------------------
    ITEM / WEAPON DISPLAY
@@ -2102,7 +2115,11 @@ tr:hover td { background: var(--block-green-hover); }
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.16);
 }
 
-/* Smaller weapon icon */
+
+/* ---------------------------------------------------------
+   WEAPON ICONS
+   --------------------------------------------------------- */
+
 .primordial-weapon-icon {
   width: 135px;
   height: 135px;
@@ -2113,18 +2130,22 @@ tr:hover td { background: var(--block-green-hover); }
   height: 125px;
 }
 
-/* Regular / legendary weapon texture */
 .legendary-weapon .weapon-texture img {
   width: 120px;
   height: 120px;
 }
 
-/* Weapon names */
+
+/* ---------------------------------------------------------
+   WEAPON NAMES
+   --------------------------------------------------------- */
+
 .primordial-weapon-name,
 .legendary-weapon-name {
   margin-top: 10px;
   font-size: 16px;
 }
+
 
 /* ---------------------------------------------------------
    ABILITY / VIDEO SIDE
@@ -2138,9 +2159,10 @@ tr:hover td { background: var(--block-green-hover); }
   gap: 12px;
 }
 
+
 /*
-   Legendary weapons now have ONE ability column.
-   Any old third "utility" column is removed from the layout.
+   Legendary weapons have one ability column.
+   Any old utility column is removed.
 */
 
 .legendary-weapon {
@@ -2150,6 +2172,7 @@ tr:hover td { background: var(--block-green-hover); }
 .legendary-weapon .weapon-ability {
   min-width: 0;
 }
+
 
 /* ---------------------------------------------------------
    ABILITY CARDS
@@ -2175,14 +2198,10 @@ tr:hover td { background: var(--block-green-hover); }
   box-shadow: 0 5px 16px rgba(0, 0, 0, 0.12);
 }
 
+
 /* ---------------------------------------------------------
    VIDEOS / ABILITY IMAGES
    --------------------------------------------------------- */
-
-/*
-   Videos are naturally rectangular, so let them use the
-   wider right-hand column instead of forcing a square-ish box.
-*/
 
 .primordial-ability img,
 .legendary-weapon .weapon-ability img,
@@ -2202,7 +2221,8 @@ tr:hover td { background: var(--block-green-hover); }
   border-radius: 7px;
 }
 
-/* If the ability is a video inside a placeholder */
+
+/* Video inside placeholder */
 .legendary-weapon .weapon-ability .placeholder-box {
   width: 100%;
   height: auto;
@@ -2229,6 +2249,7 @@ tr:hover td { background: var(--block-green-hover); }
   object-fit: contain;
 }
 
+
 /* ---------------------------------------------------------
    ABILITY TEXT
    --------------------------------------------------------- */
@@ -2253,14 +2274,10 @@ tr:hover td { background: var(--block-green-hover); }
   line-height: 1.45;
 }
 
+
 /* ---------------------------------------------------------
    REMOVE LEGENDARY UTILITY COLUMN
    --------------------------------------------------------- */
-
-/*
-   If the old HTML contains a utility section, hide it.
-   This prevents it from creating a third column.
-*/
 
 .legendary-weapon .weapon-utility,
 .legendary-weapon .legendary-utility,
@@ -2269,97 +2286,74 @@ tr:hover td { background: var(--block-green-hover); }
   display: none !important;
 }
 
-/* ---------------------------------------------------------
-   MOBILE
-   --------------------------------------------------------- */
+
+/* =========================================================
+   TABLET / MOBILE
+   ========================================================= */
 
 @media (max-width: 700px) {
 
+  /*
+     IMPORTANT:
+     Give the video more horizontal space.
+     The old 150px weapon column was too greedy,
+     especially for Legendary weapons.
+  */
+
   .primordial-weapon,
   .legendary-weapon {
-    grid-template-columns: 150px minmax(0, 1fr);
-    gap: 10px;
+    grid-template-columns: 125px minmax(0, 1fr);
+    gap: 9px;
   }
+
+
+  /* Weapon display */
 
   .primordial-weapon-display,
   .legendary-weapon .weapon-display {
-    min-height: 190px;
-    padding: 12px 8px;
+    min-height: 180px;
+    padding: 11px 6px;
   }
 
+
+  /* Elemental icon */
+
   .primordial-weapon-icon {
-    width: 110px;
-    height: 110px;
+    width: 105px;
+    height: 105px;
   }
 
   .primordial-weapon-icon img {
-    width: 102px;
-    height: 102px;
+    width: 97px;
+    height: 97px;
   }
 
+
+  /* Legendary icon */
+
   .legendary-weapon .weapon-texture img {
-    width: 100px;
-    height: 100px;
+    width: 92px;
+    height: 92px;
   }
+
+
+  /* Names */
 
   .primordial-weapon-name,
   .legendary-weapon-name {
-    font-size: 13px;
-  }
-
-  .primordial-ability,
-  .legendary-weapon .weapon-ability {
-    padding: 7px;
-  }
-
-  .primordial-ability-name,
-  .legendary-weapon .ability-name {
     font-size: 12px;
   }
 
-  .primordial-ability-description,
-  .legendary-weapon .ability-description {
-    font-size: 11px;
-  }
-}
 
-/* ---------------------------------------------------------
-   VERY SMALL PHONES
-   --------------------------------------------------------- */
+  /* Ability cards */
 
-@media (max-width: 480px) {
-
-  .primordial-weapon,
-  .legendary-weapon {
-    grid-template-columns: 120px minmax(0, 1fr);
-    gap: 8px;
+  .primordial-ability,
+  .legendary-weapon .weapon-ability {
+    padding: 6px;
   }
 
-  .primordial-weapon-display,
-  .legendary-weapon .weapon-display {
-    min-height: 165px;
-    padding: 10px 6px;
-  }
 
-  .primordial-weapon-icon {
-    width: 90px;
-    height: 90px;
-  }
-
-  .primordial-weapon-icon img {
-    width: 84px;
-    height: 84px;
-  }
-
-  .legendary-weapon .weapon-texture img {
-    width: 80px;
-    height: 80px;
-  }
-
-  .primordial-weapon-name,
-  .legendary-weapon-name {
-    font-size: 11px;
-  }
+  /* Ability text */
 
   .primordial-ability-name,
   .legendary-weapon .ability-name {
@@ -2369,5 +2363,115 @@ tr:hover td { background: var(--block-green-hover); }
   .primordial-ability-description,
   .legendary-weapon .ability-description {
     font-size: 10px;
+  }
+
+
+  /*
+     Videos:
+     keep the full available width and preserve 16:9.
+  */
+
+  .primordial-ability img,
+  .legendary-weapon .weapon-ability img,
+  .legendary-weapon .weapon-ability video {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+  }
+
+  .legendary-weapon .weapon-ability .placeholder-box {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    padding: 5px;
+  }
+}
+
+
+/* =========================================================
+   VERY SMALL PHONES
+   ========================================================= */
+
+@media (max-width: 480px) {
+
+  /*
+     Give the video side even more room.
+     105px is enough for the weapon icon while
+     preventing the video from becoming tiny.
+  */
+
+  .primordial-weapon,
+  .legendary-weapon {
+    grid-template-columns: 105px minmax(0, 1fr);
+    gap: 7px;
+  }
+
+
+  /* Weapon display */
+
+  .primordial-weapon-display,
+  .legendary-weapon .weapon-display {
+    min-height: 155px;
+    padding: 9px 4px;
+  }
+
+
+  /* Elemental */
+
+  .primordial-weapon-icon {
+    width: 82px;
+    height: 82px;
+  }
+
+  .primordial-weapon-icon img {
+    width: 76px;
+    height: 76px;
+  }
+
+
+  /* Legendary */
+
+  .legendary-weapon .weapon-texture img {
+    width: 72px;
+    height: 72px;
+  }
+
+
+  /* Names */
+
+  .primordial-weapon-name,
+  .legendary-weapon-name {
+    font-size: 10px;
+    line-height: 1.2;
+  }
+
+
+  /* Ability */
+
+  .primordial-ability,
+  .legendary-weapon .weapon-ability {
+    padding: 5px;
+  }
+
+  .primordial-ability-name,
+  .legendary-weapon .ability-name {
+    font-size: 10px;
+  }
+
+  .primordial-ability-description,
+  .legendary-weapon .ability-description {
+    font-size: 9px;
+  }
+
+
+  /* Video */
+
+  .primordial-ability img,
+  .legendary-weapon .weapon-ability img,
+  .legendary-weapon .weapon-ability video {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+  }
+
+  .legendary-weapon .weapon-ability .placeholder-box {
+    padding: 4px;
   }
 }
