@@ -111,61 +111,22 @@
     }
   }
 
-  /* =========================================================
-   GILE ADVANCEMENT TREE
-   ========================================================= */
-
-.advancement-tree-box {
-  width: 100%;
-  box-sizing: border-box;
-  padding: 16px;
+  .advancements-showcase {
+  max-height: 700px;
+  overflow-y: auto;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--panel-dark);
+  padding: 8px;
 }
 
-.advancement-tree-scroll {
-  width: 100%;
-  overflow-x: auto;
-  overflow-y: hidden;
-
-  display: flex;
-  justify-content: center;
-
-  scrollbar-width: thin;
-}
-
-.advancement-tree-image {
-  display: block;
-
+.advancements-showcase img {
   width: 100%;
   height: auto;
-
-  max-width: none;
-
-  margin: 0 auto;
-
-  border-radius: 8px;
+  display: block;
+  border-radius: 6px;
 }
-
-
-/* =========================================================
-   MOBILE
-   ========================================================= */
-
-@media (max-width: 700px) {
-  .advancement-tree-box {
-    padding: 10px;
-  }
-
-  .advancement-tree-scroll {
-    justify-content: flex-start;
-  }
-
-  .advancement-tree-image {
-    width: 50%;
-    min-width: 340px;
-
-    margin: 0 auto;
-  }
-}
+  
 </style>
   
 </head>
@@ -261,7 +222,7 @@
         <img src="images/showcases/items.png" alt="GILE items" style="width: 100%; height: 100%; border-radius: 8px; margin: 0 auto; display: block;">
         <li><strong>Well-thought-out Progression</strong> — A lot of advancements that guide you through almost every mod feature as well as an alternative ENDing way -
             teleport yourself to The Moon using the End Compass and you have everything you need there!</li>
-        <img src="images/showcases/advancements.png" alt="GILE advancements" style="width: 100%; height: 100%; border-radius: 8px; margin: 0 auto; display: block;">
+          <div class="advancements-showcase"><img src="images/showcases/advancements.png" alt="GILE advancements"></div>
         </ul>
       
     </main>
