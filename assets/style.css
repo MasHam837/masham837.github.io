@@ -76,6 +76,15 @@ footer a:hover { color: var(--accent-2); }
 .doc-page .content { max-width: 820px; }
 .content p { color: var(--muted); }
 
+/* Sprite Decorations */
+footer, .bottom-bar { position: relative; }
+footer::before, .bottom-bar::before {content: ""; position: absolute; left: 28px; top: 50%; width: 28px; height: 28px; transform: translateY(-50%); background: url("images/logo.png") center / contain no-repeat; image-rendering: pixelated; pointer-events: none;}
+footer {padding-left: 72px; }
+.side-link.active {display: flex; align-items: center; gap: 8px;}
+.side-link.active::before {content: ""; flex: 0 0 22px; width: 22px; height: 22px; background: url("images/one_up.png") center / contain no-repeat; image-rendering: pixelated;pointer-events: none;}
+.notice {position: relative; padding-right: 72px; overflow: hidden;}
+.notice::after {content: ""; position: absolute; right: 12px; bottom: 8px; width: 48px; height: 48px; background: url("images/standing.png") right bottom / contain no-repeat; image-rendering: pixelated; pointer-events: none;}
+
 /* Buttons & Notices */
 .button-row { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 24px; }
 .button { display: inline-block; padding: 9px 14px; border: 1px solid var(--line); border-radius: 8px; color: var(--muted); background: rgba(0, 34, 85, 0.35); transition: color 0.2s ease, background 0.2s ease, border-color 0.2s ease, transform 0.2s ease; }
@@ -289,6 +298,13 @@ tr:hover td { background: var(--block-green-hover); }
   .entity-spawn-box img { width: 50px; height: 50px; }
   .entity-info-box { padding: 11px 12px; font-size: 13px; line-height: 1.5; }
   .entity-info-box strong { margin-bottom: 5px; }
+  
+  /* Sprite decorations — mobile */
+  footer {padding-left: 58px;}
+  footer::before, .bottom-bar::before {left: 18px; width: 24px; height: 24px;}
+  .side-link.active::before {flex-basis: 19px; width: 19px; height: 19px;}
+  .notice {padding-right: 58px;}
+  .notice::after {right: 8px; bottom: 6px; width: 40px; height: 40px;}
 
   /* Weapon media — mobile */
   .weapon-media-grid { grid-template-columns: 1fr !important; align-items: start !important; gap: 12px !important; margin: 22px 0 !important; }
@@ -372,6 +388,11 @@ tr:hover td { background: var(--block-green-hover); }
   .entity-drop { width: 54px; min-height: 66px; }
   .entity-drop img { width: 34px; height: 34px; }
   .entity-spawn { width: 82px; padding: 8px; }
+  footer {padding-left: 50px;}
+  footer::before, .bottom-bar::before {left: 11px; width: 22px; height: 22px;}
+  .side-link.active::before { flex-basis: 17px; width: 17px; height: 17px;}
+  .notice {padding-right: 50px;}
+  .notice::after {right: 6px; bottom: 5px; width: 34px; height: 34px;}
 
   /* Weapon media — compact phone */
   .weapon-media-grid { gap: 10px !important; }
