@@ -394,3 +394,276 @@ tr:hover td { background: var(--block-green-hover); }
   .primordial-ability-name, .ability-name { font-size: 10px; }
   .primordial-ability-description, .ability-description { font-size: 9px; }
 }
+
+
+/* ============================================================
+   WEAPON MEDIA — UNIFIED LAYOUT
+   All elemental and legendary weapons use the same presentation:
+   left = vertical item card + name
+   right = horizontal ability video + name
+   ============================================================ */
+
+.weapon-media-grid {
+  display: grid !important;
+  grid-template-columns: 220px minmax(0, 1fr) !important;
+  align-items: start !important;
+  gap: 18px !important;
+  width: 100% !important;
+  margin: 25px 0 !important;
+  box-sizing: border-box !important;
+}
+
+/* The item is always a vertical rectangle. */
+.weapon-media-grid > .weapon-display {
+  width: 220px !important;
+  min-width: 220px !important;
+  height: auto !important;
+  min-height: 293px !important;
+  aspect-ratio: 3 / 4 !important;
+  margin: 0 !important;
+  padding: 16px 12px !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: center !important;
+  text-align: center !important;
+  box-sizing: border-box !important;
+  overflow: hidden !important;
+  background:
+    radial-gradient(circle at center, rgba(120, 169, 214, 0.10), transparent 65%),
+    var(--panel-dark) !important;
+  border: 1px solid var(--line) !important;
+  border-radius: 12px !important;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.16) !important;
+}
+
+/* Same item-image treatment for elemental and legendary weapons. */
+.weapon-media-grid > .weapon-display .weapon-texture {
+  width: 100% !important;
+  min-width: 0 !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+
+.weapon-media-grid > .weapon-display .weapon-texture img {
+  width: 156px !important;
+  height: 156px !important;
+  max-width: 100% !important;
+  max-height: 100% !important;
+  object-fit: contain !important;
+  image-rendering: pixelated !important;
+}
+
+/* Item name is always directly underneath its item. */
+.weapon-media-grid > .weapon-display .weapon-name,
+.weapon-media-grid > .weapon-display .legendary-weapon-name,
+.weapon-media-grid > .weapon-display .primordial-weapon-name,
+.weapon-media-grid > .weapon-display .pixelated-name {
+  display: block !important;
+  width: 100% !important;
+  margin: 12px 0 0 !important;
+  font-family: "Monocraft", monospace !important;
+  font-size: 16px !important;
+  line-height: 1.25 !important;
+  font-weight: normal !important;
+  text-align: center !important;
+  overflow-wrap: anywhere !important;
+}
+
+/* Keep the existing Minecraft-like elemental/legendary colors,
+   but make the layout identical. */
+.weapon-media-grid > .weapon-display .weapon-name {
+  color: #55ffff !important;
+}
+
+.weapon-media-grid > .weapon-display .legendary-weapon-name {
+  color: #ff55ff !important;
+}
+
+.weapon-media-grid > .weapon-display .primordial-weapon-name {
+  color: #ffff55 !important;
+  font-weight: bold !important;
+}
+
+/* The ability occupies the right column. */
+.weapon-media-grid > .weapon-ability {
+  width: 100% !important;
+  min-width: 0 !important;
+  height: auto !important;
+  min-height: 0 !important;
+  margin: 0 !important;
+  padding: 10px !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: stretch !important;
+  justify-content: flex-start !important;
+  text-align: center !important;
+  box-sizing: border-box !important;
+  overflow: hidden !important;
+  background: linear-gradient(
+    145deg,
+    rgba(0, 34, 85, 0.42),
+    rgba(13, 28, 48, 0.72)
+  ) !important;
+  border: 1px solid var(--line) !important;
+  border-radius: 10px !important;
+  box-shadow: 0 5px 16px rgba(0, 0, 0, 0.12) !important;
+}
+
+/* Ability demonstration is always horizontal. */
+.weapon-media-grid > .weapon-ability > video,
+.weapon-media-grid > .weapon-ability > img {
+  display: block !important;
+  width: 100% !important;
+  max-width: 100% !important;
+  height: auto !important;
+  aspect-ratio: 16 / 9 !important;
+  object-fit: contain !important;
+  box-sizing: border-box !important;
+  border-radius: 7px !important;
+}
+
+/* Ability name/description sits underneath the demonstration. */
+.weapon-media-grid > .weapon-ability > strong {
+  display: block !important;
+  margin-top: 10px !important;
+  line-height: 1.3 !important;
+  color: var(--accent) !important;
+}
+
+.weapon-media-grid > .weapon-ability > span {
+  display: inline !important;
+  line-height: 1.3 !important;
+  color: var(--muted) !important;
+}
+
+/* If an ability uses a nested placeholder, it must still be 16:9. */
+.weapon-media-grid > .weapon-ability > .placeholder-box {
+  width: 100% !important;
+  height: auto !important;
+  min-height: 0 !important;
+  aspect-ratio: 16 / 9 !important;
+  margin: 0 !important;
+  padding: 8px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  box-sizing: border-box !important;
+  overflow: hidden !important;
+}
+
+.weapon-media-grid > .weapon-ability > .placeholder-box video,
+.weapon-media-grid > .weapon-ability > .placeholder-box img {
+  width: 100% !important;
+  height: 100% !important;
+  max-width: 100% !important;
+  max-height: 100% !important;
+  aspect-ratio: auto !important;
+  object-fit: contain !important;
+}
+
+/* Make primordial ability cards follow the same visual language
+   when that markup is present elsewhere. */
+.weapon-media-grid .primordial-abilities {
+  min-width: 0 !important;
+  width: 100% !important;
+}
+
+.weapon-media-grid .primordial-ability {
+  width: 100% !important;
+  box-sizing: border-box !important;
+}
+
+.weapon-media-grid .primordial-ability img,
+.weapon-media-grid .primordial-ability video {
+  width: 100% !important;
+  aspect-ratio: 16 / 9 !important;
+  height: auto !important;
+  object-fit: contain !important;
+}
+
+/* ------------------------------------------------------------
+   Responsive: preserve the same visual relationship.
+   On narrow screens the two cards stack, but item remains 3:4
+   and ability remains 16:9.
+   ------------------------------------------------------------ */
+
+@media (max-width: 800px) {
+  .weapon-media-grid {
+    grid-template-columns: 1fr !important;
+    gap: 12px !important;
+    margin: 22px 0 !important;
+  }
+
+  .weapon-media-grid > .weapon-display {
+    width: 100% !important;
+    min-width: 0 !important;
+    min-height: 0 !important;
+    height: auto !important;
+    aspect-ratio: 3 / 4 !important;
+    padding: 14px 10px !important;
+  }
+
+  .weapon-media-grid > .weapon-display .weapon-texture img {
+    width: 150px !important;
+    height: 150px !important;
+  }
+
+  .weapon-media-grid > .weapon-display .weapon-name,
+  .weapon-media-grid > .weapon-display .legendary-weapon-name,
+  .weapon-media-grid > .weapon-display .primordial-weapon-name,
+  .weapon-media-grid > .weapon-display .pixelated-name {
+    font-size: 14px !important;
+    margin-top: 10px !important;
+  }
+
+  .weapon-media-grid > .weapon-ability {
+    width: 100% !important;
+    min-width: 0 !important;
+    padding: 7px !important;
+  }
+
+  .weapon-media-grid > .weapon-ability > video,
+  .weapon-media-grid > .weapon-ability > img {
+    aspect-ratio: 16 / 9 !important;
+  }
+
+  .weapon-media-grid > .weapon-ability > strong {
+    margin-top: 8px !important;
+    font-size: 13px !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .weapon-media-grid {
+    gap: 10px !important;
+  }
+
+  .weapon-media-grid > .weapon-display {
+    padding: 9px 7px !important;
+  }
+
+  .weapon-media-grid > .weapon-display .weapon-texture img {
+    width: 110px !important;
+    height: 110px !important;
+  }
+
+  .weapon-media-grid > .weapon-display .weapon-name,
+  .weapon-media-grid > .weapon-display .legendary-weapon-name,
+  .weapon-media-grid > .weapon-display .primordial-weapon-name,
+  .weapon-media-grid > .weapon-display .pixelated-name {
+    font-size: 11px !important;
+    line-height: 1.2 !important;
+  }
+
+  .weapon-media-grid > .weapon-ability {
+    padding: 5px !important;
+  }
+
+  .weapon-media-grid > .weapon-ability > strong,
+  .weapon-media-grid > .weapon-ability > span {
+    font-size: 10px !important;
+    line-height: 1.25 !important;
+  }
+}
