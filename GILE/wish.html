@@ -1,380 +1,311 @@
 <!doctype html>
 <html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="icon" type="image/png" href="icon.png">
-  <title>Wishing Mechanic — GILE Wiki</title>
-  <link rel="stylesheet" href="../assets/style.css">
-  
-  <style>
-    
-    .item-showcase { position: relative; }
-    .recipe-type-sprite { position: absolute; top: 8px; left: 8px; width: 86px; height: 44px; object-fit: contain; image-rendering: pixelated; pointer-events: none;}
-      
-    .rarity-common { color: #5c8aff; font-weight: bold; }
-    .rarity-rare { color: #b75cff; font-weight: bold; }
-    .rarity-legendary { color: #ffb732; font-weight: bold; }
-    
-  </style>
-  
-</head>
-<body>
-  <header class="topbar">
-    <a class="brand" href="../">MasterHamster837 <span>WIKI</span></a>
-    <nav>
-      <a class="active sidebar-toggle" href="./"><img src="icon.png" alt="GILE icon"> GILE</a>
-      <a href="https://www.curseforge.com/minecraft/mc-mods/genshin-impact-lunar-expansion" target="_blank" rel="noreferrer" style="color: #f36c21;">CurseForge ↗</a>
-      <a href="https://modrinth.com/mod/genshin-impact-lunar-expansion" target="_blank" rel="noreferrer" style="color: #5cff4a;">Modrinth ↗</a>
-      <a href="https://github.com/MasHam837/minecraft-mods-source-codes" target="_blank" rel="noreferrer" style="color: #f0f6fc;">Source ↗</a>
-    </nav>
-  </header>
-  <div class="docs-layout">
-    
-    <aside class="sidebar">
-      <div class="sidebar-title">GILE</div>
-      <a class="side-link" href="./">Overview</a>
-
-      <div class="side-heading">GAMEPLAY</div>
-      <a class="side-link" href="start.html">Getting Started</a>
-      <a class="side-link" href="ancient_ruins.html">Ancient Ruins</a>
-      <a class="side-link" href="end_threshold.html">End Threshold</a>
-      <a class="side-link" href="the_moon.html">The Moon</a>
-      <a class="side-link" href="ghostly_thickets.html">Ghostly Thickets</a>
-      <a class="side-link" href="moon_desert.html">Moon Desert</a>
-      <a class="side-link" href="tools.html">Tools & Utilities</a>
-      <a class="side-link active" href="wish.html">Wishing Mechanic</a>
-      <a class="side-link" href="elemental_weapons.html">Elemental Weapons</a>
-      <a class="side-link" href="legendary_weapons.html">Legendary Weapons</a>
-
-      <div class="side-heading">DOCUMENTATION</div>
-      <a class="side-link" href="installation.html">Installation</a>
-      <a class="side-link" href="issues.html">Known Issues</a>
-      <a class="side-link" href="versions.html">Versions History</a>
-
-    </aside>
-    
-    <main class="docs-main doc-page">
-      <div class="breadcrumbs"><a href="index.html">GILE</a> / Wishing Mechanic</div>
-      <div class="content">
-        <p class="eyebrow">GILE DOCUMENTATION</p>
-        <h1>Wishing Mechanic</h1>
-        <p class="lead">The primary use of Primogems. A unique gacha-inspired system to obtain powerful Elemental and Legendary weapons through the Wish Table.</p>
-
-        <h2>1. The Wish Table</h2>
-        <p>The entire mechanic revolves around the <strong>Wish Table</strong>, a functional block with a custom user interface. The UI consists of inputs, outputs, a central star, and a progression bar.
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/png" href="icon.png">
+    <title>Wishing Mechanic — GILE Wiki</title>
+    <link rel="stylesheet" href="../assets/style.css">
+    <style>
+      .item-showcase { position: relative; }
+      .recipe-type-sprite { position: absolute; top: 8px; left: 8px; width: 86px; height: 44px; object-fit: contain; image-rendering: pixelated; pointer-events: none;}
+      .rarity-common { color: #5c8aff; font-weight: bold; }
+      .rarity-rare { color: #b75cff; font-weight: bold; }
+      .rarity-legendary { color: #ffb732; font-weight: bold; }
+    </style>
+  </head>
+  <body>
+    <header class="topbar">
+      <a class="brand" href="../">MasterHamster837 <span>WIKI</span></a>
+      <nav>
+        <a class="active sidebar-toggle" href="./"><img src="icon.png" alt="GILE icon"> GILE</a>
+        <a href="https://www.curseforge.com/minecraft/mc-mods/genshin-impact-lunar-expansion" target="_blank" rel="noreferrer" style="color: #f36c21;">CurseForge ↗</a>
+        <a href="https://modrinth.com/mod/genshin-impact-lunar-expansion" target="_blank" rel="noreferrer" style="color: #5cff4a;">Modrinth ↗</a>
+        <a href="https://github.com/MasHam837/minecraft-mods-source-codes" target="_blank" rel="noreferrer" style="color: #f0f6fc;">Source ↗</a>
+      </nav>
+    </header>
+    <div class="docs-layout">
+      <aside class="sidebar">
+        <div class="sidebar-title">GILE</div>
+        <a class="side-link" href="./">Overview</a>
+        <div class="side-heading">GAMEPLAY</div>
+        <a class="side-link" href="start.html">Getting Started</a>
+        <a class="side-link" href="ancient_ruins.html">Ancient Ruins</a>
+        <a class="side-link" href="end_threshold.html">End Threshold</a>
+        <a class="side-link" href="the_moon.html">The Moon</a>
+        <a class="side-link" href="ghostly_thickets.html">Ghostly Thickets</a>
+        <a class="side-link" href="moon_desert.html">Moon Desert</a>
+        <a class="side-link" href="tools.html">Tools & Utilities</a>
+        <a class="side-link active" href="wish.html">Wishing Mechanic</a>
+        <a class="side-link" href="elemental_weapons.html">Elemental Weapons</a>
+        <a class="side-link" href="legendary_weapons.html">Legendary Weapons</a>
+        <div class="side-heading">DOCUMENTATION</div>
+        <a class="side-link" href="installation.html">Installation</a>
+        <a class="side-link" href="issues.html">Known Issues</a>
+        <a class="side-link" href="versions.html">Versions History</a>
+      </aside>
+      <main class="docs-main doc-page">
+        <div class="breadcrumbs"><a href="index.html">GILE</a> / Wishing Mechanic</div>
+        <div class="content">
+          <p class="eyebrow">GILE DOCUMENTATION</p>
+          <h1>Wishing Mechanic</h1>
+          <p class="lead">The primary use of Primogems. A unique gacha-inspired system to obtain powerful Elemental and Legendary weapons through the Wish Table.</p>
+          <h2>1. The Wish Table</h2>
+          <p>The entire mechanic revolves around the <strong>Wish Table</strong>, a functional block with a custom user interface. The UI consists of inputs, outputs, a central star, and a progression bar.
             First, you need to craft Wishes. That is the main way to use primogems, the most important one of them. For 1 Wish you'll need either 9 <a href="start.html">Pearlescent Materials</a>,
             normally, either 9 Genesis Crystals, that you can get only with cheats.</p>
-
-        <!-- IMAGE PLACEHOLDER -->
-        <div class="placeholder-box">
-        <img src="images/recipes/wish.png" 
-        alt="Wish Recipes"
-        style="width: 100%; border-radius: 8px; margin-bottom: 0px;">
-        </div>
-
-        <p>After you've got this, it'll be usefull to know, that you can also use Wishes for Wish Ingots and nuggets, but the main function is for Wishing mechanic, described right below.</p>
-        
-        <!-- Wish Table -->
-        <div class="item-showcase">
-          <img class="recipe-type-sprite" src="../assets/branding/skin_sprite/recipes/right_crouching-crafting.png" alt="Crafting">
-        <div class="item-showcase-image" data-item-name="Wish Table">
-          <img src="images/screenshots/wish_table.png" alt="Wish Table Block Texture">
-        </div>
-      <div class="item-showcase-info">
-    <div class="item-showcase-section">
-      <strong>Description</strong>
-      <p> The core of GILE. Your guaranteed way to epic weapons and much more. Craft it with one Crafting Table, 4 Wish Ingots and 2<a href="start.html">Pearlescent blocks</a>. You'll get 1 input for Wish, 1 input for any <a href="start.html">Elemental Sigil</a> -> 
-          1 output for <a href="elemental_weapons.html">Elemental</a> or <a href="elemental_weapons.html">Legendary</a> weapon, and 1 output for byproducts - Star Dust & Star Shine. As soon as 2 inputs are filled, the Wish attempt starts.</p>
-    </div>
-    <div class="item-showcase-section">
-      <strong>Crafting Recipe</strong>
-      <div class="recipe">
-        <img src="images/recipes/wish_table.png"
-          alt="Wish Table crafting recipe"
-          style="width: 372px; height: 186px; image-rendering: pixelated;">
+          <div class="placeholder-box">
+            <img src="images/recipes/wish.png"
+            alt="Wish Recipes"
+            style="width: 100%; border-radius: 8px; margin-bottom: 0px;">
+          </div>
+          <p>After you've got this, it'll be usefull to know, that you can also use Wishes for Wish Ingots and nuggets, but the main function is for Wishing mechanic, described right below.</p>
+          <div class="item-showcase">
+            <img class="recipe-type-sprite" src="../assets/branding/skin_sprite/recipes/right_crouching-crafting.png" alt="Crafting">
+            <div class="item-showcase-image" data-item-name="Wish Table">
+              <img src="images/screenshots/wish_table.png" alt="Wish Table Block Texture">
+            </div>
+            <div class="item-showcase-info">
+              <div class="item-showcase-section">
+                <strong>Description</strong>
+                <p> The core of GILE. Your guaranteed way to epic weapons and much more. Craft it with one Crafting Table, 4 Wish Ingots and 2<a href="start.html">Pearlescent blocks</a>. You'll get 1 input for Wish, 1 input for any <a href="start.html">Elemental Sigil</a> ->
+                  1 output for <a href="elemental_weapons.html">Elemental</a> or <a href="elemental_weapons.html">Legendary</a> weapon, and 1 output for byproducts - Star Dust & Star Shine. As soon as 2 inputs are filled, the Wish attempt starts.</p>
+              </div>
+              <div class="item-showcase-section">
+                <strong>Crafting Recipe</strong>
+                <div class="recipe">
+                  <img src="images/recipes/wish_table.png"
+                  alt="Wish Table crafting recipe"
+                  style="width: 372px; height: 186px; image-rendering: pixelated;">
+                </div>
+              </div>
             </div>
           </div>
-        </div>
-      </div>
-
-        <ul class="feature-list">
-          <li><strong>Input Slots (2):</strong> One strictly for <strong>Wish Blocks</strong> (the fuel), and one for an <strong>Elemental Sigil</strong> (the catalyst).</li>
-          <li><strong>Output Slots (2):</strong> One for byproducts (Star Dust/Star Shine) and one for the successful result (Weapon).</li>
-        </ul>
-          
-        <img src="images/gui/wish_table_gui.png" alt="Wish Table Gui" style="width: 75%; height: 75%; border-radius: 8px; margin: 0 auto; display: block;">
-
-        <div class="notice">
-          <strong>Automation:</strong> The Wish Table can be automated! A hopper placed beneath the table will extract outputs. <em>Note:</em> The table will not start a new wish progress if the output slots are full.
-        </div>
-
-        <hr style="border: 0; border-top: 1px solid var(--line); margin: 8px 0;">
-
-        <h2>2. The Wishing Process (Attempt)</h2>
-        <p>Inputting one Elemental Sigil alongside Wish Blocks will begin the wishing process. <strong>Each attempt takes 5 seconds, consumes 1 Wish Block, and yields Star Dust, but does NOT consume the Elemental Sigil.</strong></p>
-
-        <!-- GIF PLACEHOLDER -->
-        <div class="placeholder-box">
-          <img src="images/gifs/wishing_progress.gif"
+          <ul class="feature-list">
+            <li><strong>Input Slots (2):</strong> One strictly for <strong>Wish Blocks</strong> (the fuel), and one for an <strong>Elemental Sigil</strong> (the catalyst).</li>
+            <li><strong>Output Slots (2):</strong> One for byproducts (Star Dust/Star Shine) and one for the successful result (Weapon).</li>
+          </ul>
+          <img src="images/gui/wish_table_gui.png" alt="Wish Table Gui" style="width: 75%; height: 75%; border-radius: 8px; margin: 0 auto; display: block;">
+          <div class="notice">
+            <strong>Automation:</strong> The Wish Table can be automated! A hopper placed beneath the table will extract outputs. <em>Note:</em> The table will not start a new wish progress if the output slots are full.
+          </div>
+          <hr style="border: 0; border-top: 1px solid var(--line); margin: 8px 0;">
+          <h2>2. The Wishing Process (Attempt)</h2>
+          <p>Inputting one Elemental Sigil alongside Wish Blocks will begin the wishing process. <strong>Each attempt takes 5 seconds, consumes 1 Wish Block, and yields Star Dust, but does NOT consume the Elemental Sigil.</strong></p>
+          <div class="placeholder-box">
+            <img src="images/gifs/wishing_progress.gif"
             alt="Wish Table Gui Progress"
             style="width: 100%; border-radius: 8px;">
-          <strong>Wish Table Progress</strong>
-          <span>Triggered when the player inputs at least one Wish and one Elemental Sigil.</span>
-        </div>
-
-        <p>During an attempt, the central star brightens and emits colored particles (visible both in the GUI and in the world). The color determines how much the progression bar fills:</p>
-
-        <table>
-          <thead>
-            <tr><th>Rarity (Color)</th><th>Chance per Attempt</th><th>Progress Bar Fill %</th></tr>
-          </thead>
-          <tbody>
-            <tr><td><span class="rarity-common"><img class="entity-heart" src="images/gui/common_star.png" alt="common star"> Common (Blue)</span></td><td>80%</td><td>2% - 4%</td></tr>
-            <tr><td><span class="rarity-rare"><img class="entity-heart" src="images/gui/rare_star.png" alt="rare star"> Rare (Purple)</span></td><td>17%</td><td>12% - 16%</td></tr>
-            <tr><td><span class="rarity-legendary"><img class="entity-heart" src="images/gui/legendary_star.png" alt="legendary star"> Legendary (Golden)</span></td><td>3%</td><td>36% - 48%</td></tr>
-          </tbody>
-        </table>
-
-        <!-- GIF PLACEHOLDER -->
-        <div class="placeholder-box">
-          <img src="images/gifs/wish_exterior_particles.gif"
+            <strong>Wish Table Progress</strong>
+            <span>Triggered when the player inputs at least one Wish and one Elemental Sigil.</span>
+          </div>
+          <p>During an attempt, the central star brightens and emits colored particles (visible both in the GUI and in the world). The color determines how much the progression bar fills:</p>
+          <table>
+            <thead>
+              <tr><th>Rarity (Color)</th><th>Chance per Attempt</th><th>Progress Bar Fill %</th></tr>
+            </thead>
+            <tbody>
+              <tr><td><span class="rarity-common"><img class="entity-heart" src="images/gui/common_star.png" alt="common star"> Common (Blue)</span></td><td>80%</td><td>2% - 4%</td></tr>
+              <tr><td><span class="rarity-rare"><img class="entity-heart" src="images/gui/rare_star.png" alt="rare star"> Rare (Purple)</span></td><td>17%</td><td>12% - 16%</td></tr>
+              <tr><td><span class="rarity-legendary"><img class="entity-heart" src="images/gui/legendary_star.png" alt="legendary star"> Legendary (Golden)</span></td><td>3%</td><td>36% - 48%</td></tr>
+            </tbody>
+          </table>
+          <div class="placeholder-box">
+            <img src="images/gifs/wish_exterior_particles.gif"
             alt="Wish Exterior particles"
             style="width: 100%; border-radius: 8px;">
-          <strong>Wish Exterior particles</strong>
-          <span>When any attempt is successful, the Wish Table emmits a cloud of colored particles, that depends on the Star Rarity.</span>
-        </div>
-
-        <hr style="border: 0; border-top: 1px solid var(--line); margin: 30px 0;">
-
-        <h2>3. Wish Completion & Rewards</h2>
-        <p>Once the progression bar fills to 100%, a weapon is generated in the output slot alongside a bonus of <strong>10 Star Shine</strong>. A pretty big cloud of particles appears then.
+            <strong>Wish Exterior particles</strong>
+            <span>When any attempt is successful, the Wish Table emmits a cloud of colored particles, that depends on the Star Rarity.</span>
+          </div>
+          <hr style="border: 0; border-top: 1px solid var(--line); margin: 30px 0;">
+          <h2>3. Wish Completion & Rewards</h2>
+          <p>Once the progression bar fills to 100%, a weapon is generated in the output slot alongside a bonus of <strong>10 Star Shine</strong>. A pretty big cloud of particles appears then.
             The weapon you receive depends on a final roll based on the Elemental Sigil you used.</p>
-
-        <table>
-          <thead>
-            <tr><th>Outcome</th><th>Chance</th><th>Result Details</th></tr>
-          </thead>
-          <tbody>
-            <tr><td><strong>Wish Success</strong></td><td>60%</td><td>You receive the exact <a href="elemental_weapons.html">Elemental Weapon</a> corresponding to your inputted sigil (e.g., Anemo Sigil gives an Anemo Weapon).</td></tr>
-            <tr><td><strong>Legendary Success</strong></td><td>20%</td><td>You receive 1 of the 4 <a href="legendary_weapons.html">Legendary Weapons</a>.</td></tr>
-            <tr><td><strong>Wish Fail</strong></td><td>20%</td><td>You receive a random Elemental Weapon of a <em>different</em> element.</td></tr>
-          </tbody>
-        </table>
-
-        <!-- GIF PLACEHOLDER -->
-        <div class="placeholder-box">
-          <img src="images/gifs/wish_completion.gif"
+          <table>
+            <thead>
+              <tr><th>Outcome</th><th>Chance</th><th>Result Details</th></tr>
+            </thead>
+            <tbody>
+              <tr><td><strong>Wish Success</strong></td><td>60%</td><td>You receive the exact <a href="elemental_weapons.html">Elemental Weapon</a> corresponding to your inputted sigil (e.g., Anemo Sigil gives an Anemo Weapon).</td></tr>
+              <tr><td><strong>Legendary Success</strong></td><td>20%</td><td>You receive 1 of the 4 <a href="legendary_weapons.html">Legendary Weapons</a>.</td></tr>
+              <tr><td><strong>Wish Fail</strong></td><td>20%</td><td>You receive a random Elemental Weapon of a <em>different</em> element.</td></tr>
+            </tbody>
+          </table>
+          <div class="placeholder-box">
+            <img src="images/gifs/wish_completion.gif"
             alt="Wish completion"
             style="width: 100%; border-radius: 8px;">
-          <strong>Wish completion</strong>
-          <span>When progress bar is filled, the wish completes. The bar then resets, table emmits some particles and you get your weapon - 
-            <a href="elemental_weapons.html">Elemental</a> or <a href="legendary_weapons.html">Legendary</a>.</span>
-        </div>
-
-        <blockquote>
-          <strong>Pro Tip:</strong> Based on mathematical averages, a full stack of Wish Blocks (64) will typically yield around <strong>4 weapons</strong>.
-        </blockquote>
-
-        <hr style="border: 0; border-top: 1px solid var(--line); margin: 8px 0;">
-
-        <h2>4. The Wisher Villager & Byproducts</h2>
-        <p>The Wish Table also acts as a job site block, allowing an unemployed villager to take on the custom <strong>Wisher</strong> profession. </p>
-
-        <!-- Wisher Entity Showcase-->
-<div class="entity-showcase">
-  <!-- ENTITY ART -->
-  <div class="entity-showcase-image">
-    <img src="images/entities/wisher.png" alt="Wisher Villager Profession Model">
-    <div class="entity-showcase-name">Wisher Villager</div>
-    <div class="entity-showcase-type">Merchant</div>
-  </div>
-  <!-- ENTITY INFORMATION -->
-  <div class="entity-showcase-info">
-    <!-- HEADER -->
-    <div class="entity-header">
-      <div class="entity-header-title">
-        <h3>Wisher Villager</h3>
-        <span>Neutral · Peaceful · Overworld</span>
-      </div>
-      <!-- HEALTH -->
-      <div class="entity-health">
-        <span class="entity-health-label">Health</span>
-        <div class="entity-hearts">
-          <img class="entity-heart" src="../assets/ui/heart_full.png" alt="1 heart">  × 10
-          <span class="entity-health-number">20 HP</span>
-        </div>
-      </div>
-    </div>
-    <!-- QUICK STATS -->
-    <div class="entity-stats">
-      <div class="entity-stat"><strong>SPEED</strong>0.5</div>
-      <div class="entity-stat"><strong>XP</strong>0</div>
-    </div>
-    <!-- SPAWNING -->
-    <div class="entity-info-box spawning">
-      <strong>Spawning</strong>
-      <p>Spawns only in vanilla villages, by breeding, or by curing Zombie Villagers.</p>
-    </div>
-    <!-- BEHAVIOUR -->
-    <div class="entity-info-box behaviour">
-      <strong>Behaviour</strong>
-      <p>Takes this profession when Wish Table not taken by any other Villager is near.</p>
-    </div>
-    <!-- TRADE -->
-    <div class="entity-info-box combat">
-      <strong>Trade</strong>
-      <p>Has special custom trades involving star dust & star shine that you get from wishing.</p>
-    </div>
-    <!-- DROPS + SPAWN EGG -->
-<div class="entity-bottom-row">
-  <!-- DROPS -->
-  <div class="entity-drops">
-    <div class="entity-drops-title">Drops</div>
-    <div class="entity-drops-list">
-      <!-- DROP 0 -->
-    </div>
-  </div>
-    <!-- SPAWN EGG -->
-<div class="entity-spawn">
-  <div class="entity-spawn-title">Spawn Egg</div>
-  <div class="entity-spawn-box">
-    <img src="images/textures/villager_spawn_egg.png" alt="Villager Spawn Egg">
-  </div>
-</div>
-    </div>
-  </div>
-</div>
-
-        <!-- TRADES TABLE PLACEHOLDER -->
-      <table>
-        <thead><tr><th>Wisher Level</th><th>First Trade (max uses / XP for trade)</th><th>Second Trade (max uses / XP for trade)</th><th>Third Trade (max uses / XP for trade)</th></tr></thead>
-        <tbody>
-          <tr><td>Novice</td><td>3 Star Dust -> 2 Moon Flowers (8 / 2)</td><td>5 Star Shine -> 1 Wish (8 / 2)</td><td>8 Star Dust + Book -> Enchanted Book Range I (12 / 10)</td></tr>
-          <tr><td>Apprentice</td><td>3 Star Dust -> 1 Chrono Gear (8 / 10)</td><td>2 Star Dust -> 1 Jar of Glitters (4 / 2)</td><td> - </td></tr>
-          <tr><td>Journeyman</td><td>4 Star Dust -> 1 Wish Nugget (6 / 10)</td><td>6 Star Dust -> 1 Emerald (12 / 10)</td><td>10 Star Shine + Book -> Enchanted Book Fluttering (12 / 10)</td></tr>
-          <tr><td>Expert</td><td>8 Star Dust -> 1 Wish (8 / 10)</td><td>4 Star Shine -> 1 Heart of Emergency (3 / 20)</td><td> - </td></tr>
-          <tr><td>Master</td><td>24 Star Shine -> 1 Fate Bow (1 / 30)</td><td>24 Star Shine -> 1 Fate Sword (1 / 30)</td><td>12 Star Shine -> 48 Fate Arrow (2 / 20)</td></tr>
-        </tbody>
-      </table>
-
-        <h3>Example Screenshot of a possible Trades roll</h3>
-
-        <!-- IMAGE PLACEHOLDER -->
-        <div class="placeholder-box">
-        <img src="images/screenshots/wisher_trades.png" 
-        alt="Wisher Villager Trades"
-        style="width: 100%; border-radius: 8px; margin-bottom: 0px;">
-        Wisher Villager Trades example
-        </div>
-
-        <h3>Currencies & Crafting</h3>
-        <ul class="feature-list">
-          <li><strong>Star Shine:</strong> Obtained purely from Wish Completions. Used exclusively as high-tier currency to trade with the Wisher villager.</li>
-          <li><strong>Star Dust:</strong> Obtained from every single Wish Attempt. Can be sold to the Wisher, or used to craft decorative <strong>Glitter Blocks</strong> and <strong>Glitter Carpets</strong>.</li>
-        </ul>
-
-        <div class="notice">
-          <strong>Note:</strong> Dust dropped by the Glitter mob found in the (see <a href="end_threshold.html">End Threshold</a>) can also be used interchangeably to craft Glitter Blocks and Carpets.
-        </div>
-
-        <!-- Glitter Block Crafting Recipe -->
-      <div class="item-showcase">
-        <img class="recipe-type-sprite" src="../assets/branding/skin_sprite/recipes/right_crouching-crafting.png" alt="Crafting">
-        <div class="item-showcase-image" data-item-name="Glitter Block">
-          <img src="images/gifs/glitter_block.gif" alt="Glitter Block Item Texture">
-        </div>
-      <div class="item-showcase-info">
-    <div class="item-showcase-section">
-      <strong>Description</strong>
-      <p>Star Dust is mainly used to craft Glitter Blocks. Can be crafted also by placing 3 carpets in one column on crafting grid.</p>
-    </div>
-    <div class="item-showcase-section">
-      <strong>Crafting Recipe</strong>
-      <div class="recipe">
-        <img src="images/recipes/glitter_block_star_dust.png"
-          alt="Glitter Block crafting recipe"
-          style="width: 372px; height: 186px; image-rendering: pixelated;">
+            <strong>Wish completion</strong>
+            <span>When progress bar is filled, the wish completes. The bar then resets, table emmits some particles and you get your weapon -
+              <a href="elemental_weapons.html">Elemental</a> or <a href="legendary_weapons.html">Legendary</a>.</span>
+          </div>
+          <blockquote>
+            <strong>Pro Tip:</strong> Based on mathematical averages, a full stack of Wish Blocks (64) will typically yield around <strong>4 weapons</strong>.
+          </blockquote>
+          <hr style="border: 0; border-top: 1px solid var(--line); margin: 8px 0;">
+          <h2>4. The Wisher Villager & Byproducts</h2>
+          <p>The Wish Table also acts as a job site block, allowing an unemployed villager to take on the custom <strong>Wisher</strong> profession. </p>
+          <div class="entity-showcase">
+            <div class="entity-showcase-image">
+              <img src="images/entities/wisher.png" alt="Wisher Villager Profession Model">
+              <div class="entity-showcase-name">Wisher Villager</div>
+              <div class="entity-showcase-type">Merchant</div>
+            </div>
+            <div class="entity-showcase-info">
+              <div class="entity-header">
+                <div class="entity-header-title">
+                  <h3>Wisher Villager</h3>
+                  <span>Neutral · Peaceful · Overworld</span>
+                </div>
+                <div class="entity-health">
+                  <span class="entity-health-label">Health</span>
+                  <div class="entity-hearts">
+                    <img class="entity-heart" src="../assets/ui/heart_full.png" alt="1 heart">  × 10
+                    <span class="entity-health-number">20 HP</span>
+                  </div>
+                </div>
+              </div>
+              <div class="entity-stats">
+                <div class="entity-stat"><strong>SPEED</strong>0.5</div>
+                <div class="entity-stat"><strong>XP</strong>0</div>
+              </div>
+              <div class="entity-info-box spawning">
+                <strong>Spawning</strong>
+                <p>Spawns only in vanilla villages, by breeding, or by curing Zombie Villagers.</p>
+              </div>
+              <div class="entity-info-box behaviour">
+                <strong>Behaviour</strong>
+                <p>Takes this profession when Wish Table not taken by any other Villager is near.</p>
+              </div>
+              <div class="entity-info-box combat">
+                <strong>Trade</strong>
+                <p>Has special custom trades involving star dust & star shine that you get from wishing.</p>
+              </div>
+              <div class="entity-bottom-row">
+                <div class="entity-drops">
+                  <div class="entity-drops-title">Drops</div>
+                  <div class="entity-drops-list">
+                  </div>
+                </div>
+                <div class="entity-spawn">
+                  <div class="entity-spawn-title">Spawn Egg</div>
+                  <div class="entity-spawn-box">
+                    <img src="images/textures/villager_spawn_egg.png" alt="Villager Spawn Egg">
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
-        </div>
-      </div>
-        
-        <!-- Glitter Carpet Crafting Recipe -->
-      <div class="item-showcase">
-        <img class="recipe-type-sprite" src="../assets/branding/skin_sprite/recipes/right_crouching-crafting.png" alt="Crafting">
-        <div class="item-showcase-image" data-item-name="Glitter Carpet">
-          <img src="images/gifs/glitter_carpet.gif" alt="Glitter Carpet Item Texture">
-        </div>
-      <div class="item-showcase-info">
-    <div class="item-showcase-section">
-      <strong>Description</strong>
-      <p> Star Dust is mainly used to craft Glitter Carpet. Or just use blocks just like in a wool carpet recipe.</p>
-    </div>
-    <div class="item-showcase-section">
-      <strong>Crafting Recipe</strong>
-      <div class="recipe">
-        <img src="images/recipes/glitter_carpet_star_dust.png"
-          alt="Glitter Carpet crafting recipe"
-          style="width: 372px; height: 186px; image-rendering: pixelated;">
+          <table>
+            <thead><tr><th>Wisher Level</th><th>First Trade (max uses / XP for trade)</th><th>Second Trade (max uses / XP for trade)</th><th>Third Trade (max uses / XP for trade)</th></tr></thead>
+            <tbody>
+              <tr><td>Novice</td><td>3 Star Dust -> 2 Moon Flowers (8 / 2)</td><td>5 Star Shine -> 1 Wish (8 / 2)</td><td>8 Star Dust + Book -> Enchanted Book Range I (12 / 10)</td></tr>
+              <tr><td>Apprentice</td><td>3 Star Dust -> 1 Chrono Gear (8 / 10)</td><td>2 Star Dust -> 1 Jar of Glitters (4 / 2)</td><td> - </td></tr>
+              <tr><td>Journeyman</td><td>4 Star Dust -> 1 Wish Nugget (6 / 10)</td><td>6 Star Dust -> 1 Emerald (12 / 10)</td><td>10 Star Shine + Book -> Enchanted Book Fluttering (12 / 10)</td></tr>
+              <tr><td>Expert</td><td>8 Star Dust -> 1 Wish (8 / 10)</td><td>4 Star Shine -> 1 Heart of Emergency (3 / 20)</td><td> - </td></tr>
+              <tr><td>Master</td><td>24 Star Shine -> 1 Fate Bow (1 / 30)</td><td>24 Star Shine -> 1 Fate Sword (1 / 30)</td><td>12 Star Shine -> 48 Fate Arrow (2 / 20)</td></tr>
+            </tbody>
+          </table>
+          <h3>Example Screenshot of a possible Trades roll</h3>
+          <div class="placeholder-box">
+            <img src="images/screenshots/wisher_trades.png"
+            alt="Wisher Villager Trades"
+            style="width: 100%; border-radius: 8px; margin-bottom: 0px;">
+            Wisher Villager Trades example
+          </div>
+          <h3>Currencies & Crafting</h3>
+          <ul class="feature-list">
+            <li><strong>Star Shine:</strong> Obtained purely from Wish Completions. Used exclusively as high-tier currency to trade with the Wisher villager.</li>
+            <li><strong>Star Dust:</strong> Obtained from every single Wish Attempt. Can be sold to the Wisher, or used to craft decorative <strong>Glitter Blocks</strong> and <strong>Glitter Carpets</strong>.</li>
+          </ul>
+          <div class="notice">
+            <strong>Note:</strong> Dust dropped by the Glitter mob found in the (see <a href="end_threshold.html">End Threshold</a>) can also be used interchangeably to craft Glitter Blocks and Carpets.
+          </div>
+          <div class="item-showcase">
+            <img class="recipe-type-sprite" src="../assets/branding/skin_sprite/recipes/right_crouching-crafting.png" alt="Crafting">
+            <div class="item-showcase-image" data-item-name="Glitter Block">
+              <img src="images/gifs/glitter_block.gif" alt="Glitter Block Item Texture">
+            </div>
+            <div class="item-showcase-info">
+              <div class="item-showcase-section">
+                <strong>Description</strong>
+                <p>Star Dust is mainly used to craft Glitter Blocks. Can be crafted also by placing 3 carpets in one column on crafting grid.</p>
+              </div>
+              <div class="item-showcase-section">
+                <strong>Crafting Recipe</strong>
+                <div class="recipe">
+                  <img src="images/recipes/glitter_block_star_dust.png"
+                  alt="Glitter Block crafting recipe"
+                  style="width: 372px; height: 186px; image-rendering: pixelated;">
+                </div>
+              </div>
             </div>
           </div>
-        </div>
-      </div>
-
-        <hr style="border: 0; border-top: 1px solid var(--line); margin: 8px 0;">
-
-        <h2>5. The Fate Weapon Set</h2>
-        <p>During your wishing rolls, you may also occasionally obtain pieces of the <strong>Fate Weapon Set</strong> (Sword, Bow, and Arrow). Unlike the Elemental and Legendary weapons, the Fate set weapons are <strong>breakable</strong> (they have durability) and cannot be crafted.</p>
-
-        <!-- IMAGE PLACEHOLDER -->
-        <div class="placeholder-box">
-        <img src="images/screenshots/fate_collection.png" 
-        alt="Fate Collection"
-        style="width: 100%; border-radius: 8px; margin-bottom: 0px;">
-        Fate Collection
-        </div>
-
-        <!-- Fate Arrow Crafting Recipe -->
-      <div class="item-showcase">
-        <img class="recipe-type-sprite" src="../assets/branding/skin_sprite/recipes/right_crouching-crafting.png" alt="Crafting">
-        <div class="item-showcase-image" data-item-name="Fate Arrow">
-          <img src="images/textures/fate_arrow.png" alt="Fate Arrow Item Texture">
-        </div>
-      <div class="item-showcase-info">
-    <div class="item-showcase-section">
-      <strong>Description</strong>
-      <p> Fate Arrows can be bought from Wisher, but also crafted like right below,
-          using 1 Stick, 1 <a href="the_moon.html">Moth Wing</a> and 1 Crystal that has some chance to drop from Moon Sand.
-          Makes your ennemies levitate. Can be shot only with Fate Bow.</p>
-    </div>
-    <div class="item-showcase-section">
-      <strong>Crafting Recipe</strong>
-      <div class="recipe">
-        <img src="images/recipes/fate_arrow.png"
-          alt="Fate Arrow crafting recipe"
-          style="width: 372px; height: 186px; image-rendering: pixelated;">
+          <div class="item-showcase">
+            <img class="recipe-type-sprite" src="../assets/branding/skin_sprite/recipes/right_crouching-crafting.png" alt="Crafting">
+            <div class="item-showcase-image" data-item-name="Glitter Carpet">
+              <img src="images/gifs/glitter_carpet.gif" alt="Glitter Carpet Item Texture">
+            </div>
+            <div class="item-showcase-info">
+              <div class="item-showcase-section">
+                <strong>Description</strong>
+                <p> Star Dust is mainly used to craft Glitter Carpet. Or just use blocks just like in a wool carpet recipe.</p>
+              </div>
+              <div class="item-showcase-section">
+                <strong>Crafting Recipe</strong>
+                <div class="recipe">
+                  <img src="images/recipes/glitter_carpet_star_dust.png"
+                  alt="Glitter Carpet crafting recipe"
+                  style="width: 372px; height: 186px; image-rendering: pixelated;">
+                </div>
+              </div>
             </div>
           </div>
+          <hr style="border: 0; border-top: 1px solid var(--line); margin: 8px 0;">
+          <h2>5. The Fate Weapon Set</h2>
+          <p>During your wishing rolls, you may also occasionally obtain pieces of the <strong>Fate Weapon Set</strong> (Sword, Bow, and Arrow). Unlike the Elemental and Legendary weapons, the Fate set weapons are <strong>breakable</strong> (they have durability) and cannot be crafted.</p>
+          <div class="placeholder-box">
+            <img src="images/screenshots/fate_collection.png"
+            alt="Fate Collection"
+            style="width: 100%; border-radius: 8px; margin-bottom: 0px;">
+            Fate Collection
+          </div>
+          <div class="item-showcase">
+            <img class="recipe-type-sprite" src="../assets/branding/skin_sprite/recipes/right_crouching-crafting.png" alt="Crafting">
+            <div class="item-showcase-image" data-item-name="Fate Arrow">
+              <img src="images/textures/fate_arrow.png" alt="Fate Arrow Item Texture">
+            </div>
+            <div class="item-showcase-info">
+              <div class="item-showcase-section">
+                <strong>Description</strong>
+                <p> Fate Arrows can be bought from Wisher, but also crafted like right below,
+                  using 1 Stick, 1 <a href="the_moon.html">Moth Wing</a> and 1 Crystal that has some chance to drop from Moon Sand.
+                  Makes your ennemies levitate. Can be shot only with Fate Bow.</p>
+              </div>
+              <div class="item-showcase-section">
+                <strong>Crafting Recipe</strong>
+                <div class="recipe">
+                  <img src="images/recipes/fate_arrow.png"
+                  alt="Fate Arrow crafting recipe"
+                  style="width: 372px; height: 186px; image-rendering: pixelated;">
+                </div>
+              </div>
+            </div>
+          </div>
+          <h3>Unique On-Hit Effects</h3>
+          <p>Though they break over time, they make up for it with powerful, fate-altering strikes:</p>
+          <ul class="feature-list">
+            <li><strong>Fate Sword:</strong> Aproximatively as strong as diamond sword. Makes special effects on hit.</li>
+            <li><strong>Fate Bow:</strong> Shoots faster and stronger than normal bow. Can shoot any arrow, including the Fate one.</li>
+            <li><strong>Fate Arrow:</strong> Makes targets levitate. Can be shot only using the Fate Bow.</li>
+          </ul>
+          <div class="notice">
+            <p>Go see this page if you need some more detailed information about every <a href="elemental_weapon.html">Elemental Weapon →</a> to choose from.</p>
+          </div>
         </div>
-      </div>
-
-        <h3>Unique On-Hit Effects</h3>
-        <p>Though they break over time, they make up for it with powerful, fate-altering strikes:</p>
-        <ul class="feature-list">
-          <li><strong>Fate Sword:</strong> Aproximatively as strong as diamond sword. Makes special effects on hit.</li>
-          <li><strong>Fate Bow:</strong> Shoots faster and stronger than normal bow. Can shoot any arrow, including the Fate one.</li>
-          <li><strong>Fate Arrow:</strong> Makes targets levitate. Can be shot only using the Fate Bow.</li>
-        </ul>
-
-        <div class="notice">
-         <p>Go see this page if you need some more detailed information about every <a href="elemental_weapon.html">Elemental Weapon →</a> to choose from.</p>
-        </div>
-        
-      </div>
-    </main>
-  </div>
-  <footer>GILE Wiki · MasterHamster837 · <a href="index.html">Back to GILE</a></footer>
-  <script src="../assets/js/docs-sidebar.js"></script>
-</body>
+      </main>
+    </div>
+    <footer>GILE Wiki · MasterHamster837 · <a href="index.html">Back to GILE</a></footer>
+    <script src="../assets/js/docs-sidebar.js"></script>
+  </body>
 </html>

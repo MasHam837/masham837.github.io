@@ -1,311 +1,262 @@
 <!doctype html>
 <html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="icon" type="image/png" href="icon.png">
-  <title>Ancient Ruins & Ruin Guard — GILE Wiki</title>
-  <link rel="stylesheet" href="../assets/style.css">
-  
-  <style>
-    .item-showcase { position: relative; }
-    .recipe-type-sprite { position: absolute; top: 8px; left: 8px; width: 86px; height: 44px; object-fit: contain; image-rendering: pixelated; pointer-events: none;}
-  </style>
-  
-</head>
-<body>
-  <header class="topbar">
-    <a class="brand" href="../">MasterHamster837 <span>WIKI</span></a>
-    <nav>
-      <a class="active sidebar-toggle" href="./"><img src="icon.png" alt="GILE icon"> GILE</a>
-      <a href="https://www.curseforge.com/minecraft/mc-mods/genshin-impact-lunar-expansion" target="_blank" rel="noreferrer" style="color: #f36c21;">CurseForge ↗</a>
-      <a href="https://modrinth.com/mod/genshin-impact-lunar-expansion" target="_blank" rel="noreferrer" style="color: #5cff4a;">Modrinth ↗</a>
-      <a href="https://github.com/MasHam837/minecraft-mods-source-codes" target="_blank" rel="noreferrer" style="color: #f0f6fc;">Source ↗</a>
-    </nav>
-  </header>
-  <div class="docs-layout">
-    
-    <aside class="sidebar">
-      <div class="sidebar-title">GILE</div>
-      <a class="side-link" href="./">Overview</a>
-
-      <div class="side-heading">GAMEPLAY</div>
-      <a class="side-link" href="start.html">Getting Started</a>
-      <a class="side-link active" href="ancient_ruins.html">Ancient Ruins</a>
-      <a class="side-link" href="end_threshold.html">End Threshold</a>
-      <a class="side-link" href="the_moon.html">The Moon</a>
-      <a class="side-link" href="ghostly_thickets.html">Ghostly Thickets</a>
-      <a class="side-link" href="moon_desert.html">Moon Desert</a>
-      <a class="side-link" href="tools.html">Tools & Utilities</a>
-      <a class="side-link" href="wish.html">Wishing Mechanic</a>
-      <a class="side-link" href="elemental_weapons.html">Elemental Weapons</a>
-      <a class="side-link" href="legendary_weapons.html">Legendary Weapons</a>
-
-      <div class="side-heading">DOCUMENTATION</div>
-      <a class="side-link" href="installation.html">Installation</a>
-      <a class="side-link" href="issues.html">Known Issues</a>
-      <a class="side-link" href="versions.html">Versions History</a>
-
-    </aside>
-    
-    <main class="docs-main doc-page">
-      <div class="breadcrumbs"><a href="index.html">GILE</a> / World Generation</div>
-      <div class="content">
-        <p class="eyebrow">GILE DOCUMENTATION</p>
-        <h1>Ancient Ruins & Ruin Guard</h1>
-        <p class="lead">Discover Ancient Ruins, defeat the Ruin Guard, and find your way to the Moon (Outer End Islands).</p>
-
-        <div class="placeholder-box">
-        <img src="images/screenshots/ancient_ruins_exterior.png" 
-        alt="Ancient Ruins structure exterior"
-        style="width: 100%; border-radius: 8px; margin-bottom: 0px;">
-        Ancient Ruins structure exterior
-        </div>
-
-        <h2>1. Ancient Ruins</h2>
-        <p>The <strong>Ancient Ruins</strong> structure can generate anywhere on the Overworld surface. It is the primary mid-game dungeon of the mod and your alternative gateway to the End dimension.</p>
-        
-        <h3>Structure Layout & Loot</h3>
-        <p>The ruins consist of one <strong>Central Boss Arena</strong> and up to <strong>5 randomly generated side rooms</strong>. Note that some side rooms have a chance to not generate at all, making every ruin slightly different!</p>
-        
-        <ul class="feature-list">
-          <li>Every side room (except closed) have one decorated pot, barrel and chest.</li>
-          <li>Pots contain one elemental bundle with some of special elemental item.</li>
-          <li>Barrels contain ruined junk, some primogems, corresponding sigils and another special elemental item.</li>
-          <li>Chests loot is based on one of the 8 elements, pulling from vanilla structures loot tables.</li>
-        </ul>
-
-        <div class="placeholder-box">
-        <img src="images/screenshots/ancient_ruins_rooms.png" 
-        alt="Side Rooms Gallery"
-        style="width: 100%; border-radius: 8px; margin-bottom: 0px;">
-        Side Rooms Gallery
-        </div>
-
-        <p>Three rows from left to right: <strong>Anemo, Geo, Electro; Luna, Closed, Dendro; Cryo, Pyro, Hydro</strong> elemental room types.</p>
-        
-        <p style="margin-top: 15px;"><strong>Special Elemental Loot Pools:</strong></p>
-        <table>
-          <thead>
-            <tr><th>Type</th><th>Pot Loot</th><th>Barrel Special item</th><th>Chest Loot Table</th></tr>
-          </thead>
-          <tbody>
-            <tr><td>Closed</td><td><em>stone_axe</em></td><td><em> - </em></td><td><em> - </em></td></tr>
-            <tr><td>Anemo</td><td><em>phantom_membrane</em></td><td><em>wind_charge</em></td><td><em>trial_chambers/entrance</em></td></tr>
-            <tr><td>Geo</td><td><em></em>pointed_dripstone</td><td><em>smooth_sandstone</em></td><td><em>desert_pyramid</em></td></tr>
-            <tr><td>Electro</td><td><em>amethyst_shard</em></td><td><em>copper_ingot</em></td><td><em>ancient_city</em></td></tr>
-            <tr><td>Dendro</td><td><em>flowering_azalea</em></td><td><em>big_dripleaf</em></td><td><em>jungle_temple</em></td></tr>
-            <tr><td>Hydro</td><td><em>prismarine_crystal</em></td><td><em>prismarine_shard</em></td><td><em>shipwreck_treasure</em></td></tr>
-            <tr><td>Pyro</td><td><em>gunpowder</em></td><td><em>fire_charge</em></td><td><em>ruined_portal</em></td></tr>
-            <tr><td>Cryo</td><td><em>snow_layer</em></td><td><em>ice</em></td><td><em>igloo_chest</em></td></tr>
-            <tr><td>Luna</td><td><em><a href="end_threshold.html">gilemod:dust</a></em></td><td><em>end_stone</em></td><td><em>end_city_treasure</em></td></tr>
-          </tbody>
-        </table>
-
-        <h2>2. The Ruin Guard (Mini-Boss)</h2>
-        <p>The central arena of the Ancient Ruins houses the <strong>Ruin Guard</strong>.</p>
-        
-        <!-- Ruin Guard Entity Showcase-->
-<div class="entity-showcase">
-  <!-- ENTITY ART -->
-  <div class="entity-showcase-image">
-    <img src="images/entities/ruin_guard.png" alt="Ruin Guard Entity Model">
-    <div class="entity-showcase-name">Ruin Guard</div>
-    <div class="entity-showcase-type">Mini-Boss</div>
-  </div>
-  <!-- ENTITY INFORMATION -->
-  <div class="entity-showcase-info">
-    <!-- HEADER -->
-    <div class="entity-header">
-      <div class="entity-header-title">
-        <h3>Ruin Guard</h3>
-        <span>Mini-Boss · Hostile · Overworld</span>
-      </div>
-      <!-- HEALTH -->
-      <div class="entity-health">
-        <span class="entity-health-label">Health</span>
-        <div class="entity-hearts">
-          <img class="entity-heart" src="../assets/ui/heart_full.png" alt="1 heart">  × 200
-          <span class="entity-health-number">400 HP</span>
-        </div>
-      </div>
-    </div>
-    <!-- QUICK STATS -->
-    <div class="entity-stats">
-      <div class="entity-stat"><strong>ATTACK</strong>15</div>
-      <div class="entity-stat"><strong>ARMOR</strong>10</div>
-      <div class="entity-stat"><strong>SPEED</strong>0.25</div>
-      <div class="entity-stat"><strong>XP</strong>20</div>
-    </div>
-    <!-- SPAWNING -->
-    <div class="entity-info-box spawning">
-      <strong>Spawning</strong>
-      <p>
-        Spawns exactly once on Ancient Ruins Generation.
-      </p>
-    </div>
-    <!-- BEHAVIOUR -->
-    <div class="entity-info-box behaviour">
-      <strong>Behaviour</strong>
-      <p>
-        Have three types of attack: Melee, Ranged & Rotation. Targets players and traders.
-        When does not have target or when chases it, Ruin Guard walks or can randomly use
-        its Rotation attack, that deals a huge knockback. Deals 10 damage on contact.
-      </p>
-    </div>
-    <!-- COMBAT -->
-    <div class="entity-info-box combat">
-      <strong>Combat</strong>
-      <p>
-        Melee is used on close distance to the target, consist of 5 consecutive hits with 15 damage each.
-        Ranged makes it shoot 6 following target rockets. Each one explodes and deals 6 damage.
-      </p>
-    </div>
-    <!-- DROPS + SPAWN EGG -->
-<div class="entity-bottom-row">
-  <!-- DROPS -->
-  <div class="entity-drops">
-    <div class="entity-drops-title">Drops</div>
-    <div class="entity-drops-list">
-      <!-- DROP 1 -->
-      <div class="entity-drop">
-        <img src="images/textures/primogem.png" alt="Primogem">
-        <span class="entity-drop-amount">10-20</span>
-      </div>
-      <!-- DROP 2 -->
-      <div class="entity-drop">
-        <img src="images/textures/cogwork_core.png" alt="Cogwork Core">
-        <span class="entity-drop-amount">1</span>
-      </div>
-    </div>
-  </div>
-  <!-- SPAWN EGG -->
-  <div class="entity-spawn">
-    <div class="entity-spawn-title">Spawn Egg</div>
-    <div class="entity-spawn-box">
-      <img src="images/textures/ruin_guard_spawn_egg.png" alt="Ruin Guard Spawn Egg">
-    </div>
-  </div>
-</div>
-  </div>
-</div>
-
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/png" href="icon.png">
+    <title>Ancient Ruins & Ruin Guard — GILE Wiki</title>
+    <link rel="stylesheet" href="../assets/style.css">
+    <style>
+      .item-showcase { position: relative; }
+      .recipe-type-sprite { position: absolute; top: 8px; left: 8px; width: 86px; height: 44px; object-fit: contain; image-rendering: pixelated; pointer-events: none;}
+    </style>
+  </head>
+  <body>
+    <header class="topbar">
+      <a class="brand" href="../">MasterHamster837 <span>WIKI</span></a>
+      <nav>
+        <a class="active sidebar-toggle" href="./"><img src="icon.png" alt="GILE icon"> GILE</a>
+        <a href="https://www.curseforge.com/minecraft/mc-mods/genshin-impact-lunar-expansion" target="_blank" rel="noreferrer" style="color: #f36c21;">CurseForge ↗</a>
+        <a href="https://modrinth.com/mod/genshin-impact-lunar-expansion" target="_blank" rel="noreferrer" style="color: #5cff4a;">Modrinth ↗</a>
+        <a href="https://github.com/MasHam837/minecraft-mods-source-codes" target="_blank" rel="noreferrer" style="color: #f0f6fc;">Source ↗</a>
+      </nav>
+    </header>
+    <div class="docs-layout">
+      <aside class="sidebar">
+        <div class="sidebar-title">GILE</div>
+        <a class="side-link" href="./">Overview</a>
+        <div class="side-heading">GAMEPLAY</div>
+        <a class="side-link" href="start.html">Getting Started</a>
+        <a class="side-link active" href="ancient_ruins.html">Ancient Ruins</a>
+        <a class="side-link" href="end_threshold.html">End Threshold</a>
+        <a class="side-link" href="the_moon.html">The Moon</a>
+        <a class="side-link" href="ghostly_thickets.html">Ghostly Thickets</a>
+        <a class="side-link" href="moon_desert.html">Moon Desert</a>
+        <a class="side-link" href="tools.html">Tools & Utilities</a>
+        <a class="side-link" href="wish.html">Wishing Mechanic</a>
+        <a class="side-link" href="elemental_weapons.html">Elemental Weapons</a>
+        <a class="side-link" href="legendary_weapons.html">Legendary Weapons</a>
+        <div class="side-heading">DOCUMENTATION</div>
+        <a class="side-link" href="installation.html">Installation</a>
+        <a class="side-link" href="issues.html">Known Issues</a>
+        <a class="side-link" href="versions.html">Versions History</a>
+      </aside>
+      <main class="docs-main doc-page">
+        <div class="breadcrumbs"><a href="index.html">GILE</a> / World Generation</div>
+        <div class="content">
+          <p class="eyebrow">GILE DOCUMENTATION</p>
+          <h1>Ancient Ruins & Ruin Guard</h1>
+          <p class="lead">Discover Ancient Ruins, defeat the Ruin Guard, and find your way to the Moon (Outer End Islands).</p>
+          <div class="placeholder-box">
+            <img src="images/screenshots/ancient_ruins_exterior.png"
+            alt="Ancient Ruins structure exterior"
+            style="width: 100%; border-radius: 8px; margin-bottom: 0px;">
+            Ancient Ruins structure exterior
+          </div>
+          <h2>1. Ancient Ruins</h2>
+          <p>The <strong>Ancient Ruins</strong> structure can generate anywhere on the Overworld surface. It is the primary mid-game dungeon of the mod and your alternative gateway to the End dimension.</p>
+          <h3>Structure Layout & Loot</h3>
+          <p>The ruins consist of one <strong>Central Boss Arena</strong> and up to <strong>5 randomly generated side rooms</strong>. Note that some side rooms have a chance to not generate at all, making every ruin slightly different!</p>
+          <ul class="feature-list">
+            <li>Every side room (except closed) have one decorated pot, barrel and chest.</li>
+            <li>Pots contain one elemental bundle with some of special elemental item.</li>
+            <li>Barrels contain ruined junk, some primogems, corresponding sigils and another special elemental item.</li>
+            <li>Chests loot is based on one of the 8 elements, pulling from vanilla structures loot tables.</li>
+          </ul>
+          <div class="placeholder-box">
+            <img src="images/screenshots/ancient_ruins_rooms.png"
+            alt="Side Rooms Gallery"
+            style="width: 100%; border-radius: 8px; margin-bottom: 0px;">
+            Side Rooms Gallery
+          </div>
+          <p>Three rows from left to right: <strong>Anemo, Geo, Electro; Luna, Closed, Dendro; Cryo, Pyro, Hydro</strong> elemental room types.</p>
+          <p style="margin-top: 15px;"><strong>Special Elemental Loot Pools:</strong></p>
+          <table>
+            <thead>
+              <tr><th>Type</th><th>Pot Loot</th><th>Barrel Special item</th><th>Chest Loot Table</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>Closed</td><td><em>stone_axe</em></td><td><em> - </em></td><td><em> - </em></td></tr>
+              <tr><td>Anemo</td><td><em>phantom_membrane</em></td><td><em>wind_charge</em></td><td><em>trial_chambers/entrance</em></td></tr>
+              <tr><td>Geo</td><td><em></em>pointed_dripstone</td><td><em>smooth_sandstone</em></td><td><em>desert_pyramid</em></td></tr>
+              <tr><td>Electro</td><td><em>amethyst_shard</em></td><td><em>copper_ingot</em></td><td><em>ancient_city</em></td></tr>
+              <tr><td>Dendro</td><td><em>flowering_azalea</em></td><td><em>big_dripleaf</em></td><td><em>jungle_temple</em></td></tr>
+              <tr><td>Hydro</td><td><em>prismarine_crystal</em></td><td><em>prismarine_shard</em></td><td><em>shipwreck_treasure</em></td></tr>
+              <tr><td>Pyro</td><td><em>gunpowder</em></td><td><em>fire_charge</em></td><td><em>ruined_portal</em></td></tr>
+              <tr><td>Cryo</td><td><em>snow_layer</em></td><td><em>ice</em></td><td><em>igloo_chest</em></td></tr>
+              <tr><td>Luna</td><td><em><a href="end_threshold.html">gilemod:dust</a></em></td><td><em>end_stone</em></td><td><em>end_city_treasure</em></td></tr>
+            </tbody>
+          </table>
+          <h2>2. The Ruin Guard (Mini-Boss)</h2>
+          <p>The central arena of the Ancient Ruins houses the <strong>Ruin Guard</strong>.</p>
+          <div class="entity-showcase">
+            <div class="entity-showcase-image">
+              <img src="images/entities/ruin_guard.png" alt="Ruin Guard Entity Model">
+              <div class="entity-showcase-name">Ruin Guard</div>
+              <div class="entity-showcase-type">Mini-Boss</div>
+            </div>
+            <div class="entity-showcase-info">
+              <div class="entity-header">
+                <div class="entity-header-title">
+                  <h3>Ruin Guard</h3>
+                  <span>Mini-Boss · Hostile · Overworld</span>
+                </div>
+                <div class="entity-health">
+                  <span class="entity-health-label">Health</span>
+                  <div class="entity-hearts">
+                    <img class="entity-heart" src="../assets/ui/heart_full.png" alt="1 heart">  × 200
+                    <span class="entity-health-number">400 HP</span>
+                  </div>
+                </div>
+              </div>
+              <div class="entity-stats">
+                <div class="entity-stat"><strong>ATTACK</strong>15</div>
+                <div class="entity-stat"><strong>ARMOR</strong>10</div>
+                <div class="entity-stat"><strong>SPEED</strong>0.25</div>
+                <div class="entity-stat"><strong>XP</strong>20</div>
+              </div>
+              <div class="entity-info-box spawning">
+                <strong>Spawning</strong>
+                <p>
+                  Spawns exactly once on Ancient Ruins Generation.
+                </p>
+              </div>
+              <div class="entity-info-box behaviour">
+                <strong>Behaviour</strong>
+                <p>
+                  Have three types of attack: Melee, Ranged & Rotation. Targets players and traders.
+                  When does not have target or when chases it, Ruin Guard walks or can randomly use
+                  its Rotation attack, that deals a huge knockback. Deals 10 damage on contact.
+                </p>
+              </div>
+              <div class="entity-info-box combat">
+                <strong>Combat</strong>
+                <p>
+                  Melee is used on close distance to the target, consist of 5 consecutive hits with 15 damage each.
+                  Ranged makes it shoot 6 following target rockets. Each one explodes and deals 6 damage.
+                </p>
+              </div>
+              <div class="entity-bottom-row">
+                <div class="entity-drops">
+                  <div class="entity-drops-title">Drops</div>
+                  <div class="entity-drops-list">
+                    <div class="entity-drop">
+                      <img src="images/textures/primogem.png" alt="Primogem">
+                      <span class="entity-drop-amount">10-20</span>
+                    </div>
+                    <div class="entity-drop">
+                      <img src="images/textures/cogwork_core.png" alt="Cogwork Core">
+                      <span class="entity-drop-amount">1</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="entity-spawn">
+                  <div class="entity-spawn-title">Spawn Egg</div>
+                  <div class="entity-spawn-box">
+                    <img src="images/textures/ruin_guard_spawn_egg.png" alt="Ruin Guard Spawn Egg">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
           <div class="doc-grid" style="margin: 20px 0;">
             <div>
               <img src="images/gifs/ruin_guard_walking.gif"
-               alt="Ruin Guard Walking"
-               style="width: 100%; border-radius: 8px;">
+              alt="Ruin Guard Walking"
+              style="width: 100%; border-radius: 8px;">
               <strong>Walking</strong>
               <span>Triggered when the player is not spotted or while chasing the player.</span>
             </div>
             <div>
               <img src="images/gifs/ruin_guard_melee.gif"
-               alt="Ruin Guard Melee Attack"
-               style="width: 100%; border-radius: 8px;">
+              alt="Ruin Guard Melee Attack"
+              style="width: 100%; border-radius: 8px;">
               <strong>Melee Attack</strong>
               <span>Triggered when the player is close. Deals heavy physical damage.</span>
             </div>
             <div>
               <img src="images/gifs/ruin_guard_ranged.gif"
-               alt="Ruin Guard Ranged Attack"
-               style="width: 100%; border-radius: 8px;">
+              alt="Ruin Guard Ranged Attack"
+              style="width: 100%; border-radius: 8px;">
               <strong>Ranged Attack</strong>
               <span>Triggered when the player is far away. Shoots simultaniously 6 explosive rockets.</span>
             </div>
             <div>
-                <img src="images/gifs/ruin_guard_rotation.gif"
-               alt="Ruin Guard Rotation Attack"
-               style="width: 100%; border-radius: 8px;">
+              <img src="images/gifs/ruin_guard_rotation.gif"
+              alt="Ruin Guard Rotation Attack"
+              style="width: 100%; border-radius: 8px;">
               <strong>Rotation Attack</strong>
               <span>Random chance to trigger at mid-range or while chasing the player. Deals huge AoE knockback.</span>
             </div>
           </div>
-
-        <h2>3. Cogwork Core</h2>
-        <p>Defeating the Ruin Guard gives you a 100% chance to obtain 10-20 Primogems and a <strong>Cogwork Core</strong>. This item is critical for crafting two highly overpowered utility items: the <strong>Nuclear Cannon</strong> and the <strong>End Compass</strong>. The <a href="legendary_weapons.html">Phanes Blade</a> can be crafted too</p>
-
-        <!-- End Compass -->
-<div class="item-showcase">
-
-  <img class="recipe-type-sprite" src="../assets/branding/skin_sprite/recipes/right_crouching-crafting.png" alt="Crafting">
-
-  <div class="item-showcase-image" data-item-name="End Compass">
-    <img src="images/textures/end_compass.png" alt="End Compass Item Texture">
-  </div>
-
-  <div class="item-showcase-info">
-    <div class="item-showcase-section">
-      <strong>Description</strong>
-      <p>
-        Craft it from a Cogwork Core, one <a href="the_moon.html">Moth Wing</a> and 7
-        <a href="wish.html">Pearlescent Materials</a>.
-        Using the End Compass teleports you directly to the End dimension at your exact
-        Overworld coordinates (X and Z). The compass algorithm ensures you never tp in
-        the void by searching for a safe block within an 8-chunk radius.
-        If no safe block is found, it returns an error.
-      </p>
+          <h2>3. Cogwork Core</h2>
+          <p>Defeating the Ruin Guard gives you a 100% chance to obtain 10-20 Primogems and a <strong>Cogwork Core</strong>. This item is critical for crafting two highly overpowered utility items: the <strong>Nuclear Cannon</strong> and the <strong>End Compass</strong>. The <a href="legendary_weapons.html">Phanes Blade</a> can be crafted too</p>
+          <div class="item-showcase">
+            <img class="recipe-type-sprite" src="../assets/branding/skin_sprite/recipes/right_crouching-crafting.png" alt="Crafting">
+            <div class="item-showcase-image" data-item-name="End Compass">
+              <img src="images/textures/end_compass.png" alt="End Compass Item Texture">
+            </div>
+            <div class="item-showcase-info">
+              <div class="item-showcase-section">
+                <strong>Description</strong>
+                <p>
+                  Craft it from a Cogwork Core, one <a href="the_moon.html">Moth Wing</a> and 7
+                  <a href="wish.html">Pearlescent Materials</a>.
+                  Using the End Compass teleports you directly to the End dimension at your exact
+                  Overworld coordinates (X and Z). The compass algorithm ensures you never tp in
+                  the void by searching for a safe block within an 8-chunk radius.
+                  If no safe block is found, it returns an error.
+                </p>
+              </div>
+              <div class="item-showcase-section">
+                <strong>Crafting Recipe</strong>
+                <div class="recipe">
+                  <img src="images/recipes/end_compass.png"
+                  alt="End Compass crafting recipe"
+                  style="width: 372px; height: 186px; image-rendering: pixelated;">
+                </div>
+              </div>
+            </div>
+          </div>
+          <ul class="feature-list">
+            <li><strong>Bypassing the Dragon:</strong> If your X or Z coordinates in the Overworld are close to <strong>1000 or greater</strong>, the compass will safely teleport you to the Outer End Islands (The Moon).</li>
+            <li><strong>Warning System:</strong> The compass emits a warning if your coordinates will land you on the Main End Island, allowing you to prepare before accidental teleportation.</li>
+          </ul>
+          <div class="item-showcase">
+            <img class="recipe-type-sprite" src="../assets/branding/skin_sprite/recipes/right_crouching-crafting.png" alt="Crafting">
+            <div class="item-showcase-image" data-item-name="Nuclear Cannon">
+              <img src="images/textures/nuclear_cannon.png" alt="Nuclear Cannon Item Texture">
+            </div>
+            <div class="item-showcase-info">
+              <div class="item-showcase-section">
+                <strong>Description</strong>
+                <p>
+                  Can be crafted from a Cogwork Core, one <a href="the_moon.html">Enderite Ingot</a>
+                  and two <a href="wish.html">Wish Ingots</a>.
+                  Using it emits a pretty short, but powerful ray of radiation. It destroys every
+                  block in it's way, except those that don't explode and enderite-related blocks.
+                  Also burns and hurts entities as well as occasionnaly causes explosions.
+                  Durability is just 40. Nuclear Cannon can be recharged with Wish Nuggets when on low ammo.
+                </p>
+              </div>
+              <div class="item-showcase-section">
+                <strong>Crafting Recipe</strong>
+                <div class="recipe">
+                  <img src="images/recipes/nuclear_cannon.png"
+                  alt="Nuclear Cannon crafting recipe"
+                  style="width: 372px; height: 186px; image-rendering: pixelated;">
+                </div>
+              </div>
+            </div>
+          </div>
+          <hr style="border: 0; border-top: 1px solid var(--line); margin: 8px 0;">
+          <div class="notice">
+            <p>Looking for details on the new moon terrains and mobs? Head over to the <a href="the_moon.html">Moon Documentation →</a>.</p>
+          </div>
+        </div>
+      </main>
     </div>
-
-    <div class="item-showcase-section">
-      <strong>Crafting Recipe</strong>
-      <div class="recipe">
-        <img src="images/recipes/end_compass.png"
-             alt="End Compass crafting recipe"
-             style="width: 372px; height: 186px; image-rendering: pixelated;">
-      </div>
-    </div>
-  </div>
-</div>
-
-<ul class="feature-list">
-  <li><strong>Bypassing the Dragon:</strong> If your X or Z coordinates in the Overworld are close to <strong>1000 or greater</strong>, the compass will safely teleport you to the Outer End Islands (The Moon).</li>
-  <li><strong>Warning System:</strong> The compass emits a warning if your coordinates will land you on the Main End Island, allowing you to prepare before accidental teleportation.</li>
-</ul>
-
-
-<!-- Nuclear Cannon -->
-<div class="item-showcase">
-
-  <img class="recipe-type-sprite" src="../assets/branding/skin_sprite/recipes/right_crouching-crafting.png" alt="Crafting">
-
-  <div class="item-showcase-image" data-item-name="Nuclear Cannon">
-    <img src="images/textures/nuclear_cannon.png" alt="Nuclear Cannon Item Texture">
-  </div>
-
-  <div class="item-showcase-info">
-    <div class="item-showcase-section">
-      <strong>Description</strong>
-      <p>
-        Can be crafted from a Cogwork Core, one <a href="the_moon.html">Enderite Ingot</a>
-        and two <a href="wish.html">Wish Ingots</a>.
-        Using it emits a pretty short, but powerful ray of radiation. It destroys every
-        block in it's way, except those that don't explode and enderite-related blocks.
-        Also burns and hurts entities as well as occasionnaly causes explosions.
-        Durability is just 40. Nuclear Cannon can be recharged with Wish Nuggets when on low ammo.
-      </p>
-    </div>
-
-    <div class="item-showcase-section">
-      <strong>Crafting Recipe</strong>
-      <div class="recipe">
-        <img src="images/recipes/nuclear_cannon.png"
-             alt="Nuclear Cannon crafting recipe"
-             style="width: 372px; height: 186px; image-rendering: pixelated;">
-      </div>
-    </div>
-  </div>
-</div>
-
-<hr style="border: 0; border-top: 1px solid var(--line); margin: 8px 0;">
-
-<div class="notice">
-  <p>Looking for details on the new moon terrains and mobs? Head over to the <a href="the_moon.html">Moon Documentation →</a>.</p>
-</div>
-        
-      </div>
-    </main>
-  </div>
-  <footer>GILE Wiki · MasterHamster837 · <a href="index.html">Back to GILE</a></footer>
-<script src="../assets/js/docs-sidebar.js"></script>
-</body>
+    <footer>GILE Wiki · MasterHamster837 · <a href="index.html">Back to GILE</a></footer>
+    <script src="../assets/js/docs-sidebar.js"></script>
+  </body>
 </html>

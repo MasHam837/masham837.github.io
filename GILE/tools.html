@@ -1,18 +1,15 @@
 <!doctype html>
 <html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="icon" type="image/png" href="icon.png">
-  <title>Tools & Utilities — GILE Wiki</title>
-  <link rel="stylesheet" href="../assets/style.css">
-  
-  <style>
-    
-    .item-showcase { position: relative; }
-    .recipe-type-sprite { position: absolute; top: 8px; left: 8px; width: 86px; height: 44px; object-fit: contain; image-rendering: pixelated; pointer-events: none;}
-    
-    .key-bind {
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/png" href="icon.png">
+    <title>Tools & Utilities — GILE Wiki</title>
+    <link rel="stylesheet" href="../assets/style.css">
+    <style>
+      .item-showcase { position: relative; }
+      .recipe-type-sprite { position: absolute; top: 8px; left: 8px; width: 86px; height: 44px; object-fit: contain; image-rendering: pixelated; pointer-events: none;}
+      .key-bind {
       display: inline-block;
       padding: 2px 6px;
       font-size: 0.85em;
@@ -21,551 +18,459 @@
       border: 1px solid var(--line);
       border-radius: 4px;
       color: var(--accent);
-    }
-    .tool-grid {
+      }
+      .tool-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
       gap: 16px;
       margin: 20px 0;
-    }
-    .enchantment-grid {
-            display: grid;
-            grid-template-columns: repeat(2, minmax(0, 1fr));
-            gap: 20px;
-            margin: 24px 0;
-          }
-
-          .enchantment-card {
-            display: flex;
-            flex-direction: column;
-            overflow: hidden;
-            background: rgba(255, 255, 255, 0.035);
-            border: 1px solid var(--line);
-            border-radius: 10px;
-            transition: transform 0.15s ease, border-color 0.15s ease;
-          }
-
-          .enchantment-card:hover {
-            transform: translateY(-2px);
-            border-color: var(--accent);
-          }
-
-          .enchantment-card-image {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            min-height: 220px;
-            padding: 24px;
-            background: rgba(0, 0, 0, 0.12);
-            border-bottom: 1px solid var(--line);
-          }
-
-          .enchantment-book-texture {
-            width: 220px;
-            height: 220px;
-            object-fit: contain;
-            image-rendering: pixelated;
-          }
-
-          @media (max-width: 700px)   {
-          .enchantment-book-texture {
-            width: 110px;
-            height: 110px;
-            }
-          }
-
-          .enchantment-card-info {
-            padding: 20px;
-          }
-
-          .enchantment-card-info h3 {
-            margin: 0 0 6px;
-            font-size: 1.35rem;
-          }
-
-          .enchantment-level {
-            margin: 0 0 12px;
-            color: var(--accent);
-          }
-
-          .enchantment-card-info p {
-            line-height: 1.6;
-          }
-
-          .enchantment-effect,
-          .enchantment-compatible {
-            display: flex;
-            flex-direction: column;
-            gap: 3px;
-            margin-top: 14px;
-            padding-top: 12px;
-            border-top: 1px solid var(--line);
-          }
-
-          .enchantment-effect span,
-          .enchantment-compatible span {
-            color: var(--muted);
-          }
-
-          @media (max-width: 700px) {
-            .enchantment-grid {
-              grid-template-columns: 1fr;
-            }
-          }
-  </style>
-</head>
-<body>
-  <header class="topbar">
-    <a class="brand" href="../">MasterHamster837 <span>WIKI</span></a>
-    <nav>
-      <a class="active sidebar-toggle" href="./"><img src="icon.png" alt="GILE icon"> GILE</a>
-      <a href="https://www.curseforge.com/minecraft/mc-mods/genshin-impact-lunar-expansion" target="_blank" rel="noreferrer" style="color: #f36c21;">CurseForge ↗</a>
-      <a href="https://modrinth.com/mod/genshin-impact-lunar-expansion" target="_blank" rel="noreferrer" style="color: #5cff4a;">Modrinth ↗</a>
-      <a href="https://github.com/MasHam837/minecraft-mods-source-codes" target="_blank" rel="noreferrer" style="color: #f0f6fc;">Source ↗</a>
-    </nav>
-  </header>
-  <div class="docs-layout">
-    
-    <aside class="sidebar">
-      <div class="sidebar-title">GILE</div>
-      <a class="side-link" href="./">Overview</a>
-
-      <div class="side-heading">GAMEPLAY</div>
-      <a class="side-link" href="start.html">Getting Started</a>
-      <a class="side-link" href="ancient_ruins.html">Ancient Ruins</a>
-      <a class="side-link" href="end_threshold.html">End Threshold</a>
-      <a class="side-link" href="the_moon.html">The Moon</a>
-      <a class="side-link" href="ghostly_thickets.html">Ghostly Thickets</a>
-      <a class="side-link" href="moon_desert.html">Moon Desert</a>
-      <a class="side-link active" href="tools.html">Tools & Utilities</a>
-      <a class="side-link" href="wish.html">Wishing Mechanic</a>
-      <a class="side-link" href="elemental_weapons.html">Elemental Weapons</a>
-      <a class="side-link" href="legendary_weapons.html">Legendary Weapons</a>
-
-      <div class="side-heading">DOCUMENTATION</div>
-      <a class="side-link" href="installation.html">Installation</a>
-      <a class="side-link" href="issues.html">Known Issues</a>
-      <a class="side-link" href="versions.html">Versions History</a>
-
-    </aside>
-
-    <main class="docs-main doc-page">
-      <div class="breadcrumbs"><a href="index.html">GILE</a> / Tools & Utilities</div>
-      <div class="content">
-        <p class="eyebrow">GILE DOCUMENTATION</p>
-        <h1>Tools & Utilities</h1>
-        <p class="lead">Specialized utility items, movement gear, and magical devices designed to help you navigate and survive in your world.</p>
-
-        <!-- 1. FLUTTERER & FLUTTERING ENCHANTMENT -->
-        <h2>1. Flutterer & Fluttering Enchantment</h2>
-        <p>A mobility utility that grants enhanced jump height and slow-falling "glides".</p>
-
-        <!-- MP4 PLACEHOLDER -->
-        <div class="placeholder-box">
-          <video autoplay muted loop playsinline preload="metadata">
-            <source src="videos/flutterer.mp4" type="video/mp4">
-          </video>
+      }
+      .enchantment-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 20px;
+      margin: 24px 0;
+      }
+      .enchantment-card {
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+      background: rgba(255, 255, 255, 0.035);
+      border: 1px solid var(--line);
+      border-radius: 10px;
+      transition: transform 0.15s ease, border-color 0.15s ease;
+      }
+      .enchantment-card:hover {
+      transform: translateY(-2px);
+      border-color: var(--accent);
+      }
+      .enchantment-card-image {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 220px;
+      padding: 24px;
+      background: rgba(0, 0, 0, 0.12);
+      border-bottom: 1px solid var(--line);
+      }
+      .enchantment-book-texture {
+      width: 220px;
+      height: 220px;
+      object-fit: contain;
+      image-rendering: pixelated;
+      }
+      @media (max-width: 700px)   {
+      .enchantment-book-texture {
+      width: 110px;
+      height: 110px;
+      }
+      }
+      .enchantment-card-info {
+      padding: 20px;
+      }
+      .enchantment-card-info h3 {
+      margin: 0 0 6px;
+      font-size: 1.35rem;
+      }
+      .enchantment-level {
+      margin: 0 0 12px;
+      color: var(--accent);
+      }
+      .enchantment-card-info p {
+      line-height: 1.6;
+      }
+      .enchantment-effect,
+      .enchantment-compatible {
+      display: flex;
+      flex-direction: column;
+      gap: 3px;
+      margin-top: 14px;
+      padding-top: 12px;
+      border-top: 1px solid var(--line);
+      }
+      .enchantment-effect span,
+      .enchantment-compatible span {
+      color: var(--muted);
+      }
+      @media (max-width: 700px) {
+      .enchantment-grid {
+      grid-template-columns: 1fr;
+      }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="topbar">
+      <a class="brand" href="../">MasterHamster837 <span>WIKI</span></a>
+      <nav>
+        <a class="active sidebar-toggle" href="./"><img src="icon.png" alt="GILE icon"> GILE</a>
+        <a href="https://www.curseforge.com/minecraft/mc-mods/genshin-impact-lunar-expansion" target="_blank" rel="noreferrer" style="color: #f36c21;">CurseForge ↗</a>
+        <a href="https://modrinth.com/mod/genshin-impact-lunar-expansion" target="_blank" rel="noreferrer" style="color: #5cff4a;">Modrinth ↗</a>
+        <a href="https://github.com/MasHam837/minecraft-mods-source-codes" target="_blank" rel="noreferrer" style="color: #f0f6fc;">Source ↗</a>
+      </nav>
+    </header>
+    <div class="docs-layout">
+      <aside class="sidebar">
+        <div class="sidebar-title">GILE</div>
+        <a class="side-link" href="./">Overview</a>
+        <div class="side-heading">GAMEPLAY</div>
+        <a class="side-link" href="start.html">Getting Started</a>
+        <a class="side-link" href="ancient_ruins.html">Ancient Ruins</a>
+        <a class="side-link" href="end_threshold.html">End Threshold</a>
+        <a class="side-link" href="the_moon.html">The Moon</a>
+        <a class="side-link" href="ghostly_thickets.html">Ghostly Thickets</a>
+        <a class="side-link" href="moon_desert.html">Moon Desert</a>
+        <a class="side-link active" href="tools.html">Tools & Utilities</a>
+        <a class="side-link" href="wish.html">Wishing Mechanic</a>
+        <a class="side-link" href="elemental_weapons.html">Elemental Weapons</a>
+        <a class="side-link" href="legendary_weapons.html">Legendary Weapons</a>
+        <div class="side-heading">DOCUMENTATION</div>
+        <a class="side-link" href="installation.html">Installation</a>
+        <a class="side-link" href="issues.html">Known Issues</a>
+        <a class="side-link" href="versions.html">Versions History</a>
+      </aside>
+      <main class="docs-main doc-page">
+        <div class="breadcrumbs"><a href="index.html">GILE</a> / Tools & Utilities</div>
+        <div class="content">
+          <p class="eyebrow">GILE DOCUMENTATION</p>
+          <h1>Tools & Utilities</h1>
+          <p class="lead">Specialized utility items, movement gear, and magical devices designed to help you navigate and survive in your world.</p>
+          <h2>1. Flutterer & Fluttering Enchantment</h2>
+          <p>A mobility utility that grants enhanced jump height and slow-falling "glides".</p>
+          <div class="placeholder-box">
+            <video autoplay muted loop playsinline preload="metadata">
+              <source src="videos/flutterer.mp4" type="video/mp4">
+            </video>
             <strong>Flutterer: </strong>
-          <span> lifting and slow falling demonstration.</span>
-        </div>
-
-        <!-- PLACEHOLDER ABOUT FLUTTERER -->
-      <div class="item-showcase">
-        <img class="recipe-type-sprite" src="../assets/branding/skin_sprite/recipes/right_crouching-crafting.png" alt="Crafting">
-        <div class="item-showcase-image" data-item-name="Flutterer">
-          <img src="images/textures/flutterer.png" alt="Flutterer Texture">
-        </div>
-      <div class="item-showcase-info">
-    <div class="item-showcase-section">
-      <strong>Description</strong>
-      <p> Can be crafted from one <a href="wish.html">Pearlescent Chain</a>, 2 Moth Wings, dropped from <a href="the_moon">Moth</a> and
-          2 Dust that can be dropped from <a href="the_moon.html">Ender Flies</a> and from <a href="end_threshold.html">Glitters</a>.
-          Flutterer has 324 durability. Consumes it on every ability use. Ability key is SPACE by default, but can be configured.</p>
-    </div>
-    <div class="item-showcase-section">
-      <strong>Crafting Recipe</strong>
-      <div class="recipe">
-        <img src="images/recipes/flutterer.png"
-          alt="Flutterer crafting recipe"
-          style="width: 372px; height: 186px; image-rendering: pixelated;">
+            <span> lifting and slow falling demonstration.</span>
+          </div>
+          <div class="item-showcase">
+            <img class="recipe-type-sprite" src="../assets/branding/skin_sprite/recipes/right_crouching-crafting.png" alt="Crafting">
+            <div class="item-showcase-image" data-item-name="Flutterer">
+              <img src="images/textures/flutterer.png" alt="Flutterer Texture">
+            </div>
+            <div class="item-showcase-info">
+              <div class="item-showcase-section">
+                <strong>Description</strong>
+                <p> Can be crafted from one <a href="wish.html">Pearlescent Chain</a>, 2 Moth Wings, dropped from <a href="the_moon">Moth</a> and
+                  2 Dust that can be dropped from <a href="the_moon.html">Ender Flies</a> and from <a href="end_threshold.html">Glitters</a>.
+                  Flutterer has 324 durability. Consumes it on every ability use. Ability key is SPACE by default, but can be configured.</p>
+              </div>
+              <div class="item-showcase-section">
+                <strong>Crafting Recipe</strong>
+                <div class="recipe">
+                  <img src="images/recipes/flutterer.png"
+                  alt="Flutterer crafting recipe"
+                  style="width: 372px; height: 186px; image-rendering: pixelated;">
+                </div>
+              </div>
             </div>
           </div>
-        </div>
-      </div>
-        
-        <h3>The Flutterer (Chest Slot Item)</h3>
-        <ul class="feature-list">
-          <li>Equipped in the chest armor slot in place of a standard chestplate.</li>
-          <li>Pressing <span class="key-bind">SPACE</span> (or custom rebindable key) performs an elevated jump slightly higher than 1 block.</li>
-          <li>Applies <strong>Slow Falling</strong> automatically while descending, accompanied by particle trail effects.</li>
-          <li><strong>Repairable:</strong> Yes.</li>
-        </ul>
-
-        <h3>Fluttering Enchantment</h3>
-        <ul class="feature-list">
-          <li>Purchased directly from the Wisher villager (<a href="wish.html">Wish Mechanic</a>).</li>
-          <li>Can be applied to <strong>any chestplate armor piece</strong>, granting the exact same jump boost, slow-falling effect, and keybind functionality while draining the armor's durability.</li>
-        </ul>
-
-        <hr style="border: 0; border-top: 1px solid var(--line); margin: 30px 0;">
-
-        <!-- 2. GRAPPLING HOOK -->
-        <h2>2. Grappling Hook</h2>
-        <p>A mobility tool that fires a line of rope upon right-clicking, pulling the player toward the target location.</p>
-
-        <!-- MP4 PLACEHOLDER -->
-        <div class="placeholder-box">
-          <video autoplay muted loop playsinline preload="metadata">
-            <source src="videos/grappling_hook.mp4" type="video/mp4">
-          </video>
-            <strong>Grappling Hook:</strong>
-          <span> player pulling using a grappling hook.</span>
-        </div>
-
-<!-- PLACEHOLDER ABOUT GRAPPLING HOOK -->
-      <div class="item-showcase">
-        <img class="recipe-type-sprite" src="../assets/branding/skin_sprite/recipes/right_crouching-crafting.png" alt="Crafting">
-        <div class="item-showcase-image" data-item-name="Grappling Hook">
-          <img src="images/textures/grappling_hook.png" alt="Grappling Hook Item Texture">
-        </div>
-      <div class="item-showcase-info">
-    <div class="item-showcase-section">
-      <strong>Description</strong>
-      <p> Craft it merging one <a href="the_moon.html">Void Slimeball</a>, 2 <a href="ghostly_thickets.html">Star Fragments</a> and 2 <a href="wish.html">Wish Ingots</a>.
-          Grappling Hook can really simplify your travelling. Especially in a mountain region or in The End dimension. Has 282 durability.
-          Default range is 32 blocks. Range enchantment can be used to increase it by 16 blocks per level.</p>
-    </div>
-    <div class="item-showcase-section">
-      <strong>Crafting Recipe</strong>
-      <div class="recipe">
-        <img src="images/recipes/grappling_hook.png"
-          alt="Grappling Hook crafting recipe"
-          style="width: 372px; height: 186px; image-rendering: pixelated;">
-            </div>
-          </div>
-        </div>
-      </div>
-        
-        <h3>Mechanics & Rules</h3>
-        <ul class="feature-list">
-          <li><strong>Base Range:</strong> 32 blocks. Targeting block must be solid and non-collidable.</li>
-          <li><strong>Texture Dynamic:</strong> Swaps textures when deployed and actively pulling.</li>
-          <li><strong>Canceling Rope:</strong> Can be canceled manually by looking straight down, sneaking, or automatically after 15 seconds as a anti-bug safety measure.</li>
-          <li><strong>Enchantments:</strong> Compatible with the <strong>Range</strong> enchantment (+16 blocks per level). Can be acquired from the Wisher villager (see <a href="wish.html">Wishing Mechanic</a>).</li>
-          <li><strong>Repairable:</strong> Yes.</li>
-        </ul>
-
-        <hr style="border: 0; border-top: 1px solid var(--line); margin: 30px 0;">
-
-        <!-- 3. HEART OF EMERGENCY -->
-        <h2>3. Heart of Emergency</h2>
-        <p>A life-saving relic that automatically safeguards you from lethal damage.</p>
-
-        <!-- MP4 PLACEHOLDER -->
-        <div class="placeholder-box">
-          <video autoplay muted loop playsinline preload="metadata">
-            <source src="videos/heart_of_emergency.mp4" type="video/mp4">
-          </video>
-            <strong>Heart of Emergency:</strong>
-          <span> saves player on critical HP.</span>
-        </div>
-        
-        <ul class="feature-list">
-          <li><strong>Trigger:</strong> Activates automatically when stored anywhere in your inventory if player health drops to <strong>25% or below</strong>.</li>
-          <li><strong>Buffs Granted:</strong> Instant Health, Regeneration, and Resistance for several seconds.</li>
-          <li><strong>Restrictions:</strong> Has an internal cooldown and does not stack.</li>
-          <li><strong>Uncraftable:</strong> Found in loot chests within <a href="ancientruins.html">Ancient Ruins</a>, End Cities, or purchased from the Wisher villager (<a href="wish.html">Wish Mechanic</a>).</li>
-        </ul>
-
-        <hr style="border: 0; border-top: 1px solid var(--line); margin: 30px 0;">
-        
-        <!-- 4. JELLY ON A STICK -->
-        <h2>4. Jelly on a Stick</h2>
-        <p>A specialized creature control tool crafted using a standard <strong>Fishing Rod</strong> and <strong>Jelly</strong> (harvested in the <a href="biomes.html">Ghostly Thickets</a> biome).</p>
-        
-        <ul class="feature-list">
-          <li><strong>Function:</strong> Allows players to mount and steer the floating <strong>Hovering Ghost</strong> entity.</li>
-          <li><strong>Repairable:</strong> Yes.</li>
-        </ul>
-
-        <!-- PLACEHOLDER ABOUT JELLY ON A STICK -->
-      <div class="item-showcase">
-        <img class="recipe-type-sprite" src="../assets/branding/skin_sprite/recipes/right_crouching-crafting.png" alt="Crafting">
-        <div class="item-showcase-image" data-item-name="Jelly on a Stick">
-          <img src="images/textures/jelly_on_a_stick.png" alt="Jelly on a Stick Item Texture">
-        </div>
-      <div class="item-showcase-info">
-    <div class="item-showcase-section">
-      <strong>Description</strong>
-      <p> Jelly on a Stick is used to control <a href="ghostly_thickets.html">Hovering Ghost</a> riding it. Has 25 durability. 
-          When the <a href="ghostly_thickets.html">Jelly</a> is eaten, you get back the fishing rod, so you can re-craft the stick easily and continue your trip.</p>
-    </div>
-    <div class="item-showcase-section">
-      <strong>Crafting Recipe</strong>
-      <div class="recipe">
-        <img src="images/recipes/jelly_on_a_stick.png"
-          alt="Jelly on a Stick crafting recipe"
-          style="width: 372px; height: 186px; image-rendering: pixelated;">
-            </div>
-          </div>
-        </div>
-      </div>
-
-        <hr style="border: 0; border-top: 1px solid var(--line); margin: 30px 0;">
-        
-        <!-- 5. SHRINKER & ENLARGER -->
-        <h2>5. Size Manipulation Wands (Shrinker & Enlarger)</h2>
-        <p>Two powerful wands capable of manipulating entity and player scales. Both share similar crafting recipes and equal durability values.</p>
-
-        <!-- PLACEHOLDER ABOUT SHRINKER -->
-      <div class="item-showcase">
-        <img class="recipe-type-sprite" src="../assets/branding/skin_sprite/recipes/right_crouching-crafting.png" alt="Crafting">
-        <div class="item-showcase-image" data-item-name="Shrinker">
-          <img src="images/textures/shrinker.png" alt="Shrinker Item Texture">
-        </div>
-      <div class="item-showcase-info">
-    <div class="item-showcase-section">
-      <strong>Description</strong>
-      <p> Craft it from 1 <a href="ghostly_thickets.html">Star</a> positioned on bottom, 2 <a href="moon_desert.html">Jerboa's Tails</a> and 2 Crystals that you can get with some chance from the Moon Sand.
-          Reduces target size to 0.20x. Has 191 durability. Can shrink the player using it, or any entity its looking at.
-          Player receives a custom Infinite Invisibility ability while holding it.</p>
-    </div>
-    <div class="item-showcase-section">
-      <strong>Crafting Recipe</strong>
-      <div class="recipe">
-        <img src="images/recipes/shrinker.png"
-          alt="Shrinker crafting recipe"
-          style="width: 372px; height: 186px; image-rendering: pixelated;">
-            </div>
-          </div>
-        </div>
-      </div>
-
-        <!-- PLACEHOLDER ABOUT ENLARGER -->
-      <div class="item-showcase">
-        <img class="recipe-type-sprite" src="../assets/branding/skin_sprite/recipes/right_crouching-crafting.png" alt="Crafting">
-        <div class="item-showcase-image" data-item-name="Enlarger">
-          <img src="images/textures/enlarger.png" alt="Enlarger Item Texture">
-        </div>
-      <div class="item-showcase-info">
-    <div class="item-showcase-section">
-      <strong>Description</strong>
-      <p> Craft it from 1 <a href="ghostly_thickets.html">Star</a> positioned on top, 2 <a href="moon_desert.html">Jerboa's Tails</a> and 2 Crystals that you can get with some chance from the Moon Sand.
-          Increases target size to 1.80x. Has 191 durability. Can enlarge the player using it, or any entity its looking at.
-          Player receives a custom Lunar Stomp ability while holding it.</p>
-    </div>
-    <div class="item-showcase-section">
-      <strong>Crafting Recipe</strong>
-      <div class="recipe">
-        <img src="images/recipes/enlarger.png"
-          alt="Enlarger crafting recipe"
-          style="width: 372px; height: 186px; image-rendering: pixelated;">
-            </div>
-          </div>
-        </div>
-      </div>
-
-        <h3>Controls & Controls Mechanics</h3>
-        <table>
-          <thead>
-            <tr><th>Action</th><th>Target</th><th>Effect</th></tr>
-          </thead>
-          <tbody>
-            <tr><td><strong>Right-Click</strong></td><td>Entity (up to 32 blocks)</td><td>Applies Shrinking/Enlarging effect for 5 minutes.</td></tr>
-            <tr><td><strong>Shift + Right-Click</strong></td><td>Self</td><td>Applies Shrinking/Enlarging effect on self for 5 minutes.</td></tr>
-            <tr><td><strong>Close Right-Click</strong></td><td>Active Target</td><td>Cancels active size effect on the target.</td></tr>
-            <tr><td><strong>Shift + RC (Looking Straight Down)</strong></td><td>Self</td><td>Cancels active size effect on the player.</td></tr>
-            <tr><td><strong>Opposite Wand Use</strong></td><td>Active Target / Self</td><td>Subtracts 5 minutes from the current active effect.</td></tr>
-          </tbody>
-        </table>
-
-        <h3>Demonstrations</h3>
-      <div class="placeholder-box">
-          
-        <!-- MP4 PLACEHOLDER -->
-        <div>
-          <video autoplay muted loop playsinline preload="metadata">
-            <source src="videos/shrinker.mp4" type="video/mp4">
-          </video>
-        </div>
-
-        <!-- MP4 PLACEHOLDER -->
-        <div>
-          <video autoplay muted loop playsinline preload="metadata">
-            <source src="videos/enlarger.mp4" type="video/mp4">
-          </video>
-            <strong>Shrinker & Enlarger:</strong>
-          <span> use demonstration.</span>
-        </div>
-
-      </div>
-
-        <h3>Attribute Scaling & Abilities (<span class="key-bind">V</span> Key)</h3>
-        <p>Size changes scale player attributes proportionally: Max Health, Jump Height, Speed, Block Reach, and Entity Interaction Range. Survival default effect level is <strong>Level IV</strong> (commands support alternate levels, with each level adding/subtracting 20% size).</p>
-
-        <div class="notice">
-          <strong>Special Ability Trigger (<span class="key-bind">V</span> Key):</strong>
-          <ul>
-            <li><strong>Shrink Effect Active:</strong> Pressing <span class="key-bind">V</span> toggles <strong>Infinite Invisibility</strong> (press again to disable).</li>
-            <li><strong>Enlarge Effect Active:</strong> Pressing <span class="key-bind">V</span> triggers <strong>Lunar Stomp</strong>, dealing AoE damage and applying Slowness to surrounding entities in a small radius (has cooldown).</li>
+          <h3>The Flutterer (Chest Slot Item)</h3>
+          <ul class="feature-list">
+            <li>Equipped in the chest armor slot in place of a standard chestplate.</li>
+            <li>Pressing <span class="key-bind">SPACE</span> (or custom rebindable key) performs an elevated jump slightly higher than 1 block.</li>
+            <li>Applies <strong>Slow Falling</strong> automatically while descending, accompanied by particle trail effects.</li>
+            <li><strong>Repairable:</strong> Yes.</li>
           </ul>
-        </div>
-
-        <hr style="border: 0; border-top: 1px solid var(--line); margin: 30px 0;">
-        
-        <!-- 6. WARP CLOCK -->
-        <h2>6. Warp Clock</h2>
-        <p>A stackable temporal device (up to 16) used to bind and teleport to specific sign coordinates.</p>
-
-         <!-- MP4 PLACEHOLDER -->
-        <div class="placeholder-box">
-          <video autoplay muted loop playsinline preload="metadata">
-            <source src="videos/warp_clock.mp4" type="video/mp4">
-          </video>
+          <h3>Fluttering Enchantment</h3>
+          <ul class="feature-list">
+            <li>Purchased directly from the Wisher villager (<a href="wish.html">Wish Mechanic</a>).</li>
+            <li>Can be applied to <strong>any chestplate armor piece</strong>, granting the exact same jump boost, slow-falling effect, and keybind functionality while draining the armor's durability.</li>
+          </ul>
+          <hr style="border: 0; border-top: 1px solid var(--line); margin: 30px 0;">
+          <h2>2. Grappling Hook</h2>
+          <p>A mobility tool that fires a line of rope upon right-clicking, pulling the player toward the target location.</p>
+          <div class="placeholder-box">
+            <video autoplay muted loop playsinline preload="metadata">
+              <source src="videos/grappling_hook.mp4" type="video/mp4">
+            </video>
+            <strong>Grappling Hook:</strong>
+            <span> player pulling using a grappling hook.</span>
+          </div>
+          <div class="item-showcase">
+            <img class="recipe-type-sprite" src="../assets/branding/skin_sprite/recipes/right_crouching-crafting.png" alt="Crafting">
+            <div class="item-showcase-image" data-item-name="Grappling Hook">
+              <img src="images/textures/grappling_hook.png" alt="Grappling Hook Item Texture">
+            </div>
+            <div class="item-showcase-info">
+              <div class="item-showcase-section">
+                <strong>Description</strong>
+                <p> Craft it merging one <a href="the_moon.html">Void Slimeball</a>, 2 <a href="ghostly_thickets.html">Star Fragments</a> and 2 <a href="wish.html">Wish Ingots</a>.
+                  Grappling Hook can really simplify your travelling. Especially in a mountain region or in The End dimension. Has 282 durability.
+                  Default range is 32 blocks. Range enchantment can be used to increase it by 16 blocks per level.</p>
+              </div>
+              <div class="item-showcase-section">
+                <strong>Crafting Recipe</strong>
+                <div class="recipe">
+                  <img src="images/recipes/grappling_hook.png"
+                  alt="Grappling Hook crafting recipe"
+                  style="width: 372px; height: 186px; image-rendering: pixelated;">
+                </div>
+              </div>
+            </div>
+          </div>
+          <h3>Mechanics & Rules</h3>
+          <ul class="feature-list">
+            <li><strong>Base Range:</strong> 32 blocks. Targeting block must be solid and non-collidable.</li>
+            <li><strong>Texture Dynamic:</strong> Swaps textures when deployed and actively pulling.</li>
+            <li><strong>Canceling Rope:</strong> Can be canceled manually by looking straight down, sneaking, or automatically after 15 seconds as a anti-bug safety measure.</li>
+            <li><strong>Enchantments:</strong> Compatible with the <strong>Range</strong> enchantment (+16 blocks per level). Can be acquired from the Wisher villager (see <a href="wish.html">Wishing Mechanic</a>).</li>
+            <li><strong>Repairable:</strong> Yes.</li>
+          </ul>
+          <hr style="border: 0; border-top: 1px solid var(--line); margin: 30px 0;">
+          <h2>3. Heart of Emergency</h2>
+          <p>A life-saving relic that automatically safeguards you from lethal damage.</p>
+          <div class="placeholder-box">
+            <video autoplay muted loop playsinline preload="metadata">
+              <source src="videos/heart_of_emergency.mp4" type="video/mp4">
+            </video>
+            <strong>Heart of Emergency:</strong>
+            <span> saves player on critical HP.</span>
+          </div>
+          <ul class="feature-list">
+            <li><strong>Trigger:</strong> Activates automatically when stored anywhere in your inventory if player health drops to <strong>25% or below</strong>.</li>
+            <li><strong>Buffs Granted:</strong> Instant Health, Regeneration, and Resistance for several seconds.</li>
+            <li><strong>Restrictions:</strong> Has an internal cooldown and does not stack.</li>
+            <li><strong>Uncraftable:</strong> Found in loot chests within <a href="ancientruins.html">Ancient Ruins</a>, End Cities, or purchased from the Wisher villager (<a href="wish.html">Wish Mechanic</a>).</li>
+          </ul>
+          <hr style="border: 0; border-top: 1px solid var(--line); margin: 30px 0;">
+          <h2>4. Jelly on a Stick</h2>
+          <p>A specialized creature control tool crafted using a standard <strong>Fishing Rod</strong> and <strong>Jelly</strong> (harvested in the <a href="biomes.html">Ghostly Thickets</a> biome).</p>
+          <ul class="feature-list">
+            <li><strong>Function:</strong> Allows players to mount and steer the floating <strong>Hovering Ghost</strong> entity.</li>
+            <li><strong>Repairable:</strong> Yes.</li>
+          </ul>
+          <div class="item-showcase">
+            <img class="recipe-type-sprite" src="../assets/branding/skin_sprite/recipes/right_crouching-crafting.png" alt="Crafting">
+            <div class="item-showcase-image" data-item-name="Jelly on a Stick">
+              <img src="images/textures/jelly_on_a_stick.png" alt="Jelly on a Stick Item Texture">
+            </div>
+            <div class="item-showcase-info">
+              <div class="item-showcase-section">
+                <strong>Description</strong>
+                <p> Jelly on a Stick is used to control <a href="ghostly_thickets.html">Hovering Ghost</a> riding it. Has 25 durability.
+                  When the <a href="ghostly_thickets.html">Jelly</a> is eaten, you get back the fishing rod, so you can re-craft the stick easily and continue your trip.</p>
+              </div>
+              <div class="item-showcase-section">
+                <strong>Crafting Recipe</strong>
+                <div class="recipe">
+                  <img src="images/recipes/jelly_on_a_stick.png"
+                  alt="Jelly on a Stick crafting recipe"
+                  style="width: 372px; height: 186px; image-rendering: pixelated;">
+                </div>
+              </div>
+            </div>
+          </div>
+          <hr style="border: 0; border-top: 1px solid var(--line); margin: 30px 0;">
+          <h2>5. Size Manipulation Wands (Shrinker & Enlarger)</h2>
+          <p>Two powerful wands capable of manipulating entity and player scales. Both share similar crafting recipes and equal durability values.</p>
+          <div class="item-showcase">
+            <img class="recipe-type-sprite" src="../assets/branding/skin_sprite/recipes/right_crouching-crafting.png" alt="Crafting">
+            <div class="item-showcase-image" data-item-name="Shrinker">
+              <img src="images/textures/shrinker.png" alt="Shrinker Item Texture">
+            </div>
+            <div class="item-showcase-info">
+              <div class="item-showcase-section">
+                <strong>Description</strong>
+                <p> Craft it from 1 <a href="ghostly_thickets.html">Star</a> positioned on bottom, 2 <a href="moon_desert.html">Jerboa's Tails</a> and 2 Crystals that you can get with some chance from the Moon Sand.
+                  Reduces target size to 0.20x. Has 191 durability. Can shrink the player using it, or any entity its looking at.
+                  Player receives a custom Infinite Invisibility ability while holding it.</p>
+              </div>
+              <div class="item-showcase-section">
+                <strong>Crafting Recipe</strong>
+                <div class="recipe">
+                  <img src="images/recipes/shrinker.png"
+                  alt="Shrinker crafting recipe"
+                  style="width: 372px; height: 186px; image-rendering: pixelated;">
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="item-showcase">
+            <img class="recipe-type-sprite" src="../assets/branding/skin_sprite/recipes/right_crouching-crafting.png" alt="Crafting">
+            <div class="item-showcase-image" data-item-name="Enlarger">
+              <img src="images/textures/enlarger.png" alt="Enlarger Item Texture">
+            </div>
+            <div class="item-showcase-info">
+              <div class="item-showcase-section">
+                <strong>Description</strong>
+                <p> Craft it from 1 <a href="ghostly_thickets.html">Star</a> positioned on top, 2 <a href="moon_desert.html">Jerboa's Tails</a> and 2 Crystals that you can get with some chance from the Moon Sand.
+                  Increases target size to 1.80x. Has 191 durability. Can enlarge the player using it, or any entity its looking at.
+                  Player receives a custom Lunar Stomp ability while holding it.</p>
+              </div>
+              <div class="item-showcase-section">
+                <strong>Crafting Recipe</strong>
+                <div class="recipe">
+                  <img src="images/recipes/enlarger.png"
+                  alt="Enlarger crafting recipe"
+                  style="width: 372px; height: 186px; image-rendering: pixelated;">
+                </div>
+              </div>
+            </div>
+          </div>
+          <h3>Controls & Controls Mechanics</h3>
+          <table>
+            <thead>
+              <tr><th>Action</th><th>Target</th><th>Effect</th></tr>
+            </thead>
+            <tbody>
+              <tr><td><strong>Right-Click</strong></td><td>Entity (up to 32 blocks)</td><td>Applies Shrinking/Enlarging effect for 5 minutes.</td></tr>
+              <tr><td><strong>Shift + Right-Click</strong></td><td>Self</td><td>Applies Shrinking/Enlarging effect on self for 5 minutes.</td></tr>
+              <tr><td><strong>Close Right-Click</strong></td><td>Active Target</td><td>Cancels active size effect on the target.</td></tr>
+              <tr><td><strong>Shift + RC (Looking Straight Down)</strong></td><td>Self</td><td>Cancels active size effect on the player.</td></tr>
+              <tr><td><strong>Opposite Wand Use</strong></td><td>Active Target / Self</td><td>Subtracts 5 minutes from the current active effect.</td></tr>
+            </tbody>
+          </table>
+          <h3>Demonstrations</h3>
+          <div class="placeholder-box">
+            <div>
+              <video autoplay muted loop playsinline preload="metadata">
+                <source src="videos/shrinker.mp4" type="video/mp4">
+              </video>
+            </div>
+            <div>
+              <video autoplay muted loop playsinline preload="metadata">
+                <source src="videos/enlarger.mp4" type="video/mp4">
+              </video>
+              <strong>Shrinker & Enlarger:</strong>
+              <span> use demonstration.</span>
+            </div>
+          </div>
+          <h3>Attribute Scaling & Abilities (<span class="key-bind">V</span> Key)</h3>
+          <p>Size changes scale player attributes proportionally: Max Health, Jump Height, Speed, Block Reach, and Entity Interaction Range. Survival default effect level is <strong>Level IV</strong> (commands support alternate levels, with each level adding/subtracting 20% size).</p>
+          <div class="notice">
+            <strong>Special Ability Trigger (<span class="key-bind">V</span> Key):</strong>
+            <ul>
+              <li><strong>Shrink Effect Active:</strong> Pressing <span class="key-bind">V</span> toggles <strong>Infinite Invisibility</strong> (press again to disable).</li>
+              <li><strong>Enlarge Effect Active:</strong> Pressing <span class="key-bind">V</span> triggers <strong>Lunar Stomp</strong>, dealing AoE damage and applying Slowness to surrounding entities in a small radius (has cooldown).</li>
+            </ul>
+          </div>
+          <hr style="border: 0; border-top: 1px solid var(--line); margin: 30px 0;">
+          <h2>6. Warp Clock</h2>
+          <p>A stackable temporal device (up to 16) used to bind and teleport to specific sign coordinates.</p>
+          <div class="placeholder-box">
+            <video autoplay muted loop playsinline preload="metadata">
+              <source src="videos/warp_clock.mp4" type="video/mp4">
+            </video>
             <strong>Warp Clock:</strong>
-          <span> warp setting & using it demonstration.</span>
+            <span> warp setting & using it demonstration.</span>
+          </div>
+          <div class="item-showcase">
+            <img class="recipe-type-sprite" src="../assets/branding/skin_sprite/recipes/right_crouching-crafting.png" alt="Crafting">
+            <div class="item-showcase-image" data-item-name="Chrono Gear">
+              <img src="images/textures/chrono_gear.png" alt="Chrono Gear Texture">
+            </div>
+            <div class="item-showcase-info">
+              <div class="item-showcase-section">
+                <strong>Description</strong>
+                <p> Shapeless fabrication of 4 Chrono Gears using 1 <a href="the_moon.html">Phasma</a> and 1 <a href="the_moon.html">Void Slimeball</a>. It is needed to craft Warp Clock and to use it.</p>
+              </div>
+              <div class="item-showcase-section">
+                <strong>Crafting Recipe</strong>
+                <div class="recipe">
+                  <img src="images/recipes/chrono_gear.png"
+                  alt="Chrono Gear crafting recipe"
+                  style="width: 372px; height: 186px; image-rendering: pixelated;">
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="item-showcase">
+            <img class="recipe-type-sprite" src="../assets/branding/skin_sprite/recipes/right_crouching-crafting.png" alt="Crafting">
+            <div class="item-showcase-image" data-item-name="Warp Clock">
+              <img src="images/textures/warp_clock.png" alt="Warp Clock Texture">
+            </div>
+            <div class="item-showcase-info">
+              <div class="item-showcase-section">
+                <strong>Description</strong>
+                <p> Craft it from 1 Chrono Gear, 1 Ender Pearl, 1 <a href="the_moon.html">Void Slimeball</a>, 2 <a href="the_moon.html">Moth Wings</a>
+                  and 4 Phasma, dropped from <a href="the_moon.html">Ender Flies</a>, or from any of the ghosts from <a href="ghostly_thickets.html">Ghostly Thickets</a>.
+                  Can be used to set warp points on signs. Can be used multiple simultaniously. Consumes Chrono Gears for each teleportation.</p>
+              </div>
+              <div class="item-showcase-section">
+                <strong>Crafting Recipe</strong>
+                <div class="recipe">
+                  <img src="images/recipes/warp_clock.png"
+                  alt="Warp Clock crafting recipe"
+                  style="width: 372px; height: 186px; image-rendering: pixelated;">
+                </div>
+              </div>
+            </div>
+          </div>
+          <h3>Usage Steps</h3>
+          <ol class="feature-list">
+            <li><strong>Binding:</strong> Right-click on any standard or hanging sign. The sign text will save to the item tooltip as a warp point, displaying a confirmation message.</li>
+            <li><strong>Teleporting:</strong> Right-click anywhere else to instantly teleport to the saved sign coordinates. Consumes <strong>1 Chrono Gear</strong> per warp.</li>
+            <li><strong>Clearing Target:</strong> Shift + Right-Click on any block to clear the saved warp point.</li>
+          </ol>
+          <div class="notice">
+            <strong>Note:</strong> Warp Clocks operate when stacked and share the same bound warp point across the stack. Teleporting fails with an error message if you are in the wrong dimension or if the bound sign is destroyed.
+          </div>
+          <h2>7. New Enchantments</h2>
+          <div class="enchantment-grid">
+            <div class="enchantment-card">
+              <div class="enchantment-card-image">
+                <img src="images/textures/enchanted_book.png"
+                alt="Range Enchanted Book"
+                class="enchantment-book-texture">
+              </div>
+              <div class="enchantment-card-info">
+                <h3>Range</h3>
+                <p class="enchantment-level">
+                  <strong>Level:</strong> I – IV
+                </p>
+                <p>
+                  Increases the maximum range of compatible utility items,
+                  allowing them to interact with targets from farther away.
+                  On normal tools and weapons increases block and entity
+                  interaction range.
+                </p>
+                <div class="enchantment-effect">
+                  <strong>Effect</strong>
+                  <span>+16 blocks of range per level</span>
+                </div>
+                <div class="enchantment-compatible">
+                  <strong>Compatible With</strong>
+                  <span>Grappling Hook, Shrinker, Enlarger, Nuclear Cannon & any Tool or Weapon</span>
+                </div>
+              </div>
+            </div>
+            <div class="enchantment-card">
+              <div class="enchantment-card-image">
+                <img src="images/textures/enchanted_book.png"
+                alt="Fluttering Enchanted Book"
+                class="enchantment-book-texture">
+              </div>
+              <div class="enchantment-card-info">
+                <h3>Fluttering</h3>
+                <p class="enchantment-level">
+                  <strong>Level:</strong> I
+                </p>
+                <p>
+                  Grants chestplates the ability to perform an elevated jump
+                  and automatically apply Slow Falling while descending, with
+                  no need to wear Flutterer and be protected instead.
+                </p>
+                <div class="enchantment-effect">
+                  <strong>Effect</strong>
+                  <span>Enhanced Flutterer abilities</span>
+                </div>
+                <div class="enchantment-compatible">
+                  <strong>Compatible With</strong>
+                  <span>Any Chestplate</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="notice">
+            <p>Got fully equiped and plenty of Primogems - <a href="wish.html">Wishing Mechanic →</a> will grant you with the ultimate GILE goal:
+              <a href="elemental_weapons.html">Elemental Weapons →</a> & <a href="legendary_weapons.html">Legendary Weapons →</a>.</p>
+          </div>
         </div>
-
-        <!-- PLACEHOLDER ABOUT WARP CLOCK -->
- <div class="item-showcase">
-   <img class="recipe-type-sprite" src="../assets/branding/skin_sprite/recipes/right_crouching-crafting.png" alt="Crafting">
-        <div class="item-showcase-image" data-item-name="Chrono Gear">
-          <img src="images/textures/chrono_gear.png" alt="Chrono Gear Texture">
-        </div>
-      <div class="item-showcase-info">
-    <div class="item-showcase-section">
-      <strong>Description</strong>
-      <p> Shapeless fabrication of 4 Chrono Gears using 1 <a href="the_moon.html">Phasma</a> and 1 <a href="the_moon.html">Void Slimeball</a>. It is needed to craft Warp Clock and to use it.</p>
+      </main>
     </div>
-    <div class="item-showcase-section">
-      <strong>Crafting Recipe</strong>
-      <div class="recipe">
-        <img src="images/recipes/chrono_gear.png"
-          alt="Chrono Gear crafting recipe"
-          style="width: 372px; height: 186px; image-rendering: pixelated;">
-            </div>
-          </div>
-        </div>
-      </div>
-        
-      <div class="item-showcase">
-        <img class="recipe-type-sprite" src="../assets/branding/skin_sprite/recipes/right_crouching-crafting.png" alt="Crafting">
-        <div class="item-showcase-image" data-item-name="Warp Clock">
-          <img src="images/textures/warp_clock.png" alt="Warp Clock Texture">
-        </div>
-      <div class="item-showcase-info">
-    <div class="item-showcase-section">
-      <strong>Description</strong>
-      <p> Craft it from 1 Chrono Gear, 1 Ender Pearl, 1 <a href="the_moon.html">Void Slimeball</a>, 2 <a href="the_moon.html">Moth Wings</a>
-          and 4 Phasma, dropped from <a href="the_moon.html">Ender Flies</a>, or from any of the ghosts from <a href="ghostly_thickets.html">Ghostly Thickets</a>.
-          Can be used to set warp points on signs. Can be used multiple simultaniously. Consumes Chrono Gears for each teleportation.</p>
-    </div>
-    <div class="item-showcase-section">
-      <strong>Crafting Recipe</strong>
-      <div class="recipe">
-        <img src="images/recipes/warp_clock.png"
-          alt="Warp Clock crafting recipe"
-          style="width: 372px; height: 186px; image-rendering: pixelated;">
-            </div>
-          </div>
-        </div>
-      </div>
-
-        <h3>Usage Steps</h3>
-        <ol class="feature-list">
-          <li><strong>Binding:</strong> Right-click on any standard or hanging sign. The sign text will save to the item tooltip as a warp point, displaying a confirmation message.</li>
-          <li><strong>Teleporting:</strong> Right-click anywhere else to instantly teleport to the saved sign coordinates. Consumes <strong>1 Chrono Gear</strong> per warp.</li>
-          <li><strong>Clearing Target:</strong> Shift + Right-Click on any block to clear the saved warp point.</li>
-        </ol>
-
-        <div class="notice">
-          <strong>Note:</strong> Warp Clocks operate when stacked and share the same bound warp point across the stack. Teleporting fails with an error message if you are in the wrong dimension or if the bound sign is destroyed.
-        </div>
-
-        <h2>7. New Enchantments</h2>
-
-        <!-- CUSTOM ENCHANTMENT BOOKS -->
-        <div class="enchantment-grid">
-
-          <!-- ENCHANTMENT 1 -->
-          <div class="enchantment-card">
-            <div class="enchantment-card-image">
-              <img src="images/textures/enchanted_book.png"
-                   alt="Range Enchanted Book"
-                   class="enchantment-book-texture">
-            </div>
-
-            <div class="enchantment-card-info">
-              <h3>Range</h3>
-
-              <p class="enchantment-level">
-                <strong>Level:</strong> I – IV
-              </p>
-
-              <p>
-                Increases the maximum range of compatible utility items,
-                allowing them to interact with targets from farther away.
-                On normal tools and weapons increases block and entity
-                interaction range.
-              </p>
-
-              <div class="enchantment-effect">
-                <strong>Effect</strong>
-                <span>+16 blocks of range per level</span>
-              </div>
-
-              <div class="enchantment-compatible">
-                <strong>Compatible With</strong>
-                <span>Grappling Hook, Shrinker, Enlarger, Nuclear Cannon & any Tool or Weapon</span>
-              </div>
-            </div>
-          </div>
-
-          <!-- ENCHANTMENT 2 -->
-          <div class="enchantment-card">
-            <div class="enchantment-card-image">
-              <img src="images/textures/enchanted_book.png"
-                   alt="Fluttering Enchanted Book"
-                   class="enchantment-book-texture">
-            </div>
-
-            <div class="enchantment-card-info">
-              <h3>Fluttering</h3>
-
-              <p class="enchantment-level">
-                <strong>Level:</strong> I
-              </p>
-
-              <p>
-                Grants chestplates the ability to perform an elevated jump
-                and automatically apply Slow Falling while descending, with
-                no need to wear Flutterer and be protected instead.
-              </p>
-
-              <div class="enchantment-effect">
-                <strong>Effect</strong>
-                <span>Enhanced Flutterer abilities</span>
-              </div>
-
-              <div class="enchantment-compatible">
-                <strong>Compatible With</strong>
-                <span>Any Chestplate</span>
-              </div>
-            </div>
-          </div>
-
-        </div>
-
-        <div class="notice">
-         <p>Got fully equiped and plenty of Primogems - <a href="wish.html">Wishing Mechanic →</a> will grant you with the ultimate GILE goal: 
-           <a href="elemental_weapons.html">Elemental Weapons →</a> & <a href="legendary_weapons.html">Legendary Weapons →</a>.</p>
-        </div>
-        
-      </div>
-    </main>
-  </div>
-
-  <footer>GILE Wiki · MasterHamster837 · <a href="index.html">Back to GILE</a></footer>
-<script src="../assets/js/docs-sidebar.js"></script>
-</body>
+    <footer>GILE Wiki · MasterHamster837 · <a href="index.html">Back to GILE</a></footer>
+    <script src="../assets/js/docs-sidebar.js"></script>
+  </body>
 </html>

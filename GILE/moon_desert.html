@@ -1,258 +1,215 @@
 <!doctype html>
 <html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="icon" type="image/png" href="icon.png">
-  <title>Moon Desert — GILE Wiki</title>
-  <link rel="stylesheet" href="../assets/style.css">
-  <style>
-    .item-showcase { position: relative; }
-    .recipe-type-sprite { position: absolute; top: 8px; left: 8px; width: 86px; height: 44px; object-fit: contain; image-rendering: pixelated; pointer-events: none;}
-  </style>
-</head>
-<body>
-  <header class="topbar">
-    <a class="brand" href="../">MasterHamster837 <span>WIKI</span></a>
-    <nav>
-      <a class="active sidebar-toggle" href="./"><img src="icon.png" alt="GILE icon"> GILE</a>
-      <a href="https://www.curseforge.com/minecraft/mc-mods/genshin-impact-lunar-expansion" target="_blank" rel="noreferrer" style="color: #f36c21;">CurseForge ↗</a>
-      <a href="https://modrinth.com/mod/genshin-impact-lunar-expansion" target="_blank" rel="noreferrer" style="color: #5cff4a;">Modrinth ↗</a>
-      <a href="https://github.com/MasHam837/minecraft-mods-source-codes" target="_blank" rel="noreferrer" style="color: #f0f6fc;">Source ↗</a>
-    </nav>
-  </header>
-  <div class="docs-layout">
-    
-    <aside class="sidebar">
-      <div class="sidebar-title">GILE</div>
-      <a class="side-link" href="./">Overview</a>
-
-      <div class="side-heading">GAMEPLAY</div>
-      <a class="side-link" href="start.html">Getting Started</a>
-      <a class="side-link" href="ancient_ruins.html">Ancient Ruins</a>
-      <a class="side-link" href="end_threshold.html">End Threshold</a>
-      <a class="side-link" href="the_moon.html">The Moon</a>
-      <a class="side-link" href="ghostly_thickets.html">Ghostly Thickets</a>
-      <a class="side-link active" href="moon_desert.html">Moon Desert</a>
-      <a class="side-link" href="tools.html">Tools & Utilities</a>
-      <a class="side-link" href="wish.html">Wishing Mechanic</a>
-      <a class="side-link" href="elemental_weapons.html">Elemental Weapons</a>
-      <a class="side-link" href="legendary_weapons.html">Legendary Weapons</a>
-
-      <div class="side-heading">DOCUMENTATION</div>
-      <a class="side-link" href="installation.html">Installation</a>
-      <a class="side-link" href="issues.html">Known Issues</a>
-      <a class="side-link" href="versions.html">Versions History</a>
-
-    </aside>
-    
-    <main class="docs-main doc-page">
-      <div class="breadcrumbs"><a href="index.html">GILE</a> / Moon Desert</div>
-      <div class="content">
-        <p class="eyebrow">GILE DOCUMENTATION</p>
-        <h1>Moon Desert</h1>
-        <p class="lead">An arid landscape composed entirely of lunar materials.</p>
-
-        <!-- MOON DESERT IMAGE PLACEHOLDER -->
-        <div class="placeholder-box">
-        <img src="images/screenshots/moon_desert.png" 
-        alt="Moon Desert Panorama"
-        style="width: 100%; border-radius: 8px; margin-bottom: 0px;">
-        Moon Desert Panorama
-        </div>
-
-        <ul class="feature-list">
-          <li><strong>Blocks:</strong> Primarily made of Moon Sand and Moon Sandstone underneath it.</li>
-          <li><strong>Flora:</strong> Dry Flowers and Glowing Chorus plants populate the dunes.</li>
-          <li><strong>Fauna:</strong> A specific mob native to the Moon Desert can also be found wandering here. <em>Jerboa</em></li>
-        </ul>
-
-         <hr style="border: 0; border-top: 1px solid var(--line); margin: 1px 0;">
-
-<h2>1. Moon Desert worldgen</h2>
-        
-        <!-- GLOWING CHORUS FEATURE BOX -->
-        <h3>Glowing Chorus Feature</h3>
-        <p>Appears everywhere: very rarely in the <a href="end_threshold.html">End Threshold</a>, a bit more often on the 
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/png" href="icon.png">
+    <title>Moon Desert — GILE Wiki</title>
+    <link rel="stylesheet" href="../assets/style.css">
+    <style>
+      .item-showcase { position: relative; }
+      .recipe-type-sprite { position: absolute; top: 8px; left: 8px; width: 86px; height: 44px; object-fit: contain; image-rendering: pixelated; pointer-events: none;}
+    </style>
+  </head>
+  <body>
+    <header class="topbar">
+      <a class="brand" href="../">MasterHamster837 <span>WIKI</span></a>
+      <nav>
+        <a class="active sidebar-toggle" href="./"><img src="icon.png" alt="GILE icon"> GILE</a>
+        <a href="https://www.curseforge.com/minecraft/mc-mods/genshin-impact-lunar-expansion" target="_blank" rel="noreferrer" style="color: #f36c21;">CurseForge ↗</a>
+        <a href="https://modrinth.com/mod/genshin-impact-lunar-expansion" target="_blank" rel="noreferrer" style="color: #5cff4a;">Modrinth ↗</a>
+        <a href="https://github.com/MasHam837/minecraft-mods-source-codes" target="_blank" rel="noreferrer" style="color: #f0f6fc;">Source ↗</a>
+      </nav>
+    </header>
+    <div class="docs-layout">
+      <aside class="sidebar">
+        <div class="sidebar-title">GILE</div>
+        <a class="side-link" href="./">Overview</a>
+        <div class="side-heading">GAMEPLAY</div>
+        <a class="side-link" href="start.html">Getting Started</a>
+        <a class="side-link" href="ancient_ruins.html">Ancient Ruins</a>
+        <a class="side-link" href="end_threshold.html">End Threshold</a>
+        <a class="side-link" href="the_moon.html">The Moon</a>
+        <a class="side-link" href="ghostly_thickets.html">Ghostly Thickets</a>
+        <a class="side-link active" href="moon_desert.html">Moon Desert</a>
+        <a class="side-link" href="tools.html">Tools & Utilities</a>
+        <a class="side-link" href="wish.html">Wishing Mechanic</a>
+        <a class="side-link" href="elemental_weapons.html">Elemental Weapons</a>
+        <a class="side-link" href="legendary_weapons.html">Legendary Weapons</a>
+        <div class="side-heading">DOCUMENTATION</div>
+        <a class="side-link" href="installation.html">Installation</a>
+        <a class="side-link" href="issues.html">Known Issues</a>
+        <a class="side-link" href="versions.html">Versions History</a>
+      </aside>
+      <main class="docs-main doc-page">
+        <div class="breadcrumbs"><a href="index.html">GILE</a> / Moon Desert</div>
+        <div class="content">
+          <p class="eyebrow">GILE DOCUMENTATION</p>
+          <h1>Moon Desert</h1>
+          <p class="lead">An arid landscape composed entirely of lunar materials.</p>
+          <div class="placeholder-box">
+            <img src="images/screenshots/moon_desert.png"
+            alt="Moon Desert Panorama"
+            style="width: 100%; border-radius: 8px; margin-bottom: 0px;">
+            Moon Desert Panorama
+          </div>
+          <ul class="feature-list">
+            <li><strong>Blocks:</strong> Primarily made of Moon Sand and Moon Sandstone underneath it.</li>
+            <li><strong>Flora:</strong> Dry Flowers and Glowing Chorus plants populate the dunes.</li>
+            <li><strong>Fauna:</strong> A specific mob native to the Moon Desert can also be found wandering here. <em>Jerboa</em></li>
+          </ul>
+          <hr style="border: 0; border-top: 1px solid var(--line); margin: 1px 0;">
+          <h2>1. Moon Desert worldgen</h2>
+          <h3>Glowing Chorus Feature</h3>
+          <p>Appears everywhere: very rarely in the <a href="end_threshold.html">End Threshold</a>, a bit more often on the
             <a href="the_moon.html">Moon</a> and really often in the <a href="moon_desert.html">Moon Desert</a>. Plant creates light level of 8, while flower - 12.</p>
-        <img src="images/screenshots/glowing_chorus.png" alt="Glowing Chorus feature" style="width: 25%; height: 25%; border-radius: 8px; margin: 0 auto; display: block;">
-
-        <!-- PLACEHOLDER ABOUT POPPED GLOWING CHORUS FRUIT -->
-      <div class="item-showcase">
-        <img class="recipe-type-sprite" src="../assets/branding/skin_sprite/recipes/right_crouching-smelting.png" alt="Smelting">
-        <div class="item-showcase-image" data-item-name="Popped Fruit">
-          <img src="images/textures/glowing_popped_chorus_fruit.png" alt="Glowing Popped Chorus Fruit Item Texture">
-        </div>
-      <div class="item-showcase-info">
-    <div class="item-showcase-section">
-      <strong>Description</strong>
-      <p> Glowing Chorus Fruit can be eaten giving glowing effect, teleporting like normal chorus fruit and restoring 
-          <img class="entity-heart" src="../assets/ui/hunger.png" alt="1 hunger"><img class="entity-heart" src="../assets/ui/hunger.png" alt="1 hunger"> with 0.3 saturation.
-          It can be also used for smelting. Its popped version gives a fluo block set.</p>
-    </div>
-    <div class="item-showcase-section">
-      <strong>Cooking Recipe</strong>
-      <div class="recipe">
-        <img src="images/recipes/glowing_popped_chorus_fruit.png"
-          alt="Glowing Popped Chorus Fruit cooking recipe"
-          style="width: 270px; height: 186px; image-rendering: pixelated;">
+          <img src="images/screenshots/glowing_chorus.png" alt="Glowing Chorus feature" style="width: 25%; height: 25%; border-radius: 8px; margin: 0 auto; display: block;">
+          <div class="item-showcase">
+            <img class="recipe-type-sprite" src="../assets/branding/skin_sprite/recipes/right_crouching-smelting.png" alt="Smelting">
+            <div class="item-showcase-image" data-item-name="Popped Fruit">
+              <img src="images/textures/glowing_popped_chorus_fruit.png" alt="Glowing Popped Chorus Fruit Item Texture">
+            </div>
+            <div class="item-showcase-info">
+              <div class="item-showcase-section">
+                <strong>Description</strong>
+                <p> Glowing Chorus Fruit can be eaten giving glowing effect, teleporting like normal chorus fruit and restoring
+                  <img class="entity-heart" src="../assets/ui/hunger.png" alt="1 hunger"><img class="entity-heart" src="../assets/ui/hunger.png" alt="1 hunger"> with 0.3 saturation.
+                  It can be also used for smelting. Its popped version gives a fluo block set.</p>
+              </div>
+              <div class="item-showcase-section">
+                <strong>Cooking Recipe</strong>
+                <div class="recipe">
+                  <img src="images/recipes/glowing_popped_chorus_fruit.png"
+                  alt="Glowing Popped Chorus Fruit cooking recipe"
+                  style="width: 270px; height: 186px; image-rendering: pixelated;">
+                </div>
+              </div>
             </div>
           </div>
-        </div>
-      </div>
-
-        <!-- FLUO BLOCK SET IMAGE PLACEHOLDER -->
-        <h3>Fluo Block set</h3>
-        <p>Those are building blocks that emmit some light.</p>
-        <div class="placeholder-box">
-        <img src="images/recipes/fluo.png" 
-        alt="Fluo blocks recipes"
-        style="width: 100%; border-radius: 8px; margin-bottom: 0px;">
-        Fluo blocks related recipes
-        </div>
-
-         <!-- MOON SANDSTONE BLOCK SET IMAGE PLACEHOLDER -->
-        <h3>Moon Sandstone</h3>
-        <p>Moon sand and sandstone found in this desert can be used to craft the whole corresponding block set.</p>
-        <div class="placeholder-box">
-        <img src="images/recipes/moon_sandstone.png" 
-        alt="Moon Sandstone recipes"
-        style="width: 100%; border-radius: 8px; margin-bottom: 0px;">
-        Moon Sandstone related recipes
-        </div>
-        
-        <!-- MOON FIRE BLOCK SET IMAGE PLACEHOLDER -->
-        <h3>Moon Fire</h3>
-        <p>Setting on fire moon sand will place moon fire on it. So obviously the moon sand can be used in crafting recipes for torch, lantern and campfire.
-           Won't propagate and burn blocks, only items & entities that get in it.</p>
-        <div class="placeholder-box">
-        <img src="images/recipes/moon_fire.png" 
-        alt="Moon Fire recipes"
-        style="width: 100%; border-radius: 8px; margin-bottom: 0px;">
-        Moon Fire related recipes
-        </div>
-
-         <hr style="border: 0; border-top: 1px solid var(--line); margin: 8px 0;">
-
-<h2>2. Jerboa</h2>
-        
-        <!-- Jerboa Showcase-->
-<div class="entity-showcase">
-  <!-- ENTITY ART -->
-  <div class="entity-showcase-image">
-    <img src="images/entities/jerboa_desert.png" alt="Jerboa Desert Model">
-    <img src="images/entities/jerboa_moon.png" alt="Jerboa Moon Model">
-    <div class="entity-showcase-name">Jerboa</div>
-    <div class="entity-showcase-type">Creature</div>
-  </div>
-  <!-- ENTITY INFORMATION -->
-  <div class="entity-showcase-info">
-    <!-- HEADER -->
-    <div class="entity-header">
-      <div class="entity-header-title">
-        <h3>Jerboa</h3>
-        <span>Ground · Peaceful · Overworld / The End</span>
-      </div>
-      <!-- HEALTH -->
-      <div class="entity-health">
-        <span class="entity-health-label">Health</span>
-        <div class="entity-hearts">
-          <img class="entity-heart" src="../assets/ui/heart_full.png" alt="1 heart">
-          <img class="entity-heart" src="../assets/ui/heart_full.png" alt="1 heart">
-          <img class="entity-heart" src="../assets/ui/heart_full.png" alt="1 heart">
-          <span class="entity-health-number">6 HP</span>
-        </div>
-      </div>
-    </div>
-    <!-- QUICK STATS -->
-    <div class="entity-stats">
-      <div class="entity-stat"><strong>SPEED</strong>0.32</div>
-      <div class="entity-stat"><strong>XP</strong>1-3</div>
-    </div>
-    <!-- SPAWNING -->
-    <div class="entity-info-box spawning">
-      <strong>Spawning</strong>
-      <p>
-        Spawns in tiny groups only in the Moon Desert biome.
-      </p>
-    </div>
-    <!-- BEHAVIOUR -->
-    <div class="entity-info-box behaviour">
-      <strong>Behaviour</strong>
-      <p>
-        Wanders around in any desert. Have two variants, depending on the dimension it spawned.
-      </p>
-    </div>
-    <!-- SPECIALITY -->
-    <div class="entity-info-box combat">
-      <strong>Speciality</strong>
-      <p>
-        Can be bred using only Dry Flowers. If not holding a dry flower, hides in any sand.
-        If not on sandy ground, tries to find it, fleeing with double speed from the danger.
-      </p>
-    </div>
-    <!-- DROPS + SPAWN EGG -->
-<div class="entity-bottom-row">
-  <!-- DROPS -->
-  <div class="entity-drops">
-    <div class="entity-drops-title">Drops</div>
-    <div class="entity-drops-list">
-      <!-- DROP 1 -->
-      <div class="entity-drop">
-        <img src="images/textures/jerboas_tail.png" alt="Jerboa's Tail">
-        <span class="entity-drop-amount">0-1</span>
-      </div>
-      <!-- DROP 2 -->
-      <div class="entity-drop">
-        <img src="images/textures/rabbit_hide.png" alt="Rabbit Hide">
-        <span class="entity-drop-amount">0-4</span>
-      </div>
-    </div>
-  </div>
-  <!-- SPAWN EGG -->
-  <div class="entity-spawn">
-    <div class="entity-spawn-title">Spawn Egg</div>
-    <div class="entity-spawn-box">
-      <img src="images/textures/jerboa_spawn_egg.png" alt="Jerboa Spawn Egg">
-    </div>
-  </div>
-</div>
-  </div>
-</div>
-
-        <p><em>N.B. Another Jerboa type spawns in the Overworld - Desert pale yellow one. Spawns in any mesa or desert biome. The Moon type is slightly green-ish.</em></p>
-        <div class="placeholder-box">
-        <img src="images/screenshots/jerboa_overworld.png" 
-        alt="Jerboa in the Overworld"
-        style="width: 100%; border-radius: 8px; margin-bottom: 0px;">
-        Jerboa in the Overworld
-        </div>
-
-        <hr style="border: 0; border-top: 1px solid var(--line); margin: 8px 0;">
-        
-        <!-- FLOWERS USES BLOCK SET IMAGE PLACEHOLDER -->
-        <h2>3. Moon Flowers</h2>
-        <p>Every moon flower can also be used to craft a dye and a suspiciuous stew. Moon Flower gives Levitation for 7 seconds,
-           Gloomy Flowers gives Darkness for 8 seconds, Dry Flower gives Wither for 6 seconds.</p>
-        <div class="placeholder-box">
-        <img src="images/recipes/moon_flowers.png" 
-        alt="Moon Flowers recipes"
-        style="width: 100%; border-radius: 8px; margin-bottom: 0px;">
-        Moon Flowers related recipes
-        </div>
-
-        <div class="notice">
+          <h3>Fluo Block set</h3>
+          <p>Those are building blocks that emmit some light.</p>
+          <div class="placeholder-box">
+            <img src="images/recipes/fluo.png"
+            alt="Fluo blocks recipes"
+            style="width: 100%; border-radius: 8px; margin-bottom: 0px;">
+            Fluo blocks related recipes
+          </div>
+          <h3>Moon Sandstone</h3>
+          <p>Moon sand and sandstone found in this desert can be used to craft the whole corresponding block set.</p>
+          <div class="placeholder-box">
+            <img src="images/recipes/moon_sandstone.png"
+            alt="Moon Sandstone recipes"
+            style="width: 100%; border-radius: 8px; margin-bottom: 0px;">
+            Moon Sandstone related recipes
+          </div>
+          <h3>Moon Fire</h3>
+          <p>Setting on fire moon sand will place moon fire on it. So obviously the moon sand can be used in crafting recipes for torch, lantern and campfire.
+            Won't propagate and burn blocks, only items & entities that get in it.</p>
+          <div class="placeholder-box">
+            <img src="images/recipes/moon_fire.png"
+            alt="Moon Fire recipes"
+            style="width: 100%; border-radius: 8px; margin-bottom: 0px;">
+            Moon Fire related recipes
+          </div>
+          <hr style="border: 0; border-top: 1px solid var(--line); margin: 8px 0;">
+          <h2>2. Jerboa</h2>
+          <div class="entity-showcase">
+            <div class="entity-showcase-image">
+              <img src="images/entities/jerboa_desert.png" alt="Jerboa Desert Model">
+              <img src="images/entities/jerboa_moon.png" alt="Jerboa Moon Model">
+              <div class="entity-showcase-name">Jerboa</div>
+              <div class="entity-showcase-type">Creature</div>
+            </div>
+            <div class="entity-showcase-info">
+              <div class="entity-header">
+                <div class="entity-header-title">
+                  <h3>Jerboa</h3>
+                  <span>Ground · Peaceful · Overworld / The End</span>
+                </div>
+                <div class="entity-health">
+                  <span class="entity-health-label">Health</span>
+                  <div class="entity-hearts">
+                    <img class="entity-heart" src="../assets/ui/heart_full.png" alt="1 heart">
+                    <img class="entity-heart" src="../assets/ui/heart_full.png" alt="1 heart">
+                    <img class="entity-heart" src="../assets/ui/heart_full.png" alt="1 heart">
+                    <span class="entity-health-number">6 HP</span>
+                  </div>
+                </div>
+              </div>
+              <div class="entity-stats">
+                <div class="entity-stat"><strong>SPEED</strong>0.32</div>
+                <div class="entity-stat"><strong>XP</strong>1-3</div>
+              </div>
+              <div class="entity-info-box spawning">
+                <strong>Spawning</strong>
+                <p>
+                  Spawns in tiny groups only in the Moon Desert biome.
+                </p>
+              </div>
+              <div class="entity-info-box behaviour">
+                <strong>Behaviour</strong>
+                <p>
+                  Wanders around in any desert. Have two variants, depending on the dimension it spawned.
+                </p>
+              </div>
+              <div class="entity-info-box combat">
+                <strong>Speciality</strong>
+                <p>
+                  Can be bred using only Dry Flowers. If not holding a dry flower, hides in any sand.
+                  If not on sandy ground, tries to find it, fleeing with double speed from the danger.
+                </p>
+              </div>
+              <div class="entity-bottom-row">
+                <div class="entity-drops">
+                  <div class="entity-drops-title">Drops</div>
+                  <div class="entity-drops-list">
+                    <div class="entity-drop">
+                      <img src="images/textures/jerboas_tail.png" alt="Jerboa's Tail">
+                      <span class="entity-drop-amount">0-1</span>
+                    </div>
+                    <div class="entity-drop">
+                      <img src="images/textures/rabbit_hide.png" alt="Rabbit Hide">
+                      <span class="entity-drop-amount">0-4</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="entity-spawn">
+                  <div class="entity-spawn-title">Spawn Egg</div>
+                  <div class="entity-spawn-box">
+                    <img src="images/textures/jerboa_spawn_egg.png" alt="Jerboa Spawn Egg">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <p><em>P.S. Another Jerboa type spawns in the Overworld - Desert pale yellow one. Spawns in any mesa or desert biome. The Moon type is slightly green-ish.</em></p>
+          <div class="placeholder-box">
+            <img src="images/screenshots/jerboa_overworld.png"
+            alt="Jerboa in the Overworld"
+            style="width: 100%; border-radius: 8px; margin-bottom: 0px;">
+            Jerboa in the Overworld
+          </div>
+          <hr style="border: 0; border-top: 1px solid var(--line); margin: 8px 0;">
+          <h2>3. Moon Flowers</h2>
+          <p>Every moon flower can also be used to craft a dye and a suspiciuous stew. Moon Flower gives Levitation for 7 seconds,
+            Gloomy Flowers gives Darkness for 8 seconds, Dry Flower gives Wither for 6 seconds.</p>
+          <div class="placeholder-box">
+            <img src="images/recipes/moon_flowers.png"
+            alt="Moon Flowers recipes"
+            style="width: 100%; border-radius: 8px; margin-bottom: 0px;">
+            Moon Flowers related recipes
+          </div>
+          <div class="notice">
             Setting Moon Sand on fire will give you cool Magenta Fire, as you already understood.
             Now mining moon sand will eventually grant you with crystals, that are pretty usefull in different craft recipes, especially to craft
             <a href="the_moon.html">Enderite Equipment</a>, <a href="tools.html">Size Manipulation Wands</a> and <a href="wish.html">Fate Arrows</a>.
             Or else you just can smelt it to tinted glass:
             <p><img src="images/recipes/tinted_glass.png" alt="Tinted Glass from Moon Sand"></p>
+          </div>
         </div>
-
-      </div>
-    </main>
-  </div>
-  <footer>GILE Wiki · MasterHamster837 · <a href="index.html">Back to GILE</a></footer>
-<script src="../assets/js/docs-sidebar.js"></script>
-</body>
+      </main>
+    </div>
+    <footer>GILE Wiki · MasterHamster837 · <a href="index.html">Back to GILE</a></footer>
+    <script src="../assets/js/docs-sidebar.js"></script>
+  </body>
 </html>

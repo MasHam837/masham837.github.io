@@ -1,317 +1,262 @@
 <!doctype html>
 <html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="icon" type="image/png" href="icon.png">
-  <title>Installation — GILE Wiki</title>
-  <link rel="stylesheet" href="../assets/style.css">
-  <style> 
-    .mod-paths { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; margin: 24px 0 30px; } 
-    .mod-path { min-width: 0; padding: 16px; border: 1px solid var(--line);
-               border-radius: 10px; background: linear-gradient( 145deg, rgba(0, 34, 85, 0.32), rgba(13, 28, 48, 0.52) ); } 
-    .mod-path-title { display: flex; align-items: center; gap: 8px; margin-bottom: 10px; 
-                     font-family: "Monocraft", monospace; font-size: 14px; font-weight: bold; color: var(--accent); } 
-    .mod-path-description { margin: 0 0 10px; color: var(--muted); font-size: 12px; line-height: 1.45; } 
-    .mod-path code { display: block; width: 100%; box-sizing: border-box; padding: 9px 10px; border: 1px solid var(--line-soft); border-radius: 7px; background: rgba(0, 0, 0, 0.28);
-                    color: var(--text); font-family: "Monocraft", monospace; font-size: 10px; line-height: 1.45; overflow-x: auto; white-space: nowrap; } 
-    .mod-path-note { margin-top: 8px; color: var(--muted-dark); font-size: 10px; line-height: 1.4; }
-    .path-tip { margin: 18px 0 26px; padding: 13px 15px; border-left: 3px solid var(--accent); border-radius: 0 8px 8px 0;
-               background: var(--accent-bg);color: var(--muted); font-size: 13px; line-height: 1.5; } 
-    .path-tip strong { color: var(--text); }
-    .install-warning { margin: 20px 0; padding: 14px 15px; border-left: 4px solid #ff4a4a; border-radius: 0 7px 7px 0; background: rgba(255, 0, 0, 0.10);
-                      font-size: 13px; line-height: 1.5; } @media (max-width: 800px) { 
-      .mod-paths { grid-template-columns: 1fr; gap: 10px; } 
-      .mod-path { padding: 13px; } .mod-path-title { font-size: 13px; } 
-      .mod-path code { font-size: 9px; } } 
-  </style>
-</head>
-<body>
-  <header class="topbar">
-    <a class="brand" href="../">MasterHamster837 <span>WIKI</span></a>
-    <nav>
-      <a class="active sidebar-toggle" href="./"><img src="icon.png" alt="GILE icon"> GILE</a>
-      <a href="https://www.curseforge.com/minecraft/mc-mods/genshin-impact-lunar-expansion" target="_blank" rel="noreferrer" style="color: #f36c21;">CurseForge ↗</a>
-      <a href="https://modrinth.com/mod/genshin-impact-lunar-expansion" target="_blank" rel="noreferrer" style="color: #5cff4a;">Modrinth ↗</a>
-      <a href="https://github.com/MasHam837/minecraft-mods-source-codes" target="_blank" rel="noreferrer" style="color: #f0f6fc;">Source ↗</a>
-    </nav>
-  </header>
-  <div class="docs-layout">
-    
-    <aside class="sidebar">
-      <div class="sidebar-title">GILE</div>
-      <a class="side-link" href="./">Overview</a>
-
-      <div class="side-heading">GAMEPLAY</div>
-      <a class="side-link" href="start.html">Getting Started</a>
-      <a class="side-link" href="ancient_ruins.html">Ancient Ruins</a>
-       <a class="side-link" href="end_threshold.html">End Threshold</a>
-      <a class="side-link" href="the_moon.html">The Moon</a>
-      <a class="side-link" href="ghostly_thickets.html">Ghostly Thickets</a>
-      <a class="side-link" href="moon_desert.html">Moon Desert</a>
-      <a class="side-link" href="tools.html">Tools & Utilities</a>
-      <a class="side-link" href="wish.html">Wishing Mechanic</a>
-      <a class="side-link" href="elemental_weapons.html">Elemental Weapons</a>
-      <a class="side-link" href="legendary_weapons.html">Legendary Weapons</a>
-
-      <div class="side-heading">DOCUMENTATION</div>
-      <a class="side-link active" href="installation.html">Installation</a>
-      <a class="side-link" href="issues.html">Known Issues</a>
-      <a class="side-link" href="versions.html">Versions History</a>
-        
-    </aside>
-    
-    <main class="docs-main doc-page">
-      <div class="breadcrumbs"><a href="index.html">GILE</a> / Installation</div>
-      <div class="content">
-        <p class="eyebrow">GILE DOCUMENTATION</p>
-        <h1>Installation</h1>
-        <p class="lead">Requirements and step-by-step instructions for installing GILE on Fabric.</p>
-
-        <h2>1. Minimum Requirements</h2>
-        <p>GILE strictly requires the <strong>Fabric Loader</strong> and the <strong>Fabric API</strong>. Please ensure you are matching your mod version with the exact dependencies listed below.</p>
-        
-        <table>
-          <thead>
-            <tr>
-              <th>GILE Version</th>
-              <th>Minecraft Version</th>
-              <th>Fabric Loader</th>
-              <th>Fabric API</th>
-              <th>Java Version</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td><strong>1.0.0 Release</strong></td>
-              <td>~26.1-26.1.2</td>
-              <td>&gt;= 0.19.3</td>
-              <td>0.145.1+26.1</td>
-              <td>Java 25+</td>
-            </tr>
-            <tr>
-              <td><strong>0.1.5 Beta</strong></td>
-              <td>~1.21.1</td>
-              <td>&gt;= 0.19.2</td>
-              <td>0.116.11+1.21.1</td>
-              <td>Java 21+</td>
-            </tr>
-          </tbody>
-        </table>
-
-        <div style="background: rgba(255,0,0,0.1); border-left: 4px solid #ff4a4a; padding: 15px; margin: 20px 0;">
-          <strong>Warning:</strong> GILE will <em>not</em> function without the correct version of the <strong>Fabric API</strong> present in your mods folder!
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/png" href="icon.png">
+    <title>Installation — GILE Wiki</title>
+    <link rel="stylesheet" href="../assets/style.css">
+    <style>
+      .mod-paths { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; margin: 24px 0 30px; }
+      .mod-path { min-width: 0; padding: 16px; border: 1px solid var(--line);
+      border-radius: 10px; background: linear-gradient( 145deg, rgba(0, 34, 85, 0.32), rgba(13, 28, 48, 0.52) ); }
+      .mod-path-title { display: flex; align-items: center; gap: 8px; margin-bottom: 10px;
+      font-family: "Monocraft", monospace; font-size: 14px; font-weight: bold; color: var(--accent); }
+      .mod-path-description { margin: 0 0 10px; color: var(--muted); font-size: 12px; line-height: 1.45; }
+      .mod-path code { display: block; width: 100%; box-sizing: border-box; padding: 9px 10px; border: 1px solid var(--line-soft); border-radius: 7px; background: rgba(0, 0, 0, 0.28);
+      color: var(--text); font-family: "Monocraft", monospace; font-size: 10px; line-height: 1.45; overflow-x: auto; white-space: nowrap; }
+      .mod-path-note { margin-top: 8px; color: var(--muted-dark); font-size: 10px; line-height: 1.4; }
+      .path-tip { margin: 18px 0 26px; padding: 13px 15px; border-left: 3px solid var(--accent); border-radius: 0 8px 8px 0;
+      background: var(--accent-bg);color: var(--muted); font-size: 13px; line-height: 1.5; }
+      .path-tip strong { color: var(--text); }
+      .install-warning { margin: 20px 0; padding: 14px 15px; border-left: 4px solid #ff4a4a; border-radius: 0 7px 7px 0; background: rgba(255, 0, 0, 0.10);
+      font-size: 13px; line-height: 1.5; } @media (max-width: 800px) {
+      .mod-paths { grid-template-columns: 1fr; gap: 10px; }
+      .mod-path { padding: 13px; } .mod-path-title { font-size: 13px; }
+      .mod-path code { font-size: 9px; } }
+    </style>
+  </head>
+  <body>
+    <header class="topbar">
+      <a class="brand" href="../">MasterHamster837 <span>WIKI</span></a>
+      <nav>
+        <a class="active sidebar-toggle" href="./"><img src="icon.png" alt="GILE icon"> GILE</a>
+        <a href="https://www.curseforge.com/minecraft/mc-mods/genshin-impact-lunar-expansion" target="_blank" rel="noreferrer" style="color: #f36c21;">CurseForge ↗</a>
+        <a href="https://modrinth.com/mod/genshin-impact-lunar-expansion" target="_blank" rel="noreferrer" style="color: #5cff4a;">Modrinth ↗</a>
+        <a href="https://github.com/MasHam837/minecraft-mods-source-codes" target="_blank" rel="noreferrer" style="color: #f0f6fc;">Source ↗</a>
+      </nav>
+    </header>
+    <div class="docs-layout">
+      <aside class="sidebar">
+        <div class="sidebar-title">GILE</div>
+        <a class="side-link" href="./">Overview</a>
+        <div class="side-heading">GAMEPLAY</div>
+        <a class="side-link" href="start.html">Getting Started</a>
+        <a class="side-link" href="ancient_ruins.html">Ancient Ruins</a>
+        <a class="side-link" href="end_threshold.html">End Threshold</a>
+        <a class="side-link" href="the_moon.html">The Moon</a>
+        <a class="side-link" href="ghostly_thickets.html">Ghostly Thickets</a>
+        <a class="side-link" href="moon_desert.html">Moon Desert</a>
+        <a class="side-link" href="tools.html">Tools & Utilities</a>
+        <a class="side-link" href="wish.html">Wishing Mechanic</a>
+        <a class="side-link" href="elemental_weapons.html">Elemental Weapons</a>
+        <a class="side-link" href="legendary_weapons.html">Legendary Weapons</a>
+        <div class="side-heading">DOCUMENTATION</div>
+        <a class="side-link active" href="installation.html">Installation</a>
+        <a class="side-link" href="issues.html">Known Issues</a>
+        <a class="side-link" href="versions.html">Versions History</a>
+      </aside>
+      <main class="docs-main doc-page">
+        <div class="breadcrumbs"><a href="index.html">GILE</a> / Installation</div>
+        <div class="content">
+          <p class="eyebrow">GILE DOCUMENTATION</p>
+          <h1>Installation</h1>
+          <p class="lead">Requirements and step-by-step instructions for installing GILE on Fabric.</p>
+          <h2>1. Minimum Requirements</h2>
+          <p>GILE strictly requires the <strong>Fabric Loader</strong> and the <strong>Fabric API</strong>. Please ensure you are matching your mod version with the exact dependencies listed below.</p>
+          <table>
+            <thead>
+              <tr>
+                <th>GILE Version</th>
+                <th>Minecraft Version</th>
+                <th>Fabric Loader</th>
+                <th>Fabric API</th>
+                <th>Java Version</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>1.0.0 Release</strong></td>
+                <td>~26.1-26.1.2</td>
+                <td>&gt;= 0.19.3</td>
+                <td>0.145.1+26.1</td>
+                <td>Java 25+</td>
+              </tr>
+              <tr>
+                <td><strong>0.1.5 Beta</strong></td>
+                <td>~1.21.1</td>
+                <td>&gt;= 0.19.2</td>
+                <td>0.116.11+1.21.1</td>
+                <td>Java 21+</td>
+              </tr>
+            </tbody>
+          </table>
+          <div style="background: rgba(255,0,0,0.1); border-left: 4px solid #ff4a4a; padding: 15px; margin: 20px 0;">
+            <strong>Warning:</strong> GILE will <em>not</em> function without the correct version of the <strong>Fabric API</strong> present in your mods folder!
+          </div>
+          <ol>
+            <li>
+              <strong>Install Fabric:</strong>
+              Download and run the
+              <a href="https://fabricmc.net/use/installer/" target="_blank" rel="noreferrer">
+                Fabric Installer
+              </a>
+              for your targeted Minecraft version.
+            </li>
+            <li>
+              <strong>Download Fabric API:</strong>
+              Download the matching version of
+              <a href="https://modrinth.com/mod/fabric-api" target="_blank" rel="noreferrer">
+                Fabric API
+              </a>.
+            </li>
+            <li>
+              <strong>Download GILE:</strong>
+              Download the <code>.jar</code> file for
+              <em>Genshin Impact: Lunar Expansion</em> from
+              <a
+              href="https://www.curseforge.com/minecraft/mc-mods/genshin-impact-lunar-expansion"
+              target="_blank"
+              rel="noreferrer"
+              >
+              CurseForge
+            </a>
+            or
+            <a
+            href="https://modrinth.com/mod/genshin-impact-lunar-expansion"
+            target="_blank"
+            rel="noreferrer"
+            >
+            Modrinth
+          </a>.
+        </li>
+      </ol>
+      <h2>3. Open Your Minecraft Mods Folder</h2>
+      <p>
+        Once Fabric is installed, you need to place the GILE
+        <code>.jar</code> and the matching Fabric API
+        <code>.jar</code> inside your Minecraft
+        <code>mods</code> folder.
+      </p>
+      <p>
+        The location of this folder depends on your operating system.
+        Here are the default Minecraft paths:
+      </p>
+      <div class="mod-paths">
+        <div class="mod-path">
+          <div class="mod-path-title">
+            🪟 Windows
+          </div>
+          <p class="mod-path-description">
+            Press <strong>Win + R</strong>, paste the path below,
+            and press Enter.
+          </p>
+          <code>%APPDATA%\.minecraft\mods</code>
+          <div class="mod-path-note">
+            This opens the Minecraft <code>mods</code> folder directly.
+          </div>
         </div>
-
-    <ol>
-      <li>
-        <strong>Install Fabric:</strong>
-        Download and run the
-        <a href="https://fabricmc.net/use/installer/" target="_blank" rel="noreferrer">
-          Fabric Installer
-        </a>
-        for your targeted Minecraft version.
-      </li>
-
-      <li>
-        <strong>Download Fabric API:</strong>
-        Download the matching version of
-        <a href="https://modrinth.com/mod/fabric-api" target="_blank" rel="noreferrer">
-          Fabric API
-        </a>.
-      </li>
-
-      <li>
-        <strong>Download GILE:</strong>
-        Download the <code>.jar</code> file for
-        <em>Genshin Impact: Lunar Expansion</em> from
-        <a
-          href="https://www.curseforge.com/minecraft/mc-mods/genshin-impact-lunar-expansion"
-          target="_blank"
-          rel="noreferrer"
-        >
-          CurseForge
-        </a>
-        or
-        <a
-          href="https://modrinth.com/mod/genshin-impact-lunar-expansion"
-          target="_blank"
-          rel="noreferrer"
-        >
-          Modrinth
-        </a>.
-      </li>
-    </ol>
-
-    <h2>3. Open Your Minecraft Mods Folder</h2>
-
-    <p>
-      Once Fabric is installed, you need to place the GILE
-      <code>.jar</code> and the matching Fabric API
-      <code>.jar</code> inside your Minecraft
-      <code>mods</code> folder.
-    </p>
-
-    <p>
-      The location of this folder depends on your operating system.
-      Here are the default Minecraft paths:
-    </p>
-
-    <div class="mod-paths">
-
-      <div class="mod-path">
-
-        <div class="mod-path-title">
-          🪟 Windows
+        <div class="mod-path">
+          <div class="mod-path-title">
+            🍎 macOS
+          </div>
+          <p class="mod-path-description">
+            In Finder, choose <strong>Go → Go to Folder...</strong>
+            and enter the path below.
+          </p>
+          <code>~/Library/Application Support/minecraft/mods</code>
+          <div class="mod-path-note">
+            You can also press <strong>⌘ Command + Shift + G</strong>
+            in Finder.
+          </div>
         </div>
-
-        <p class="mod-path-description">
-          Press <strong>Win + R</strong>, paste the path below,
-          and press Enter.
-        </p>
-
-        <code>%APPDATA%\.minecraft\mods</code>
-
-        <div class="mod-path-note">
-          This opens the Minecraft <code>mods</code> folder directly.
+        <div class="mod-path">
+          <div class="mod-path-title">
+            🐧 Linux
+          </div>
+          <p class="mod-path-description">
+            Open your file manager and navigate to your Minecraft
+            directory using the path below.
+          </p>
+          <code>~/.minecraft/mods</code>
+          <div class="mod-path-note">
+            The <code>.minecraft</code> directory may be hidden.
+            Enable hidden files if necessary.
+          </div>
         </div>
-
       </div>
-
-      <div class="mod-path">
-
-        <div class="mod-path-title">
-          🍎 macOS
-        </div>
-
-        <p class="mod-path-description">
-          In Finder, choose <strong>Go → Go to Folder...</strong>
-          and enter the path below.
-        </p>
-
-        <code>~/Library/Application Support/minecraft/mods</code>
-
-        <div class="mod-path-note">
-          You can also press <strong>⌘ Command + Shift + G</strong>
-          in Finder.
-        </div>
-
+      <div class="path-tip">
+        <strong>💡 Don't have a <code>mods</code> folder?</strong><br>
+        If the folder does not exist yet, simply create a new folder
+        named <code>mods</code> inside your Minecraft directory.
       </div>
-
-      <div class="mod-path">
-
-        <div class="mod-path-title">
-          🐧 Linux
-        </div>
-
-        <p class="mod-path-description">
-          Open your file manager and navigate to your Minecraft
-          directory using the path below.
-        </p>
-
-        <code>~/.minecraft/mods</code>
-
-        <div class="mod-path-note">
-          The <code>.minecraft</code> directory may be hidden.
-          Enable hidden files if necessary.
-        </div>
-
+      <h2>4. Put the Mods Inside</h2>
+      <p>
+        Your <code>mods</code> folder should contain at least these
+        two files:
+      </p>
+      <div class="placeholder-box">
+        <strong>📁 .minecraft</strong><br>
+        &nbsp;&nbsp;└── <strong>mods</strong><br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├── Fabric API <code>.jar</code><br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└── GILE <code>.jar</code>
       </div>
-
-    </div>
-
-    <div class="path-tip">
-      <strong>💡 Don't have a <code>mods</code> folder?</strong><br>
-      If the folder does not exist yet, simply create a new folder
-      named <code>mods</code> inside your Minecraft directory.
-    </div>
-
-    <h2>4. Put the Mods Inside</h2>
-
-    <p>
-      Your <code>mods</code> folder should contain at least these
-      two files:
-    </p>
-
-    <div class="placeholder-box">
-      <strong>📁 .minecraft</strong><br>
-      &nbsp;&nbsp;└── <strong>mods</strong><br>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├── Fabric API <code>.jar</code><br>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└── GILE <code>.jar</code>
-    </div>
-
-    <p>
-      Do <strong>not</strong> extract the <code>.jar</code> files.
-      Place the downloaded files directly into the
-      <code>mods</code> folder.
-    </p>
-
-    <h2>5. Launch GILE</h2>
-
-    <ol>
-
-      <li>
-        Open the <strong>Minecraft Launcher</strong>.
-      </li>
-
-      <li>
-        Select the <strong>Fabric</strong> installation for the
-        Minecraft version you installed GILE for.
-      </li>
-
-      <li>
-        Click <strong>Play</strong>.
-      </li>
-
-      <li>
-        Once Minecraft starts, GILE should load automatically
-        alongside Fabric API.
-      </li>
-
-    </ol>
-
-    <div class="path-tip">
-      <strong>⚠ Version matters.</strong><br>
-      Make sure the GILE version, Minecraft version, Fabric Loader
-      version and Fabric API version are compatible with each other.
-      If Minecraft crashes during startup, check the
-      <a href="issues.html">Known Issues</a> page first.
-    </div>
-
-    <h2>Quick Reference</h2>
-
-    <table>
-      <thead>
-        <tr>
-          <th>System</th>
-          <th>Default Mods Folder</th>
-        </tr>
-      </thead>
-
-      <tbody>
-
-        <tr>
-          <td><strong>Windows</strong></td>
-          <td><code>%APPDATA%\.minecraft\mods</code></td>
-        </tr>
-
-        <tr>
-          <td><strong>macOS</strong></td>
-          <td><code>~/Library/Application Support/minecraft/mods</code></td>
-        </tr>
-
-        <tr>
-          <td><strong>Linux</strong></td>
-          <td><code>~/.minecraft/mods</code></td>
-        </tr>
-
-      </tbody>
-    </table>
-        
+      <p>
+        Do <strong>not</strong> extract the <code>.jar</code> files.
+        Place the downloaded files directly into the
+        <code>mods</code> folder.
+      </p>
+      <h2>5. Launch GILE</h2>
+      <ol>
+        <li>
+          Open the <strong>Minecraft Launcher</strong>.
+        </li>
+        <li>
+          Select the <strong>Fabric</strong> installation for the
+          Minecraft version you installed GILE for.
+        </li>
+        <li>
+          Click <strong>Play</strong>.
+        </li>
+        <li>
+          Once Minecraft starts, GILE should load automatically
+          alongside Fabric API.
+        </li>
+      </ol>
+      <div class="path-tip">
+        <strong>⚠ Version matters.</strong><br>
+        Make sure the GILE version, Minecraft version, Fabric Loader
+        version and Fabric API version are compatible with each other.
+        If Minecraft crashes during startup, check the
+        <a href="issues.html">Known Issues</a> page first.
       </div>
-    </main>
-  </div>
-  <footer>GILE Wiki · MasterHamster837 · <a href="index.html">Back to GILE</a></footer>
+      <h2>Quick Reference</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>System</th>
+            <th>Default Mods Folder</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Windows</strong></td>
+            <td><code>%APPDATA%\.minecraft\mods</code></td>
+          </tr>
+          <tr>
+            <td><strong>macOS</strong></td>
+            <td><code>~/Library/Application Support/minecraft/mods</code></td>
+          </tr>
+          <tr>
+            <td><strong>Linux</strong></td>
+            <td><code>~/.minecraft/mods</code></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </main>
+</div>
+<footer>GILE Wiki · MasterHamster837 · <a href="index.html">Back to GILE</a></footer>
 <script src="../assets/js/docs-sidebar.js"></script>
 </body>
 </html>
