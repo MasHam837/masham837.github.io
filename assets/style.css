@@ -84,7 +84,7 @@ footer a:hover { color: var(--accent-2); }
 .side-link.active::before { content: ""; flex: 0 0 22px; width: 22px; height: 22px; background: url("branding/skin_sprite/right_one-up.png") center / contain no-repeat; pointer-events: none; }
 .notice { position: relative; margin: 42px 0; padding: 15px 82px 15px 18px; border: 1px solid var(--warning); border-radius: 10px; background: var(--warning-bg); color: var(--text); overflow: hidden; }
 .notice strong { color: var(--warning); }
-.notice::after { content: ""; position: absolute; right: 12px; top: 50%; bottom: auto; width: 48px; height: 48px; transform: translateY(-50%); background: url("branding/skin_sprite/left_standing.png") right center / contain no-repeat; pointer-events: none; }
+.notice::after { content: ""; position: absolute; right: 12px; top: 50%; bottom: auto; width: 48px; height: 48px; transform: translateY(-50%); background: url("branding/skin_sprite/left_standing.png") right bottom / contain no-repeat; pointer-events: none; }
 
 /* Buttons & Notices */
 .button-row { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 24px; }
