@@ -224,39 +224,38 @@ tr:hover td { background: var(--block-green-hover); }
 
   /* Mobile documentation toggle */
   .sidebar-toggle {
-    display: flex;
+    display: inline-flex;
     align-items: center;
-    justify-content: space-between;
-    width: 100%;
-    margin: 0 0 10px;
-    padding: 10px 13px;
-    border: 1px solid var(--line);
-    border-radius: 8px;
-    background: rgba(0, 34, 85, 0.35);
-    color: var(--text);
-    font: inherit;
-    font-size: 12px;
-    font-weight: 800;
-    text-align: left;
+    gap: 5px;
+    color: var(--muted);
     cursor: pointer;
-    transition: color 0.2s ease, background 0.2s ease, border-color 0.2s ease;
+  }
+
+  .sidebar-toggle::before {
+    content: "☰";
+    font-size: 12px;
   }
 
   .sidebar-toggle:hover,
   .sidebar-toggle:focus-visible {
     color: var(--text);
-    border-color: var(--line-hover);
-    background: var(--accent-bg);
     outline: none;
   }
 
   .sidebar {
-    position: static;
+    position: fixed;
+    top: 60px;
+    left: 0;
+    right: 0;
+    z-index: 999;
     display: none;
     width: 100%;
+    max-height: calc(100vh - 60px);
+    overflow-y: auto;
+    padding: 14px 14px 20px;
     border-bottom: 1px solid var(--line);
-    padding: 0 0 16px;
-    margin-bottom: 22px;
+    background: rgba(11, 22, 40, 0.97);
+    backdrop-filter: blur(14px);
   }
 
   .sidebar.is-open { display: flex; }
@@ -308,4 +307,123 @@ tr:hover td { background: var(--block-green-hover); }
   .entity-bottom-row { gap: 10px; }
   .entity-drops { padding: 11px; }
   .entity-drops-list { gap: 8px; }
-  .entity-drop { width: 58px; min-height: 
+  .entity-drop { width: 58px; min-height: 70px; padding: 5px; }
+  .entity-drop img { width: 36px; height: 36px; }
+  .entity-drop-name { max-width: 52px; font-size: 6.5px; }
+  .entity-spawn { width: 88px; padding: 10px; }
+  .entity-spawn-box { width: 66px; height: 66px; }
+  .entity-spawn-box img { width: 50px; height: 50px; }
+  .entity-info-box { padding: 11px 12px; font-size: 13px; line-height: 1.5; }
+  .entity-info-box strong { margin-bottom: 5px; }
+
+  /* Sprite decorations — mobile */
+  .side-link.active::before { flex-basis: 19px; width: 19px; height: 19px; }
+
+  /* Weapon media — mobile */
+  .weapon-media-grid { grid-template-columns: 1fr !important; align-items: start !important; gap: 12px !important; margin: 22px 0 !important; }
+  .weapon-media-grid > .weapon-display { width: 100% !important; min-width: 0 !important; height: 190px !important; min-height: 190px !important; aspect-ratio: auto !important; padding: 12px 10px !important; }
+  .weapon-media-grid > .weapon-display .weapon-texture img { width: 125px !important; height: 125px !important; }
+  .weapon-media-grid > .weapon-display .weapon-name, .weapon-media-grid > .weapon-display .legendary-weapon-name, .weapon-media-grid > .weapon-display .primordial-weapon-name, .weapon-media-grid > .weapon-display .pixelated-name { font-size: 14px !important; margin-top: 8px !important; }
+  .weapon-media-grid > .weapon-ability { width: 100% !important; min-width: 0 !important; padding: 7px !important; }
+  .weapon-media-grid > .weapon-ability > video, .weapon-media-grid > .weapon-ability > img { aspect-ratio: 16 / 9 !important; }
+  .weapon-media-grid > .weapon-ability > strong { margin-top: 8px !important; font-size: 13px !important; }
+
+  .primordial-weapon, .legendary-weapon { grid-template-columns: minmax(0, 1fr) !important; gap: 10px !important; }
+  .primordial-weapon-display, .legendary-weapon .weapon-display { width: 100% !important; min-width: 0 !important; height: auto !important; min-height: 0 !important; aspect-ratio: 16 / 9 !important; padding: 8px !important; }
+  .primordial-weapon-icon { width: 95px !important; height: 95px !important; }
+  .primordial-weapon-icon img { width: 88px !important; height: 88px !important; }
+  .legendary-weapon .weapon-texture img { width: 84px !important; height: 84px !important; }
+  .primordial-weapon-name, .legendary-weapon-name { font-size: 10px !important; line-height: 1.2 !important; }
+  .primordial-ability, .legendary-weapon .weapon-ability { padding: 5px !important; }
+  .primordial-ability .placeholder-box, .legendary-weapon .weapon-ability .placeholder-box { padding: 4px !important; aspect-ratio: 16 / 9 !important; }
+  .primordial-ability-name, .ability-name { font-size: 10px; }
+  .primordial-ability-description, .ability-description { font-size: 9px; }
+
+  .primordial-weapon-name { margin-top: 10px; font-size: 16px; }
+  .primordial-weapon-subtitle { font-size: 11px; }
+
+  .button-row { gap: 8px; margin-top: 16px; }
+  .button { padding: 8px 11px; font-size: 12px; line-height: 1.3; }
+  .feature-list { padding-left: 8px; }
+  .feature-list li, .content li { margin: 6px 0; padding: 7px 10px; font-size: 13px; line-height: 1.5; }
+  .badge { font-size: 10px; padding: 2px 7px; }
+  footer { padding: 24px 18px; }
+}
+
+@media (max-width: 700px) {
+  .card-title .gile-title { font-size: clamp(1.45rem, 8vw, 2.2rem); }
+  .mod-card, .mod-card.featured { width: 100%; max-width: 100%; box-sizing: border-box; }
+  .card-top { min-width: 0; max-width: 100%; padding-right: 0; }
+  .card-body { min-width: 0; max-width: 100%; }
+  .card-title { min-width: 0; max-width: 100%; flex: 1 1 auto; }
+  .card-title .gile-title { white-space: normal; overflow-wrap: anywhere; }
+}
+
+@media (max-width: 600px) {
+  .weapon-media-grid { grid-template-columns: 1fr !important; }
+  .weapon-media-grid .placeholder-box { height: auto; min-height: 0; aspect-ratio: 16 / 9; padding: 6px; }
+  .weapon-media-grid .placeholder-box video { width: 100%; height: 100%; object-fit: contain; }
+}
+
+@media (max-width: 480px) {
+  .topbar { padding: 0 14px; height: 60px; gap: 10px; }
+  .topbar::before { left: 14px; width: 24px; height: 24px; }
+  .topbar .brand { margin-left: 32px; font-size: 12px; line-height: 1; }
+  .brand span { font-size: 7px; letter-spacing: 0.12em; margin-left: 3px; }
+  .topbar nav { gap: 9px; margin-left: auto; }
+  .topbar nav a { font-size: 10px; white-space: nowrap; }
+  .topbar nav a:not(.active) { display: none; }
+  nav a.active img { width: 18px; height: 18px; }
+  .brand { font-size: 12px; }
+
+  .card-title .gile-title { font-size: clamp(1.35rem, 7vw, 2rem); }
+  .mod-card { width: 100%; max-width: 100%; margin-left: 0; margin-right: 0; }
+  h1 { font-size: 44px; }
+  .lead { font-size: 16px; }
+  .mod-card { padding: 22px; min-height: 220px; }
+  .card-icon { width: 50px; height: 50px; }
+  .card-title h2 { font-size: 24px; }
+  .card-body { padding-right: 25px; }
+  .doc-grid a { padding: 16px; }
+  .docs-layout { padding-left: 11px; padding-right: 11px; }
+  .docs-main h2 { font-size: 21px; }
+
+  .notice { margin: 22px 0; padding: 11px 58px 11px 12px; font-size: 12px; }
+  .notice img { max-height: 145px; }
+  .notice::after { right: 6px; bottom: 5px; width: 34px; height: 34px; }
+
+  .recipe { width: 100%; max-width: 372px; height: 186px; }
+  .recipe span { font-size: 11px; }
+  .recipe-title-separator { margin: 5px 0; }
+
+  .item-showcase { padding: 11px; }
+  .item-showcase-image { min-height: 120px; }
+  .item-showcase-image img { width: 88px; height: 88px; }
+  .item-showcase-image::after { font-size: 12px; }
+  .item-showcase-section { padding: 9px 10px; font-size: 12px; }
+
+  .content th, .content td, .docs-main th, .docs-main td { padding: 7px 8px; font-size: 11px; }
+  .content th, .docs-main th { font-size: 10px; }
+
+  .entity-showcase-image { min-height: 270px; padding: 20px; }
+  .entity-showcase-image img { width: 160px; height: 160px; }
+  .entity-header { flex-direction: column; }
+  .entity-health { width: 100%; }
+  .entity-showcase-info { padding: 16px; }
+  .entity-header-title h3 { font-size: 24px; }
+  .entity-bottom-row { gap: 7px; }
+  .entity-drops { padding: 9px; }
+  .entity-drops-list { gap: 6px; }
+  .entity-drop { width: 54px; min-height: 66px; }
+  .entity-drop img { width: 34px; height: 34px; }
+  .entity-spawn { width: 82px; padding: 8px; }
+  .side-link.active::before { flex-basis: 17px; width: 17px; height: 17px; }
+
+  /* Weapon media — compact phone */
+  .weapon-media-grid { gap: 10px !important; }
+  .weapon-media-grid > .weapon-display { height: 160px !important; min-height: 160px !important; padding: 8px 7px !important; }
+  .weapon-media-grid > .weapon-display .weapon-texture img { width: 105px !important; height: 105px !important; }
+  .weapon-media-grid > .weapon-display .weapon-name, .weapon-media-grid > .weapon-display .legendary-weapon-name, .weapon-media-grid > .weapon-display .primordial-weapon-name, .weapon-media-grid > .weapon-display .pixelated-name { font-size: 11px !important; line-height: 1.2 !important; margin-top: 6px !important; }
+  .weapon-media-grid > .weapon-ability { padding: 5px !important; }
+  .weapon-media-grid > .weapon-ability > strong, .weapon-media-grid > .weapon-ability > span { font-size: 10px !important; line-height: 1.25 !important; }
+}
