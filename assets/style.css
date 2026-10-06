@@ -389,8 +389,6 @@ tr:hover td { background: var(--block-green-hover); }
   .entity-drop { width: 54px; min-height: 66px; }
   .entity-drop img { width: 34px; height: 34px; }
   .entity-spawn { width: 82px; padding: 8px; }
-  footer {padding-left: 50px;}
-  footer::before, .bottom-bar::before {left: 11px; width: 22px; height: 22px;}
   .side-link.active::before { flex-basis: 17px; width: 17px; height: 17px;}
   .notice {padding-right: 50px;}
   .notice::after {right: 6px; bottom: 5px; width: 34px; height: 34px;}
