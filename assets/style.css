@@ -1,81 +1,35 @@
-:root {
-  /* Calm Deep Blue Backgrounds */
-  --bg: #0b1628;
-  --bg-deep: #07101e;
-  --panel: #12243b;
-  --panel-2: #18304d;
-  --panel-dark: #0d1c30;
-  --line: #284765;
-  --line-soft: #203b57;
-  --line-hover: #3d6385;
-
-  /* Softer Main Text */
-  --text: #e8edf2;
-  --muted: #b7c2ce;
-  --muted-dark: #8492a1;
-
-  /* Calm Blue Accents */
-  --accent: #78a9d6;
-  --accent-2: #8fc4cf;
-  
-  /* Soft Sage Green for Blocks */
-  --block-green: #8fc6a3;
-  --block-green-bg: rgba(143, 198, 163, 0.10);
-  --block-green-hover: rgba(143, 198, 163, 0.16);
-  --good: #8fc6a3;
-
-  /* Pale Ochre Warnings */
-  --warning: #d6b56a;
-
-  /* Transparent BG references */
-  --accent-bg: rgba(120, 169, 214, 0.10);
-  --accent-bg-strong: rgba(120, 169, 214, 0.16);
-  --cyan-bg: rgba(143, 196, 207, 0.10);
-  --green-bg: rgba(143, 198, 163, 0.09);
-  --warning-bg: rgba(214, 181, 106, 0.12);
-  
-  --max: 1180px;
-}
-
+/* Variables & Reset */
+:root { --bg: #0b1628; --bg-deep: #07101e; --panel: #12243b; --panel-2: #18304d; --panel-dark: #0d1c30; --line: #284765; --line-soft: #203b57; --line-hover: #3d6385; --text: #e8edf2; --muted: #b7c2ce; --muted-dark: #8492a1; --accent: #78a9d6; --accent-2: #8fc4cf; --block-green: #8fc6a3; --block-green-bg: rgba(143, 198, 163, 0.10); --block-green-hover: rgba(143, 198, 163, 0.16); --good: #8fc6a3; --warning: #d6b56a; --accent-bg: rgba(120, 169, 214, 0.10); --accent-bg-strong: rgba(120, 169, 214, 0.16); --cyan-bg: rgba(143, 196, 207, 0.10); --green-bg: rgba(143, 198, 163, 0.09); --warning-bg: rgba(214, 181, 106, 0.12); --max: 1180px; }
 * { box-sizing: border-box; }
 html { scroll-behavior: smooth; }
-
-body {
-  margin: 0;
-  /* Updated gradient glows to fit the new blue/green theme */
-  background: radial-gradient(circle at 80% 0%, rgba(51, 136, 255, 0.15), transparent 34rem),
-              radial-gradient(circle at 15% 25%, rgba(0, 255, 85, 0.08), transparent 28rem),
-              var(--bg);
-  color: var(--text);
-  font: 15px/1.65 Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-}
-
+body { margin: 0; background: radial-gradient(circle at 80% 0%, rgba(51, 136, 255, 0.15), transparent 34rem), radial-gradient(circle at 15% 25%, rgba(0, 255, 85, 0.08), transparent 28rem), var(--bg); color: var(--text); font: 15px/1.65 Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
 a { color: inherit; text-decoration: none; }
 button, a { -webkit-tap-highlight-color: transparent; }
 
-nav a.active { display: inline-flex; align-items: center; gap: 8px; }
-nav a.active img { width: 24px; height: 24px; object-fit: contain; }
+/* Typography & Fonts */
+@font-face { font-family: "Monocraft"; src: url("fonts/Monocraft.ttf") format("truetype"); font-weight: normal; font-style: normal; font-display: swap; }
+h1 { font-size: clamp(42px, 7vw, 78px); line-height: 0.98; letter-spacing: -0.055em; margin: 0 0 24px; }
+h1 span { color: var(--accent); }
+.eyebrow { color: var(--accent); font-size: 11px; font-weight: 800; letter-spacing: 0.18em; margin: 0 0 14px; }
+.lead { color: var(--muted); font-size: 18px; max-width: 720px; }
 
+/* Navigation & Topbar */
 .topbar { height: 68px; display: flex; align-items: center; justify-content: space-between; padding: 0 28px; border-bottom: 1px solid var(--line); background: rgba(0, 18, 51, 0.88); backdrop-filter: blur(14px); position: sticky; top: 0; z-index: 10; }
 .brand { font-weight: 800; letter-spacing: -0.02em; }
 .brand span { color: var(--accent); font-size: 11px; letter-spacing: 0.18em; margin-left: 8px; }
 .topbar nav { display: flex; gap: 20px; color: var(--muted); }
 .topbar nav a { transition: color 0.2s ease, opacity 0.2s ease; }
 .topbar nav a:hover, .topbar nav .active { color: var(--text); }
+nav a.active { display: inline-flex; align-items: center; gap: 8px; }
+nav a.active img { width: 24px; height: 24px; object-fit: contain; }
 
+/* Layout & Mod Cards */
 .hero-wrap { max-width: var(--max); margin: auto; padding: 90px 28px 70px; }
 .hero { max-width: 820px; }
-.eyebrow { color: var(--accent); font-size: 11px; font-weight: 800; letter-spacing: 0.18em; margin: 0 0 14px; }
-h1 { font-size: clamp(42px, 7vw, 78px); line-height: 0.98; letter-spacing: -0.055em; margin: 0 0 24px; }
-h1 span { color: var(--accent); }
-.lead { color: var(--muted); font-size: 18px; max-width: 720px; }
-
 .mod-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; margin-top: 52px; }
-/* Hardcoded RGBAs updated to match new true blue theme */
 .mod-card { min-height: 250px; padding: 28px; border: 1px solid var(--line); border-radius: 18px; background: linear-gradient(145deg, rgba(0, 34, 85, 0.92), rgba(0, 22, 59, 0.94)); display: block; position: relative; transition: transform 0.2s ease, border-color 0.2s ease, background 0.2s ease; }
 .mod-card.featured:hover { transform: translateY(-4px); border-color: rgba(51, 136, 255, 0.65); background: linear-gradient(145deg, rgba(0, 48, 119, 0.96), rgba(0, 22, 59, 0.96)); }
 .mod-card.placeholder { opacity: 0.65; }
-
 .card-top { display: flex; align-items: center; gap: 16px; padding-right: 35px; }
 .card-icon { width: 56px; height: 56px; border: 1px solid var(--line); border-radius: 12px; display: grid; place-items: center; color: var(--accent); background: var(--accent-bg); font-size: 22px; flex: 0 0 auto; overflow: hidden; }
 .card-icon img { width: 100%; height: 100%; padding: 6px; object-fit: contain; }
@@ -84,17 +38,18 @@ h1 span { color: var(--accent); }
 .card-title h2 { margin: 0; font-size: 28px; line-height: 1.1; letter-spacing: -0.025em; }
 .card-body { padding-right: 35px; margin-top: 18px; }
 .card-body p { color: var(--muted); margin: 0 0 18px; }
-
 .tag, .version-label { color: var(--accent); font-size: 10px; font-weight: 800; letter-spacing: 0.16em; }
 .meta { display: flex; gap: 8px; flex-wrap: wrap; }
 .meta span { font-size: 11px; padding: 4px 8px; border: 1px solid var(--line); border-radius: 999px; color: var(--muted); background: rgba(0, 34, 85, 0.35); }
 .arrow { position: absolute; right: 24px; bottom: 22px; color: var(--accent); font-size: 22px; transition: transform 0.2s ease; }
 .mod-card.featured:hover .arrow { transform: translateX(4px); }
 
+/* Footer */
 footer { max-width: var(--max); margin: auto; padding: 28px; border-top: 1px solid var(--line); color: var(--muted); font-size: 12px; }
 footer a { color: var(--accent); }
 footer a:hover { color: var(--accent-2); }
 
+/* Documentation & Sidebar */
 .docs-layout { max-width: 1280px; margin: auto; display: grid; grid-template-columns: 230px minmax(0, 1fr); gap: 46px; padding: 36px 28px 80px; }
 .sidebar { position: sticky; top: 104px; align-self: start; display: flex; flex-direction: column; gap: 4px; }
 .sidebar-title { font-size: 20px; font-weight: 800; margin-bottom: 12px; letter-spacing: -0.025em; }
@@ -102,845 +57,298 @@ footer a:hover { color: var(--accent-2); }
 .side-link { padding: 7px 10px; border-radius: 7px; color: var(--muted); transition: color 0.2s ease, background 0.2s ease, box-shadow 0.2s ease; }
 .side-link:hover { background: var(--accent-bg); color: var(--text); }
 .side-link.active { background: var(--accent-bg-strong); color: var(--text); box-shadow: inset 2px 0 var(--accent); }
-
 .docs-main { min-width: 0; }
 .breadcrumbs { color: var(--muted); font-size: 12px; margin-bottom: 40px; }
 .breadcrumbs a { color: var(--accent); }
 .breadcrumbs a:hover { color: var(--accent-2); }
 .doc-hero { display: flex; justify-content: space-between; gap: 40px; align-items: flex-end; }
 .doc-hero h1 { font-size: clamp(42px, 6vw, 68px); }
-
 .version-card { min-width: 205px; padding: 20px; border: 1px solid var(--line); border-radius: 14px; background: linear-gradient(145deg, rgba(0, 34, 85, 0.9), rgba(0, 22, 59, 0.9)); }
 .version-card strong { display: block; font-size: 22px; margin: 5px 0; }
 .version-card span { color: var(--muted); font-size: 12px; }
-
-.button-row { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 24px; }
-.button { display: inline-block; padding: 9px 14px; border: 1px solid var(--line); border-radius: 8px; color: var(--muted); background: rgba(0, 34, 85, 0.35); transition: color 0.2s ease, background 0.2s ease, border-color 0.2s ease, transform 0.2s ease; }
-.button:hover { color: var(--text); border-color: var(--line-hover); background: var(--panel-2); transform: translateY(-1px); }
-.button.primary { background: var(--accent); border-color: var(--accent); color: #001233; font-weight: 800; }
-.button.primary:hover { background: #66a3ff; border-color: #66a3ff; color: #000a1f; }
-
-/* Ochre Warnings */
-.notice { margin: 42px 0; padding: 15px 18px; border: 1px solid var(--warning); border-radius: 10px; background: var(--warning-bg); color: var(--text); }
-.notice strong { color: var(--warning); }
-
 .docs-main h2 { margin: 42px 0 18px; font-size: 26px; letter-spacing: -0.025em; }
 .doc-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; }
 .doc-grid a { display: block; padding: 18px; border: 1px solid var(--line); border-radius: 10px; background: linear-gradient(145deg, rgba(0, 34, 85, 0.72), rgba(0, 22, 59, 0.72)); transition: border-color 0.2s ease, background 0.2s ease, transform 0.2s ease; }
 .doc-grid a:hover { border-color: var(--line-hover); background: linear-gradient(145deg, rgba(0, 48, 119, 0.82), rgba(0, 28, 74, 0.82)); transform: translateY(-1px); }
 .doc-grid b { display: block; margin-bottom: 4px; }
 .doc-grid span { color: var(--muted); font-size: 13px; }
-
 .doc-page h1 { font-size: 52px; }
 .doc-page .content { max-width: 820px; }
 .content p { color: var(--muted); }
 
-/* VIBRANT GREEN BLOCKS (Lists, Tables, Code Boxes) */
+/* Buttons & Notices */
+.button-row { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 24px; }
+.button { display: inline-block; padding: 9px 14px; border: 1px solid var(--line); border-radius: 8px; color: var(--muted); background: rgba(0, 34, 85, 0.35); transition: color 0.2s ease, background 0.2s ease, border-color 0.2s ease, transform 0.2s ease; }
+.button:hover { color: var(--text); border-color: var(--line-hover); background: var(--panel-2); transform: translateY(-1px); }
+.button.primary { background: var(--accent); border-color: var(--accent); color: #001233; font-weight: 800; }
+.button.primary:hover { background: #66a3ff; border-color: #66a3ff; color: #000a1f; }
+.notice { margin: 42px 0; padding: 15px 18px; border: 1px solid var(--warning); border-radius: 10px; background: var(--warning-bg); color: var(--text); }
+.notice strong { color: var(--warning); }
+
+/* Lists, Code & Tables */
 .feature-list { padding-left: 20px; color: var(--text); }
-.feature-list li, .content li { 
-  margin: 8px 0; 
-  padding: 8px 14px; 
-  background: var(--block-green-bg); 
-  border-left: 4px solid var(--block-green); 
-  border-radius: 0 6px 6px 0; 
-  color: var(--text); 
-}
-
-.content code { 
-  padding: 2px 5px; 
-  background: var(--block-green-bg); 
-  border: 1px solid var(--block-green); 
-  border-radius: 4px; 
-  color: var(--block-green); 
-}
-
-.content .placeholder-box { 
-  padding: 22px; 
-  border: 2px dashed var(--block-green); 
-  border-radius: 12px; 
-  color: var(--text); 
-  background: var(--block-green-bg); 
-}
-
-.item-showcase {
-  display: grid;
-  grid-template-columns: 180px minmax(0, 1fr);
-  gap: 24px;
-  margin: 25px 0;
-  padding: 20px;
-  border: 1px solid var(--line);
-  border-radius: 12px;
-  background: var(--accent-bg);
-}
-
-.item-showcase-image {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  min-height: 180px;
-  gap: 4px;
-}
-
-.item-showcase-image img {
-  width: 128px;
-  height: 128px;
-  object-fit: contain;
-  image-rendering: pixelated;
-}
-
-/* Minecraft tooltip name underneath the item */
-.item-showcase-image::after {
-  content: attr(data-item-name);
-  display: block;
-
-  margin-top: 12px;
-
-  font-family: "Monocraft", monospace;
-  font-size: 18px;
-  font-weight: normal;
-  line-height: 1.2;
-
-  color: var(--text);
-
-  white-space: nowrap;
-}
-
-.item-showcase-info {
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-}
-
-.item-showcase-section {
-  padding: 14px;
-  border: 1px solid var(--line);
-  border-radius: 8px;
-  background: rgba(0, 34, 85, 0.35);
-}
-
-.item-showcase-section strong {
-  display: block;
-  color: var(--accent);
-  margin-bottom: 6px;
-}
-
-.item-showcase-section:first-child {
-  border-color: var(--warning);
-  background: var(--warning-bg);
-}
-
-.item-showcase-section:first-child strong {
-  color: var(--warning);
-}
-
-@font-face {
-  font-family: "Monocraft";
-  src: url("fonts/Monocraft.ttf") format("truetype");
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
-}
-
-.item-showcase-image::after {
-  font-family: "Monocraft", monospace;
-}
-
-/* Minecraft-style crafting recipe */
-.recipe {
-  display: inline-flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 0;
-}
-
-/* Minecraft item tooltip name */
-.recipe span {
-  font-family: "Monocraft", monospace;
-}
-
-.recipe-title-separator{margin:0 144px;color:var(--muted)}
-
-/* Yellow notice-style description */
-.item-showcase-section:first-child {
-  border-color: var(--warning);
-  background: var(--warning-bg);
-}
-
-.item-showcase-section:first-child strong {
-  color: var(--warning);
-}
-
-@media (max-width: 600px) {
-  .item-showcase {
-    grid-template-columns: 1fr;
-  }
-
-  .item-showcase-image {
-    min-height: 140px;
-  }
-}
-
-/* =========================================================
-   ENTITY SHOWCASE
-   Minecraft / Pokémon / Bakugan inspired entity card
-   ========================================================= */
-
-.entity-showcase {
-  position: relative;
-  display: grid;
-  grid-template-columns: 280px minmax(0, 1fr);
-  gap: 0;
-  margin: 30px 0;
-  border: 1px solid var(--line);
-  border-radius: 16px;
-  overflow: hidden;
-
-  background:
-    radial-gradient(
-      circle at 18% 20%,
-      rgba(120, 169, 214, 0.12),
-      transparent 220px
-    ),
-    linear-gradient(
-      145deg,
-      rgba(0, 34, 85, 0.96),
-      rgba(7, 16, 30, 0.98)
-    );
-
-  box-shadow:
-    0 12px 30px rgba(0, 0, 0, 0.25),
-    inset 0 1px 0 rgba(255, 255, 255, 0.04);
-}
-
-/* Thin decorative line at the top of the card */
-.entity-showcase::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 3px;
-  background: linear-gradient(
-    90deg,
-    var(--accent),
-    var(--accent-2),
-    var(--block-green)
-  );
-}
-
-/* =========================================================
-   ENTITY ART / LEFT SIDE
-   ========================================================= */
-
-.entity-showcase-image {
-  min-height: 390px;
-  padding: 28px;
-
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-
-  border-right: 1px solid var(--line);
-
-  background:
-    radial-gradient(
-      circle at center,
-      rgba(120, 169, 214, 0.13),
-      transparent 65%
-    ),
-    rgba(7, 16, 30, 0.42);
-}
-
-.entity-showcase-image img {
-  width: 220px;
-  height: 220px;
-
-  object-fit: contain;
-  image-rendering: pixelated;
-
-  filter:
-    drop-shadow(0 8px 10px rgba(0, 0, 0, 0.55))
-    drop-shadow(0 0 18px rgba(120, 169, 214, 0.12));
-}
-
-/* =========================================================
-   ENTITY NAME / HEADER
-   ========================================================= */
-
-.entity-showcase-name {
-  width: 100%;
-  margin-top: 18px;
-
-  text-align: center;
-
-  font-family: "Monocraft", monospace;
-  font-size: 20px;
-  font-weight: bold;
-  letter-spacing: -0.02em;
-
-  color: var(--text);
-}
-
-.entity-showcase-type {
-  margin-top: 5px;
-
-  color: var(--accent);
-  font-size: 10px;
-  font-weight: 800;
-  letter-spacing: 0.16em;
-  text-transform: uppercase;
-}
-
-/* =========================================================
-   RIGHT SIDE
-   ========================================================= */
-
-.entity-showcase-info {
-  min-width: 0;
-  padding: 26px;
-
-  display: flex;
-  flex-direction: column;
-  gap: 14px;
-}
-
-/* =========================================================
-   ENTITY HEADER
-   ========================================================= */
-
-.entity-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  gap: 20px;
-
-  padding-bottom: 14px;
-
-  border-bottom: 1px solid var(--line);
-}
-
-.entity-header-title {
-  min-width: 0;
-}
-
-.entity-header-title h3 {
-  margin: 0;
-
-  font-size: 28px;
-  line-height: 1.1;
-  letter-spacing: -0.025em;
-}
-
-.entity-header-title span {
-  display: block;
-  margin-top: 5px;
-
-  color: var(--muted);
-  font-size: 12px;
-}
-
-/* =========================================================
-   HEALTH
-   ========================================================= */
-
-.entity-health {
-  flex: 0 0 auto;
-
-  padding: 9px 12px;
-
-  border: 1px solid var(--line);
-  border-radius: 9px;
-
-  background: rgba(0, 0, 0, 0.22);
-
-  white-space: nowrap;
-}
-
-.entity-health-label {
-  display: block;
-
-  margin-bottom: 5px;
-
-  color: var(--muted-dark);
-  font-size: 9px;
-  font-weight: 800;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-}
-
-.entity-hearts {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 2px;
-  align-items: center;
-}
-
-.entity-heart {
-  width: 18px;
-  height: 18px;
-
-  object-fit: contain;
-
-  image-rendering: pixelated;
-}
-
-.entity-health-number {
-  margin-left: 6px;
-
-  color: var(--text);
-  font-family: "Monocraft", monospace;
-  font-size: 12px;
-  font-weight: bold;
-}
-
-/* =========================================================
-   STAT BADGES
-   ========================================================= */
-
-.entity-stats {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 7px;
-}
-
-.entity-stat {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-
-  padding: 5px 9px;
-
-  border: 1px solid var(--line);
-  border-radius: 7px;
-
-  background: rgba(0, 34, 85, 0.35);
-
-  color: var(--muted);
-  font-size: 11px;
-}
-
-.entity-stat strong {
-  color: var(--accent);
-  font-size: 10px;
-  letter-spacing: 0.05em;
-}
-
-/* =========================================================
-   INFORMATION BOXES
-   ========================================================= */
-
-.entity-info-box {
-  padding: 14px;
-
-  border: 1px solid var(--line);
-  border-radius: 9px;
-
-  background: rgba(0, 34, 85, 0.32);
-}
-
-.entity-info-box strong {
-  display: block;
-
-  margin-bottom: 6px;
-
-  color: var(--accent);
-
-  font-size: 11px;
-  font-weight: 800;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-}
-
-.entity-info-box p {
-  margin: 0;
-  color: var(--muted);
-}
-
-/* Spawning box */
-.entity-info-box.spawning {
-  border-color: var(--block-green);
-  background: var(--block-green-bg);
-}
-
-.entity-info-box.spawning strong {
-  color: var(--block-green);
-}
-
-/* Behaviour box */
-.entity-info-box.behaviour {
-  border-color: var(--accent-2);
-  background: var(--cyan-bg);
-}
-
-.entity-info-box.behaviour strong {
-  color: var(--accent-2);
-}
-
-/* Combat box */
-.entity-info-box.combat {
-  border-color: var(--warning);
-  background: var(--warning-bg);
-}
-
-.entity-info-box.combat strong {
-  color: var(--warning);
-}
-
-/* =========================================================
-   DROPS + SPAWN EGG
-   ========================================================= */
-
-.entity-bottom-row {
-  display: flex;
-  align-items: stretch;
-  gap: 14px;
-}
-
-/* =========================================================
-   DROPS
-   ========================================================= */
-
-.entity-drops {
-  flex: 1;
-  min-width: 0;
-
-  padding: 14px;
-
-  border: 1px solid var(--line);
-  border-radius: 9px;
-
-  background: rgba(0, 34, 85, 0.28);
-}
-
-.entity-drops-title,
-.entity-spawn-title {
-  margin-bottom: 10px;
-
-  color: var(--accent);
-  font-size: 11px;
-  font-weight: 800;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-}
-
-.entity-drops-list {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 12px;
-}
-
-/* Individual dropped item */
-.entity-drop {
-  position: relative;
-
-  width: 64px;
-  min-height: 76px;
-
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 3px;
-
-  padding: 6px;
-
-  border: 1px solid var(--line);
-  border-radius: 7px;
-
-  background: rgba(7, 16, 30, 0.65);
-
-  transition:
-    transform 0.15s ease,
-    border-color 0.15s ease,
-    background 0.15s ease;
-}
-
-.entity-drop:hover {
-  transform: translateY(-3px);
-
-  border-color: var(--line-hover);
-
-  background: rgba(24, 48, 77, 0.8);
-}
-
-.entity-drop img {
-  width: 40px;
-  height: 40px;
-
-  object-fit: contain;
-  image-rendering: pixelated;
-}
-
-.entity-drop-name {
-  max-width: 58px;
-
-  overflow: hidden;
-
-  color: var(--muted);
-
-  font-family: "Monocraft", monospace;
-  font-size: 7px;
-  line-height: 1.2;
-
-  text-align: center;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-}
-
-/* Drop quantity badge */
-.entity-drop-amount {
-  position: absolute;
-  right: 3px;
-  bottom: 3px;
-
-  min-width: 15px;
-  height: 15px;
-
-  padding: 1px 3px;
-
-  display: grid;
-  place-items: center;
-
-  border: 1px solid rgba(255, 255, 255, 0.12);
-  border-radius: 3px;
-
-  background: #10001f;
-
-  color: #ffffff;
-
-  font-family: "Monocraft", monospace;
-  font-size: 8px;
-  font-weight: bold;
-
-  box-shadow: 2px 2px 0 #000000;
-}
-
-/* =========================================================
-   SPAWN EGG
-   ========================================================= */
-
-.entity-spawn {
-  flex: 0 0 auto;
-
-  width: 110px;
-  padding: 14px;
-
-  box-sizing: border-box;
-
-  border: 1px solid var(--line);
-  border-radius: 9px;
-
-  background: rgba(0, 34, 85, 0.28);
-}
-
-.entity-spawn-title {
-  white-space: nowrap;
-}
-
-.entity-spawn-box {
-  width: 80px;
-  height: 80px;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  box-sizing: border-box;
-
-  border: 1px solid var(--line);
-  border-radius: 7px;
-
-  background: rgba(7, 16, 30, 0.65);
-
-  transition:
-    transform 0.15s ease,
-    border-color 0.15s ease,
-    background 0.15s ease;
-}
-
-.entity-spawn-box:hover {
-  transform: translateY(-3px);
-
-  border-color: var(--line-hover);
-
-  background: rgba(24, 48, 77, 0.8);
-}
-
-.entity-spawn-box img {
-  width: 64px;
-  height: 64px;
-
-  object-fit: contain;
-  image-rendering: pixelated;
-
-  filter: drop-shadow(0 4px 5px rgba(0, 0, 0, 0.45));
-}
-
-/* =========================================================
-   MOBILE
-   ========================================================= */
-
-@media (max-width: 480px) {
-
-  .entity-bottom-row {
-    gap: 10px;
-  }
-
-  .entity-spawn {
-    width: 92px;
-    padding: 10px;
-  }
-
-  .entity-spawn-box {
-    width: 70px;
-    height: 70px;
-  }
-
-  .entity-spawn-box img {
-    width: 54px;
-    height: 54px;
-  }
-}
-
-/* =========================================================
-   SMALL CARD LABEL
-   ========================================================= */
-
-.entity-label {
-  display: inline-block;
-
-  padding: 3px 7px;
-
-  border: 1px solid var(--line);
-  border-radius: 999px;
-
-  color: var(--muted);
-
-  font-size: 9px;
-  font-weight: 800;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-}
-
-/* =========================================================
-   RESPONSIVE
-   ========================================================= */
-
-@media (max-width: 800px) {
-  .entity-showcase {
-    grid-template-columns: 1fr;
-  }
-
-  .entity-showcase-image {
-    min-height: 320px;
-
-    border-right: none;
-    border-bottom: 1px solid var(--line);
-  }
-
-  .entity-showcase-image img {
-    width: 190px;
-    height: 190px;
-  }
-
-  .entity-showcase-info {
-    padding: 20px;
-  }
-}
-
-@media (max-width: 480px) {
-  .entity-showcase-image {
-    min-height: 270px;
-    padding: 20px;
-  }
-
-  .entity-showcase-image img {
-    width: 160px;
-    height: 160px;
-  }
-
-  .entity-header {
-    flex-direction: column;
-  }
-
-  .entity-health {
-    width: 100%;
-  }
-
-  .entity-showcase-info {
-    padding: 16px;
-  }
-
-  .entity-header-title h3 {
-    font-size: 24px;
-  }
-}
-
-/* =========================================================
-   CONTENT LINKS
-   ========================================================= */
-
-.content a {
-  color: var(--block-green);
-  text-decoration: underline;
-  text-decoration-thickness: 1px;
-  text-underline-offset: 3px;
-  text-decoration-color: rgba(143, 198, 163, 0.65);
-  transition:
-    color 0.2s ease,
-    text-decoration-color 0.2s ease;
-}
-
-.content a:hover {
-  color: #b2e0bf;
-  text-decoration-color: #b2e0bf;
-}
-
+.feature-list li, .content li { margin: 8px 0; padding: 8px 14px; background: var(--block-green-bg); border-left: 4px solid var(--block-green); border-radius: 0 6px 6px 0; color: var(--text); }
+.content code { padding: 2px 5px; background: var(--block-green-bg); border: 1px solid var(--block-green); border-radius: 4px; color: var(--block-green); }
+.content .placeholder-box { position: relative; overflow: hidden; padding: 22px; border: 2px dashed var(--block-green); border-radius: 12px; color: var(--text); background: var(--block-green-bg); }
+.content .placeholder-box video { display: block; width: 100%; max-width: 100%; height: 100%; object-fit: contain; border-radius: 8px; }
+.content a { color: var(--block-green); text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 3px; text-decoration-color: rgba(143, 198, 163, 0.65); transition: color 0.2s ease, text-decoration-color 0.2s ease; }
+.content a:hover { color: #b2e0bf; text-decoration-color: #b2e0bf; }
 table { width: 100%; border-collapse: collapse; margin: 20px 0; }
 th, td { padding: 10px 12px; border: 1px solid var(--block-green); text-align: left; }
 th { background: rgba(0, 255, 85, 0.25); color: var(--text); font-weight: bold; }
 td { color: var(--text); background: var(--block-green-bg); }
 tr:hover td { background: var(--block-green-hover); }
 
-/* Text Utilities */
+/* Item Showcase & Recipes */
+.item-showcase { display: grid; grid-template-columns: 180px minmax(0, 1fr); gap: 24px; margin: 25px 0; padding: 20px; border: 1px solid var(--line); border-radius: 12px; background: var(--accent-bg); }
+.item-showcase-image { display: flex; flex-direction: column; align-items: center; justify-content: center; min-height: 180px; gap: 4px; }
+.item-showcase-image img { width: 128px; height: 128px; object-fit: contain; image-rendering: pixelated; }
+.item-showcase-image::after { content: attr(data-item-name); display: block; margin-top: 12px; font-family: "Monocraft", monospace; font-size: 18px; font-weight: normal; line-height: 1.2; color: var(--text); white-space: nowrap; }
+.item-showcase-image[data-item-name="Phanes Blade"]::after { color: #ffff55; }
+.item-showcase-info { display: flex; flex-direction: column; gap: 16px; }
+.item-showcase-section { padding: 14px; border: 1px solid var(--line); border-radius: 8px; background: rgba(0, 34, 85, 0.35); }
+.item-showcase-section strong { display: block; color: var(--accent); margin-bottom: 6px; }
+.item-showcase-section:first-child { border-color: var(--warning); background: var(--warning-bg); }
+.item-showcase-section:first-child strong { color: var(--warning); }
+.recipe { display: inline-flex; flex-direction: column; align-items: flex-start; gap: 0; }
+.recipe span { font-family: "Monocraft", monospace; }
+.recipe-title-separator { margin: 0 144px; color: var(--muted); }
+
+/* Entity Showcase */
+.entity-showcase { position: relative; display: grid; grid-template-columns: 280px minmax(0, 1fr); gap: 0; margin: 30px 0; border: 1px solid var(--line); border-radius: 16px; overflow: hidden; background: radial-gradient(circle at 18% 20%, rgba(120, 169, 214, 0.12), transparent 220px), linear-gradient(145deg, rgba(0, 34, 85, 0.96), rgba(7, 16, 30, 0.98)); box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25), inset 0 1px 0 rgba(255, 255, 255, 0.04); }
+.entity-showcase::before { content: ""; position: absolute; top: 0; left: 0; right: 0; height: 3px; background: linear-gradient(90deg, var(--accent), var(--accent-2), var(--block-green)); }
+.entity-showcase-image { min-height: 390px; padding: 28px; display: flex; flex-direction: column; align-items: center; justify-content: center; border-right: 1px solid var(--line); background: radial-gradient(circle at center, rgba(120, 169, 214, 0.13), transparent 65%), rgba(7, 16, 30, 0.42); }
+.entity-showcase-image img { width: 220px; height: 220px; object-fit: contain; image-rendering: pixelated; filter: drop-shadow(0 8px 10px rgba(0, 0, 0, 0.55)) drop-shadow(0 0 18px rgba(120, 169, 214, 0.12)); }
+.entity-showcase-name { width: 100%; margin-top: 18px; text-align: center; font-family: "Monocraft", monospace; font-size: 20px; font-weight: bold; letter-spacing: -0.02em; color: var(--text); }
+.entity-showcase-type { margin-top: 5px; color: var(--accent); font-size: 10px; font-weight: 800; letter-spacing: 0.16em; text-transform: uppercase; }
+.entity-showcase-info { min-width: 0; padding: 26px; display: flex; flex-direction: column; gap: 14px; }
+.entity-header { display: flex; justify-content: space-between; align-items: flex-start; gap: 20px; padding-bottom: 14px; border-bottom: 1px solid var(--line); }
+.entity-header-title { min-width: 0; }
+.entity-header-title h3 { margin: 0; font-size: 28px; line-height: 1.1; letter-spacing: -0.025em; }
+.entity-header-title span { display: block; margin-top: 5px; color: var(--muted); font-size: 12px; }
+.entity-health { flex: 0 0 auto; padding: 9px 12px; border: 1px solid var(--line); border-radius: 9px; background: rgba(0, 0, 0, 0.22); white-space: nowrap; }
+.entity-health-label { display: block; margin-bottom: 5px; color: var(--muted-dark); font-size: 9px; font-weight: 800; letter-spacing: 0.14em; text-transform: uppercase; }
+.entity-hearts { display: flex; flex-wrap: wrap; gap: 2px; align-items: center; }
+.entity-heart { width: 18px; height: 18px; object-fit: contain; image-rendering: pixelated; }
+.entity-health-number { margin-left: 6px; color: var(--text); font-family: "Monocraft", monospace; font-size: 12px; font-weight: bold; }
+.entity-stats { display: flex; flex-wrap: wrap; gap: 7px; }
+.entity-stat { display: inline-flex; align-items: center; gap: 6px; padding: 5px 9px; border: 1px solid var(--line); border-radius: 7px; background: rgba(0, 34, 85, 0.35); color: var(--muted); font-size: 11px; }
+.entity-stat strong { color: var(--accent); font-size: 10px; letter-spacing: 0.05em; }
+.entity-info-box { padding: 14px; border: 1px solid var(--line); border-radius: 9px; background: rgba(0, 34, 85, 0.32); }
+.entity-info-box strong { display: block; margin-bottom: 6px; color: var(--accent); font-size: 11px; font-weight: 800; letter-spacing: 0.12em; text-transform: uppercase; }
+.entity-info-box p { margin: 0; color: var(--muted); }
+.entity-info-box.spawning { border-color: var(--block-green); background: var(--block-green-bg); }
+.entity-info-box.spawning strong { color: var(--block-green); }
+.entity-info-box.behaviour { border-color: var(--accent-2); background: var(--cyan-bg); }
+.entity-info-box.behaviour strong { color: var(--accent-2); }
+.entity-info-box.combat { border-color: var(--warning); background: var(--warning-bg); }
+.entity-info-box.combat strong { color: var(--warning); }
+.entity-bottom-row { display: flex; align-items: stretch; gap: 14px; }
+.entity-drops { flex: 1; min-width: 0; padding: 14px; border: 1px solid var(--line); border-radius: 9px; background: rgba(0, 34, 85, 0.28); }
+.entity-drops-title, .entity-spawn-title { margin-bottom: 10px; color: var(--accent); font-size: 11px; font-weight: 800; letter-spacing: 0.12em; text-transform: uppercase; }
+.entity-drops-list { display: flex; flex-wrap: wrap; gap: 12px; }
+.entity-drop { position: relative; width: 64px; min-height: 76px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 3px; padding: 6px; border: 1px solid var(--line); border-radius: 7px; background: rgba(7, 16, 30, 0.65); transition: transform 0.15s ease, border-color 0.15s ease, background 0.15s ease; }
+.entity-drop:hover { transform: translateY(-3px); border-color: var(--line-hover); background: rgba(24, 48, 77, 0.8); }
+.entity-drop img { width: 40px; height: 40px; object-fit: contain; image-rendering: pixelated; }
+.entity-drop-name { max-width: 58px; overflow: hidden; color: var(--muted); font-family: "Monocraft", monospace; font-size: 7px; line-height: 1.2; text-align: center; text-overflow: ellipsis; white-space: nowrap; }
+.entity-drop-amount { position: absolute; right: 3px; bottom: 3px; min-width: 15px; height: 15px; padding: 1px 3px; display: grid; place-items: center; border: 1px solid rgba(255, 255, 255, 0.12); border-radius: 3px; background: #10001f; color: #ffffff; font-family: "Monocraft", monospace; font-size: 8px; font-weight: bold; box-shadow: 2px 2px 0 #000000; }
+.entity-spawn { flex: 0 0 auto; width: 110px; padding: 14px; box-sizing: border-box; border: 1px solid var(--line); border-radius: 9px; background: rgba(0, 34, 85, 0.28); }
+.entity-spawn-title { white-space: nowrap; }
+.entity-spawn-box { width: 80px; height: 80px; display: flex; align-items: center; justify-content: center; box-sizing: border-box; border: 1px solid var(--line); border-radius: 7px; background: rgba(7, 16, 30, 0.65); transition: transform 0.15s ease, border-color 0.15s ease, background 0.15s ease; }
+.entity-spawn-box:hover { transform: translateY(-3px); border-color: var(--line-hover); background: rgba(24, 48, 77, 0.8); }
+.entity-spawn-box img { width: 64px; height: 64px; object-fit: contain; image-rendering: pixelated; filter: drop-shadow(0 4px 5px rgba(0, 0, 0, 0.45)); }
+.entity-label { display: inline-block; padding: 3px 7px; border: 1px solid var(--line); border-radius: 999px; color: var(--muted); font-size: 9px; font-weight: 800; letter-spacing: 0.1em; text-transform: uppercase; }
+
+/* Weapons & Media */
+.weapon-media-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px; }
+.weapon-media-grid .placeholder-box { height: 300px; display: flex; align-items: center; justify-content: center; padding: 12px; margin: 0 !important; box-sizing: border-box; }
+.weapon-media-grid .placeholder-box video { width: 100%; height: 100%; max-width: 100%; max-height: 100%; object-fit: contain; border-radius: 8px; }
+.weapon-media-grid > .primordial-weapon { grid-column: 1 / -1 !important; display: grid !important; grid-template-columns: 240px minmax(0, 1fr) !important; width: 100% !important; max-width: 100% !important; gap: 16px !important; margin: 25px 0 !important; }
+.weapon-media-grid > .primordial-weapon > .primordial-weapon-display { width: 240px !important; min-width: 240px !important; aspect-ratio: 3 / 4 !important; height: auto !important; }
+.weapon-media-grid > .primordial-weapon > .primordial-abilities { min-width: 0 !important; width: 100% !important; display: grid !important; grid-template-columns: minmax(0, 1fr) !important; }
+.weapon-media-grid > .primordial-weapon .primordial-ability img, .weapon-media-grid > .primordial-weapon .primordial-ability video { width: 100% !important; aspect-ratio: 16 / 9 !important; height: auto !important; object-fit: contain !important; }
+.primordial-weapon, .legendary-weapon { display: grid !important; grid-template-columns: 240px minmax(0, 1fr) !important; gap: 16px !important; width: 100% !important; max-width: 100% !important; margin: 25px 0 !important; box-sizing: border-box !important; }
+.primordial-weapon-display, .legendary-weapon .weapon-display { width: 100% !important; min-width: 0 !important; min-height: 0 !important; height: 100% !important; aspect-ratio: 3 / 4 !important; box-sizing: border-box !important; padding: 18px 12px !important; display: flex !important; flex-direction: column !important; align-items: center !important; justify-content: center !important; text-align: center !important; overflow: hidden !important; background: radial-gradient(circle at center, rgba(120, 169, 214, 0.10), transparent 65%), var(--panel-dark); border: 1px solid var(--line); border-radius: 12px; box-shadow: 0 8px 20px rgba(0, 0, 0, 0.16); }
+.primordial-weapon-icon { width: 170px !important; height: 170px !important; max-width: 100% !important; max-height: 60% !important; display: flex !important; align-items: center !important; justify-content: center !important; }
+.primordial-weapon-icon img { width: 156px !important; height: 156px !important; max-width: 100% !important; max-height: 100% !important; object-fit: contain !important; image-rendering: pixelated; filter: drop-shadow(0 8px 10px rgba(0, 0, 0, 0.45)) drop-shadow(0 0 18px rgba(120, 169, 214, 0.12)); }
+.legendary-weapon .weapon-texture img { width: 145px !important; height: 145px !important; max-width: 100% !important; max-height: 100% !important; object-fit: contain !important; }
+.weapon-display { display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; min-height: 220px; }
+.weapon-texture img { width: 128px; height: 128px; image-rendering: pixelated; }
+.primordial-weapon-name { margin-top: 14px !important; font-family: "Monocraft", monospace; font-size: 18px; font-weight: bold; color: #ffff55; }
+.legendary-weapon-name { margin-top: 12px; font-family: "Monocraft", monospace; font-size: 18px; color: #ff55ff; }
+.weapon-name { margin-top: 12px; font-family: "Monocraft", monospace; font-size: 18px; color: #55ffff; }
+.pixelated-name { margin-top: 12px; font-family: "Monocraft", monospace; font-size: 18px; color: var(--text); }
+.primordial-weapon-subtitle { margin-top: 5px; color: var(--muted); font-size: 12px; font-style: italic; }
+.primordial-abilities { min-width: 0 !important; width: 100% !important; display: grid !important; grid-template-columns: minmax(0, 1fr) !important; gap: 14px !important; box-sizing: border-box !important; }
+.legendary-weapon .weapon-ability { min-width: 0 !important; width: 100% !important; box-sizing: border-box !important; }
+.primordial-ability, .legendary-weapon .weapon-ability { min-width: 0 !important; width: 100% !important; box-sizing: border-box !important; padding: 10px !important; text-align: center !important; overflow: hidden !important; background: linear-gradient(145deg, rgba(0, 34, 85, 0.42), rgba(13, 28, 48, 0.72)); border: 1px solid var(--line); border-radius: 10px; box-shadow: 0 5px 16px rgba(0, 0, 0, 0.12); }
+.primordial-ability:hover { border-color: var(--line-hover); background: linear-gradient(145deg, rgba(0, 48, 119, 0.48), rgba(13, 28, 48, 0.78)); transform: translateY(-2px); }
+.primordial-ability img, .primordial-ability video, .legendary-weapon .weapon-ability img, .legendary-weapon .weapon-ability video { display: block !important; width: 100% !important; max-width: 100% !important; height: auto !important; max-height: none !important; aspect-ratio: 16 / 9 !important; object-fit: contain !important; box-sizing: border-box !important; border-radius: 7px !important; }
+.weapon-ability { text-align: center; min-width: 0; }
+.weapon-ability img { display: block; width: 100%; border-radius: 8px; }
+.primordial-ability .placeholder-box, .legendary-weapon .weapon-ability .placeholder-box { width: 100% !important; height: auto !important; min-height: 0 !important; aspect-ratio: 16 / 9 !important; padding: 8px !important; margin: 0 !important; box-sizing: border-box !important; display: flex !important; align-items: center !important; justify-content: center !important; overflow: hidden !important; }
+.primordial-ability .placeholder-box video, .legendary-weapon .weapon-ability .placeholder-box video { width: 100% !important; height: 100% !important; max-width: 100% !important; max-height: 100% !important; aspect-ratio: auto !important; object-fit: contain !important; }
+.primordial-ability-name, .legendary-weapon .ability-name { margin-top: 8px; font-family: "Monocraft", monospace; font-size: 14px; line-height: 1.3; color: var(--accent); }
+.ability-name { margin-top: 10px; font-family: "Monocraft", monospace; font-size: 16px; color: var(--accent); }
+.primordial-ability-key { display: inline-block; margin-top: 6px; padding: 3px 8px; border: 1px solid var(--line); border-radius: 999px; background: rgba(0, 34, 85, 0.35); color: var(--muted); font-size: 10px; font-weight: 700; letter-spacing: 0.03em; }
+.primordial-ability-description, .legendary-weapon .ability-description { margin-top: 6px; color: var(--muted); font-size: 12px; line-height: 1.45; }
+.ability-description { margin-top: 5px; color: var(--muted); }
+.legendary-weapon .weapon-display { min-height: 110px; }
+.legendary-weapon .weapon-utility, .legendary-weapon .legendary-utility, .legendary-weapon .weapon-utilities, .legendary-weapon .legendary-utilities { display: none !important; }
+
+/* Weasel Trades */
+.weasel-trades { --wt-panel: var(--panel); --wt-panel-2: var(--panel-2); --wt-dark: var(--panel-dark); --wt-line: var(--line); --wt-soft: var(--line-soft); --wt-hover: var(--line-hover); --wt-text: var(--text); --wt-muted: var(--muted); --wt-accent: var(--accent); --wt-accent-2: var(--accent-2); --wt-green: var(--block-green); --wt-green-bg: var(--block-green-bg); padding: 4px 0; color: var(--wt-text); line-height: 1.55; }
+.weasel-trades h2 { margin: 30px 0 14px; color: var(--wt-accent); font-size: 1.45rem; }
+.weasel-trades > h2:first-child { margin-top: 0; }
+.weasel-trades p { margin: 8px 0 18px; color: var(--wt-muted); }
+.weasel-trades code { padding: 2px 5px; border-radius: 4px; background: var(--wt-dark); border: 1px solid var(--wt-soft); color: var(--wt-accent-2); font-size: 0.9em; }
+.weasel-trades .trade-summary { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 10px; margin: 18px 0 28px; }
+.weasel-trades .summary-card { padding: 15px 16px; background: linear-gradient(145deg, var(--wt-panel-2), var(--wt-dark)); border: 1px solid var(--wt-line); border-radius: 9px; box-shadow: 0 4px 14px rgba(0, 0, 0, 0.12); }
+.weasel-trades .summary-card strong { display: block; margin-bottom: 3px; color: var(--wt-accent); font-size: 1.35rem; }
+.weasel-trades .summary-card span { display: block; color: var(--wt-muted); font-size: 0.82rem; }
+.weasel-trades .section-note { margin: 14px 0 20px; padding: 12px 15px; background: var(--wt-green-bg); border-left: 3px solid var(--wt-green); border-top: 1px solid var(--wt-soft); border-right: 1px solid var(--wt-soft); border-bottom: 1px solid var(--wt-soft); border-radius: 0 7px 7px 0; color: var(--wt-muted); }
+.weasel-trades .section-note strong { color: var(--wt-text); }
+.weasel-trades .table-wrapper { overflow-x: auto; margin: 14px 0 26px; border: 1px solid var(--wt-line); border-radius: 8px; background: var(--wt-panel); box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1); }
+.weasel-trades table { width: 100%; min-width: 720px; margin: 0; border: 0; border-collapse: collapse; background: var(--wt-panel); }
+.weasel-trades th { padding: 11px 12px; background: var(--wt-panel-2); border: 0; border-bottom: 1px solid var(--wt-line); color: var(--wt-accent); text-align: left; font-size: 0.78rem; font-weight: 700; letter-spacing: 0.04em; text-transform: uppercase; white-space: nowrap; }
+.weasel-trades td { padding: 10px 12px; border: 0; border-top: 1px solid var(--wt-soft); color: var(--wt-text); vertical-align: middle; }
+.weasel-trades tbody tr { transition: background 0.15s ease; }
+.weasel-trades tbody tr:hover { background: var(--wt-hover); }
+.weasel-trades .trade-number { width: 45px; color: var(--wt-muted); font-weight: 700; }
+.weasel-trades .amount, .weasel-trades .currency { color: var(--wt-accent); font-weight: 700; white-space: nowrap; }
+.weasel-trades .output { font-weight: 600; }
+.weasel-trades .variant { display: inline-block; padding: 3px 8px; border: 1px solid currentColor; border-radius: 999px; font-size: 0.7rem; font-weight: 800; letter-spacing: 0.03em; }
+.weasel-trades .amateur { color: #8fd694; background: rgba(143, 214, 148, 0.08); }
+.weasel-trades .hoarder { color: #82b8e8; background: rgba(130, 184, 232, 0.08); }
+.weasel-trades .golden { color: #e8c66a; background: rgba(232, 198, 106, 0.08); }
+.weasel-trades .random { display: inline-block; min-width: 22px; padding: 2px 6px; border: 1px solid var(--wt-soft); border-radius: 5px; background: var(--wt-dark); color: var(--wt-accent-2); font-family: monospace; font-weight: 700; text-align: center; }
+.weasel-trades .element-table td:first-child { font-weight: 800; }
+.weasel-trades .element-air { color: #9bd9d2; }
+.weasel-trades .element-earth { color: #d6b278; }
+.weasel-trades .element-electro { color: #b99bea; }
+.weasel-trades .element-nature { color: #8fd694; }
+.weasel-trades .element-water { color: #82b8e8; }
+.weasel-trades .element-fire { color: #e98585; }
+.weasel-trades .element-frost { color: #a7d9ed; }
+.weasel-trades .element-moon { color: #d0b9ed; }
+
+/* Utilities & Scrollbar */
 .text-accent { color: var(--accent); }
 .text-cyan { color: var(--accent-2); }
 .text-green { color: var(--good); }
 .text-warning { color: var(--warning); }
-
 .badge { display: inline-block; padding: 3px 8px; border-radius: 999px; border: 1px solid var(--line); font-size: 11px; color: var(--muted); }
 .badge-blue { color: var(--accent); border-color: rgba(51, 136, 255, 0.3); background: var(--accent-bg); }
 .badge-cyan { color: var(--accent-2); border-color: rgba(51, 204, 255, 0.3); background: var(--cyan-bg); }
 .badge-green { color: var(--good); border-color: rgba(0, 255, 85, 0.3); background: var(--green-bg); }
-
 ::selection { background: rgba(51, 136, 255, 0.28); color: var(--text); }
 ::-webkit-scrollbar { width: 10px; }
 ::-webkit-scrollbar-track { background: var(--bg-deep); }
 ::-webkit-scrollbar-thumb { background: var(--line); border-radius: 999px; border: 2px solid var(--bg-deep); }
 ::-webkit-scrollbar-thumb:hover { background: var(--line-hover); }
 
+/* Responsive Media Queries */
 @media (max-width: 800px) {
-  .topbar { padding: 0 16px; }
-  .topbar nav { gap: 12px; }
+  .topbar { padding: 0 16px; height: 60px; gap: 12px; }
+  .topbar nav { gap: 12px; font-size: 11px; }
+  .topbar nav a { font-size: 11px; white-space: nowrap; }
   .topbar nav a:nth-child(1) { display: none; }
+  nav a.active img { width: 19px; height: 19px; }
+  .brand { min-width: 0; font-size: 13px; line-height: 1; white-space: nowrap; }
+  .brand span { font-size: 8px; letter-spacing: 0.14em; margin-left: 4px; }
   .hero-wrap { padding: 65px 18px 55px; }
   .mod-grid, .doc-grid { grid-template-columns: 1fr; }
-  .docs-layout { grid-template-columns: 1fr; padding: 22px 18px 60px; }
+  .docs-layout { grid-template-columns: 1fr; padding: 22px 14px 60px; }
   .sidebar { position: static; border-bottom: 1px solid var(--line); padding-bottom: 16px; }
   .side-heading { margin-top: 14px; }
   .doc-hero { flex-direction: column; align-items: flex-start; }
   .version-card { width: 100%; }
-  .doc-page h1 { font-size: clamp(40px, 12vw, 52px); }
+  .doc-page h1 { font-size: clamp(40px, 12vw, 52px); line-height: 1.02; }
+  .docs-main, .content { min-width: 0; max-width: 100%; }
+  .docs-main { overflow-x: hidden; }
+  .docs-main h2 { font-size: 23px; line-height: 1.2; margin-top: 34px; }
+  .content { overflow-wrap: break-word; }
+  .notice { margin: 28px 0; padding: 13px 14px; font-size: 13px; line-height: 1.55; overflow: hidden; }
+  .notice strong { line-height: 1.4; }
+  .notice img { display: block; width: auto; max-width: 100%; height: auto; max-height: 180px; margin: 10px auto 4px; object-fit: contain; }
+  .notice picture, .notice figure { display: block; max-width: 100%; margin: 10px auto; }
+  .notice figure img { margin: 0 auto; }
+  .item-showcase { grid-template-columns: 1fr; gap: 14px; margin: 20px 0; padding: 14px; }
+  .item-showcase-image { min-height: 135px; padding: 8px 4px; }
+  .item-showcase-image img { width: 104px; height: 104px; }
+  .item-showcase-image::after { max-width: 100%; margin-top: 8px; font-size: 14px; line-height: 1.25; text-align: center; white-space: normal; overflow-wrap: anywhere; }
+  .item-showcase-info { gap: 10px; }
+  .item-showcase-section { padding: 11px 12px; font-size: 13px; line-height: 1.5; }
+  .item-showcase-section strong { margin-bottom: 5px; }
+  .recipe { width: min(372px, 100%); height: 186px; margin-left: auto; margin-right: auto; display: flex; align-items: center; justify-content: center; overflow: hidden; }
+  .recipe span { max-width: 100%; font-size: 12px; line-height: 1.35; text-align: center; white-space: normal; overflow-wrap: anywhere; }
+  .recipe-title-separator { width: 100%; margin: 6px 0; text-align: center; color: var(--muted); }
+  .recipe img { max-width: 100%; max-height: 100%; width: auto; height: auto; object-fit: contain; }
+  .content table, .docs-main table { display: block; width: 100%; max-width: 100%; overflow-x: auto; overflow-y: hidden; -webkit-overflow-scrolling: touch; white-space: nowrap; margin: 16px 0; }
+  .content table thead, .content table tbody, .docs-main table thead, .docs-main table tbody { width: max-content; }
+  .content th, .content td, .docs-main th, .docs-main td { padding: 8px 10px; font-size: 12px; line-height: 1.4; vertical-align: middle; max-width: 280px; }
+  .content th, .docs-main th { font-size: 11px; }
+  .entity-showcase { grid-template-columns: 1fr; margin: 22px 0; }
+  .entity-showcase-image { min-height: 245px; padding: 18px; border-right: none; border-bottom: 1px solid var(--line); }
+  .entity-showcase-image img { width: 145px; height: 145px; }
+  .entity-showcase-name { margin-top: 12px; font-size: 16px; white-space: normal; overflow-wrap: anywhere; }
+  .entity-showcase-info { padding: 14px; gap: 11px; }
+  .entity-header { gap: 12px; }
+  .entity-header-title h3 { font-size: 21px; line-height: 1.15; }
+  .entity-header-title span { font-size: 11px; }
+  .entity-bottom-row { gap: 10px; }
+  .entity-drops { padding: 11px; }
+  .entity-drops-list { gap: 8px; }
+  .entity-drop { width: 58px; min-height: 70px; padding: 5px; }
+  .entity-drop img { width: 36px; height: 36px; }
+  .entity-drop-name { max-width: 52px; font-size: 6.5px; }
+  .entity-spawn { width: 88px; padding: 10px; }
+  .entity-spawn-box { width: 66px; height: 66px; }
+  .entity-spawn-box img { width: 50px; height: 50px; }
+  .entity-info-box { padding: 11px 12px; font-size: 13px; line-height: 1.5; }
+  .entity-info-box strong { margin-bottom: 5px; }
+  .primordial-weapon, .legendary-weapon, .weapon-media-grid > .primordial-weapon { grid-template-columns: minmax(0, 1fr) !important; gap: 12px !important; margin: 22px 0 !important; }
+  .primordial-weapon-display, .legendary-weapon .weapon-display, .weapon-media-grid > .primordial-weapon > .primordial-weapon-display { width: 100% !important; min-width: 0 !important; height: auto !important; min-height: 0 !important; aspect-ratio: 16 / 9 !important; padding: 12px !important; }
+  .primordial-weapon-icon { width: 120px !important; height: 120px !important; max-width: 45% !important; max-height: 70% !important; }
+  .primordial-weapon-icon img { width: 110px !important; height: 110px !important; max-width: 100% !important; max-height: 100% !important; }
+  .legendary-weapon .weapon-texture img { width: 105px !important; height: 105px !important; max-width: 100% !important; max-height: 100% !important; }
+  .primordial-abilities, .weapon-media-grid > .primordial-weapon > .primordial-abilities { width: 100% !important; grid-template-columns: minmax(0, 1fr) !important; gap: 12px !important; }
+  .primordial-ability, .legendary-weapon .weapon-ability { width: 100% !important; min-width: 0 !important; padding: 7px !important; }
+  .primordial-ability img, .primordial-ability video, .legendary-weapon .weapon-ability img, .legendary-weapon .weapon-ability video, .weapon-media-grid > .primordial-weapon .primordial-ability img, .weapon-media-grid > .primordial-weapon .primordial-ability video { width: 100% !important; height: auto !important; aspect-ratio: 16 / 9 !important; object-fit: contain !important; }
+  .primordial-ability .placeholder-box, .legendary-weapon .weapon-ability .placeholder-box { width: 100% !important; height: auto !important; min-height: 0 !important; aspect-ratio: 16 / 9 !important; padding: 5px !important; }
+  .primordial-ability-name, .ability-name { margin-top: 8px; font-size: 13px; line-height: 1.3; }
+  .primordial-ability-key { margin-top: 5px; padding: 2px 7px; font-size: 9px; }
+  .primordial-ability-description, .ability-description { margin-top: 6px; font-size: 12px; line-height: 1.45; }
+  .weapon-ability img { width: 100%; max-width: 100%; height: auto; }
+  .primordial-weapon-name { margin-top: 10px; font-size: 16px; }
+  .primordial-weapon-subtitle { font-size: 11px; }
+  .button-row { gap: 8px; margin-top: 16px; }
+  .button { padding: 8px 11px; font-size: 12px; line-height: 1.3; }
+  .feature-list { padding-left: 8px; }
+  .feature-list li, .content li { margin: 6px 0; padding: 7px 10px; font-size: 13px; line-height: 1.5; }
+  .badge { font-size: 10px; padding: 2px 7px; }
   footer { padding: 24px 18px; }
 }
 
+@media (max-width: 700px) {
+  .weasel-trades .trade-summary { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .weasel-trades h2 { font-size: 1.25rem; }
+  .weasel-trades .table-wrapper { margin-left: -4px; margin-right: -4px; border-radius: 7px; }
+}
+
+@media (max-width: 600px) {
+  .weapon-media-grid { grid-template-columns: 1fr; }
+  .weapon-media-grid .placeholder-box { height: auto; min-height: 220px; aspect-ratio: 16 / 9; padding: 8px; }
+  .weapon-media-grid .placeholder-box video { width: 100%; height: 100%; object-fit: contain; }
+}
+
 @media (max-width: 480px) {
-  .topbar { height: 60px; }
-  .brand { font-size: 14px; }
-  .brand span { font-size: 9px; margin-left: 5px; }
-  .topbar nav a { font-size: 12px; }
+  .topbar { height: 56px; padding: 0 11px; }
+  .brand { font-size: 12px; }
+  .brand span { font-size: 7px; letter-spacing: 0.12em; margin-left: 3px; }
+  .topbar nav { gap: 7px; }
+  .topbar nav a { font-size: 10px; }
+  nav a.active img { width: 17px; height: 17px; }
   h1 { font-size: 44px; }
   .lead { font-size: 16px; }
   .mod-card { padding: 22px; min-height: 220px; }
@@ -948,2386 +356,41 @@ tr:hover td { background: var(--block-green-hover); }
   .card-title h2 { font-size: 24px; }
   .card-body { padding-right: 25px; }
   .doc-grid a { padding: 16px; }
-}
-
-/* =========================================================
-    WEAPONS
-   ========================================================= */
-
-.weapon-media-grid {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 20px;
-}
-
-.weapon-media-grid .placeholder-box {
-  height: 300px;
-  margin: 0 !important;
-  box-sizing: border-box;
-}
-
-@media (max-width: 600px) {
-  .weapon-media-grid {
-    grid-template-columns: 1fr;
-  }
-}
-
-/* =========================================================
-   PRIMORDIAL WEAPON
-   ========================================================= */
-
-.primordial-weapon{
-  display:grid;
-  grid-template-columns:240px minmax(0,1fr);
-  gap:16px;
-  margin:25px 0;
-}
-
-.primordial-weapon-display{
-  display:flex;
-  flex-direction:column;
-  align-items:center;
-  justify-content:center;
-  min-height:100%;
-  padding:24px 18px;
-  text-align:center;
-  background:
-    radial-gradient(circle at center,rgba(120,169,214,.10),transparent 65%),
-    var(--panel-dark);
-  border:1px solid var(--line);
-  border-radius:12px;
-  box-shadow:0 8px 20px rgba(0,0,0,.16);
-}
-
-.primordial-weapon-icon{
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  width:190px;
-  height:190px;
-}
-
-.primordial-weapon-icon img{
-  width:176px;
-  height:176px;
-  object-fit:contain;
-  image-rendering:pixelated;
-  filter:
-    drop-shadow(0 8px 10px rgba(0,0,0,.45))
-    drop-shadow(0 0 18px rgba(120,169,214,.12));
-}
-
-.primordial-weapon-name{
-  margin-top:14px;
-  font-family:"Monocraft",monospace;
-  font-size:18px;
-  font-weight:bold;
-  color: #ffff55;
-}
-
-.item-showcase-image[data-item-name="Phanes Blade"]::after {
-  color: #ffff55;
-}
-
-.primordial-weapon-subtitle{
-  margin-top:5px;
-  color:var(--muted);
-  font-size:12px;
-  font-style:italic;
-}
-
-.primordial-abilities{
-  display:grid;
-  grid-template-columns:repeat(2,minmax(0,1fr));
-  gap:14px;
-}
-
-.primordial-ability{
-  min-width:0;
-  padding:12px;
-  text-align:center;
-  background:
-    linear-gradient(145deg,rgba(0,34,85,.42),rgba(13,28,48,.72));
-  border:1px solid var(--line);
-  border-radius:10px;
-  box-shadow:0 5px 16px rgba(0,0,0,.12);
-  transition:
-    border-color .2s ease,
-    background .2s ease,
-    transform .2s ease;
-}
-
-.primordial-ability:hover{
-  border-color:var(--line-hover);
-  background:
-    linear-gradient(145deg,rgba(0,48,119,.48),rgba(13,28,48,.78));
-  transform:translateY(-2px);
-}
-
-.primordial-ability img{
-  display:block;
-  width:100%;
-  aspect-ratio:16/9;
-  object-fit:cover;
-  border:1px solid var(--line-soft);
-  border-radius:7px;
-}
-
-.primordial-ability-name{
-  margin-top:10px;
-  font-family:"Monocraft",monospace;
-  font-size:15px;
-  font-weight:bold;
-  color:var(--accent);
-}
-
-.primordial-ability-key{
-  display:inline-block;
-  margin-top:6px;
-  padding:3px 8px;
-  border:1px solid var(--line);
-  border-radius:999px;
-  background:rgba(0,34,85,.35);
-  color:var(--muted);
-  font-size:10px;
-  font-weight:700;
-  letter-spacing:.03em;
-}
-
-.primordial-ability-description{
-  margin-top:8px;
-  color:var(--muted);
-  font-size:13px;
-}
-
-@media (max-width:800px){
-  .primordial-weapon{
-    grid-template-columns:1fr;
-  }
-
-  .primordial-weapon-display{
-    min-height:260px;
-  }
-}
-
-@media (max-width:600px){
-  .primordial-abilities{
-    grid-template-columns:1fr;
-  }
-
-  .primordial-weapon-icon{
-    width:170px;
-    height:170px;
-  }
-
-  .primordial-weapon-icon img{
-    width:156px;
-    height:156px;
-  }
-}
-
-.weapon-display{display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;min-height:220px}
-.weapon-texture img{width:128px;height:128px;image-rendering:pixelated}
-.weapon-name{margin-top:12px;font-family:"Monocraft",monospace;font-size:18px;color:#55ffff;}
-.pixelated-name{margin-top:12px;font-family:"Monocraft",monospace;font-size:18px;color:var(--text)}
-.weapon-ability{text-align:center}
-.weapon-ability img{display:block;width:100%;border-radius:8px}
-.ability-name{margin-top:10px;font-family:"Monocraft",monospace;font-size:16px;color:var(--accent)}
-.ability-description{margin-top:5px;color:var(--muted)}
-.legendary-weapon{grid-template-columns:110px 1fr 1fr}
-.legendary-weapon .weapon-display{min-height:110px}
-.legendary-weapon .weapon-ability{min-width:0}
-.legendary-weapon-name{margin-top:12px;font-family:"Monocraft",monospace;font-size:18px;color:#ff55ff;}
-
-/* =========================================================
-   WEASEL TRADES
-   ========================================================= */
-
-.weasel-trades{--wt-panel:var(--panel);--wt-panel-2:var(--panel-2);--wt-dark:var(--panel-dark);--wt-line:var(--line);--wt-soft:var(--line-soft);--wt-hover:var(--line-hover);--wt-text:var(--text);--wt-muted:var(--muted);--wt-accent:var(--accent);--wt-accent-2:var(--accent-2);--wt-green:var(--block-green);--wt-green-bg:var(--block-green-bg);padding:4px 0;color:var(--wt-text);line-height:1.55}.weasel-trades h2{margin:30px 0 14px;color:var(--wt-accent);font-size:1.45rem}.weasel-trades>h2:first-child{margin-top:0}.weasel-trades p{margin:8px 0 18px;color:var(--wt-muted)}.weasel-trades code{padding:2px 5px;border-radius:4px;background:var(--wt-dark);border:1px solid var(--wt-soft);color:var(--wt-accent-2);font-size:.9em}.weasel-trades .trade-summary{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px;margin:18px 0 28px}.weasel-trades .summary-card{padding:15px 16px;background:linear-gradient(145deg,var(--wt-panel-2),var(--wt-dark));border:1px solid var(--wt-line);border-radius:9px;box-shadow:0 4px 14px rgba(0,0,0,.12)}.weasel-trades .summary-card strong{display:block;margin-bottom:3px;color:var(--wt-accent);font-size:1.35rem}.weasel-trades .summary-card span{display:block;color:var(--wt-muted);font-size:.82rem}.weasel-trades .section-note{margin:14px 0 20px;padding:12px 15px;background:var(--wt-green-bg);border-left:3px solid var(--wt-green);border-top:1px solid var(--wt-soft);border-right:1px solid var(--wt-soft);border-bottom:1px solid var(--wt-soft);border-radius:0 7px 7px 0;color:var(--wt-muted)}.weasel-trades .section-note strong{color:var(--wt-text)}.weasel-trades .table-wrapper{overflow-x:auto;margin:14px 0 26px;border:1px solid var(--wt-line);border-radius:8px;background:var(--wt-panel);box-shadow:0 4px 16px rgba(0,0,0,.1)}.weasel-trades table{width:100%;min-width:720px;margin:0;border:0;border-collapse:collapse;background:var(--wt-panel)}.weasel-trades th{padding:11px 12px;background:var(--wt-panel-2);border:0;border-bottom:1px solid var(--wt-line);color:var(--wt-accent);text-align:left;font-size:.78rem;font-weight:700;letter-spacing:.04em;text-transform:uppercase;white-space:nowrap}.weasel-trades td{padding:10px 12px;border:0;border-top:1px solid var(--wt-soft);color:var(--wt-text);vertical-align:middle}.weasel-trades tbody tr{transition:background .15s ease}.weasel-trades tbody tr:hover{background:var(--wt-hover)}.weasel-trades .trade-number{width:45px;color:var(--wt-muted);font-weight:700}.weasel-trades .amount,.weasel-trades .currency{color:var(--wt-accent);font-weight:700;white-space:nowrap}.weasel-trades .output{font-weight:600}.weasel-trades .variant{display:inline-block;padding:3px 8px;border:1px solid currentColor;border-radius:999px;font-size:.7rem;font-weight:800;letter-spacing:.03em}.weasel-trades .amateur{color:#8fd694;background:rgba(143,214,148,.08)}.weasel-trades .hoarder{color:#82b8e8;background:rgba(130,184,232,.08)}.weasel-trades .golden{color:#e8c66a;background:rgba(232,198,106,.08)}.weasel-trades .random{display:inline-block;min-width:22px;padding:2px 6px;border:1px solid var(--wt-soft);border-radius:5px;background:var(--wt-dark);color:var(--wt-accent-2);font-family:monospace;font-weight:700;text-align:center}.weasel-trades .element-table td:first-child{font-weight:800}.weasel-trades .element-air{color:#9bd9d2}.weasel-trades .element-earth{color:#d6b278}.weasel-trades .element-electro{color:#b99bea}.weasel-trades .element-nature{color:#8fd694}.weasel-trades .element-water{color:#82b8e8}.weasel-trades .element-fire{color:#e98585}.weasel-trades .element-frost{color:#a7d9ed}.weasel-trades .element-moon{color:#d0b9ed}@media(max-width:700px){.weasel-trades .trade-summary{grid-template-columns:repeat(2,minmax(0,1fr))}.weasel-trades h2{font-size:1.25rem}.weasel-trades .table-wrapper{margin-left:-4px;margin-right:-4px;border-radius:7px}}
-
-/* =========================================================
-   MOBILE POLISH
-   ---------------------------------------------------------
-   Final mobile overrides.
-   Keep this section at the END of style.css so it wins
-   over earlier component-specific media queries.
-   ========================================================= */
-
-@media (max-width: 800px) {
-
-  /* -------------------------------------------------------
-     GLOBAL MOBILE SPACING
-     ------------------------------------------------------- */
-
-  .docs-main,
-  .content {
-    min-width: 0;
-    max-width: 100%;
-  }
-
-  .docs-main {
-    overflow-x: hidden;
-  }
-
-  .content {
-    overflow-wrap: break-word;
-  }
-
-
-  /* -------------------------------------------------------
-     TOP BAR
-     ------------------------------------------------------- */
-
-  .topbar {
-    height: 60px;
-    padding: 0 14px;
-    gap: 12px;
-  }
-
-  .brand {
-    min-width: 0;
-
-    font-size: 13px;
-    line-height: 1;
-    white-space: nowrap;
-  }
-
-  .brand span {
-    font-size: 8px;
-    letter-spacing: 0.14em;
-    margin-left: 4px;
-  }
-
-  .topbar nav {
-    min-width: 0;
-    gap: 9px;
-
-    font-size: 11px;
-  }
-
-  .topbar nav a {
-    font-size: 11px;
-    white-space: nowrap;
-  }
-
-  nav a.active img {
-    width: 19px;
-    height: 19px;
-  }
-
-
-  /* -------------------------------------------------------
-     DOCUMENT CONTENT
-     ------------------------------------------------------- */
-
-  .docs-layout {
-    padding-left: 14px;
-    padding-right: 14px;
-  }
-
-  .docs-main h2 {
-    font-size: 23px;
-    line-height: 1.2;
-    margin-top: 34px;
-  }
-
-  .doc-page h1 {
-    line-height: 1.02;
-  }
-
-
-  /* -------------------------------------------------------
-     NOTICES
-     ------------------------------------------------------- */
-
-  .notice {
-    margin: 28px 0;
-    padding: 13px 14px;
-
-    font-size: 13px;
-    line-height: 1.55;
-
-    overflow: hidden;
-  }
-
-  .notice strong {
-    line-height: 1.4;
-  }
-
-  /*
-     Notices containing images.
-
-     Images become a normal block instead of forcing the
-     text to wrap awkwardly around them.
-  */
-
-  .notice img {
-    display: block;
-
-    width: auto;
-    max-width: 100%;
-    height: auto;
-    max-height: 180px;
-
-    margin: 10px auto 4px;
-
-    object-fit: contain;
-  }
-
-  .notice picture,
-  .notice figure {
-    display: block;
-    max-width: 100%;
-    margin: 10px auto;
-  }
-
-  .notice figure img {
-    margin: 0 auto;
-  }
-
-
-  /* -------------------------------------------------------
-     ITEM SHOWCASE / RECIPES
-     ------------------------------------------------------- */
-
-  .item-showcase {
-    grid-template-columns: 1fr;
-    gap: 14px;
-
-    margin: 20px 0;
-    padding: 14px;
-  }
-
-  .item-showcase-image {
-    min-height: 135px;
-    padding: 8px 4px;
-  }
-
-  .item-showcase-image img {
-    width: 104px;
-    height: 104px;
-  }
-
-  /*
-     Minecraft tooltip name under the item.
-
-     The desktop nowrap behaviour is too aggressive on phones.
-  */
-
-  .item-showcase-image::after {
-    max-width: 100%;
-
-    margin-top: 8px;
-
-    font-size: 14px;
-    line-height: 1.25;
-
-    text-align: center;
-    white-space: normal;
-    overflow-wrap: anywhere;
-  }
-
-  .item-showcase-info {
-    gap: 10px;
-  }
-
-  .item-showcase-section {
-    padding: 11px 12px;
-
-    font-size: 13px;
-    line-height: 1.5;
-  }
-
-  .item-showcase-section strong {
-    margin-bottom: 5px;
-  }
-
-
-  /* -------------------------------------------------------
-   RECIPE BOXES
-   ------------------------------------------------------- */
-
-.recipe {
-  width: 100%;
-  max-width: 100%;
-
-  align-items: center;
-}
-
-.recipe span {
-  max-width: 100%;
-
-  font-size: 12px;
-  line-height: 1.35;
-
-  text-align: center;
-  white-space: normal;
-  overflow-wrap: anywhere;
-}
-
-/*
-   Recipe title separator
-*/
-
-.recipe-title-separator {
-  width: 100%;
-  margin: 6px 0;
-
-  text-align: center;
-
-  color: var(--muted);
-}
-
-/*
-   Keep recipe images inside the available space.
-*/
-
-.recipe img {
-  max-width: 100%;
-  height: auto;
-}
-
-/*
-   MOBILE RECIPE SIZE
-   372 × 186 px (2:1)
-
-   On smaller phones, width shrinks automatically
-   so the recipe never causes horizontal overflow.
-*/
-
-@media (max-width: 800px) {
-
-  .recipe {
-    width: min(372px, 100%);
-    height: 186px;
-
-    margin-left: auto;
-    margin-right: auto;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    overflow: hidden;
-  }
-
-  .recipe img {
-    max-width: 100%;
-    max-height: 100%;
-
-    width: auto;
-    height: auto;
-
-    object-fit: contain;
-  }
-
-  .recipe span {
-    max-width: 100%;
-
-    font-size: 12px;
-    line-height: 1.35;
-
-    text-align: center;
-    white-space: normal;
-    overflow-wrap: anywhere;
-  }
-
-  .recipe-title-separator {
-    width: 100%;
-    margin: 5px 0;
-
-    text-align: center;
-  }
-}
-
-@media (max-width: 480px) {
-
-  .recipe {
-    width: 100%;
-    max-width: 372px;
-    height: 186px;
-  }
-
-  .recipe span {
-    font-size: 11px;
-  }
-}
-
-  /* -------------------------------------------------------
-     REGULAR TABLES
-     ------------------------------------------------------- */
-
-  /*
-     Tables should scroll horizontally rather than destroying
-     their column widths.
-
-     This works even when the HTML does not have a dedicated
-     .table-wrapper around the table.
-  */
-
-  .content table,
-  .docs-main table {
-    display: block;
-
-    width: 100%;
-    max-width: 100%;
-
-    overflow-x: auto;
-    overflow-y: hidden;
-
-    -webkit-overflow-scrolling: touch;
-
-    white-space: nowrap;
-
-    margin: 16px 0;
-  }
-
-  .content table thead,
-  .content table tbody,
-  .docs-main table thead,
-  .docs-main table tbody {
-    width: max-content;
-  }
-
-  .content th,
-  .content td,
-  .docs-main th,
-  .docs-main td {
-    padding: 8px 10px;
-
-    font-size: 12px;
-    line-height: 1.4;
-
-    vertical-align: middle;
-  }
-
-  .content th,
-  .docs-main th {
-    font-size: 11px;
-  }
-
-  /*
-     Prevent giant words / item names from blowing out
-     the table's layout.
-  */
-
-  .content td,
-  .content th,
-  .docs-main td,
-  .docs-main th {
-    max-width: 280px;
-  }
-
-
-  /* -------------------------------------------------------
-     ENTITY DROPS + SPAWN EGG
-     ------------------------------------------------------- */
-
-  .entity-bottom-row {
-    gap: 10px;
-  }
-
-  .entity-drops {
-    padding: 11px;
-  }
-
-  .entity-drops-list {
-    gap: 8px;
-  }
-
-  .entity-drop {
-    width: 58px;
-    min-height: 70px;
-    padding: 5px;
-  }
-
-  .entity-drop img {
-    width: 36px;
-    height: 36px;
-  }
-
-  .entity-drop-name {
-    max-width: 52px;
-    font-size: 6.5px;
-  }
-
-  .entity-spawn {
-    width: 88px;
-    padding: 10px;
-  }
-
-  .entity-spawn-box {
-    width: 66px;
-    height: 66px;
-  }
-
-  .entity-spawn-box img {
-    width: 50px;
-    height: 50px;
-  }
-
-
-  /* -------------------------------------------------------
-     ENTITY INFORMATION BOXES
-     ------------------------------------------------------- */
-
-  .entity-info-box {
-    padding: 11px 12px;
-
-    font-size: 13px;
-    line-height: 1.5;
-  }
-
-  .entity-info-box strong {
-    margin-bottom: 5px;
-  }
-
-
-  /* -------------------------------------------------------
-     ENTITY SHOWCASE
-     ------------------------------------------------------- */
-
-  .entity-showcase {
-    margin: 22px 0;
-  }
-
-  .entity-showcase-image {
-    min-height: 245px;
-    padding: 18px;
-  }
-
-  .entity-showcase-image img {
-    width: 145px;
-    height: 145px;
-  }
-
-  .entity-showcase-name {
-    margin-top: 12px;
-    font-size: 16px;
-
-    white-space: normal;
-    overflow-wrap: anywhere;
-  }
-
-  .entity-showcase-info {
-    padding: 14px;
-    gap: 11px;
-  }
-
-  .entity-header {
-    gap: 12px;
-  }
-
-  .entity-header-title h3 {
-    font-size: 21px;
-    line-height: 1.15;
-  }
-
-  .entity-header-title span {
-    font-size: 11px;
-  }
-
-
-  /* -------------------------------------------------------
-     ABILITIES
-     ------------------------------------------------------- */
-
-  /*
-     Keep one ability per row, but don't make the card
-     unnecessarily huge on phones.
-  */
-
-  .primordial-abilities {
-    grid-template-columns: 1fr;
-    gap: 10px;
-  }
-
-  .primordial-ability {
-    padding: 9px;
-  }
-
-  .primordial-ability img {
-    width: 100%;
-    aspect-ratio: 16 / 8;
-    object-fit: cover;
-  }
-
-  .primordial-ability-name {
-    margin-top: 8px;
-    font-size: 13px;
-    line-height: 1.3;
-  }
-
-  .primordial-ability-key {
-    margin-top: 5px;
-    padding: 2px 7px;
-
-    font-size: 9px;
-  }
-
-  .primordial-ability-description {
-    margin-top: 6px;
-
-    font-size: 12px;
-    line-height: 1.45;
-  }
-
-
-  /* -------------------------------------------------------
-     WEAPON ABILITIES
-     ------------------------------------------------------- */
-
-  .weapon-ability {
-    min-width: 0;
-  }
-
-  .weapon-ability img {
-    width: 100%;
-    max-width: 100%;
-    height: auto;
-  }
-
-  .ability-name {
-    font-size: 14px;
-    line-height: 1.3;
-  }
-
-  .ability-description {
-    font-size: 12px;
-    line-height: 1.45;
-  }
-
-
-  /* -------------------------------------------------------
-     PRIMORDIAL / LEGENDARY WEAPONS
-     ------------------------------------------------------- */
-
-  .primordial-weapon {
-    grid-template-columns: 1fr;
-    gap: 12px;
-  }
-
-  .primordial-weapon-display {
-    min-height: 220px;
-    padding: 18px 14px;
-  }
-
-  .primordial-weapon-icon {
-    width: 145px;
-    height: 145px;
-  }
-
-  .primordial-weapon-icon img {
-    width: 132px;
-    height: 132px;
-  }
-
-  .primordial-weapon-name {
-    margin-top: 10px;
-    font-size: 16px;
-  }
-
-  .primordial-weapon-subtitle {
-    font-size: 11px;
-  }
-
-
-  /* -------------------------------------------------------
-     BUTTONS
-     ------------------------------------------------------- */
-
-  .button-row {
-    gap: 8px;
-    margin-top: 16px;
-  }
-
-  .button {
-    padding: 8px 11px;
-
-    font-size: 12px;
-    line-height: 1.3;
-  }
-
-
-  /* -------------------------------------------------------
-     LIST BLOCKS
-     ------------------------------------------------------- */
-
-  .feature-list {
-    padding-left: 8px;
-  }
-
-  .feature-list li,
-  .content li {
-    margin: 6px 0;
-    padding: 7px 10px;
-
-    font-size: 13px;
-    line-height: 1.5;
-  }
-
-
-  /* -------------------------------------------------------
-     BADGES
-     ------------------------------------------------------- */
-
-  .badge {
-    font-size: 10px;
-    padding: 2px 7px;
-  }
-}
-
-
-/* =========================================================
-   EXTRA SMALL PHONES
-   ========================================================= */
-
-@media (max-width: 480px) {
-
-  /* TOP BAR */
-
-  .topbar {
-    height: 56px;
-    padding: 0 11px;
-  }
-
-  .brand {
-    font-size: 12px;
-  }
-
-  .brand span {
-    font-size: 7px;
-    letter-spacing: 0.12em;
-    margin-left: 3px;
-  }
-
-  .topbar nav {
-    gap: 7px;
-  }
-
-  .topbar nav a {
-    font-size: 10px;
-  }
-
-  nav a.active img {
-    width: 17px;
-    height: 17px;
-  }
-
-
-  /* DOCUMENT AREA */
-
-  .docs-layout {
-    padding-left: 11px;
-    padding-right: 11px;
-  }
-
-  .docs-main h2 {
-    font-size: 21px;
-  }
-
-
-  /* NOTICES */
-
-  .notice {
-    margin: 22px 0;
-    padding: 11px 12px;
-
-    font-size: 12px;
-  }
-
-  .notice img {
-    max-height: 145px;
-  }
-
-
-  /* RECIPES */
-
-  .recipe span {
-    font-size: 11px;
-  }
-
-  .recipe-title-separator {
-    margin: 5px 0;
-  }
-
-
-  /* ITEM SHOWCASE */
-
-  .item-showcase {
-    padding: 11px;
-  }
-
-  .item-showcase-image {
-    min-height: 120px;
-  }
-
-  .item-showcase-image img {
-    width: 88px;
-    height: 88px;
-  }
-
-  .item-showcase-image::after {
-    font-size: 12px;
-  }
-
-  .item-showcase-section {
-    padding: 9px 10px;
-    font-size: 12px;
-  }
-
-
-  /* TABLES */
-
-  .content th,
-  .content td,
-  .docs-main th,
-  .docs-main td {
-    padding: 7px 8px;
-    font-size: 11px;
-  }
-
-  .content th,
-  .docs-main th {
-    font-size: 10px;
-  }
-
-
-  /* ENTITY */
-
-  .entity-bottom-row {
-    gap: 7px;
-  }
-
-  .entity-drops {
-    padding: 9px;
-  }
-
-  .entity-drops-list {
-    gap: 6px;
-  }
-
-  .entity-drop {
-    width: 54px;
-    min-height: 66px;
-  }
-
-  .entity-drop img {
-    width: 34px;
-    height: 34px;
-  }
-
-  .entity-spawn {
-    width: 82px;
-    padding: 8px;
-  }
-
-
-  /* ABILITIES */
-
-  .primordial-ability {
-    padding: 8px;
-  }
-
-  .primordial-ability img {
-    aspect-ratio: 16 / 8;
-  }
-
-  .primordial-ability-name {
-    font-size: 12px;
-  }
-
-  .primordial-ability-description {
-    font-size: 11px;
-  }
-
-
-  /* WEAPON ABILITIES */
-
-  .ability-name {
-    font-size: 13px;
-  }
-
-  .ability-description {
-    font-size: 11px;
-  }
-}
-
-/* =========================================================
-   VIDEO PLACEHOLDERS
-   ---------------------------------------------------------
-   Videos inside placeholder boxes stay contained within
-   the box instead of expanding to the full page width.
-   Responsive on desktop, tablet and mobile.
-   ========================================================= */
-
-.content .placeholder-box {
-  position: relative;
-  overflow: hidden;
-}
-
-/* Video itself */
-.content .placeholder-box video {
-  display: block;
-
-  width: 100%;
-  max-width: 100%;
-  height: 100%;
-
-  object-fit: contain;
-
-  border-radius: 8px;
-}
-
-/* ---------------------------------------------------------
-   WEAPON MEDIA BOXES
-   --------------------------------------------------------- */
-
-.weapon-media-grid .placeholder-box {
-  height: 300px;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  padding: 12px;
-  margin: 0 !important;
-
-  box-sizing: border-box;
-}
-
-.weapon-media-grid .placeholder-box video {
-  width: 100%;
-  height: 100%;
-
-  max-width: 100%;
-  max-height: 100%;
-
-  object-fit: contain;
-
-  border-radius: 8px;
-}
-
-/* ---------------------------------------------------------
-   MOBILE
-   --------------------------------------------------------- */
-
-@media (max-width: 600px) {
-
-  .weapon-media-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .weapon-media-grid .placeholder-box {
-    height: auto;
-    min-height: 220px;
-
-    aspect-ratio: 16 / 9;
-
-    padding: 8px;
-  }
-
-  .weapon-media-grid .placeholder-box video {
-    width: 100%;
-    height: 100%;
-
-    object-fit: contain;
-  }
-}
-
-/* ---------------------------------------------------------
-   EXTRA SMALL PHONES
-   --------------------------------------------------------- */
-
-@media (max-width: 480px) {
-
-  .weapon-media-grid .placeholder-box {
-    min-height: 0;
-    aspect-ratio: 16 / 9;
-    padding: 6px;
-  }
-}
-
-/* =========================================================
-   COMPACT WEAPON SHOWCASES
-   ---------------------------------------------------------
-   Elemental + Legendary weapons
-   Responsive layout:
-   - Desktop: generous video area
-   - Mobile: video gets priority
-   ========================================================= */
-
-
-/* ---------------------------------------------------------
-   BASE LAYOUT
-   --------------------------------------------------------- */
-
-/* Elemental weapons */
-.primordial-weapon {
-  display: grid;
-  grid-template-columns: 180px minmax(0, 1fr);
-  gap: 14px;
-
-  width: 100%;
-  margin: 25px 0;
-}
-
-/* Legendary weapons */
-.legendary-weapon {
-  display: grid;
-  grid-template-columns: 180px minmax(0, 1fr);
-  gap: 14px;
-
-  width: 100%;
-  margin: 25px 0;
-}
-
-
-/* ---------------------------------------------------------
-   ITEM / WEAPON DISPLAY
-   --------------------------------------------------------- */
-
-.primordial-weapon-display,
-.legendary-weapon .weapon-display {
-  min-width: 0;
-  min-height: 220px;
-
-  padding: 16px 12px;
-
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-
-  text-align: center;
-
-  background:
-    radial-gradient(
-      circle at center,
-      rgba(120, 169, 214, 0.10),
-      transparent 65%
-    ),
-    var(--panel-dark);
-
-  border: 1px solid var(--line);
-  border-radius: 12px;
-
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.16);
-}
-
-
-/* ---------------------------------------------------------
-   WEAPON ICONS
-   --------------------------------------------------------- */
-
-.primordial-weapon-icon {
-  width: 135px;
-  height: 135px;
-}
-
-.primordial-weapon-icon img {
-  width: 125px;
-  height: 125px;
-}
-
-.legendary-weapon .weapon-texture img {
-  width: 120px;
-  height: 120px;
-}
-
-
-/* ---------------------------------------------------------
-   WEAPON NAMES
-   --------------------------------------------------------- */
-
-.primordial-weapon-name,
-.legendary-weapon-name {
-  margin-top: 10px;
-  font-size: 16px;
-}
-
-
-/* ---------------------------------------------------------
-   ABILITY / VIDEO SIDE
-   --------------------------------------------------------- */
-
-.primordial-abilities {
-  min-width: 0;
-
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 12px;
-}
-
-
-/*
-   Legendary weapons have one ability column.
-   Any old utility column is removed.
-*/
-
-.legendary-weapon {
-  grid-template-columns: 180px minmax(0, 1fr);
-}
-
-.legendary-weapon .weapon-ability {
-  min-width: 0;
-}
-
-
-/* ---------------------------------------------------------
-   ABILITY CARDS
-   --------------------------------------------------------- */
-
-.primordial-ability,
-.legendary-weapon .weapon-ability {
-  min-width: 0;
-  padding: 10px;
-
-  text-align: center;
-
-  background:
-    linear-gradient(
-      145deg,
-      rgba(0, 34, 85, 0.42),
-      rgba(13, 28, 48, 0.72)
-    );
-
-  border: 1px solid var(--line);
-  border-radius: 10px;
-
-  box-shadow: 0 5px 16px rgba(0, 0, 0, 0.12);
-}
-
-
-/* ---------------------------------------------------------
-   VIDEOS / ABILITY IMAGES
-   --------------------------------------------------------- */
-
-.primordial-ability img,
-.legendary-weapon .weapon-ability img,
-.legendary-weapon .weapon-ability video {
-  display: block;
-
-  width: 100%;
-  max-width: 100%;
-
-  aspect-ratio: 16 / 9;
-
-  height: auto;
-
-  object-fit: contain;
-
-  border: 1px solid var(--line-soft);
-  border-radius: 7px;
-}
-
-
-/* Video inside placeholder */
-.legendary-weapon .weapon-ability .placeholder-box {
-  width: 100%;
-  height: auto;
-  min-height: 0;
-
-  aspect-ratio: 16 / 9;
-
-  padding: 8px;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  box-sizing: border-box;
-  overflow: hidden;
-}
-
-.legendary-weapon .weapon-ability .placeholder-box video {
-  width: 100%;
-  height: 100%;
-
-  aspect-ratio: auto;
-
-  object-fit: contain;
-}
-
-
-/* ---------------------------------------------------------
-   ABILITY TEXT
-   --------------------------------------------------------- */
-
-.primordial-ability-name,
-.legendary-weapon .ability-name {
-  margin-top: 8px;
-
-  font-family: "Monocraft", monospace;
-  font-size: 14px;
-  line-height: 1.3;
-
-  color: var(--accent);
-}
-
-.primordial-ability-description,
-.legendary-weapon .ability-description {
-  margin-top: 6px;
-
-  color: var(--muted);
-  font-size: 12px;
-  line-height: 1.45;
-}
-
-
-/* ---------------------------------------------------------
-   REMOVE LEGENDARY UTILITY COLUMN
-   --------------------------------------------------------- */
-
-.legendary-weapon .weapon-utility,
-.legendary-weapon .legendary-utility,
-.legendary-weapon .weapon-utilities,
-.legendary-weapon .legendary-utilities {
-  display: none !important;
-}
-
-
-/* =========================================================
-   TABLET / MOBILE
-   ========================================================= */
-
-@media (max-width: 700px) {
-
-  /*
-     IMPORTANT:
-     Give the video more horizontal space.
-     The old 150px weapon column was too greedy,
-     especially for Legendary weapons.
-  */
-
-  .primordial-weapon,
-  .legendary-weapon {
-    grid-template-columns: 125px minmax(0, 1fr);
-    gap: 9px;
-  }
-
-
-  /* Weapon display */
-
-  .primordial-weapon-display,
-  .legendary-weapon .weapon-display {
-    min-height: 180px;
-    padding: 11px 6px;
-  }
-
-
-  /* Elemental icon */
-
-  .primordial-weapon-icon {
-    width: 105px;
-    height: 105px;
-  }
-
-  .primordial-weapon-icon img {
-    width: 97px;
-    height: 97px;
-  }
-
-
-  /* Legendary icon */
-
-  .legendary-weapon .weapon-texture img {
-    width: 92px;
-    height: 92px;
-  }
-
-
-  /* Names */
-
-  .primordial-weapon-name,
-  .legendary-weapon-name {
-    font-size: 12px;
-  }
-
-
-  /* Ability cards */
-
-  .primordial-ability,
-  .legendary-weapon .weapon-ability {
-    padding: 6px;
-  }
-
-
-  /* Ability text */
-
-  .primordial-ability-name,
-  .legendary-weapon .ability-name {
-    font-size: 11px;
-  }
-
-  .primordial-ability-description,
-  .legendary-weapon .ability-description {
-    font-size: 10px;
-  }
-
-
-  /*
-     Videos:
-     keep the full available width and preserve 16:9.
-  */
-
-  .primordial-ability img,
-  .legendary-weapon .weapon-ability img,
-  .legendary-weapon .weapon-ability video {
-    width: 100%;
-    aspect-ratio: 16 / 9;
-  }
-
-  .legendary-weapon .weapon-ability .placeholder-box {
-    width: 100%;
-    aspect-ratio: 16 / 9;
-    padding: 5px;
-  }
-}
-
-
-/* =========================================================
-   VERY SMALL PHONES
-   ========================================================= */
-
-@media (max-width: 480px) {
-
-  /*
-     Give the video side even more room.
-     105px is enough for the weapon icon while
-     preventing the video from becoming tiny.
-  */
-
-  .primordial-weapon,
-  .legendary-weapon {
-    grid-template-columns: 105px minmax(0, 1fr);
-    gap: 7px;
-  }
-
-
-  /* Weapon display */
-
-  .primordial-weapon-display,
-  .legendary-weapon .weapon-display {
-    min-height: 155px;
-    padding: 9px 4px;
-  }
-
-
-  /* Elemental */
-
-  .primordial-weapon-icon {
-    width: 82px;
-    height: 82px;
-  }
-
-  .primordial-weapon-icon img {
-    width: 76px;
-    height: 76px;
-  }
-
-
-  /* Legendary */
-
-  .legendary-weapon .weapon-texture img {
-    width: 72px;
-    height: 72px;
-  }
-
-
-  /* Names */
-
-  .primordial-weapon-name,
-  .legendary-weapon-name {
-    font-size: 10px;
-    line-height: 1.2;
-  }
-
-
-  /* Ability */
-
-  .primordial-ability,
-  .legendary-weapon .weapon-ability {
-    padding: 5px;
-  }
-
-  .primordial-ability-name,
-  .legendary-weapon .ability-name {
-    font-size: 10px;
-  }
-
-  .primordial-ability-description,
-  .legendary-weapon .ability-description {
-    font-size: 9px;
-  }
-
-
-  /* Video */
-
-  .primordial-ability img,
-  .legendary-weapon .weapon-ability img,
-  .legendary-weapon .weapon-ability video {
-    width: 100%;
-    aspect-ratio: 16 / 9;
-  }
-
-  .legendary-weapon .weapon-ability .placeholder-box {
-    padding: 4px;
-  }
-}
-
-/* =========================================================
-   FINAL WEAPON SHOWCASE OVERRIDE
-   ---------------------------------------------------------
-   MUST BE THE VERY LAST CSS IN style.css
-
-   DESKTOP:
-   [ narrow weapon item ][ wide rectangular video ]
-
-   MOBILE:
-   [ rectangular weapon item ]
-   [ rectangular video ]
-
-   This intentionally overrides all previous weapon rules.
-   ========================================================= */
-
-
-/* =========================================================
-   DESKTOP
-   ========================================================= */
-
-.primordial-weapon,
-.legendary-weapon {
-  display: grid !important;
-
-  /* Narrow item column + ALL remaining space for video */
-  grid-template-columns: 240px minmax(0, 1fr) !important;
-
-  gap: 16px !important;
-
-  width: 100% !important;
-  max-width: 100% !important;
-
-  margin: 25px 0 !important;
-
-  box-sizing: border-box !important;
-}
-
-
-/* ---------------------------------------------------------
-   WEAPON ITEM
-   --------------------------------------------------------- */
-
-.primordial-weapon-display,
-.legendary-weapon .weapon-display {
-  width: 100% !important;
-  min-width: 0 !important;
-
-  min-height: 0 !important;
-  height: 100% !important;
-
-  aspect-ratio: 1 / 1 !important;
-
-  box-sizing: border-box !important;
-
-  padding: 18px 12px !important;
-
-  display: flex !important;
-  flex-direction: column !important;
-
-  align-items: center !important;
-  justify-content: center !important;
-
-  text-align: center !important;
-
-  overflow: hidden !important;
-}
-
-
-/* ---------------------------------------------------------
-   WEAPON ICONS
-   --------------------------------------------------------- */
-
-.primordial-weapon-icon {
-  width: 170px !important;
-  height: 170px !important;
-
-  max-width: 100% !important;
-  max-height: 100% !important;
-
-  display: flex !important;
-  align-items: center !important;
-  justify-content: center !important;
-}
-
-.primordial-weapon-icon img {
-  width: 156px !important;
-  height: 156px !important;
-
-  max-width: 100% !important;
-  max-height: 100% !important;
-
-  object-fit: contain !important;
-}
-
-.legendary-weapon .weapon-texture img {
-  width: 145px !important;
-  height: 145px !important;
-
-  max-width: 100% !important;
-  max-height: 100% !important;
-
-  object-fit: contain !important;
-}
-
-
-/* =========================================================
-   VIDEO / ABILITY SIDE
-   ========================================================= */
-
-.primordial-abilities {
-  min-width: 0 !important;
-  width: 100% !important;
-
-  display: grid !important;
-
-  /*
-     One large video/card per row.
-     This gives the demonstration the entire
-     remaining width.
-  */
-  grid-template-columns: minmax(0, 1fr) !important;
-
-  gap: 14px !important;
-
-  box-sizing: border-box !important;
-}
-
-
-/* Legendary has a single video/ability column */
-
-.legendary-weapon .weapon-ability {
-  min-width: 0 !important;
-  width: 100% !important;
-
-  box-sizing: border-box !important;
-}
-
-
-/* ---------------------------------------------------------
-   ABILITY CARDS
-   --------------------------------------------------------- */
-
-.primordial-ability,
-.legendary-weapon .weapon-ability {
-  min-width: 0 !important;
-  width: 100% !important;
-
-  box-sizing: border-box !important;
-
-  padding: 10px !important;
-
-  text-align: center !important;
-
-  overflow: hidden !important;
-}
-
-
-/* =========================================================
-   VIDEOS
-   ========================================================= */
-
-/*
-   The actual demonstration is always a clean 16:9
-   rectangle and consumes the complete right column.
-*/
-
-.primordial-ability img,
-.primordial-ability video,
-.legendary-weapon .weapon-ability img,
-.legendary-weapon .weapon-ability video {
-  display: block !important;
-
-  width: 100% !important;
-  max-width: 100% !important;
-
-  height: auto !important;
-  max-height: none !important;
-
-  aspect-ratio: 16 / 9 !important;
-
-  object-fit: contain !important;
-
-  box-sizing: border-box !important;
-
-  border-radius: 7px !important;
-}
-
-
-/*
-   Legendary videos inside placeholder-box.
-   Override the generic 300px weapon placeholder.
-*/
-
-.primordial-ability .placeholder-box,
-.legendary-weapon .weapon-ability .placeholder-box {
-  width: 100% !important;
-
-  height: auto !important;
-  min-height: 0 !important;
-
-  aspect-ratio: 16 / 9 !important;
-
-  padding: 8px !important;
-  margin: 0 !important;
-
-  box-sizing: border-box !important;
-
-  display: flex !important;
-  align-items: center !important;
-  justify-content: center !important;
-
-  overflow: hidden !important;
-}
-
-.primordial-ability .placeholder-box video,
-.legendary-weapon .weapon-ability .placeholder-box video {
-  width: 100% !important;
-  height: 100% !important;
-
-  max-width: 100% !important;
-  max-height: 100% !important;
-
-  aspect-ratio: auto !important;
-
-  object-fit: contain !important;
-}
-
-
-/* =========================================================
-   MOBILE
-   ========================================================= */
-
-@media (max-width: 800px) {
-
-  /*
-     STACK EVERYTHING.
-
-     Weapon item:
-       full width
-       rectangular
-
-     Video:
-       full width
-       rectangular
-  */
-
-  .primordial-weapon,
-  .legendary-weapon {
-    display: grid !important;
-
-    grid-template-columns: minmax(0, 1fr) !important;
-
-    gap: 12px !important;
-
-    width: 100% !important;
-    max-width: 100% !important;
-
-    margin: 22px 0 !important;
-  }
-
-
-  /* -------------------------------------------------------
-     MOBILE WEAPON ITEM
-     ------------------------------------------------------- */
-
-  .primordial-weapon-display,
-  .legendary-weapon .weapon-display {
-    width: 100% !important;
-    min-width: 0 !important;
-
-    /*
-       Rectangular rather than the previous tall/square box.
-    */
-    height: auto !important;
-    min-height: 0 !important;
-
-    aspect-ratio: 16 / 9 !important;
-
-    padding: 12px !important;
-
-    box-sizing: border-box !important;
-
-    display: flex !important;
-    flex-direction: column !important;
-
-    align-items: center !important;
-    justify-content: center !important;
-
-    overflow: hidden !important;
-  }
-
-
-  /* -------------------------------------------------------
-     MOBILE ICONS
-     ------------------------------------------------------- */
-
-  .primordial-weapon-icon {
-    width: 120px !important;
-    height: 120px !important;
-
-    max-width: 45% !important;
-    max-height: 70% !important;
-  }
-
-  .primordial-weapon-icon img {
-    width: 110px !important;
-    height: 110px !important;
-
-    max-width: 100% !important;
-    max-height: 100% !important;
-  }
-
-  .legendary-weapon .weapon-texture img {
-    width: 105px !important;
-    height: 105px !important;
-
-    max-width: 100% !important;
-    max-height: 100% !important;
-  }
-
-
-  /* -------------------------------------------------------
-     MOBILE VIDEO
-     ------------------------------------------------------- */
-
-  .primordial-abilities {
-    width: 100% !important;
-
-    grid-template-columns: minmax(0, 1fr) !important;
-
-    gap: 12px !important;
-  }
-
-  .primordial-ability,
-  .legendary-weapon .weapon-ability {
-    width: 100% !important;
-    min-width: 0 !important;
-
-    padding: 7px !important;
-
-    box-sizing: border-box !important;
-  }
-
-
-  .primordial-ability img,
-  .primordial-ability video,
-  .legendary-weapon .weapon-ability img,
-  .legendary-weapon .weapon-ability video {
-    width: 100% !important;
-
-    height: auto !important;
-
-    aspect-ratio: 16 / 9 !important;
-
-    object-fit: contain !important;
-  }
-
-
-  .primordial-ability .placeholder-box,
-  .legendary-weapon .weapon-ability .placeholder-box {
-    width: 100% !important;
-
-    height: auto !important;
-    min-height: 0 !important;
-
-    aspect-ratio: 16 / 9 !important;
-
-    padding: 5px !important;
-
-    box-sizing: border-box !important;
-  }
-}
-
-
-/* =========================================================
-   VERY SMALL PHONES
-   ========================================================= */
-
-@media (max-width: 480px) {
-
-  .primordial-weapon,
-  .legendary-weapon {
-    gap: 10px !important;
-  }
-
-
-  /* Rectangular item remains full width */
-
-  .primordial-weapon-display,
-  .legendary-weapon .weapon-display {
-    aspect-ratio: 16 / 9 !important;
-
-    padding: 8px !important;
-  }
-
-
-  /* Smaller icons */
-
-  .primordial-weapon-icon {
-    width: 95px !important;
-    height: 95px !important;
-  }
-
-  .primordial-weapon-icon img {
-    width: 88px !important;
-    height: 88px !important;
-  }
-
-  .legendary-weapon .weapon-texture img {
-    width: 84px !important;
-    height: 84px !important;
-  }
-
-
-  /* Video card */
-
-  .primordial-ability,
-  .legendary-weapon .weapon-ability {
-    padding: 5px !important;
-  }
-
-
-  .primordial-ability .placeholder-box,
-  .legendary-weapon .weapon-ability .placeholder-box {
-    padding: 4px !important;
-
-    aspect-ratio: 16 / 9 !important;
-  }
-}
-
-/* =========================================================
-   DESKTOP
-   ========================================================= */
-
-.primordial-weapon {
-  display: grid !important;
-
-  /* Same left/right proportions as Legendary Weapons */
-  grid-template-columns: 240px minmax(0, 1fr) !important;
-
-  gap: 16px !important;
-
-  width: 100% !important;
-  max-width: 100% !important;
-
-  margin: 25px 0 !important;
-
-  box-sizing: border-box !important;
-}
-
-
-/* ---------------------------------------------------------
-   LEFT — ELEMENTAL WEAPON
-   --------------------------------------------------------- */
-
-.primordial-weapon-display {
-  width: 100% !important;
-  min-width: 0 !important;
-
-  min-height: 0 !important;
-  height: 100% !important;
-
-  /*
-     Vertical rectangular weapon panel.
-     Change this to e.g. 3 / 4 if you want it taller.
-  */
-  aspect-ratio: 3 / 4 !important;
-
-  box-sizing: border-box !important;
-
-  padding: 18px 12px !important;
-
-  display: flex !important;
-  flex-direction: column !important;
-
-  align-items: center !important;
-  justify-content: center !important;
-
-  text-align: center !important;
-
-  overflow: hidden !important;
-
-  background:
-    radial-gradient(
-      circle at center,
-      rgba(120, 169, 214, 0.10),
-      transparent 65%
-    ),
-    var(--panel-dark);
-
-  border: 1px solid var(--line);
-  border-radius: 12px;
-
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.16);
-}
-
-/* ---------------------------------------------------------
-   WEAPON ICON
-   --------------------------------------------------------- */
-
-.primordial-weapon-icon {
-  width: 170px !important;
-  height: 170px !important;
-
-  max-width: 100% !important;
-  max-height: 60% !important;
-
-  display: flex !important;
-
-  align-items: center !important;
-  justify-content: center !important;
-}
-
-.primordial-weapon-icon img {
-  width: 156px !important;
-  height: 156px !important;
-
-  max-width: 100% !important;
-  max-height: 100% !important;
-
-  object-fit: contain !important;
-
-  image-rendering: pixelated;
-}
-
-/* ---------------------------------------------------------
-   WEAPON NAME
-   --------------------------------------------------------- */
-
-.primordial-weapon-name {
-  margin-top: 14px !important;
-
-  font-family: "Monocraft", monospace;
-  font-size: 18px;
-  font-weight: bold;
-
-  color: #ffff55;
-}
-
-/* ---------------------------------------------------------
-   RIGHT — ABILITY / VIDEO
-   --------------------------------------------------------- */
-
-.primordial-abilities {
-  min-width: 0 !important;
-  width: 100% !important;
-
-  display: grid !important;
-
-  /*
-     One large demonstration per row.
-     It gets ALL remaining horizontal space.
-  */
-  grid-template-columns: minmax(0, 1fr) !important;
-
-  gap: 14px !important;
-
-  box-sizing: border-box !important;
-}
-
-/* Ability card */
-
-.primordial-ability {
-  min-width: 0 !important;
-  width: 100% !important;
-
-  box-sizing: border-box !important;
-
-  padding: 10px !important;
-
-  text-align: center !important;
-
-  overflow: hidden !important;
-
-  background:
-    linear-gradient(
-      145deg,
-      rgba(0, 34, 85, 0.42),
-      rgba(13, 28, 48, 0.72)
-    );
-
-  border: 1px solid var(--line);
-  border-radius: 10px;
-
-  box-shadow: 0 5px 16px rgba(0, 0, 0, 0.12);
-}
-
-/* ---------------------------------------------------------
-   VIDEO
-   --------------------------------------------------------- */
-
-.primordial-ability video,
-.primordial-ability img {
-  display: block !important;
-
-  width: 100% !important;
-  max-width: 100% !important;
-
-  height: auto !important;
-  max-height: none !important;
-
-  aspect-ratio: 16 / 9 !important;
-
-  object-fit: contain !important;
-
-  box-sizing: border-box !important;
-
-  border-radius: 7px !important;
-}
-
-/* If the video is inside your placeholder box */
-
-.primordial-ability .placeholder-box {
-  width: 100% !important;
-
-  height: auto !important;
-  min-height: 0 !important;
-
-  aspect-ratio: 16 / 9 !important;
-
-  padding: 8px !important;
-  margin: 0 !important;
-
-  box-sizing: border-box !important;
-
-  display: flex !important;
-
-  align-items: center !important;
-  justify-content: center !important;
-
-  overflow: hidden !important;
-}
-
-.primordial-ability .placeholder-box video {
-  width: 100% !important;
-  height: 100% !important;
-
-  max-width: 100% !important;
-  max-height: 100% !important;
-
-  aspect-ratio: auto !important;
-
-  object-fit: contain !important;
-}
-
-/* =========================================================
-   MOBILE
-   ========================================================= */
-
-@media (max-width: 800px) {
-
-  .primordial-weapon {
-    display: grid !important;
-
-    /*
-       Stack on mobile, like the existing Legendary layout.
-    */
-    grid-template-columns: minmax(0, 1fr) !important;
-
-    gap: 12px !important;
-
-    width: 100% !important;
-    max-width: 100% !important;
-
-    margin: 22px 0 !important;
-  }
-
-  /* Weapon panel */
-
-  .primordial-weapon-display {
-    width: 100% !important;
-
-    height: auto !important;
-    min-height: 0 !important;
-
-    /*
-       On mobile, give the weapon a wider presentation.
-    */
-    aspect-ratio: 16 / 9 !important;
-
-    padding: 12px !important;
-  }
-
-  /* Smaller icon */
-
-  .primordial-weapon-icon {
-    width: 120px !important;
-    height: 120px !important;
-
-    max-width: 45% !important;
-    max-height: 70% !important;
-  }
-
-  .primordial-weapon-icon img {
-    width: 110px !important;
-    height: 110px !important;
-
-    max-width: 100% !important;
-    max-height: 100% !important;
-  }
-
-  /* Video */
-
-  .primordial-abilities {
-    width: 100% !important;
-
-    grid-template-columns: minmax(0, 1fr) !important;
-
-    gap: 12px !important;
-  }
-
-  .primordial-ability {
-    width: 100% !important;
-
-    padding: 7px !important;
-  }
-
-  .primordial-ability video,
-  .primordial-ability img {
-    width: 100% !important;
-
-    height: auto !important;
-
-    aspect-ratio: 16 / 9 !important;
-
-    object-fit: contain !important;
-  }
-
-  .primordial-ability .placeholder-box {
-    width: 100% !important;
-
-    height: auto !important;
-    min-height: 0 !important;
-
-    aspect-ratio: 16 / 9 !important;
-
-    padding: 5px !important;
-  }
-}
-
-/* =========================================================
-   VERY SMALL PHONES
-   ========================================================= */
-
-@media (max-width: 480px) {
-
-  .primordial-weapon {
-    gap: 10px !important;
-  }
-
-  .primordial-weapon-display {
-    aspect-ratio: 16 / 9 !important;
-
-    padding: 8px !important;
-  }
-
-  .primordial-weapon-icon {
-    width: 95px !important;
-    height: 95px !important;
-  }
-
-  .primordial-weapon-icon img {
-    width: 88px !important;
-    height: 88px !important;
-  }
-
-  .primordial-ability {
-    padding: 5px !important;
-  }
-
-  .primordial-ability .placeholder-box {
-    padding: 4px !important;
-
-    aspect-ratio: 16 / 9 !important;
-  }
-}
-
-/* =========================================================
-   ELEMENTAL WEAPONS — FULL-WIDTH ROW
-   ========================================================= */
-
-/* Break the elemental weapon out of the 2-column
-   weapon-media-grid and give it the whole available width. */
-
-.weapon-media-grid > .primordial-weapon {
-  grid-column: 1 / -1 !important;
-
-  display: grid !important;
-  grid-template-columns: 240px minmax(0, 1fr) !important;
-
-  width: 100% !important;
-  max-width: 100% !important;
-
-  gap: 16px !important;
-  margin: 25px 0 !important;
-}
-
-
-/* Left weapon panel */
-
-.weapon-media-grid > .primordial-weapon > .primordial-weapon-display {
-  width: 240px !important;
-  min-width: 240px !important;
-
-  aspect-ratio: 3 / 4 !important;
-  height: auto !important;
-}
-
-
-/* Right side */
-
-.weapon-media-grid > .primordial-weapon > .primordial-abilities {
-  min-width: 0 !important;
-  width: 100% !important;
-
-  display: grid !important;
-  grid-template-columns: minmax(0, 1fr) !important;
-}
-
-
-/* Video */
-
-.weapon-media-grid > .primordial-weapon
-.primordial-ability img,
-.weapon-media-grid > .primordial-weapon
-.primordial-ability video {
-  width: 100% !important;
-  aspect-ratio: 16 / 9 !important;
-  height: auto !important;
-  object-fit: contain !important;
-}
-
-
-/* =========================================================
-   MOBILE
-   ========================================================= */
-
-@media (max-width: 800px) {
-
-  .weapon-media-grid > .primordial-weapon {
-    grid-column: 1 / -1 !important;
-
-    grid-template-columns: 1fr !important;
-
-    gap: 12px !important;
-  }
-
-  .weapon-media-grid > .primordial-weapon
-  > .primordial-weapon-display {
-    width: 100% !important;
-    min-width: 0 !important;
-
-    aspect-ratio: 16 / 9 !important;
-  }
+  .docs-layout { padding-left: 11px; padding-right: 11px; }
+  .docs-main h2 { font-size: 21px; }
+  .notice { margin: 22px 0; padding: 11px 12px; font-size: 12px; }
+  .notice img { max-height: 145px; }
+  .recipe { width: 100%; max-width: 372px; height: 186px; }
+  .recipe span { font-size: 11px; }
+  .recipe-title-separator { margin: 5px 0; }
+  .item-showcase { padding: 11px; }
+  .item-showcase-image { min-height: 120px; }
+  .item-showcase-image img { width: 88px; height: 88px; }
+  .item-showcase-image::after { font-size: 12px; }
+  .item-showcase-section { padding: 9px 10px; font-size: 12px; }
+  .content th, .content td, .docs-main th, .docs-main td { padding: 7px 8px; font-size: 11px; }
+  .content th, .docs-main th { font-size: 10px; }
+  .entity-showcase-image { min-height: 270px; padding: 20px; }
+  .entity-showcase-image img { width: 160px; height: 160px; }
+  .entity-header { flex-direction: column; }
+  .entity-health { width: 100%; }
+  .entity-showcase-info { padding: 16px; }
+  .entity-header-title h3 { font-size: 24px; }
+  .entity-bottom-row { gap: 7px; }
+  .entity-drops { padding: 9px; }
+  .entity-drops-list { gap: 6px; }
+  .entity-drop { width: 54px; min-height: 66px; }
+  .entity-drop img { width: 34px; height: 34px; }
+  .entity-spawn { width: 82px; padding: 8px; }
+  .weapon-media-grid .placeholder-box { min-height: 0; aspect-ratio: 16 / 9; padding: 6px; }
+  .primordial-weapon, .legendary-weapon { gap: 10px !important; }
+  .primordial-weapon-display, .legendary-weapon .weapon-display { aspect-ratio: 16 / 9 !important; padding: 8px !important; }
+  .primordial-weapon-icon { width: 95px !important; height: 95px !important; }
+  .primordial-weapon-icon img { width: 88px !important; height: 88px !important; }
+  .legendary-weapon .weapon-texture img { width: 84px !important; height: 84px !important; }
+  .primordial-weapon-name, .legendary-weapon-name { font-size: 10px; line-height: 1.2; }
+  .primordial-ability, .legendary-weapon .weapon-ability { padding: 5px !important; }
+  .primordial-ability .placeholder-box, .legendary-weapon .weapon-ability .placeholder-box { padding: 4px !important; aspect-ratio: 16 / 9 !important; }
+  .primordial-ability-name, .ability-name { font-size: 10px; }
+  .primordial-ability-description, .ability-description { font-size: 9px; }
 }
