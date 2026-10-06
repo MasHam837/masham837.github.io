@@ -3,359 +3,69 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-
-  <link rel="icon" type="image/png" href="assets/branding/mh837-logo.png">
-
   <title>MasterHamster837 — Minecraft Mods Wiki</title>
   <meta name="description" content="Documentation hub for Minecraft mods by MasterHamster837.">
-
+  
+  <link rel="icon" type="image/png" href="assets/branding/mh837-logo.png">
   <link rel="stylesheet" href="assets/style.css">
-
+  
   <style>
-    /* =========================================================
-       HUB BRANDING
-       ========================================================= */
+    /* Brand Color Classes using your exact style.css variables */
+    .brand-master { color: var(--accent) !important; }
+    .brand-hamster { color: var(--block-green) !important; }
+    .brand-837 { color: var(--warning) !important; }
 
-    /* Brand Color Classes using your existing variables */
-    .brand-master {
-      color: var(--accent) !important;
-    }
-
-    .brand-hamster {
-      color: var(--block-green) !important;
-    }
-
-    .brand-837 {
-      color: var(--warning) !important;
-    }
-
-    /* ---------------------------------------------------------
-       Playful hub hero
-       --------------------------------------------------------- */
-
-    .hub-hero {
-      position: relative;
-      display: grid;
-      grid-template-columns: minmax(0, 1fr) 230px;
-      align-items: center;
-      gap: 40px;
-    }
-
-    .hub-hero-content {
-      min-width: 0;
-    }
-
-    .hub-brand-art {
-      position: relative;
-      min-height: 220px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      pointer-events: none;
-    }
-
-    .hub-brand-logo {
-      position: absolute;
-      width: 190px;
-      height: 190px;
-      object-fit: contain;
-      opacity: 0.20;
-      filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.35));
-    }
-
-    .hub-brand-hamster {
-      position: relative;
-      z-index: 1;
-      width: 170px;
-      height: 170px;
-      object-fit: contain;
-      image-rendering: auto;
-      filter: drop-shadow(0 10px 12px rgba(0, 0, 0, 0.40));
-      transition: transform 0.25s ease;
-    }
-
-    .hub-brand-art:hover .hub-brand-hamster {
-      transform: translateY(-5px) rotate(-2deg);
-    }
-
-    .hub-brand-sprite {
-      position: absolute;
-      right: 2px;
-      bottom: 5px;
-      width: 48px;
-      height: auto;
-      image-rendering: pixelated;
-      filter: drop-shadow(2px 3px 0 rgba(0, 0, 0, 0.45));
-      transform: rotate(4deg);
-    }
-
-    /* ---------------------------------------------------------
-       Small personal note beneath the hero
-       --------------------------------------------------------- */
-
-    .hub-signature {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      margin-top: 18px;
-      color: var(--muted-dark);
-      font-size: 11px;
-      letter-spacing: 0.04em;
-    }
-
-    .hub-signature img {
-      width: 30px;
-      height: 30px;
-      object-fit: contain;
-      image-rendering: pixelated;
-    }
-
-    /* ---------------------------------------------------------
-       GILE card
-       --------------------------------------------------------- */
-
+    /* Custom Green styling for the GILE Mod Card */
     .mod-card.card-green {
-      border-color: rgba(0, 255, 85, 0.30);
-      background:
-        linear-gradient(
-          145deg,
-          rgba(0, 50, 20, 0.92),
-          rgba(0, 22, 59, 0.94)
-        );
+      border-color: rgba(0, 255, 85, 0.3);
+      background: linear-gradient(145deg, rgba(0, 50, 20, 0.92), rgba(0, 22, 59, 0.94));
     }
-
     .mod-card.card-green:hover {
       border-color: var(--block-green);
-      background:
-        linear-gradient(
-          145deg,
-          rgba(0, 70, 30, 0.96),
-          rgba(0, 22, 59, 0.96)
-        );
+      background: linear-gradient(145deg, rgba(0, 70, 30, 0.96), rgba(0, 22, 59, 0.96));
     }
-
-    .mod-card.card-green .tag {
-      color: var(--block-green);
-    }
-
-    .mod-card.card-green .arrow {
-      color: var(--block-green);
-    }
-
+    .mod-card.card-green .tag { color: var(--block-green); }
+    .mod-card.card-green .arrow { color: var(--block-green); }
     .mod-card.card-green .card-icon {
       color: var(--block-green);
       background: var(--block-green-bg);
-      border-color: rgba(0, 255, 85, 0.30);
-    }
-
-    /* ---------------------------------------------------------
-       Hub footer branding
-       --------------------------------------------------------- */
-
-    .hub-footer {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 20px;
-    }
-
-    .hub-footer-brand {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-    }
-
-    .hub-footer-brand img {
-      width: 28px;
-      height: 28px;
-      object-fit: contain;
-      image-rendering: pixelated;
-    }
-
-    /* ---------------------------------------------------------
-       Mobile
-       --------------------------------------------------------- */
-
-    @media (max-width: 800px) {
-      .hub-hero {
-        grid-template-columns: 1fr;
-        gap: 12px;
-      }
-
-      .hub-brand-art {
-        min-height: 155px;
-        margin-top: 8px;
-      }
-
-      .hub-brand-logo {
-        width: 145px;
-        height: 145px;
-      }
-
-      .hub-brand-hamster {
-        width: 135px;
-        height: 135px;
-      }
-
-      .hub-brand-sprite {
-        right: 18%;
-        bottom: 0;
-        width: 38px;
-      }
-
-      .hub-signature {
-        margin-top: 14px;
-      }
-
-      .hub-footer {
-        align-items: flex-start;
-        flex-direction: column;
-        gap: 8px;
-      }
-    }
-
-    @media (max-width: 480px) {
-      .hub-brand-art {
-        min-height: 135px;
-      }
-
-      .hub-brand-logo {
-        width: 125px;
-        height: 125px;
-      }
-
-      .hub-brand-hamster {
-        width: 115px;
-        height: 115px;
-      }
-
-      .hub-brand-sprite {
-        right: 16%;
-        width: 34px;
-      }
-
-      .hub-signature {
-        font-size: 10px;
-      }
+      border-color: rgba(0, 255, 85, 0.3);
     }
   </style>
 </head>
-
 <body class="hub">
-
   <header class="topbar">
-    <a class="brand" href="./">
-      MasterHamster837 <span>WIKI</span>
-    </a>
-
+    <a class="brand" href="./">MasterHamster837 <span>WIKI</span></a>
     <nav>
-      <a
-        href="https://www.curseforge.com/members/masterhamster837/projects"
-        target="_blank"
-        rel="noreferrer"
-        style="color: #f36c21;"
-      >
-        CurseForge ↗
-      </a>
-
-      <a
-        href="https://modrinth.com/user/masterhamster837"
-        target="_blank"
-        rel="noreferrer"
-        style="color: #5cff4a;"
-      >
-        Modrinth ↗
-      </a>
-
-      <a
-        href="https://github.com/MasHam837/minecraft-mods-source-codes"
-        target="_blank"
-        rel="noreferrer"
-        style="color: #f0f6fc;"
-      >
-        Source ↗
-      </a>
+      <a href="https://www.curseforge.com/members/masterhamster837/projects" target="_blank" rel="noreferrer" style="color: #f36c21;">CurseForge ↗</a>
+      <a href="https://modrinth.com/user/masterhamster837" target="_blank" rel="noreferrer" style="color: #5cff4a;">Modrinth ↗</a>
+      <a href="https://github.com/MasHam837/minecraft-mods-source-codes" target="_blank" rel="noreferrer" style="color: #f0f6fc;">Source ↗</a>
     </nav>
   </header>
 
-
   <main class="hero-wrap">
-
-    <section class="hero hub-hero">
-
-      <div class="hub-hero-content">
-        <p class="eyebrow">MINECRAFT MODS • DOCUMENTATION</p>
-
-        <h1>
-          Mods by
-          <span class="brand-master">Master</span><span class="brand-hamster">Hamster</span><span class="brand-837">837</span>
-        </h1>
-
-        <p class="lead">
-          A central wiki for my Minecraft projects, their mechanics,
-          content, recipes and installation guides.
-        </p>
-
-        <div class="hub-signature">
-          <img
-            src="assets/branding/skin_sprite/head-only.png"
-            alt=""
-            aria-hidden="true"
-          >
-          <span>Made by a hamster who probably should be sleeping.</span>
-        </div>
-      </div>
-
-
-      <div class="hub-brand-art" aria-hidden="true">
-
-        <img
-          class="hub-brand-logo"
-          src="assets/branding/mh837-logo.png"
-          alt=""
-        >
-
-        <img
-          class="hub-brand-hamster"
-          src="assets/branding/mh837-logo.hamster.png"
-          alt=""
-        >
-
-        <img
-          class="hub-brand-sprite"
-          src="assets/branding/skin_sprite/standing.png"
-          alt=""
-        >
-
-      </div>
-
+    <section class="hero">
+      <p class="eyebrow">MINECRAFT MODS • DOCUMENTATION</p>
+      <h1>Mods by <span class="brand-master">Master</span><span class="brand-hamster">Hamster</span><span class="brand-837">837</span></h1>
+      <p class="lead">A central wiki for my Minecraft projects, their mechanics, content, recipes and installation guides.</p>
     </section>
 
-
     <section class="mod-grid" aria-label="Mods">
-
+      <!-- Added 'card-green' class alongside 'featured' -->
       <a class="mod-card featured card-green" href="GILE/">
-
         <div class="card-top">
-
           <div class="card-icon">
             <img src="GILE/icon.png" alt="GILE icon">
           </div>
-
           <div class="card-title">
             <div class="tag">LATEST PROJECT</div>
             <h2>GILE</h2>
           </div>
-
         </div>
-
         <div class="card-body">
-
           <p>
-            Genshin Impact Lunar Expansion — Hoyoverse-inspired content,
-            new End biomes, weapons, entities, materials and custom mechanics.
+            Genshin Impact Lunar Expansion — Hoyoverse-inspired content, new End biomes, weapons, entities, materials and custom mechanics.
           </p>
-
           <div class="meta">
             <span>Fabric</span>
             <span>Minecraft 1.21.1</span>
@@ -363,55 +73,21 @@
             <span>Minecraft 26.1</span>
             <span>Release</span>
           </div>
-
         </div>
-
         <div class="arrow">→</div>
-
       </a>
 
-
       <div class="mod-card placeholder">
-
         <div class="card-icon">＋</div>
-
         <div class="card-body">
-
           <div class="tag">COMING SOON</div>
-
           <h2>More mods</h2>
-
-          <p>
-            This space is reserved for future projects by MasterHamster837.
-          </p>
-
+          <p>This space is reserved for future projects by MasterHamster837.</p>
         </div>
-
       </div>
-
     </section>
-
   </main>
 
-
-  <footer>
-
-    <div class="hub-footer">
-
-      <div class="hub-footer-brand">
-        <img
-          src="assets/branding/skin_sprite/one-up.png"
-          alt=""
-          aria-hidden="true"
-        >
-        <span>© 2026 MasterHamster837 · Built for GitHub Pages</span>
-      </div>
-
-      <span>More worlds are probably being broken somewhere.</span>
-
-    </div>
-
-  </footer>
-
+  <footer>© 2026 MasterHamster837 · Built for GitHub Pages</footer>
 </body>
 </html>
