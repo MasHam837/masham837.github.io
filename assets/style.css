@@ -3252,3 +3252,82 @@ tr:hover td { background: var(--block-green-hover); }
     aspect-ratio: 16 / 9 !important;
   }
 }
+
+/* =========================================================
+   ELEMENTAL WEAPONS — FULL-WIDTH ROW
+   ========================================================= */
+
+/* Break the elemental weapon out of the 2-column
+   weapon-media-grid and give it the whole available width. */
+
+.weapon-media-grid > .primordial-weapon {
+  grid-column: 1 / -1 !important;
+
+  display: grid !important;
+  grid-template-columns: 240px minmax(0, 1fr) !important;
+
+  width: 100% !important;
+  max-width: 100% !important;
+
+  gap: 16px !important;
+  margin: 25px 0 !important;
+}
+
+
+/* Left weapon panel */
+
+.weapon-media-grid > .primordial-weapon > .primordial-weapon-display {
+  width: 240px !important;
+  min-width: 240px !important;
+
+  aspect-ratio: 3 / 4 !important;
+  height: auto !important;
+}
+
+
+/* Right side */
+
+.weapon-media-grid > .primordial-weapon > .primordial-abilities {
+  min-width: 0 !important;
+  width: 100% !important;
+
+  display: grid !important;
+  grid-template-columns: minmax(0, 1fr) !important;
+}
+
+
+/* Video */
+
+.weapon-media-grid > .primordial-weapon
+.primordial-ability img,
+.weapon-media-grid > .primordial-weapon
+.primordial-ability video {
+  width: 100% !important;
+  aspect-ratio: 16 / 9 !important;
+  height: auto !important;
+  object-fit: contain !important;
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 800px) {
+
+  .weapon-media-grid > .primordial-weapon {
+    grid-column: 1 / -1 !important;
+
+    grid-template-columns: 1fr !important;
+
+    gap: 12px !important;
+  }
+
+  .weapon-media-grid > .primordial-weapon
+  > .primordial-weapon-display {
+    width: 100% !important;
+    min-width: 0 !important;
+
+    aspect-ratio: 16 / 9 !important;
+  }
+}
