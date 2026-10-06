@@ -92,8 +92,8 @@ footer a:hover { color: var(--accent-2); }
 .button-row { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 24px; }
 .button { display: inline-block; padding: 9px 14px; border: 1px solid var(--line); border-radius: 8px; color: var(--muted); background: rgba(0, 34, 85, 0.35); transition: color 0.2s ease, background 0.2s ease, border-color 0.2s ease, transform 0.2s ease; }
 .button:hover { color: var(--text); border-color: var(--line-hover); background: var(--panel-2); transform: translateY(-1px); }
-.button.primary { background: var(--block-green); border-color: var(--block-green); color: #001233; font-weight: 800; }
-.button.primary:hover { background: #1a5632; border-color: #a6d8b8; color: #001233; }
+.button.primary { background: #4f9b68; border-color: #4f9b68; color: #e8edf2; font-weight: 800; }
+.button.primary:hover { background: #63b77d; border-color: #63b77d; color: #ffffff; }
 
 /* Lists, Code & Tables */
 .feature-list { padding-left: 20px; color: var(--text); }
