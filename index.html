@@ -76,6 +76,57 @@
   opacity: 0.9;
 }
 
+  /* Mobile Mod Card */
+  @media (max-width: 700px) {
+    .mod-card {
+      width: 100%;
+      max-width: 100%;
+      box-sizing: border-box;
+    }
+
+    .mod-card.featured {
+      width: 100%;
+      max-width: 100%;
+      box-sizing: border-box;
+    }
+
+    .card-top {
+      min-width: 0;
+      max-width: 100%;
+      padding-right: 0;
+    }
+
+    .card-body {
+      min-width: 0;
+      max-width: 100%;
+    }
+
+    .card-title {
+      min-width: 0;
+      max-width: 100%;
+      flex: 1 1 auto;
+    }
+
+    .card-title .gile-title {
+      font-size: clamp(1.45rem, 8vw, 2.2rem);
+      white-space: normal;
+      overflow-wrap: anywhere;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .card-title .gile-title {
+      font-size: clamp(1.35rem, 7vw, 2rem);
+    }
+
+    .mod-card {
+      width: 100%;
+      max-width: 100%;
+      margin-left: 0;
+      margin-right: 0;
+    }
+  }
+
   </style>
 </head>
 <body class="hub">
