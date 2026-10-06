@@ -5,6 +5,8 @@ document.addEventListener("DOMContentLoaded", () => {
     if (!toggle || !sidebar) return;
 
     toggle.addEventListener("click", (event) => {
+        if (window.innerWidth > 800) return;
+
         event.preventDefault();
 
         const isOpen = sidebar.classList.toggle("is-open");
