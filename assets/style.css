@@ -188,6 +188,9 @@ tr:hover td { background: var(--block-green-hover); }
 .weapon-media-grid .primordial-ability { width: 100% !important; box-sizing: border-box !important; }
 .weapon-media-grid .primordial-ability img, .weapon-media-grid .primordial-ability video { width: 100% !important; aspect-ratio: 16 / 9 !important; height: auto !important; object-fit: contain !important; }
 
+/* Pack Logo */
+.pack-logo { width: 36px; height: 36px; object-fit: contain; image-rendering: pixelated; }
+
 /* Utilities & Scrollbar */
 .text-accent { color: var(--accent); }
 .text-cyan { color: var(--accent-2); }
