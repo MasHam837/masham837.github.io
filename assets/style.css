@@ -160,41 +160,23 @@ tr:hover td { background: var(--block-green-hover); }
 .entity-label { display: inline-block; padding: 3px 7px; border: 1px solid var(--line); border-radius: 999px; color: var(--muted); font-size: 9px; font-weight: 800; letter-spacing: 0.1em; text-transform: uppercase; }
 
 /* Weapons & Media */
-.weapon-media-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px; }
-.weapon-media-grid .placeholder-box { height: 300px; display: flex; align-items: center; justify-content: center; padding: 12px; margin: 0 !important; box-sizing: border-box; }
-.weapon-media-grid .placeholder-box video { width: 100%; height: 100%; max-width: 100%; max-height: 100%; object-fit: contain; border-radius: 8px; }
-.weapon-media-grid > .primordial-weapon { grid-column: 1 / -1 !important; display: grid !important; grid-template-columns: 240px minmax(0, 1fr) !important; width: 100% !important; max-width: 100% !important; gap: 16px !important; margin: 25px 0 !important; }
-.weapon-media-grid > .primordial-weapon > .primordial-weapon-display { width: 240px !important; min-width: 240px !important; aspect-ratio: 3 / 4 !important; height: auto !important; }
-.weapon-media-grid > .primordial-weapon > .primordial-abilities { min-width: 0 !important; width: 100% !important; display: grid !important; grid-template-columns: minmax(0, 1fr) !important; }
-.weapon-media-grid > .primordial-weapon .primordial-ability img, .weapon-media-grid > .primordial-weapon .primordial-ability video { width: 100% !important; aspect-ratio: 16 / 9 !important; height: auto !important; object-fit: contain !important; }
-.primordial-weapon, .legendary-weapon { display: grid !important; grid-template-columns: 240px minmax(0, 1fr) !important; gap: 16px !important; width: 100% !important; max-width: 100% !important; margin: 25px 0 !important; box-sizing: border-box !important; }
-.primordial-weapon-display, .legendary-weapon .weapon-display { width: 100% !important; min-width: 0 !important; min-height: 0 !important; height: 100% !important; aspect-ratio: 3 / 4 !important; box-sizing: border-box !important; padding: 18px 12px !important; display: flex !important; flex-direction: column !important; align-items: center !important; justify-content: center !important; text-align: center !important; overflow: hidden !important; background: radial-gradient(circle at center, rgba(120, 169, 214, 0.10), transparent 65%), var(--panel-dark); border: 1px solid var(--line); border-radius: 12px; box-shadow: 0 8px 20px rgba(0, 0, 0, 0.16); }
-.primordial-weapon-icon { width: 170px !important; height: 170px !important; max-width: 100% !important; max-height: 60% !important; display: flex !important; align-items: center !important; justify-content: center !important; }
-.primordial-weapon-icon img { width: 156px !important; height: 156px !important; max-width: 100% !important; max-height: 100% !important; object-fit: contain !important; image-rendering: pixelated; filter: drop-shadow(0 8px 10px rgba(0, 0, 0, 0.45)) drop-shadow(0 0 18px rgba(120, 169, 214, 0.12)); }
-.legendary-weapon .weapon-texture img { width: 145px !important; height: 145px !important; max-width: 100% !important; max-height: 100% !important; object-fit: contain !important; }
-.weapon-display { display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; min-height: 220px; }
-.weapon-texture img { width: 128px; height: 128px; image-rendering: pixelated; }
-.primordial-weapon-name { margin-top: 14px !important; font-family: "Monocraft", monospace; font-size: 18px; font-weight: bold; color: #ffff55; }
-.legendary-weapon-name { margin-top: 12px; font-family: "Monocraft", monospace; font-size: 18px; color: #ff55ff; }
-.weapon-name { margin-top: 12px; font-family: "Monocraft", monospace; font-size: 18px; color: #55ffff; }
-.pixelated-name { margin-top: 12px; font-family: "Monocraft", monospace; font-size: 18px; color: var(--text); }
-.primordial-weapon-subtitle { margin-top: 5px; color: var(--muted); font-size: 12px; font-style: italic; }
-.primordial-abilities { min-width: 0 !important; width: 100% !important; display: grid !important; grid-template-columns: minmax(0, 1fr) !important; gap: 14px !important; box-sizing: border-box !important; }
-.legendary-weapon .weapon-ability { min-width: 0 !important; width: 100% !important; box-sizing: border-box !important; }
-.primordial-ability, .legendary-weapon .weapon-ability { min-width: 0 !important; width: 100% !important; box-sizing: border-box !important; padding: 10px !important; text-align: center !important; overflow: hidden !important; background: linear-gradient(145deg, rgba(0, 34, 85, 0.42), rgba(13, 28, 48, 0.72)); border: 1px solid var(--line); border-radius: 10px; box-shadow: 0 5px 16px rgba(0, 0, 0, 0.12); }
-.primordial-ability:hover { border-color: var(--line-hover); background: linear-gradient(145deg, rgba(0, 48, 119, 0.48), rgba(13, 28, 48, 0.78)); transform: translateY(-2px); }
-.primordial-ability img, .primordial-ability video, .legendary-weapon .weapon-ability img, .legendary-weapon .weapon-ability video { display: block !important; width: 100% !important; max-width: 100% !important; height: auto !important; max-height: none !important; aspect-ratio: 16 / 9 !important; object-fit: contain !important; box-sizing: border-box !important; border-radius: 7px !important; }
-.weapon-ability { text-align: center; min-width: 0; }
-.weapon-ability img { display: block; width: 100%; border-radius: 8px; }
-.primordial-ability .placeholder-box, .legendary-weapon .weapon-ability .placeholder-box { width: 100% !important; height: auto !important; min-height: 0 !important; aspect-ratio: 16 / 9 !important; padding: 8px !important; margin: 0 !important; box-sizing: border-box !important; display: flex !important; align-items: center !important; justify-content: center !important; overflow: hidden !important; }
-.primordial-ability .placeholder-box video, .legendary-weapon .weapon-ability .placeholder-box video { width: 100% !important; height: 100% !important; max-width: 100% !important; max-height: 100% !important; aspect-ratio: auto !important; object-fit: contain !important; }
-.primordial-ability-name, .legendary-weapon .ability-name { margin-top: 8px; font-family: "Monocraft", monospace; font-size: 14px; line-height: 1.3; color: var(--accent); }
-.ability-name { margin-top: 10px; font-family: "Monocraft", monospace; font-size: 16px; color: var(--accent); }
-.primordial-ability-key { display: inline-block; margin-top: 6px; padding: 3px 8px; border: 1px solid var(--line); border-radius: 999px; background: rgba(0, 34, 85, 0.35); color: var(--muted); font-size: 10px; font-weight: 700; letter-spacing: 0.03em; }
-.primordial-ability-description, .legendary-weapon .ability-description { margin-top: 6px; color: var(--muted); font-size: 12px; line-height: 1.45; }
-.ability-description { margin-top: 5px; color: var(--muted); }
-.legendary-weapon .weapon-display { min-height: 110px; }
-.legendary-weapon .weapon-utility, .legendary-weapon .legendary-utility, .legendary-weapon .weapon-utilities, .legendary-weapon .legendary-utilities { display: none !important; }
+.weapon-media-grid { display: grid !important; grid-template-columns: 220px minmax(0, 1fr) !important; align-items: stretch !important; gap: 18px !important; width: 100% !important; margin: 25px 0 !important; box-sizing: border-box !important; }
+.weapon-media-grid > .weapon-display { width: 220px !important; min-width: 220px !important; height: 100% !important; min-height: 0 !important; aspect-ratio: auto !important; margin: 0 !important; padding: 16px 12px !important; display: flex !important; flex-direction: column !important; align-items: center !important; justify-content: center !important; text-align: center !important; box-sizing: border-box !important; overflow: hidden !important; background: radial-gradient(circle at center, rgba(120, 169, 214, 0.10), transparent 65%), var(--panel-dark) !important; border: 1px solid var(--line) !important; border-radius: 12px !important; box-shadow: 0 8px 20px rgba(0, 0, 0, 0.16) !important; }
+.weapon-media-grid > .weapon-display .weapon-texture { width: 100% !important; min-width: 0 !important; display: flex !important; align-items: center !important; justify-content: center !important; }
+.weapon-media-grid > .weapon-display .weapon-texture img { width: 156px !important; height: 156px !important; max-width: 100% !important; max-height: 100% !important; object-fit: contain !important; image-rendering: pixelated !important; }
+.weapon-media-grid > .weapon-display .weapon-name, .weapon-media-grid > .weapon-display .legendary-weapon-name, .weapon-media-grid > .weapon-display .primordial-weapon-name, .weapon-media-grid > .weapon-display .pixelated-name { display: block !important; width: 100% !important; margin: 12px 0 0 !important; font-family: "Monocraft", monospace !important; font-size: 16px !important; line-height: 1.25 !important; font-weight: normal !important; text-align: center !important; overflow-wrap: anywhere !important; }
+.weapon-media-grid > .weapon-display .weapon-name { color: #55ffff !important; }
+.weapon-media-grid > .weapon-display .legendary-weapon-name { color: #ff55ff !important; }
+.weapon-media-grid > .weapon-display .primordial-weapon-name { color: #ffff55 !important; font-weight: bold !important; }
+.weapon-media-grid > .weapon-ability { width: 100% !important; min-width: 0 !important; height: auto !important; min-height: 0 !important; margin: 0 !important; padding: 10px !important; display: flex !important; flex-direction: column !important; align-items: stretch !important; justify-content: flex-start !important; text-align: center !important; box-sizing: border-box !important; overflow: hidden !important; background: var(--block-green-bg) !important; border: 2px dashed var(--block-green) !important; border-radius: 12px !important; color: var(--text) !important; box-shadow: none !important; }
+.weapon-media-grid > .weapon-ability > video, .weapon-media-grid > .weapon-ability > img { display: block !important; width: 100% !important; max-width: 100% !important; height: auto !important; aspect-ratio: 16 / 9 !important; object-fit: contain !important; box-sizing: border-box !important; border-radius: 7px !important; }
+.weapon-media-grid > .weapon-ability > strong { display: block !important; margin-top: 10px !important; line-height: 1.3 !important; color: var(--text) !important; }
+.weapon-media-grid > .weapon-ability > span { display: inline !important; line-height: 1.3 !important; color: var(--muted) !important; }
+.weapon-media-grid > .weapon-ability > .placeholder-box { width: 100% !important; height: auto !important; min-height: 0 !important; aspect-ratio: 16 / 9 !important; margin: 0 !important; padding: 8px !important; display: flex !important; align-items: center !important; justify-content: center !important; box-sizing: border-box !important; overflow: hidden !important; background: var(--block-green-bg) !important; border: 2px dashed var(--block-green) !important; border-radius: 12px !important; }
+.weapon-media-grid > .weapon-ability > .placeholder-box video, .weapon-media-grid > .weapon-ability > .placeholder-box img { width: 100% !important; height: 100% !important; max-width: 100% !important; max-height: 100% !important; aspect-ratio: auto !important; object-fit: contain !important; }
+.weapon-media-grid .primordial-abilities { min-width: 0 !important; width: 100% !important; }
+.weapon-media-grid .primordial-ability { width: 100% !important; box-sizing: border-box !important; }
+.weapon-media-grid .primordial-ability img, .weapon-media-grid .primordial-ability video { width: 100% !important; aspect-ratio: 16 / 9 !important; height: auto !important; object-fit: contain !important; }
 
 /* Weasel Trades */
 .weasel-trades { --wt-panel: var(--panel); --wt-panel-2: var(--panel-2); --wt-dark: var(--panel-dark); --wt-line: var(--line); --wt-soft: var(--line-soft); --wt-hover: var(--line-hover); --wt-text: var(--text); --wt-muted: var(--muted); --wt-accent: var(--accent); --wt-accent-2: var(--accent-2); --wt-green: var(--block-green); --wt-green-bg: var(--block-green-bg); padding: 4px 0; color: var(--wt-text); line-height: 1.55; }
@@ -307,19 +289,27 @@ tr:hover td { background: var(--block-green-hover); }
   .entity-spawn-box img { width: 50px; height: 50px; }
   .entity-info-box { padding: 11px 12px; font-size: 13px; line-height: 1.5; }
   .entity-info-box strong { margin-bottom: 5px; }
-  .primordial-weapon, .legendary-weapon, .weapon-media-grid > .primordial-weapon { grid-template-columns: minmax(0, 1fr) !important; gap: 12px !important; margin: 22px 0 !important; }
-  .primordial-weapon-display, .legendary-weapon .weapon-display, .weapon-media-grid > .primordial-weapon > .primordial-weapon-display { width: 100% !important; min-width: 0 !important; height: auto !important; min-height: 0 !important; aspect-ratio: 16 / 9 !important; padding: 12px !important; }
-  .primordial-weapon-icon { width: 120px !important; height: 120px !important; max-width: 45% !important; max-height: 70% !important; }
-  .primordial-weapon-icon img { width: 110px !important; height: 110px !important; max-width: 100% !important; max-height: 100% !important; }
-  .legendary-weapon .weapon-texture img { width: 105px !important; height: 105px !important; max-width: 100% !important; max-height: 100% !important; }
-  .primordial-abilities, .weapon-media-grid > .primordial-weapon > .primordial-abilities { width: 100% !important; grid-template-columns: minmax(0, 1fr) !important; gap: 12px !important; }
-  .primordial-ability, .legendary-weapon .weapon-ability { width: 100% !important; min-width: 0 !important; padding: 7px !important; }
-  .primordial-ability img, .primordial-ability video, .legendary-weapon .weapon-ability img, .legendary-weapon .weapon-ability video, .weapon-media-grid > .primordial-weapon .primordial-ability img, .weapon-media-grid > .primordial-weapon .primordial-ability video { width: 100% !important; height: auto !important; aspect-ratio: 16 / 9 !important; object-fit: contain !important; }
-  .primordial-ability .placeholder-box, .legendary-weapon .weapon-ability .placeholder-box { width: 100% !important; height: auto !important; min-height: 0 !important; aspect-ratio: 16 / 9 !important; padding: 5px !important; }
-  .primordial-ability-name, .ability-name { margin-top: 8px; font-size: 13px; line-height: 1.3; }
-  .primordial-ability-key { margin-top: 5px; padding: 2px 7px; font-size: 9px; }
-  .primordial-ability-description, .ability-description { margin-top: 6px; font-size: 12px; line-height: 1.45; }
-  .weapon-ability img { width: 100%; max-width: 100%; height: auto; }
+
+  /* Weapon media — mobile */
+  .weapon-media-grid { grid-template-columns: 1fr !important; align-items: start !important; gap: 12px !important; margin: 22px 0 !important; }
+  .weapon-media-grid > .weapon-display { width: 100% !important; min-width: 0 !important; height: 190px !important; min-height: 190px !important; aspect-ratio: auto !important; padding: 12px 10px !important; }
+  .weapon-media-grid > .weapon-display .weapon-texture img { width: 125px !important; height: 125px !important; }
+  .weapon-media-grid > .weapon-display .weapon-name, .weapon-media-grid > .weapon-display .legendary-weapon-name, .weapon-media-grid > .weapon-display .primordial-weapon-name, .weapon-media-grid > .weapon-display .pixelated-name { font-size: 14px !important; margin-top: 8px !important; }
+  .weapon-media-grid > .weapon-ability { width: 100% !important; min-width: 0 !important; padding: 7px !important; }
+  .weapon-media-grid > .weapon-ability > video, .weapon-media-grid > .weapon-ability > img { aspect-ratio: 16 / 9 !important; }
+  .weapon-media-grid > .weapon-ability > strong { margin-top: 8px !important; font-size: 13px !important; }
+
+  .primordial-weapon, .legendary-weapon { grid-template-columns: minmax(0, 1fr) !important; gap: 10px !important; }
+  .primordial-weapon-display, .legendary-weapon .weapon-display { width: 100% !important; min-width: 0 !important; height: auto !important; min-height: 0 !important; aspect-ratio: 16 / 9 !important; padding: 8px !important; }
+  .primordial-weapon-icon { width: 95px !important; height: 95px !important; }
+  .primordial-weapon-icon img { width: 88px !important; height: 88px !important; }
+  .legendary-weapon .weapon-texture img { width: 84px !important; height: 84px !important; }
+  .primordial-weapon-name, .legendary-weapon-name { font-size: 10px !important; line-height: 1.2 !important; }
+  .primordial-ability, .legendary-weapon .weapon-ability { padding: 5px !important; }
+  .primordial-ability .placeholder-box, .legendary-weapon .weapon-ability .placeholder-box { padding: 4px !important; aspect-ratio: 16 / 9 !important; }
+  .primordial-ability-name, .ability-name { font-size: 10px; }
+  .primordial-ability-description, .ability-description { font-size: 9px; }
+
   .primordial-weapon-name { margin-top: 10px; font-size: 16px; }
   .primordial-weapon-subtitle { font-size: 11px; }
   .button-row { gap: 8px; margin-top: 16px; }
@@ -337,8 +327,8 @@ tr:hover td { background: var(--block-green-hover); }
 }
 
 @media (max-width: 600px) {
-  .weapon-media-grid { grid-template-columns: 1fr; }
-  .weapon-media-grid .placeholder-box { height: auto; min-height: 220px; aspect-ratio: 16 / 9; padding: 8px; }
+  .weapon-media-grid { grid-template-columns: 1fr !important; }
+  .weapon-media-grid .placeholder-box { height: auto; min-height: 0; aspect-ratio: 16 / 9; padding: 6px; }
   .weapon-media-grid .placeholder-box video { width: 100%; height: 100%; object-fit: contain; }
 }
 
@@ -382,289 +372,14 @@ tr:hover td { background: var(--block-green-hover); }
   .entity-drop { width: 54px; min-height: 66px; }
   .entity-drop img { width: 34px; height: 34px; }
   .entity-spawn { width: 82px; padding: 8px; }
-  .weapon-media-grid .placeholder-box { min-height: 0; aspect-ratio: 16 / 9; padding: 6px; }
-  .primordial-weapon, .legendary-weapon { gap: 10px !important; }
-  .primordial-weapon-display, .legendary-weapon .weapon-display { aspect-ratio: 16 / 9 !important; padding: 8px !important; }
-  .primordial-weapon-icon { width: 95px !important; height: 95px !important; }
-  .primordial-weapon-icon img { width: 88px !important; height: 88px !important; }
-  .legendary-weapon .weapon-texture img { width: 84px !important; height: 84px !important; }
-  .primordial-weapon-name, .legendary-weapon-name { font-size: 10px; line-height: 1.2; }
-  .primordial-ability, .legendary-weapon .weapon-ability { padding: 5px !important; }
-  .primordial-ability .placeholder-box, .legendary-weapon .weapon-ability .placeholder-box { padding: 4px !important; aspect-ratio: 16 / 9 !important; }
-  .primordial-ability-name, .ability-name { font-size: 10px; }
-  .primordial-ability-description, .ability-description { font-size: 9px; }
-}
 
+  /* Weapon media — compact phone */
+  .weapon-media-grid { gap: 10px !important; }
+  .weapon-media-grid > .weapon-display { height: 160px !important; min-height: 160px !important; padding: 8px 7px !important; }
+  .weapon-media-grid > .weapon-display .weapon-texture img { width: 105px !important; height: 105px !important; }
+  .weapon-media-grid > .weapon-display .weapon-name, .weapon-media-grid > .weapon-display .legendary-weapon-name, .weapon-media-grid > .weapon-display .primordial-weapon-name, .weapon-media-grid > .weapon-display .pixelated-name { font-size: 11px !important; line-height: 1.2 !important; margin-top: 6px !important; }
+  .weapon-media-grid > .weapon-ability { padding: 5px !important; }
+  .weapon-media-grid > .weapon-ability > strong, .weapon-media-grid > .weapon-ability > span { font-size: 10px !important; line-height: 1.25 !important; }
 
-/* ============================================================
-   WEAPON MEDIA — UNIFIED LAYOUT
-   All elemental and legendary weapons use the same presentation:
-   left = item card + name
-   right = placeholder-style ability video + name
-   ============================================================ */
-
-.weapon-media-grid {
-  display: grid !important;
-  grid-template-columns: 220px minmax(0, 1fr) !important;
-  align-items: stretch !important;
-  gap: 18px !important;
-  width: 100% !important;
-  margin: 25px 0 !important;
-  box-sizing: border-box !important;
-}
-
-/* Desktop: the item card fills exactly the same row height as the
-   ability card, so the two boxes line up perfectly. */
-.weapon-media-grid > .weapon-display {
-  width: 220px !important;
-  min-width: 220px !important;
-  height: 100% !important;
-  min-height: 0 !important;
-  aspect-ratio: auto !important;
-  margin: 0 !important;
-  padding: 16px 12px !important;
-  display: flex !important;
-  flex-direction: column !important;
-  align-items: center !important;
-  justify-content: center !important;
-  text-align: center !important;
-  box-sizing: border-box !important;
-  overflow: hidden !important;
-  background:
-    radial-gradient(circle at center, rgba(120, 169, 214, 0.10), transparent 65%),
-    var(--panel-dark) !important;
-  border: 1px solid var(--line) !important;
-  border-radius: 12px !important;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.16) !important;
-}
-
-.weapon-media-grid > .weapon-display .weapon-texture {
-  width: 100% !important;
-  min-width: 0 !important;
-  display: flex !important;
-  align-items: center !important;
-  justify-content: center !important;
-}
-
-.weapon-media-grid > .weapon-display .weapon-texture img {
-  width: 156px !important;
-  height: 156px !important;
-  max-width: 100% !important;
-  max-height: 100% !important;
-  object-fit: contain !important;
-  image-rendering: pixelated !important;
-}
-
-/* Item name. */
-.weapon-media-grid > .weapon-display .weapon-name,
-.weapon-media-grid > .weapon-display .legendary-weapon-name,
-.weapon-media-grid > .weapon-display .primordial-weapon-name,
-.weapon-media-grid > .weapon-display .pixelated-name {
-  display: block !important;
-  width: 100% !important;
-  margin: 12px 0 0 !important;
-  font-family: "Monocraft", monospace !important;
-  font-size: 16px !important;
-  line-height: 1.25 !important;
-  font-weight: normal !important;
-  text-align: center !important;
-  overflow-wrap: anywhere !important;
-}
-
-.weapon-media-grid > .weapon-display .weapon-name {
-  color: #55ffff !important;
-}
-
-.weapon-media-grid > .weapon-display .legendary-weapon-name {
-  color: #ff55ff !important;
-}
-
-.weapon-media-grid > .weapon-display .primordial-weapon-name {
-  color: #ffff55 !important;
-  font-weight: bold !important;
-}
-
-/* Ability card: intentionally styled exactly like placeholder-box. */
-.weapon-media-grid > .weapon-ability {
-  width: 100% !important;
-  min-width: 0 !important;
-  height: auto !important;
-  min-height: 0 !important;
-  margin: 0 !important;
-  padding: 10px !important;
-  display: flex !important;
-  flex-direction: column !important;
-  align-items: stretch !important;
-  justify-content: flex-start !important;
-  text-align: center !important;
-  box-sizing: border-box !important;
-  overflow: hidden !important;
-  background: var(--block-green-bg) !important;
-  border: 2px dashed var(--block-green) !important;
-  border-radius: 12px !important;
-  color: var(--text) !important;
-  box-shadow: none !important;
-}
-
-/* Ability demonstration stays horizontal. */
-.weapon-media-grid > .weapon-ability > video,
-.weapon-media-grid > .weapon-ability > img {
-  display: block !important;
-  width: 100% !important;
-  max-width: 100% !important;
-  height: auto !important;
-  aspect-ratio: 16 / 9 !important;
-  object-fit: contain !important;
-  box-sizing: border-box !important;
-  border-radius: 7px !important;
-}
-
-/* Ability names are normal gray text, not blue. */
-.weapon-media-grid > .weapon-ability > strong {
-  display: block !important;
-  margin-top: 10px !important;
-  line-height: 1.3 !important;
-  color: var(--text) !important;
-}
-
-.weapon-media-grid > .weapon-ability > span {
-  display: inline !important;
-  line-height: 1.3 !important;
-  color: var(--muted) !important;
-}
-
-/* Nested placeholder remains placeholder-style and 16:9. */
-.weapon-media-grid > .weapon-ability > .placeholder-box {
-  width: 100% !important;
-  height: auto !important;
-  min-height: 0 !important;
-  aspect-ratio: 16 / 9 !important;
-  margin: 0 !important;
-  padding: 8px !important;
-  display: flex !important;
-  align-items: center !important;
-  justify-content: center !important;
-  box-sizing: border-box !important;
-  overflow: hidden !important;
-  background: var(--block-green-bg) !important;
-  border: 2px dashed var(--block-green) !important;
-  border-radius: 12px !important;
-}
-
-.weapon-media-grid > .weapon-ability > .placeholder-box video,
-.weapon-media-grid > .weapon-ability > .placeholder-box img {
-  width: 100% !important;
-  height: 100% !important;
-  max-width: 100% !important;
-  max-height: 100% !important;
-  aspect-ratio: auto !important;
-  object-fit: contain !important;
-}
-
-/* Primordial compatibility. */
-.weapon-media-grid .primordial-abilities {
-  min-width: 0 !important;
-  width: 100% !important;
-}
-
-.weapon-media-grid .primordial-ability {
-  width: 100% !important;
-  box-sizing: border-box !important;
-}
-
-.weapon-media-grid .primordial-ability img,
-.weapon-media-grid .primordial-ability video {
-  width: 100% !important;
-  aspect-ratio: 16 / 9 !important;
-  height: auto !important;
-  object-fit: contain !important;
-}
-
-/* ------------------------------------------------------------
-   Responsive
-   ------------------------------------------------------------ */
-
-@media (max-width: 800px) {
-  .weapon-media-grid {
-    grid-template-columns: 1fr !important;
-    align-items: start !important;
-    gap: 12px !important;
-    margin: 22px 0 !important;
-  }
-
-  /* Shorter mobile item card: no oversized 3:4 rectangle. */
-  .weapon-media-grid > .weapon-display {
-    width: 100% !important;
-    min-width: 0 !important;
-    height: 190px !important;
-    min-height: 190px !important;
-    aspect-ratio: auto !important;
-    padding: 12px 10px !important;
-  }
-
-  .weapon-media-grid > .weapon-display .weapon-texture img {
-    width: 125px !important;
-    height: 125px !important;
-  }
-
-  .weapon-media-grid > .weapon-display .weapon-name,
-  .weapon-media-grid > .weapon-display .legendary-weapon-name,
-  .weapon-media-grid > .weapon-display .primordial-weapon-name,
-  .weapon-media-grid > .weapon-display .pixelated-name {
-    font-size: 14px !important;
-    margin-top: 8px !important;
-  }
-
-  .weapon-media-grid > .weapon-ability {
-    width: 100% !important;
-    min-width: 0 !important;
-    padding: 7px !important;
-  }
-
-  .weapon-media-grid > .weapon-ability > video,
-  .weapon-media-grid > .weapon-ability > img {
-    aspect-ratio: 16 / 9 !important;
-  }
-
-  .weapon-media-grid > .weapon-ability > strong {
-    margin-top: 8px !important;
-    font-size: 13px !important;
-  }
-}
-
-@media (max-width: 480px) {
-  .weapon-media-grid {
-    gap: 10px !important;
-  }
-
-  /* Even more compact on very narrow phones. */
-  .weapon-media-grid > .weapon-display {
-    height: 160px !important;
-    min-height: 160px !important;
-    padding: 8px 7px !important;
-  }
-
-  .weapon-media-grid > .weapon-display .weapon-texture img {
-    width: 105px !important;
-    height: 105px !important;
-  }
-
-  .weapon-media-grid > .weapon-display .weapon-name,
-  .weapon-media-grid > .weapon-display .legendary-weapon-name,
-  .weapon-media-grid > .weapon-display .primordial-weapon-name,
-  .weapon-media-grid > .weapon-display .pixelated-name {
-    font-size: 11px !important;
-    line-height: 1.2 !important;
-    margin-top: 6px !important;
-  }
-
-  .weapon-media-grid > .weapon-ability {
-    padding: 5px !important;
-  }
-
-  .weapon-media-grid > .weapon-ability > strong,
-  .weapon-media-grid > .weapon-ability > span {
-    font-size: 10px !important;
-    line-height: 1.25 !important;
-  }
+  .weasel-trades { overflow-x: hidden; }
 }
