@@ -399,27 +399,28 @@ tr:hover td { background: var(--block-green-hover); }
 /* ============================================================
    WEAPON MEDIA — UNIFIED LAYOUT
    All elemental and legendary weapons use the same presentation:
-   left = vertical item card + name
-   right = horizontal ability video + name
+   left = item card + name
+   right = placeholder-style ability video + name
    ============================================================ */
 
 .weapon-media-grid {
   display: grid !important;
   grid-template-columns: 220px minmax(0, 1fr) !important;
-  align-items: start !important;
+  align-items: stretch !important;
   gap: 18px !important;
   width: 100% !important;
   margin: 25px 0 !important;
   box-sizing: border-box !important;
 }
 
-/* The item is always a vertical rectangle. */
+/* Desktop: the item card fills exactly the same row height as the
+   ability card, so the two boxes line up perfectly. */
 .weapon-media-grid > .weapon-display {
   width: 220px !important;
   min-width: 220px !important;
-  height: auto !important;
-  min-height: 293px !important;
-  aspect-ratio: 3 / 4 !important;
+  height: 100% !important;
+  min-height: 0 !important;
+  aspect-ratio: auto !important;
   margin: 0 !important;
   padding: 16px 12px !important;
   display: flex !important;
@@ -437,7 +438,6 @@ tr:hover td { background: var(--block-green-hover); }
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.16) !important;
 }
 
-/* Same item-image treatment for elemental and legendary weapons. */
 .weapon-media-grid > .weapon-display .weapon-texture {
   width: 100% !important;
   min-width: 0 !important;
@@ -455,7 +455,7 @@ tr:hover td { background: var(--block-green-hover); }
   image-rendering: pixelated !important;
 }
 
-/* Item name is always directly underneath its item. */
+/* Item name. */
 .weapon-media-grid > .weapon-display .weapon-name,
 .weapon-media-grid > .weapon-display .legendary-weapon-name,
 .weapon-media-grid > .weapon-display .primordial-weapon-name,
@@ -471,8 +471,6 @@ tr:hover td { background: var(--block-green-hover); }
   overflow-wrap: anywhere !important;
 }
 
-/* Keep the existing Minecraft-like elemental/legendary colors,
-   but make the layout identical. */
 .weapon-media-grid > .weapon-display .weapon-name {
   color: #55ffff !important;
 }
@@ -486,7 +484,7 @@ tr:hover td { background: var(--block-green-hover); }
   font-weight: bold !important;
 }
 
-/* The ability occupies the right column. */
+/* Ability card: intentionally styled exactly like placeholder-box. */
 .weapon-media-grid > .weapon-ability {
   width: 100% !important;
   min-width: 0 !important;
@@ -501,17 +499,14 @@ tr:hover td { background: var(--block-green-hover); }
   text-align: center !important;
   box-sizing: border-box !important;
   overflow: hidden !important;
-  background: linear-gradient(
-    145deg,
-    rgba(0, 34, 85, 0.42),
-    rgba(13, 28, 48, 0.72)
-  ) !important;
-  border: 1px solid var(--line) !important;
-  border-radius: 10px !important;
-  box-shadow: 0 5px 16px rgba(0, 0, 0, 0.12) !important;
+  background: var(--block-green-bg) !important;
+  border: 2px dashed var(--block-green) !important;
+  border-radius: 12px !important;
+  color: var(--text) !important;
+  box-shadow: none !important;
 }
 
-/* Ability demonstration is always horizontal. */
+/* Ability demonstration stays horizontal. */
 .weapon-media-grid > .weapon-ability > video,
 .weapon-media-grid > .weapon-ability > img {
   display: block !important;
@@ -524,12 +519,12 @@ tr:hover td { background: var(--block-green-hover); }
   border-radius: 7px !important;
 }
 
-/* Ability name/description sits underneath the demonstration. */
+/* Ability names are normal gray text, not blue. */
 .weapon-media-grid > .weapon-ability > strong {
   display: block !important;
   margin-top: 10px !important;
   line-height: 1.3 !important;
-  color: var(--accent) !important;
+  color: var(--text) !important;
 }
 
 .weapon-media-grid > .weapon-ability > span {
@@ -538,7 +533,7 @@ tr:hover td { background: var(--block-green-hover); }
   color: var(--muted) !important;
 }
 
-/* If an ability uses a nested placeholder, it must still be 16:9. */
+/* Nested placeholder remains placeholder-style and 16:9. */
 .weapon-media-grid > .weapon-ability > .placeholder-box {
   width: 100% !important;
   height: auto !important;
@@ -551,6 +546,9 @@ tr:hover td { background: var(--block-green-hover); }
   justify-content: center !important;
   box-sizing: border-box !important;
   overflow: hidden !important;
+  background: var(--block-green-bg) !important;
+  border: 2px dashed var(--block-green) !important;
+  border-radius: 12px !important;
 }
 
 .weapon-media-grid > .weapon-ability > .placeholder-box video,
@@ -563,8 +561,7 @@ tr:hover td { background: var(--block-green-hover); }
   object-fit: contain !important;
 }
 
-/* Make primordial ability cards follow the same visual language
-   when that markup is present elsewhere. */
+/* Primordial compatibility. */
 .weapon-media-grid .primordial-abilities {
   min-width: 0 !important;
   width: 100% !important;
@@ -584,30 +581,30 @@ tr:hover td { background: var(--block-green-hover); }
 }
 
 /* ------------------------------------------------------------
-   Responsive: preserve the same visual relationship.
-   On narrow screens the two cards stack, but item remains 3:4
-   and ability remains 16:9.
+   Responsive
    ------------------------------------------------------------ */
 
 @media (max-width: 800px) {
   .weapon-media-grid {
     grid-template-columns: 1fr !important;
+    align-items: start !important;
     gap: 12px !important;
     margin: 22px 0 !important;
   }
 
+  /* Shorter mobile item card: no oversized 3:4 rectangle. */
   .weapon-media-grid > .weapon-display {
     width: 100% !important;
     min-width: 0 !important;
-    min-height: 0 !important;
-    height: auto !important;
-    aspect-ratio: 3 / 4 !important;
-    padding: 14px 10px !important;
+    height: 190px !important;
+    min-height: 190px !important;
+    aspect-ratio: auto !important;
+    padding: 12px 10px !important;
   }
 
   .weapon-media-grid > .weapon-display .weapon-texture img {
-    width: 150px !important;
-    height: 150px !important;
+    width: 125px !important;
+    height: 125px !important;
   }
 
   .weapon-media-grid > .weapon-display .weapon-name,
@@ -615,7 +612,7 @@ tr:hover td { background: var(--block-green-hover); }
   .weapon-media-grid > .weapon-display .primordial-weapon-name,
   .weapon-media-grid > .weapon-display .pixelated-name {
     font-size: 14px !important;
-    margin-top: 10px !important;
+    margin-top: 8px !important;
   }
 
   .weapon-media-grid > .weapon-ability {
@@ -640,13 +637,16 @@ tr:hover td { background: var(--block-green-hover); }
     gap: 10px !important;
   }
 
+  /* Even more compact on very narrow phones. */
   .weapon-media-grid > .weapon-display {
-    padding: 9px 7px !important;
+    height: 160px !important;
+    min-height: 160px !important;
+    padding: 8px 7px !important;
   }
 
   .weapon-media-grid > .weapon-display .weapon-texture img {
-    width: 110px !important;
-    height: 110px !important;
+    width: 105px !important;
+    height: 105px !important;
   }
 
   .weapon-media-grid > .weapon-display .weapon-name,
@@ -655,6 +655,7 @@ tr:hover td { background: var(--block-green-hover); }
   .weapon-media-grid > .weapon-display .pixelated-name {
     font-size: 11px !important;
     line-height: 1.2 !important;
+    margin-top: 6px !important;
   }
 
   .weapon-media-grid > .weapon-ability {
