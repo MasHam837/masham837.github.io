@@ -78,12 +78,12 @@ footer a:hover { color: var(--accent-2); }
 
 /* Sprite Decorations */
 footer, .bottom-bar { position: relative; }
-footer::before, .bottom-bar::before {content: ""; position: absolute; left: 28px; top: 50%; width: 28px; height: 28px; transform: translateY(-50%); background: url("images/logo.png") center / contain no-repeat; image-rendering: pixelated; pointer-events: none;}
+footer::before, .bottom-bar::before {content: ""; position: absolute; left: 28px; top: 50%; width: 28px; height: 28px; transform: translateY(-50%); background: url("branding/mh837-logo.png") center / contain no-repeat; image-rendering: pixelated; pointer-events: none;}
 footer {padding-left: 72px; }
 .side-link.active {display: flex; align-items: center; gap: 8px;}
-.side-link.active::before {content: ""; flex: 0 0 22px; width: 22px; height: 22px; background: url("images/one_up.png") center / contain no-repeat; image-rendering: pixelated;pointer-events: none;}
+.side-link.active::before {content: ""; flex: 0 0 22px; width: 22px; height: 22px; background: url("branding/skin_sprite/right_one_up.png") center / contain no-repeat; image-rendering: pixelated;pointer-events: none;}
 .notice {position: relative; padding-right: 72px; overflow: hidden;}
-.notice::after {content: ""; position: absolute; right: 12px; bottom: 8px; width: 48px; height: 48px; background: url("images/standing.png") right bottom / contain no-repeat; image-rendering: pixelated; pointer-events: none;}
+.notice::after {content: ""; position: absolute; right: 12px; bottom: 8px; width: 48px; height: 48px; background: url("branding/skin_sprite/left_standing.png") right bottom / contain no-repeat; image-rendering: pixelated; pointer-events: none;}
 
 /* Buttons & Notices */
 .button-row { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 24px; }
