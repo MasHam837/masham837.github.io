@@ -31,7 +31,8 @@
       background: var(--block-green-bg);
       border-color: rgba(0, 255, 85, 0.3);
     }
-      @font-face {
+      
+    @font-face {
     font-family: "Cinzel";
     src: url("assets/fonts/Cinzel.ttf") format("truetype");
     font-weight: 400;
@@ -48,7 +49,7 @@
   }
 
   /* GILE card title */
-  .mod-card.card-green .card-title h2 {
+  .gile-title {
     position: relative;
     margin: 0;
 
@@ -76,7 +77,8 @@
       0 0 8px rgba(161, 232, 253, 0.35),
       0 0 22px rgba(126, 91, 214, 0.25);
   }
-  .mod-card.card-green .card-title h2::after {
+
+  .gile-title::after {
     content: "";
     display: block;
     width: min(260px, 90%);
@@ -100,7 +102,7 @@
   }
 
   @media (max-width: 700px) {
-    .mod-card.card-green .card-title h2 {
+    .gile-title {
       font-size: clamp(1.35rem, 7vw, 2rem);
     }
   }
@@ -132,7 +134,7 @@
           </div>
           <div class="card-title">
             <div class="tag">LATEST PROJECT</div>
-            <h2>Genshin Impact Lunar Expansion</h2>
+            <h2 class="gile-title">Genshin Impact: Lunar Expansion</h2>
           </div>
         </div>
         <div class="card-body">
