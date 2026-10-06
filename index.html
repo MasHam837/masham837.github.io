@@ -1,199 +1,178 @@
 <!doctype html>
 <html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>MasterHamster837 — Minecraft Mods Wiki</title>
-  <meta name="description" content="Documentation hub for Minecraft mods by MasterHamster837.">
-  
-  <link rel="icon" type="image/png" href="assets/branding/mh837-logo.png">
-  <link rel="stylesheet" href="assets/style.css">
-  
-  <style>
-    /* Brand Color Classes using your exact style.css variables */
-    .brand-master { color: var(--accent) !important; }
-    .brand-hamster { color: var(--block-green) !important; }
-    .brand-837 { color: var(--warning) !important; }
-
-    /* Custom Green styling for Mod Card */
-    .mod-card.card-green {
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>MasterHamster837 — Minecraft Mods Wiki</title>
+    <meta name="description" content="Documentation hub for Minecraft mods by MasterHamster837.">
+    <link rel="icon" type="image/png" href="assets/branding/mh837-logo.png">
+    <link rel="stylesheet" href="assets/style.css">
+    <style>
+      body.hub { min-height: 100vh;display: flex;flex-direction: column; }
+      body.hub .hero-wrap { flex: 1; }
+      /* Brand Color Classes using your exact style.css variables */
+      .brand-master { color: var(--accent) !important; }
+      .brand-hamster { color: var(--block-green) !important; }
+      .brand-837 { color: var(--warning) !important; }
+      /* Custom Green styling for Mod Card */
+      .mod-card.card-green {
       border-color: rgba(0, 255, 85, 0.3);
       background: linear-gradient(145deg, rgba(0, 50, 20, 0.92), rgba(0, 22, 59, 0.94));
-    }
-    .mod-card.card-green:hover {
+      }
+      .mod-card.card-green:hover {
       border-color: var(--block-green);
       background: linear-gradient(145deg, rgba(0, 70, 30, 0.96), rgba(0, 22, 59, 0.96));
-    }
-    .mod-card.card-green .tag { color: var(--block-green); }
-    .mod-card.card-green .arrow { color: var(--block-green); }
-    .mod-card.card-green .card-icon {
+      }
+      .mod-card.card-green .tag { color: var(--block-green); }
+      .mod-card.card-green .arrow { color: var(--block-green); }
+      .mod-card.card-green .card-icon {
       color: var(--block-green);
       background: var(--block-green-bg);
       border-color: rgba(0, 255, 85, 0.3);
-    }
-      
-    @font-face {
-    font-family: "Cinzel";
-    src: url("assets/fonts/Cinzel.ttf") format("truetype");
-    font-weight: 400;
-    font-style: normal;
-    font-display: swap;
-  }
-
-  @font-face {
-    font-family: "Cinzel";
-    src: url("assets/fonts/Cinzel-Bold.ttf") format("truetype");
-    font-weight: 700;
-    font-style: normal;
-    font-display: swap;
-  }
-
-  /* GILE card title */
-.card-title .gile-title {
-  position: relative;
-  margin: 0;
-  font-family: "Cinzel", Georgia, serif;
-  font-weight: 700;
-  font-size: clamp(1.7rem, 3.5vw, 2.8rem);
-  line-height: 0.94;
-  letter-spacing: 0.02em;
-  white-space: nowrap;
-  background: linear-gradient(105deg, #eafcff 0%, #a1e8fd 22%, #8bc9ff 42%, #a96be8 66%, #d9a9ff 80%, #fde09f 100%);
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
-  text-shadow: 0 0 8px rgba(161, 232, 253, 0.35), 0 0 22px rgba(126, 91, 214, 0.25);
-}
-
-.card-title .gile-title::after {
-  content: "";
-  display: block;
-  width: min(260px, 90%);
-  height: 2px;
-  margin-top: 12px;
-  background: linear-gradient(90deg, transparent, #a1e8fd 18%, #b982e8 50%, #fde09f 82%, transparent);
-  box-shadow: 0 0 6px rgba(161, 232, 253, 0.45), 0 0 14px rgba(169, 107, 232, 0.30);
-  opacity: 0.9;
-}
-
-  /* Mobile Mod Card */
-  @media (max-width: 700px) {
-    .mod-card {
+      }
+      @font-face {
+      font-family: "Cinzel";
+      src: url("assets/fonts/Cinzel.ttf") format("truetype");
+      font-weight: 400;
+      font-style: normal;
+      font-display: swap;
+      }
+      @font-face {
+      font-family: "Cinzel";
+      src: url("assets/fonts/Cinzel-Bold.ttf") format("truetype");
+      font-weight: 700;
+      font-style: normal;
+      font-display: swap;
+      }
+      /* GILE card title */
+      .card-title .gile-title {
+      position: relative;
+      margin: 0;
+      font-family: "Cinzel", Georgia, serif;
+      font-weight: 700;
+      font-size: clamp(1.7rem, 3.5vw, 2.8rem);
+      line-height: 0.94;
+      letter-spacing: 0.02em;
+      white-space: nowrap;
+      background: linear-gradient(105deg, #eafcff 0%, #a1e8fd 22%, #8bc9ff 42%, #a96be8 66%, #d9a9ff 80%, #fde09f 100%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      text-shadow: 0 0 8px rgba(161, 232, 253, 0.35), 0 0 22px rgba(126, 91, 214, 0.25);
+      }
+      .card-title .gile-title::after {
+      content: "";
+      display: block;
+      width: min(260px, 90%);
+      height: 2px;
+      margin-top: 12px;
+      background: linear-gradient(90deg, transparent, #a1e8fd 18%, #b982e8 50%, #fde09f 82%, transparent);
+      box-shadow: 0 0 6px rgba(161, 232, 253, 0.45), 0 0 14px rgba(169, 107, 232, 0.30);
+      opacity: 0.9;
+      }
+      /* Mobile Mod Card */
+      @media (max-width: 700px) {
+      .mod-card {
       width: 100%;
       max-width: 100%;
       box-sizing: border-box;
-    }
-
-    .mod-card.featured {
+      }
+      .mod-card.featured {
       width: 100%;
       max-width: 100%;
       box-sizing: border-box;
-    }
-
-    .card-top {
+      }
+      .card-top {
       min-width: 0;
       max-width: 100%;
       padding-right: 0;
-    }
-
-    .card-body {
+      }
+      .card-body {
       min-width: 0;
       max-width: 100%;
-    }
-
-    .card-title {
+      }
+      .card-title {
       min-width: 0;
       max-width: 100%;
       flex: 1 1 auto;
-    }
-
-    .card-title .gile-title {
+      }
+      .card-title .gile-title {
       font-size: clamp(1.45rem, 8vw, 2.2rem);
       white-space: normal;
       overflow-wrap: anywhere;
-    }
-  }
-
-  @media (max-width: 480px) {
-    .card-title .gile-title {
+      }
+      }
+      @media (max-width: 480px) {
+      .card-title .gile-title {
       font-size: clamp(1.35rem, 7vw, 2rem);
-    }
-
-    .mod-card {
+      }
+      .mod-card {
       width: 100%;
       max-width: 100%;
       margin-left: 0;
       margin-right: 0;
-    }
-  }
-
-    .mods-by-head {
-    width: 0.8em;
-    height: 0.8em;
-    object-fit: contain;
-    image-rendering: pixelated;
-    vertical-align: -0.05em;
-    margin-left: 8px;
-    margin-right: 6px;
-  }
-    
-  </style>
-  
-</head>
-<body class="hub">
-  <header class="topbar">
-    <a class="brand" href="./">MasterHamster837 <span>WIKI</span></a>
-    <nav>
-      <a href="https://www.curseforge.com/members/masterhamster837/projects" target="_blank" rel="noreferrer" style="color: #f36c21;">CurseForge ↗</a>
-      <a href="https://modrinth.com/user/masterhamster837" target="_blank" rel="noreferrer" style="color: #5cff4a;">Modrinth ↗</a>
-      <a href="https://github.com/MasHam837/minecraft-mods-source-codes" target="_blank" rel="noreferrer" style="color: #f0f6fc;">Source ↗</a>
-    </nav>
-  </header>
-
-  <main class="hero-wrap">
-    <section class="hero">
-      <p class="eyebrow">MINECRAFT MODS • DOCUMENTATION</p>
-      <h1>Mods by <img class="mods-by-head" src="assets/branding/skin_sprite/right_head-only.png" alt="">
-        <span class="brand-master">Master</span><span class="brand-hamster">Hamster</span><span class="brand-837">837</span></h1>
-      <p class="lead">A central wiki for my Minecraft projects, their mechanics, content, recipes and installation guides.</p>
-    </section>
-
-    <section class="mod-grid" aria-label="Mods">
-      <!-- Added 'card-green' class alongside 'featured' -->
-      <a class="mod-card featured card-green" href="GILE/">
-        <div class="card-top">
-          <div class="card-icon">
-            <img src="GILE/icon.png" alt="GILE icon">
+      }
+      }
+      .mods-by-head {
+      width: 0.8em;
+      height: 0.8em;
+      object-fit: contain;
+      image-rendering: pixelated;
+      vertical-align: -0.05em;
+      margin-left: 8px;
+      margin-right: 6px;
+      }
+    </style>
+  </head>
+  <body class="hub">
+    <header class="topbar">
+      <a class="brand" href="./">MasterHamster837 <span>WIKI</span></a>
+      <nav>
+        <a href="https://www.curseforge.com/members/masterhamster837/projects" target="_blank" rel="noreferrer" style="color: #f36c21;">CurseForge ↗</a>
+        <a href="https://modrinth.com/user/masterhamster837" target="_blank" rel="noreferrer" style="color: #5cff4a;">Modrinth ↗</a>
+        <a href="https://github.com/MasHam837/minecraft-mods-source-codes" target="_blank" rel="noreferrer" style="color: #f0f6fc;">Source ↗</a>
+      </nav>
+    </header>
+    <main class="hero-wrap">
+      <section class="hero">
+        <p class="eyebrow">MINECRAFT MODS • DOCUMENTATION</p>
+        <h1>Mods by <img class="mods-by-head" src="assets/branding/skin_sprite/right_head-only.png" alt="">
+          <span class="brand-master">Master</span><span class="brand-hamster">Hamster</span><span class="brand-837">837</span></h1>
+        <p class="lead">A central wiki for my Minecraft projects, their mechanics, content, recipes and installation guides.</p>
+      </section>
+      <section class="mod-grid" aria-label="Mods">
+        <a class="mod-card featured card-green" href="GILE/">
+          <div class="card-top">
+            <div class="card-icon">
+              <img src="GILE/icon.png" alt="GILE icon">
+            </div>
+            <div class="card-title">
+              <div class="tag">LATEST PROJECT</div>
+              <h2 class="gile-title">Genshin Impact:<br>Lunar Expansion</h2>
+            </div>
           </div>
-          <div class="card-title">
-            <div class="tag">LATEST PROJECT</div>
-            <h2 class="gile-title">Genshin Impact:<br>Lunar Expansion</h2>
+          <div class="card-body">
+            <p>
+              <strong>GILE</strong> — Hoyoverse-inspired content, new boss structure, biomes, entities, special weapons, materials and the wishing mechanic.
+            </p>
+            <div class="meta">
+              <span>Fabric</span>
+              <span>Minecraft 1.21.1 - Beta</span>
+              <span>Minecraft 26.1 - Release</span>
+            </div>
+          </div>
+          <div class="arrow">→</div>
+        </a>
+        <div class="mod-card placeholder">
+          <div class="card-icon">＋</div>
+          <div class="card-body">
+            <div class="tag">COMING SOON</div>
+            <h2>More mods</h2>
+            <p>This space is reserved for future projects by MasterHamster837.</p>
           </div>
         </div>
-        <div class="card-body">
-          <p>
-            <strong>GILE</strong> — Hoyoverse-inspired content, new boss structure, biomes, entities, special weapons, materials and the wishing mechanic.
-          </p>
-          <div class="meta">
-            <span>Fabric</span>
-            <span>Minecraft 1.21.1 - Beta</span>
-            <span>Minecraft 26.1 - Release</span>
-          </div>
-        </div>
-        <div class="arrow">→</div>
-      </a>
-
-      <div class="mod-card placeholder">
-        <div class="card-icon">＋</div>
-        <div class="card-body">
-          <div class="tag">COMING SOON</div>
-          <h2>More mods</h2>
-          <p>This space is reserved for future projects by MasterHamster837.</p>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <footer>© 2026 MasterHamster837 · Built for GitHub Pages</footer>
-</body>
+      </section>
+    </main>
+    <footer>© 2026 MasterHamster837 · Built for GitHub Pages</footer>
+  </body>
 </html>
