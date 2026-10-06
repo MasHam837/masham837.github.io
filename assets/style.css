@@ -2475,3 +2475,433 @@ tr:hover td { background: var(--block-green-hover); }
     padding: 4px;
   }
 }
+
+/* =========================================================
+   FINAL WEAPON SHOWCASE OVERRIDE
+   ---------------------------------------------------------
+   MUST BE THE VERY LAST CSS IN style.css
+
+   DESKTOP:
+   [ narrow weapon item ][ wide rectangular video ]
+
+   MOBILE:
+   [ rectangular weapon item ]
+   [ rectangular video ]
+
+   This intentionally overrides all previous weapon rules.
+   ========================================================= */
+
+
+/* =========================================================
+   DESKTOP
+   ========================================================= */
+
+.primordial-weapon,
+.legendary-weapon {
+  display: grid !important;
+
+  /* Narrow item column + ALL remaining space for video */
+  grid-template-columns: 240px minmax(0, 1fr) !important;
+
+  gap: 16px !important;
+
+  width: 100% !important;
+  max-width: 100% !important;
+
+  margin: 25px 0 !important;
+
+  box-sizing: border-box !important;
+}
+
+
+/* ---------------------------------------------------------
+   WEAPON ITEM
+   --------------------------------------------------------- */
+
+.primordial-weapon-display,
+.legendary-weapon .weapon-display {
+  width: 100% !important;
+  min-width: 0 !important;
+
+  min-height: 0 !important;
+  height: 100% !important;
+
+  aspect-ratio: 1 / 1 !important;
+
+  box-sizing: border-box !important;
+
+  padding: 18px 12px !important;
+
+  display: flex !important;
+  flex-direction: column !important;
+
+  align-items: center !important;
+  justify-content: center !important;
+
+  text-align: center !important;
+
+  overflow: hidden !important;
+}
+
+
+/* ---------------------------------------------------------
+   WEAPON ICONS
+   --------------------------------------------------------- */
+
+.primordial-weapon-icon {
+  width: 170px !important;
+  height: 170px !important;
+
+  max-width: 100% !important;
+  max-height: 100% !important;
+
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+
+.primordial-weapon-icon img {
+  width: 156px !important;
+  height: 156px !important;
+
+  max-width: 100% !important;
+  max-height: 100% !important;
+
+  object-fit: contain !important;
+}
+
+.legendary-weapon .weapon-texture img {
+  width: 145px !important;
+  height: 145px !important;
+
+  max-width: 100% !important;
+  max-height: 100% !important;
+
+  object-fit: contain !important;
+}
+
+
+/* =========================================================
+   VIDEO / ABILITY SIDE
+   ========================================================= */
+
+.primordial-abilities {
+  min-width: 0 !important;
+  width: 100% !important;
+
+  display: grid !important;
+
+  /*
+     One large video/card per row.
+     This gives the demonstration the entire
+     remaining width.
+  */
+  grid-template-columns: minmax(0, 1fr) !important;
+
+  gap: 14px !important;
+
+  box-sizing: border-box !important;
+}
+
+
+/* Legendary has a single video/ability column */
+
+.legendary-weapon .weapon-ability {
+  min-width: 0 !important;
+  width: 100% !important;
+
+  box-sizing: border-box !important;
+}
+
+
+/* ---------------------------------------------------------
+   ABILITY CARDS
+   --------------------------------------------------------- */
+
+.primordial-ability,
+.legendary-weapon .weapon-ability {
+  min-width: 0 !important;
+  width: 100% !important;
+
+  box-sizing: border-box !important;
+
+  padding: 10px !important;
+
+  text-align: center !important;
+
+  overflow: hidden !important;
+}
+
+
+/* =========================================================
+   VIDEOS
+   ========================================================= */
+
+/*
+   The actual demonstration is always a clean 16:9
+   rectangle and consumes the complete right column.
+*/
+
+.primordial-ability img,
+.primordial-ability video,
+.legendary-weapon .weapon-ability img,
+.legendary-weapon .weapon-ability video {
+  display: block !important;
+
+  width: 100% !important;
+  max-width: 100% !important;
+
+  height: auto !important;
+  max-height: none !important;
+
+  aspect-ratio: 16 / 9 !important;
+
+  object-fit: contain !important;
+
+  box-sizing: border-box !important;
+
+  border-radius: 7px !important;
+}
+
+
+/*
+   Legendary videos inside placeholder-box.
+   Override the generic 300px weapon placeholder.
+*/
+
+.primordial-ability .placeholder-box,
+.legendary-weapon .weapon-ability .placeholder-box {
+  width: 100% !important;
+
+  height: auto !important;
+  min-height: 0 !important;
+
+  aspect-ratio: 16 / 9 !important;
+
+  padding: 8px !important;
+  margin: 0 !important;
+
+  box-sizing: border-box !important;
+
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+
+  overflow: hidden !important;
+}
+
+.primordial-ability .placeholder-box video,
+.legendary-weapon .weapon-ability .placeholder-box video {
+  width: 100% !important;
+  height: 100% !important;
+
+  max-width: 100% !important;
+  max-height: 100% !important;
+
+  aspect-ratio: auto !important;
+
+  object-fit: contain !important;
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 800px) {
+
+  /*
+     STACK EVERYTHING.
+
+     Weapon item:
+       full width
+       rectangular
+
+     Video:
+       full width
+       rectangular
+  */
+
+  .primordial-weapon,
+  .legendary-weapon {
+    display: grid !important;
+
+    grid-template-columns: minmax(0, 1fr) !important;
+
+    gap: 12px !important;
+
+    width: 100% !important;
+    max-width: 100% !important;
+
+    margin: 22px 0 !important;
+  }
+
+
+  /* -------------------------------------------------------
+     MOBILE WEAPON ITEM
+     ------------------------------------------------------- */
+
+  .primordial-weapon-display,
+  .legendary-weapon .weapon-display {
+    width: 100% !important;
+    min-width: 0 !important;
+
+    /*
+       Rectangular rather than the previous tall/square box.
+    */
+    height: auto !important;
+    min-height: 0 !important;
+
+    aspect-ratio: 16 / 9 !important;
+
+    padding: 12px !important;
+
+    box-sizing: border-box !important;
+
+    display: flex !important;
+    flex-direction: column !important;
+
+    align-items: center !important;
+    justify-content: center !important;
+
+    overflow: hidden !important;
+  }
+
+
+  /* -------------------------------------------------------
+     MOBILE ICONS
+     ------------------------------------------------------- */
+
+  .primordial-weapon-icon {
+    width: 120px !important;
+    height: 120px !important;
+
+    max-width: 45% !important;
+    max-height: 70% !important;
+  }
+
+  .primordial-weapon-icon img {
+    width: 110px !important;
+    height: 110px !important;
+
+    max-width: 100% !important;
+    max-height: 100% !important;
+  }
+
+  .legendary-weapon .weapon-texture img {
+    width: 105px !important;
+    height: 105px !important;
+
+    max-width: 100% !important;
+    max-height: 100% !important;
+  }
+
+
+  /* -------------------------------------------------------
+     MOBILE VIDEO
+     ------------------------------------------------------- */
+
+  .primordial-abilities {
+    width: 100% !important;
+
+    grid-template-columns: minmax(0, 1fr) !important;
+
+    gap: 12px !important;
+  }
+
+  .primordial-ability,
+  .legendary-weapon .weapon-ability {
+    width: 100% !important;
+    min-width: 0 !important;
+
+    padding: 7px !important;
+
+    box-sizing: border-box !important;
+  }
+
+
+  .primordial-ability img,
+  .primordial-ability video,
+  .legendary-weapon .weapon-ability img,
+  .legendary-weapon .weapon-ability video {
+    width: 100% !important;
+
+    height: auto !important;
+
+    aspect-ratio: 16 / 9 !important;
+
+    object-fit: contain !important;
+  }
+
+
+  .primordial-ability .placeholder-box,
+  .legendary-weapon .weapon-ability .placeholder-box {
+    width: 100% !important;
+
+    height: auto !important;
+    min-height: 0 !important;
+
+    aspect-ratio: 16 / 9 !important;
+
+    padding: 5px !important;
+
+    box-sizing: border-box !important;
+  }
+}
+
+
+/* =========================================================
+   VERY SMALL PHONES
+   ========================================================= */
+
+@media (max-width: 480px) {
+
+  .primordial-weapon,
+  .legendary-weapon {
+    gap: 10px !important;
+  }
+
+
+  /* Rectangular item remains full width */
+
+  .primordial-weapon-display,
+  .legendary-weapon .weapon-display {
+    aspect-ratio: 16 / 9 !important;
+
+    padding: 8px !important;
+  }
+
+
+  /* Smaller icons */
+
+  .primordial-weapon-icon {
+    width: 95px !important;
+    height: 95px !important;
+  }
+
+  .primordial-weapon-icon img {
+    width: 88px !important;
+    height: 88px !important;
+  }
+
+  .legendary-weapon .weapon-texture img {
+    width: 84px !important;
+    height: 84px !important;
+  }
+
+
+  /* Video card */
+
+  .primordial-ability,
+  .legendary-weapon .weapon-ability {
+    padding: 5px !important;
+  }
+
+
+  .primordial-ability .placeholder-box,
+  .legendary-weapon .weapon-ability .placeholder-box {
+    padding: 4px !important;
+
+    aspect-ratio: 16 / 9 !important;
+  }
+}
