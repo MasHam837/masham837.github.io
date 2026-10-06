@@ -56,10 +56,17 @@
           }
 
           .enchantment-book-texture {
-            width: 80px;
-            height: 80px;
+            width: 220px;
+            height: 220px;
             object-fit: contain;
             image-rendering: pixelated;
+          }
+
+          @media (max-width: 700px)   {
+          .enchantment-book-texture {
+            width: 110px;
+            height: 110px;
+            }
           }
 
           .enchantment-card-info {
