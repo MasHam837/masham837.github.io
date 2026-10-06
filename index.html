@@ -31,6 +31,79 @@
       background: var(--block-green-bg);
       border-color: rgba(0, 255, 85, 0.3);
     }
+      @font-face {
+    font-family: "Cinzel";
+    src: url("assets/fonts/Cinzel.ttf") format("truetype");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: "Cinzel";
+    src: url("assets/fonts/Cinzel-Bold.ttf") format("truetype");
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  /* GILE card title */
+  .mod-card.card-green .card-title h2 {
+    position: relative;
+    margin: 0;
+
+    font-family: "Cinzel", Georgia, serif;
+    font-weight: 700;
+    font-size: clamp(1.5rem, 3vw, 2.4rem);
+    line-height: 0.94;
+    letter-spacing: 0.02em;
+
+    background: linear-gradient(
+      105deg,
+      #eafcff 0%,
+      #a1e8fd 22%,
+      #8bc9ff 42%,
+      #a96be8 66%,
+      #d9a9ff 80%,
+      #fde09f 100%
+    );
+
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+
+    text-shadow:
+      0 0 8px rgba(161, 232, 253, 0.35),
+      0 0 22px rgba(126, 91, 214, 0.25);
+  }
+  .mod-card.card-green .card-title h2::after {
+    content: "";
+    display: block;
+    width: min(260px, 90%);
+    height: 2px;
+    margin-top: 12px;
+
+    background: linear-gradient(
+      90deg,
+      transparent,
+      #a1e8fd 18%,
+      #b982e8 50%,
+      #fde09f 82%,
+      transparent
+    );
+
+    box-shadow:
+      0 0 6px rgba(161, 232, 253, 0.45),
+      0 0 14px rgba(169, 107, 232, 0.30);
+
+    opacity: 0.9;
+  }
+
+  @media (max-width: 700px) {
+    .mod-card.card-green .card-title h2 {
+      font-size: clamp(1.35rem, 7vw, 2rem);
+    }
+  }
   </style>
 </head>
 <body class="hub">
@@ -59,12 +132,12 @@
           </div>
           <div class="card-title">
             <div class="tag">LATEST PROJECT</div>
-            <h2>GILE</h2>
+            <h2>Genshin Impact Lunar Expansion</h2>
           </div>
         </div>
         <div class="card-body">
           <p>
-            Genshin Impact Lunar Expansion — Hoyoverse-inspired content, new End biomes, weapons, entities, materials and custom mechanics.
+            GILE — Hoyoverse-inspired content, new End biomes, weapons, entities, materials and custom mechanics.
           </p>
           <div class="meta">
             <span>Fabric</span>
