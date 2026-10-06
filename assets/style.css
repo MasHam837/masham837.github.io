@@ -15,10 +15,10 @@ h1 span { color: var(--accent); }
 
 /* Navigation & Topbar */
 .topbar { height: 68px; display: flex; align-items: center; justify-content: space-between; padding: 0 28px; border-bottom: 1px solid var(--line); background: rgba(0, 18, 51, 0.88); backdrop-filter: blur(14px); position: sticky; top: 0; z-index: 10; }
-.brand { font-weight: 800; letter-spacing: -0.02em; }
+.brand { font-weight: 800; letter-spacing: -0.02em; margin-left: 40px; white-space: nowrap; flex: 0 0 auto; }
 .brand span { color: var(--accent); font-size: 11px; letter-spacing: 0.18em; margin-left: 8px; }
-.topbar nav { display: flex; gap: 20px; color: var(--muted); }
-.topbar nav a { transition: color 0.2s ease, opacity 0.2s ease; }
+.topbar nav { display: flex; gap: 20px; color: var(--muted); margin-left: auto; flex: 0 0 auto; }
+.topbar nav a { transition: color 0.2s ease, opacity 0.2s ease; white-space: nowrap; }
 .topbar nav a:hover, .topbar nav .active { color: var(--text); }
 nav a.active { display: inline-flex; align-items: center; gap: 8px; }
 nav a.active img { width: 24px; height: 24px; object-fit: contain; }
@@ -240,13 +240,14 @@ tr:hover td { background: var(--block-green-hover); }
 
 /* Responsive Media Queries */
 @media (max-width: 800px) {
-  .topbar { padding: 0 16px; height: 60px; gap: 12px; }
-  .topbar nav { gap: 12px; font-size: 11px; }
-  .topbar nav a { font-size: 11px; white-space: nowrap; }
-  .topbar nav a:nth-child(1) { display: none; }
+  .topbar { padding: 0 14px; height: 60px; gap: 10px; }
+  .topbar::before { left: 14px; width: 24px; height: 24px; }
+  .topbar .brand { margin-left: 32px; font-size: 12px; line-height: 1; }
+  .topbar nav { gap: 9px; margin-left: auto; }
+  .topbar nav a { font-size: 10px; white-space: nowrap; }
   nav a.active img { width: 19px; height: 19px; }
   .brand { min-width: 0; font-size: 13px; line-height: 1; white-space: nowrap; }
-  .brand span { font-size: 8px; letter-spacing: 0.14em; margin-left: 4px; }
+  .brand span { font-size: 7px; letter-spacing: 0.12em; margin-left: 3px; }
   .hero-wrap { padding: 65px 18px 55px; }
   .mod-grid, .doc-grid { grid-template-columns: 1fr; }
   .docs-layout { grid-template-columns: 1fr; padding: 22px 14px 60px; }
@@ -300,7 +301,6 @@ tr:hover td { background: var(--block-green-hover); }
   .entity-info-box strong { margin-bottom: 5px; }
   
   /* Sprite decorations — mobile */
-  .topbar .brand { margin-left: 34px; }
   .side-link.active::before {flex-basis: 19px; width: 19px; height: 19px;}
   .notice {padding-right: 58px;}
   .notice::after {right: 8px; bottom: 6px; width: 40px; height: 40px;}
@@ -348,13 +348,14 @@ tr:hover td { background: var(--block-green-hover); }
 }
 
 @media (max-width: 480px) {
-  .topbar .brand { margin-left: 30px; }
-  .topbar { height: 56px; padding: 0 11px; }
-  .brand { font-size: 12px; }
+  .topbar { padding: 0 14px; height: 60px; gap: 10px; }
+  .topbar::before { left: 14px; width: 24px; height: 24px; }
+  .topbar .brand { margin-left: 32px; font-size: 12px; line-height: 1; }
   .brand span { font-size: 7px; letter-spacing: 0.12em; margin-left: 3px; }
-  .topbar nav { gap: 7px; }
-  .topbar nav a { font-size: 10px; }
-  nav a.active img { width: 17px; height: 17px; }
+  .topbar nav { gap: 9px; margin-left: auto; }
+  .topbar nav a { font-size: 10px; white-space: nowrap; }
+  nav a.active img { width: 18px; height: 18px; }
+  .brand { font-size: 12px; }
   h1 { font-size: 44px; }
   .lead { font-size: 16px; }
   .mod-card { padding: 22px; min-height: 220px; }
