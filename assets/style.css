@@ -210,7 +210,7 @@ tr:hover td { background: var(--block-green-hover); }
 @media (max-width: 800px) {
   body { padding-top: 60px; }
   .hero .eyebrow { font-size: 9px; }
-  .hero h1 { font-size: 28px; }
+  .hero h1 { font-size: 36px; }
   .hero .lead { font-size: 13px; }
 
   .topbar { padding: 0 14px; height: 60px; gap: 10px; }
@@ -358,7 +358,7 @@ tr:hover td { background: var(--block-green-hover); }
 
 @media (max-width: 700px) {
   .hero .eyebrow { font-size: 9px; }
-  .hero h1 { font-size: 28px; }
+  .hero h1 { font-size: 36px; }
   .hero .lead { font-size: 13px; }
   .card-title .gile-title { font-size: clamp(1.45rem, 8vw, 2.2rem); }
   .mod-card, .mod-card.featured { width: 100%; max-width: 100%; box-sizing: border-box; }
@@ -370,7 +370,7 @@ tr:hover td { background: var(--block-green-hover); }
 
 @media (max-width: 600px) {
   .hero .eyebrow { font-size: 9px; }
-  .hero h1 { font-size: 28px; }
+  .hero h1 { font-size: 36px; }
   .hero .lead { font-size: 13px; }
   .weapon-media-grid { grid-template-columns: 1fr !important; }
   .weapon-media-grid .placeholder-box { height: auto; min-height: 0; aspect-ratio: 16 / 9; padding: 6px; }
@@ -379,7 +379,7 @@ tr:hover td { background: var(--block-green-hover); }
 
 @media (max-width: 480px) {
   .hero .eyebrow { font-size: 9px; }
-  .hero h1 { font-size: 28px; }
+  .hero h1 { font-size: 36px; }
   .hero .lead { font-size: 13px; }
   .topbar { padding: 0 14px; height: 60px; gap: 10px; }
   .topbar::before { left: 14px; width: 24px; height: 24px; }
