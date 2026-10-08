@@ -1,4 +1,4 @@
-# Genshin Impact: Lunar Expansion (GILE) — Official Minecraft Mod Wiki
+# Official Minecraft Mods Wiki
 
 Welcome to the official documentation repository for **Minecraft Mods made by MasterHamster837**.
 
